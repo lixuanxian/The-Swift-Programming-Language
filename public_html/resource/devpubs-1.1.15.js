@@ -112,8 +112,8 @@ v.prototype = {g: function() {
         });
         Array.prototype.forEach.call(document.getElementsByClassName("inline-graphic"),
                 function(a) {
-                    a.removeAttribute("height");
-                    a.removeAttribute("width")
+  a.removeAttribute("height");
+  a.removeAttribute("width")
                 })
     }, o: function() {
         iphone.n.addEventListener("click", iphone.U);
@@ -168,7 +168,7 @@ History.prototype = {g: function() {
             a.preventDefault();
             var b = window.location.origin + window.location.pathname, c = a.target.origin + a.target.pathname;
             a.target.href === window.location.href ? (b = a.target.hash, "" === b && (b = "#" + a.target.getAttribute("data-id")),
-                    b = document.getElementsByName(b.substring(1, b.length)), b[0].scrollIntoView()) : c === b ? ("" !== a.target.hash ? b = document.getElementsByName(a.target.hash.substring(1, a.target.hash.length)) : (b = "#" + a.target.getAttribute("data-id"), b = document.getElementsByName(b.substring(1, b.length))), b[0].scrollIntoView()) : (b = "#" + a.target.getAttribute("data-id"), y(historian, a.target, b));
+  b = document.getElementsByName(b.substring(1, b.length)), b[0].scrollIntoView()) : c === b ? ("" !== a.target.hash ? b = document.getElementsByName(a.target.hash.substring(1, a.target.hash.length)) : (b = "#" + a.target.getAttribute("data-id"), b = document.getElementsByName(b.substring(1, b.length))), b[0].scrollIntoView()) : (b = "#" + a.target.getAttribute("data-id"), y(historian, a.target, b));
             b = a.target;
             a = document.querySelector('a[data-id="' + a.target.getAttribute("data-id") + '"]');
             z(a, b)
@@ -259,7 +259,7 @@ window.onpopstate = function(a) {
         a = document.getElementsByTagName("title")[0];
         if (b)
             null !== b.K && B(historian, b.K), A(a, null, b.title), historian.k && (historian.k.classList.remove("nav-chapter-active"), historian.k.parentElement.classList.remove("nav-current-chapter")), a = document.querySelector('a[data-id="' + b.na + '"]'), a.classList.add("nav-chapter-active"), a.parentElement.classList.add("nav-current-chapter"), historian.k = a, null !== b.j ? part_chapters = document.querySelector('li[data-id="' +
-                    b.j + '"]').children[0] : (nav_parts.close(), part_chapters = void 0), void 0 !== part_chapters && (nav_parts.close(), nav_parts.open(part_chapters), nav_parts.i = part_chapters), void 0 !== b.scrollY && null !== b.scrollY && window.setTimeout(function() {
+  b.j + '"]').children[0] : (nav_parts.close(), part_chapters = void 0), void 0 !== part_chapters && (nav_parts.close(), nav_parts.open(part_chapters), nav_parts.i = part_chapters), void 0 !== b.scrollY && null !== b.scrollY && window.setTimeout(function() {
                 window.scrollTo(b.scrollX, b.scrollY)
             }, 100);
         else {
@@ -267,12 +267,12 @@ window.onpopstate = function(a) {
                 historian.ca();
                 var c = [];
                 Array.prototype.forEach.call(document.getElementsByTagName("article")[0].getElementsByClassName("x-name"), function(a) {
-                    c.push(a.firstChild)
+  c.push(a.firstChild)
                 });
                 w(historian, c)
             } else
                 B(historian, historian.Z),
-                        A(a, null, historian.$);
+      A(a, null, historian.$);
             nav_parts.close();
             (a = document.getElementsByClassName("nav-part-active")[0]) && a.classList.remove("nav-part-active");
             if (a = document.getElementsByClassName("nav-chapter-active")[0])
@@ -373,7 +373,7 @@ Navigator.prototype = {g: function() {
         else {
             var e = b.getElementsByTagName("ul")[0];
             void 0 !== e && (nav_parts.close(), nav_parts.open(e), nav_parts.i = e, (e = e.children[0].children[0]) && e.hasAttribute("href") && e.href !==
-                    window.location.href && (void 0 !== c ? z(c, c) : z(e, a.target), y(historian, e, b.getAttribute("data-id"))), void 0 !== ipad && ipad.v())
+  window.location.href && (void 0 !== c ? z(c, c) : z(e, a.target), y(historian, e, b.getAttribute("data-id"))), void 0 !== ipad && ipad.v())
         }
     }, o: function() {
         var a = this;
@@ -439,20 +439,20 @@ H.prototype = {r: function() {
         document.d("keydown", function(a) {
             if (this.e)
                 switch (a.keyCode) {
-                    case 27:
-                        "" === this.a.filter.value && this.close();
-                        break;
-                    case 38:
-                        a.preventDefault();
-                        0 <= this.index && (this.index--, this.focus());
-                        break;
-                    case 40:
-                        a.preventDefault();
-                        this.index < this.matches - 1 && (this.index++, this.focus());
-                        break;
-                    case 13:
-                        a.preventDefault(), this.b.c(".focused") && (a = this.b.c(".focused").getAttribute("href"), K(ref, a), this.close())
-                    }
+  case 27:
+      "" === this.a.filter.value && this.close();
+      break;
+  case 38:
+      a.preventDefault();
+      0 <= this.index && (this.index--, this.focus());
+      break;
+  case 40:
+      a.preventDefault();
+      this.index < this.matches - 1 && (this.index++, this.focus());
+      break;
+  case 13:
+      a.preventDefault(), this.b.c(".focused") && (a = this.b.c(".focused").getAttribute("href"), K(ref, a), this.close())
+  }
         }.bind(this));
         this.filter()
     }, filter: function() {
@@ -460,12 +460,12 @@ H.prototype = {r: function() {
             var a = this.a.filter.value.trim().toLowerCase(), b, c = 0;
             this.ja.forEach(function(e) {
                 if ("" === a)
-                    this.a.h[c].textContent = e, this.a.h[c].classList.remove("hidden");
+  this.a.h[c].textContent = e, this.a.h[c].classList.remove("hidden");
                 else if (/^\+( )?/.test(a)) {
-                            b =
-                                    RegExp("^\\+( )?" + a.substring(1), "i");
-                            var f = this.a.h[c], g = b;
-                            g.test(e) ? L(f, g, e) : f.classList.add("hidden")
+          b =
+RegExp("^\\+( )?" + a.substring(1), "i");
+          var f = this.a.h[c], g = b;
+          g.test(e) ? L(f, g, e) : f.classList.add("hidden")
             } else / ^ - () ? /.test(a)?(b=RegExp("^-( )?"+a.substring(1),"i"),f=this.a.h[c],g=b,g.test(e)?L(f,g,e):f.classList.add("hidden")):0<=e.toLowerCase().indexOf(a)?(b=RegExp(a,"gi"),L(this.a.h[c],b,e)):this.a.h[c].classList.add("hidden");c++}.bind(this));N(this)}.bind(this))},open:function(){I.prototype.open.call(this);this.a.filter.focus();N(this)},close:function(){I.prototype.close.call(this);this.a.filter.blur();
             J(this);
             this.index = -1;
@@ -529,7 +529,7 @@ H.prototype = {r: function() {
             this.e || (this.b.classList.remove("closed"), this.b.classList.add("open"), this.e = !0)
         }, close: function() {
             this.e && (this.b.classList.remove("open"),
-                    this.b.classList.add("closing"), this.e = !1)
+  this.b.classList.add("closing"), this.e = !1)
         }, toggle: function() {
             this.e ? this.close() : this.open()
         }};
@@ -600,8 +600,8 @@ H.prototype = {r: function() {
             var f = !1;
             0 >= window.pageYOffset ? (a(), b.scrollTop = 0) : window.pageYOffset >= document.height - window.innerHeight ? (a(), c[c.length - 1].classList.add("active-task"), b.scrollTop = 99999) : e.forEach(function(b) {
                 if (!f) {
-                    var c = b.getClientRects()[0].top;
-                    25 >= Math.abs(c) && (a(), b = h('.tasks .nav-chapter a[href="#' + b.name + '"]'), b.classList.add("active-task"), 0 < window.pageYOffset && window.pageYOffset < document.height - window.innerHeight && b.scrollIntoViewIfNeeded(), f = !0)
+  var c = b.getClientRects()[0].top;
+  25 >= Math.abs(c) && (a(), b = h('.tasks .nav-chapter a[href="#' + b.name + '"]'), b.classList.add("active-task"), 0 < window.pageYOffset && window.pageYOffset < document.height - window.innerHeight && b.scrollIntoViewIfNeeded(), f = !0)
                 }
             })
         })
@@ -615,9 +615,9 @@ H.prototype = {r: function() {
         document.d("keydown", function(a) {
             if (!/(textarea|input)/i.test(document.activeElement.nodeName) && !a.metaKey) {
                 if (68 === a.keyCode)
-                    return this.a.f.deprecated.checked = !this.a.f.deprecated.checked, pa(this), !1;
+  return this.a.f.deprecated.checked = !this.a.f.deprecated.checked, pa(this), !1;
                 if (65 === a.keyCode)
-                    return this.a.f.auto_expand.checked = !this.a.f.auto_expand.checked, qa(this), !1
+  return this.a.f.auto_expand.checked = !this.a.f.auto_expand.checked, qa(this), !1
             }
         }.bind(a))
     }
@@ -636,12 +636,12 @@ H.prototype = {r: function() {
                 var f = a.baseNode.parentNode, g = n(f, ".squashed"), f = n(f, ".height-container");
                 g ? h(".overview-bulk-toggle").click() : f && (g = n(f, ".item"), R(this, g).e || S(this, g));
                 this.ka !== a.baseNode && (setTimeout(function() {
-                    window.scrollTo(0, window.pageYOffset +
-                            1)
+  window.scrollTo(0, window.pageYOffset +
+          1)
                 }, 700), this.ka = a.baseNode)
             } else
                 b && this.D && (clearInterval(c), this.D = !1, m(".symbol:not(.on) .height-container").forEach(function(a) {
-                    a.classList.add("hidden")
+  a.classList.add("hidden")
                 }))
         }.bind(a), 16)
     }
@@ -694,7 +694,7 @@ H.prototype = {r: function() {
             } else
                 b.O = !0;
             "obj_c" === c && b.G || "swift" === c && b.F ? (V(this, a), W(b)) : (!b.C || b.C && !this.a.f.deprecated.checked) && b.q <= this.a.f.deployment_target.value &&
-                    b.show()
+  b.show()
         }.bind(a));
         X(a);
         Y(a, b)
@@ -706,16 +706,16 @@ H.prototype = {r: function() {
             if (1 !== c.length) {
                 var e = a.innerHTML.split(/, /), f = 0;
                 c.forEach(function(a) {
-                    a = a.split(c[0] !== a || /^init/.test(c[0]) ? " " : "(")[0].length;
-                    a > f && (f = a)
+  a = a.split(c[0] !== a || /^init/.test(c[0]) ? " " : "(")[0].length;
+  a > f && (f = a)
                 });
                 var g = 0;
                 c.forEach(function(a) {
-                    e[g] = Array(f - (/:/.test(a) ? a.split(c[0] !== a || /^init/.test(c[0]) ? " " : "(")[0].length : -10) + 1).join("&nbsp;") + e[g];
-                    g++
+  e[g] = Array(f - (/:/.test(a) ? a.split(c[0] !== a || /^init/.test(c[0]) ? " " : "(")[0].length : -10) + 1).join("&nbsp;") + e[g];
+  g++
                 });
                 a.innerHTML =
-                        e.join(",<br />")
+      e.join(",<br />")
             }
         });
         a = m(".instance-method .declaration .Objective-C .para, .class-method .declaration .Objective-C .para");
@@ -727,7 +727,7 @@ H.prototype = {r: function() {
                 e = a.textContent.trim().split(":")[0].length - c[f].textContent.length + 2, 0 < e && (e = Array(e).join("&nbsp;"), c[f].innerHTML = e + c[f].textContent);
             a = a.l(".n");
             for (f = 0; f < a.length; f++) / , /.test(a[f].textContent)&&(e=Array(c[c.length-1].textContent.length+
-                        10).join("&nbsp;"), a[f].innerHTML = a[f].innerHTML.replace(/,/g, ",<br />" + e))
+      10).join("&nbsp;"), a[f].innerHTML = a[f].innerHTML.replace(/,/g, ",<br />" + e))
         })
     }
     function K(a, b, c) {
@@ -764,15 +764,15 @@ H.prototype = {r: function() {
         function a(a, b) {
             if (a && b && "false" !== b) {
                 switch (a.type) {
-                    case void 0:
-                        a = a.c("#" + b);
-                        a.checked = !0;
-                        break;
-                    case "checkbox":
-                        a.checked = !0;
-                        break;
-                    case "select-one":
-                        a.value = b
+  case void 0:
+      a = a.c("#" + b);
+      a.checked = !0;
+      break;
+  case "checkbox":
+      a.checked = !0;
+      break;
+  case "select-one":
+      a.value = b
                 }
                 var c = document.createEvent("UIEvents");
                 c.initEvent("change", !1, !1);
@@ -783,14 +783,14 @@ H.prototype = {r: function() {
         if (b.J.V || !window.localStorage)
             document.cookie.split(";").forEach(function(b) {
                 if (b) {
-                    var c = b.split("=")[0].trim().replace("com.apple.devpubs.", "");
-                    c && (c = h("#" + c), a(c, b.split("=")[1].trim()))
+  var c = b.split("=")[0].trim().replace("com.apple.devpubs.", "");
+  c && (c = h("#" + c), a(c, b.split("=")[1].trim()))
                 }
             });
         else
             for (var c in b.a.f) {
                 var e = "deployment_target" ===
-                        c ? "_" + b.R : "", f = h("#" + c + e), e = localStorage.getItem("com.apple.devpubs." + c + e);
+      c ? "_" + b.R : "", f = h("#" + c + e), e = localStorage.getItem("com.apple.devpubs." + c + e);
                 a(f, e)
             }
     }
@@ -814,7 +814,7 @@ H.prototype = {r: function() {
             R(this, a).h.forEach(function(a) {
                 a = R(this, a);
                 a.P && (a.G && document.body.classList.contains("obj_c") ? f++ : a.F && document.body.classList.contains("swift") ? e++ : a.C && this.a.f.deprecated.checked ? g++ : a.q > this.a.f.deployment_target.value &&
-                        k++)
+      k++)
             }.bind(this));
             var r = a.c(".hiding-swift"), l = a.c(".hiding-obj-c"), q = a.c(".hiding-dep");
             a = a.c(".hiding-dt");
@@ -839,11 +839,11 @@ H.prototype = {r: function() {
             var e = R(this, a);
             if (!e.C)
                 if (e.q > b)
-                    V(this, a), W(e);
+  V(this, a), W(e);
                 else {
-                    (document.body.classList.contains("obj_c") && !e.G || document.body.classList.contains("swift") && !e.F || document.body.classList.contains("both")) && e.show();
-                    var f = a.c(".task-group-term .new");
-                    e.q === b ? f || (f = document.createElement("span"), f.className = "new", f.innerHTML = "(New in " + ("mac" === this.R ? "OS X" : "iOS") + " " + ("mac" === this.R ? "v10." : "") + b + ")", a.c(".task-group-term").appendChild(f)) : f && a.c(".task-group-term").removeChild(f)
+  (document.body.classList.contains("obj_c") && !e.G || document.body.classList.contains("swift") && !e.F || document.body.classList.contains("both")) && e.show();
+  var f = a.c(".task-group-term .new");
+  e.q === b ? f || (f = document.createElement("span"), f.className = "new", f.innerHTML = "(New in " + ("mac" === this.R ? "OS X" : "iOS") + " " + ("mac" === this.R ? "v10." : "") + b + ")", a.c(".task-group-term").appendChild(f)) : f && a.c(".task-group-term").removeChild(f)
                 }
         }.bind(a));
         X(a);
@@ -866,9 +866,9 @@ H.prototype = {r: function() {
             a = a.parentNode.childNodes;
             for (var e = e + 1, f = a.length; e < f; e++)
                 if (1 === a[e].nodeType) {
-                    var q = a[e], s = R(this, q).y || 0, s = s + b, t = q.style;
-                    "webkitTransform"in t ? q.style.webkitTransform = "translateY(" + s + "px)" : "mozTransform"in t ? q.style.Aa = "translateY(" + s + "px)" : "oTransform"in t ? q.style.Ca = "translateY(" + s + "px)" : "transform"in t && (q.style.transform = "translateY(" + s + "px)");
-                    R(this, q).y = s
+  var q = a[e], s = R(this, q).y || 0, s = s + b, t = q.style;
+  "webkitTransform"in t ? q.style.webkitTransform = "translateY(" + s + "px)" : "mozTransform"in t ? q.style.Aa = "translateY(" + s + "px)" : "oTransform"in t ? q.style.Ca = "translateY(" + s + "px)" : "transform"in t && (q.style.transform = "translateY(" + s + "px)");
+  R(this, q).y = s
                 }
         }.bind(a));
         h(".last-one").classList.contains("fat") ||
@@ -912,17 +912,17 @@ H.prototype = {r: function() {
             this.data[f] = e;
             a.l(".task-group-term a[href]").forEach(function(b) {
                 b.d("click", function(f) {
-                    if (!f.metaKey) {
-                        f.preventDefault();
-                        if (!e.e) {
-                            var r = a.getClientRects()[0].top;
-                            f = R(this, a).p;
-                            var l = window.innerHeight;
-                            r + f + 30 > l && (r = U(this, a), Ca(this.ga, f + 30 < l - 97 ? r - (l - f - 30 - 70 - 10) : r - 27));
-                            history.replaceState(null, null, b.href)
-                        }
-                        S(this, a)
-                    }
+  if (!f.metaKey) {
+      f.preventDefault();
+      if (!e.e) {
+          var r = a.getClientRects()[0].top;
+          f = R(this, a).p;
+          var l = window.innerHeight;
+          r + f + 30 > l && (r = U(this, a), Ca(this.ga, f + 30 < l - 97 ? r - (l - f - 30 - 70 - 10) : r - 27));
+          history.replaceState(null, null, b.href)
+      }
+      S(this, a)
+  }
                 }.bind(this))
             }.bind(this))
         }.bind(a));
@@ -933,14 +933,14 @@ H.prototype = {r: function() {
             this.data[f] = e;
             a.c(".section-name").d("click", function(b) {
                 if (!b.metaKey) {
-                    b.preventDefault();
-                    var f = !e.e;
-                    f && Q(this, a, !0);
-                    a.l(".symbol:not(.hidden)").forEach(function(a) {
-                        var b = R(this, a).e;
-                        (f && !b || !f && b) && S(this, a)
-                    }.bind(this));
-                    e.toggle()
+  b.preventDefault();
+  var f = !e.e;
+  f && Q(this, a, !0);
+  a.l(".symbol:not(.hidden)").forEach(function(a) {
+      var b = R(this, a).e;
+      (f && !b || !f && b) && S(this, a)
+  }.bind(this));
+  e.toggle()
                 }
             }.bind(this))
         }.bind(a));
@@ -1021,7 +1021,7 @@ H.prototype = {r: function() {
         a.d(window.la(), function() {
             this.classList.contains("on") || this.c(".height-container").classList.add("hidden");
             h(".last-one").classList.contains("fat") &&
-                    (h(".last-one").classList.remove("fat"), T(ref, -750))
+  (h(".last-one").classList.remove("fat"), T(ref, -750))
         });
         return this
     }
@@ -1045,7 +1045,7 @@ H.prototype = {r: function() {
         }(), f = window.cancelAnimationFrame || window.cancelRequestAnimationFrame || window.webkitCancelAnimationFrame || window.webkitCancelRequestAnimationFrame || window.mozCancelAnimationFrame || window.mozCancelRequestAnimationFrame || window.clearTimeout, g, k = null, r = a.parentNode.querySelector(".svg-play-button"), l = 0, q = 0, s = 0, t = 0, M = !1;
         return{g: function(c) {
                 b =
-                        c || {N: 50, oa: 800, sa: 5};
+      c || {N: 50, oa: 800, sa: 5};
                 k = a.contentDocument.querySelectorAll("svg > g");
                 q = k.length;
                 s = Math.round(b.oa / b.N);
@@ -1054,8 +1054,8 @@ H.prototype = {r: function() {
                 g = Date.now();
                 var a = this;
                 (function Ia() {
-                    c = e(Ia);
-                    a.loop()
+  c = e(Ia);
+  a.loop()
                 })();
                 M = !0;
                 r.classList.add("faded")
@@ -1067,7 +1067,7 @@ H.prototype = {r: function() {
             }, stop: function() {
                 f(c);
                 for (var a = 1; a < k.length; a++)
-                    k[a].style.display = "none";
+  k[a].style.display = "none";
                 l = q - 1;
                 k[l].style.display = "block";
                 t = 0;
