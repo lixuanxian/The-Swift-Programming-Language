@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0172)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#//apple_ref/doc/uid/TP40014097-CH8-XID_133 -->
+<!-- saved from url=(0172)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html#TP40014097-CH8-XID_133 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Collection Types</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -32,7 +32,7 @@
     <div id="_omniture_top">
 <!-- SiteCatalyst code will be injected here when viewed in production -->
 </div>
-    	<a name="//apple_ref/doc/uid/TP40014097" title="The Swift Programming Language"></a>
+    	<a name="TP40014097" title="The Swift Programming Language"></a>
 
     
 
@@ -49,10 +49,10 @@
   </div>
 </section>
     <div class="content-wrapper">
- 
+      
 
       <article class="chapter">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8"></a><a name="//apple_ref/doc/uid/TP40014097-CH8-XID_133"></a>
+  <a name="TP40014097-CH8"></a><a name="TP40014097-CH8-XID_133"></a>
   <div class="pixel-line"></div>
   <h2 class="chapter-name chapter-name-short">Collection Types</h2>
 
@@ -64,21 +64,21 @@
   <ul class="list-bullet">
   		<li class="item">
   			<p class="para">
-	  			<a href="#//apple_ref/doc/uid/TP40014097-CH8-XID_135">
+	  			<a href="#TP40014097-CH8-XID_135">
 	  				Arrays
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="#//apple_ref/doc/uid/TP40014097-CH8-XID_143">
+	  			<a href="#TP40014097-CH8-XID_143">
 	  				Dictionaries
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="#//apple_ref/doc/uid/TP40014097-CH8-XID_151">
+	  			<a href="#TP40014097-CH8-XID_151">
 	  				Mutability of Collections
 	  			</a>
   			</p>
@@ -95,11 +95,11 @@
   Arrays and dictionaries in Swift are always clear about the types of values and keys that they can store. This means that you cannot insert a value of the wrong type into an array or dictionary by mistake. It also means you can be confident about the types of values you will retrieve from an array or dictionary. Swift’s use of explicitly typed collections ensures that your code is always clear about the types of values it can work with and enables you to catch any type mismatches early in your code’s development.
 </p>
 <div class="note">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_134"></a>
+  <a name="TP40014097-CH8-XID_134"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    	<p class="para">Swift’s <code class="code-voice">Array</code> type exhibits different behavior to other types when assigned to a constant or variable, or when passed to a function or method. For more information, see <span class="x-name"><a href="Mutability of Collections.html#//apple_ref/doc/uid/TP40014097-CH8-XID_151" data-id="//apple_ref/doc/uid/TP40014097-CH8-XID_151">Mutability of Collections</a></span> and <span class="x-name"><a href="Assignment and Copy Behavior for Collection Types.html#//apple_ref/doc/uid/TP40014097-CH13-XID_109" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_109">Assignment and Copy Behavior for Collection Types</a></span>.
+    	<p class="para">Swift’s <code class="code-voice">Array</code> type exhibits different behavior to other types when assigned to a constant or variable, or when passed to a function or method. For more information, see <span class="x-name"><a href="Mutability of Collections.html#TP40014097-CH8-XID_151" data-id="TP40014097-CH8-XID_151">Mutability of Collections</a></span> and <span class="x-name"><a href="Assignment and Copy Behavior for Collection Types.html#TP40014097-CH13-XID_109" data-id="TP40014097-CH13-XID_109">Assignment and Copy Behavior for Collection Types</a></span>.
     	</p>
     
   </aside>
@@ -109,7 +109,7 @@
 
 
   <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_135"></a>
+  <a name="TP40014097-CH8-XID_135"></a>
   <h3 class="section-name" tabindex="0">Arrays</h3>
   <p class="para">
   An <em>array</em> stores multiple values of the same type in an ordered list. The same value can appear in an array multiple times at different positions.
@@ -117,7 +117,7 @@
   Swift arrays are specific about the kinds of values they can store. They differ from Objective-C’s <code class="code-voice">NSArray</code> and <code class="code-voice">NSMutableArray</code> classes, which can store any kind of object and do not provide any information about the nature of the objects they return. In Swift, the type of values that a particular array can store is always made clear, either through an explicit type annotation, or through type inference, and does not have to be a class type. If you create an array of <code class="code-voice">Int</code> values, for example, you can’t insert any value other than <code class="code-voice">Int</code> values into that array. Swift arrays are type safe, and are always clear about what they may contain.
 </p>
   <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_136"></a>
+  <a name="TP40014097-CH8-XID_136"></a>
   <h3 class="section-name" tabindex="0">Array Type Shorthand Syntax</h3>
   <p class="para">
   The type of a Swift array is written in full as <code class="code-voice">Array&lt;SomeType&gt;</code>, where <code class="code-voice">SomeType</code> is the type that the array is allowed to store. You can also write the type of an array in shorthand form as <code class="code-voice">SomeType[]</code>. Although the two forms are functionally identical, the shorthand form is preferred, and is used throughout this guide when referring to the type of an array.
@@ -125,7 +125,7 @@
   
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_137"></a>
+  <a name="TP40014097-CH8-XID_137"></a>
   <h3 class="section-name" tabindex="0">Array Literals</h3>
   <p class="para">
   You can initialize an array with an <em>array literal</em>, which is a shorthand way to write one or more values as an array collection. An array literal is written as a list of values, separated by commas, surrounded by a pair of square brackets:
@@ -152,7 +152,7 @@
 </section><p class="para">
   The <code class="code-voice">shoppingList</code> variable is declared as “an array of <code class="code-voice">String</code> values”, written as <code class="code-voice">String[]</code>. Because this particular array has specified a value type of <code class="code-voice">String</code>, it is <em>only</em> allowed to store <code class="code-voice">String</code> values. Here, the <code class="code-voice">shoppingList</code> array is initialized with two <code class="code-voice">String</code> values (<code class="code-voice">"Eggs"</code> and <code class="code-voice">"Milk"</code>), written within an array literal.
 </p><div class="note">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_138"></a>
+  <a name="TP40014097-CH8-XID_138"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
@@ -182,7 +182,7 @@
   
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_139"></a>
+  <a name="TP40014097-CH8-XID_139"></a>
   <h3 class="section-name" tabindex="0">Accessing and Modifying an Array</h3>
   <p class="para">
   You access and modify an array through its methods and properties, or by using subscript syntax.
@@ -313,7 +313,7 @@
 
   </div>
 </section><div class="note">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_140"></a>
+  <a name="TP40014097-CH8-XID_140"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
@@ -392,7 +392,7 @@
   
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_141"></a>
+  <a name="TP40014097-CH8-XID_141"></a>
   <h3 class="section-name" tabindex="0">Iterating Over an Array</h3>
   <p class="para">
   You can iterate over the entire set of values in an array with the <code class="code-voice">for</code>-<code class="code-voice">in</code> loop:
@@ -437,12 +437,12 @@
 
   </div>
 </section><p class="para">
-  For more about the <code class="code-voice">for</code>-<code class="code-voice">in</code> loop, see <span class="x-name"><a href="For Loops.html#//apple_ref/doc/uid/TP40014097-CH9-XID_154" data-id="//apple_ref/doc/uid/TP40014097-CH9-XID_154">For Loops</a></span>.
+  For more about the <code class="code-voice">for</code>-<code class="code-voice">in</code> loop, see <span class="x-name"><a href="For Loops.html#TP40014097-CH9-XID_154" data-id="TP40014097-CH9-XID_154">For Loops</a></span>.
 </p>
   
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_142"></a>
+  <a name="TP40014097-CH8-XID_142"></a>
   <h3 class="section-name" tabindex="0">Creating and Initializing an Array</h3>
   <p class="para">
   You can create an empty array of a certain type (without setting any initial values) using initializer syntax:
@@ -530,7 +530,7 @@
 
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_143"></a>
+  <a name="TP40014097-CH8-XID_143"></a>
   <h3 class="section-name" tabindex="0">Dictionaries</h3>
   <p class="para">
   A <em>dictionary</em> is a container that stores multiple values of the same type. Each value is associated with a unique <em>key</em>, which acts as an identifier for that value within the dictionary. Unlike items in an array, items in a dictionary do not have a specified order. You use a dictionary when you need to look up values based on their identifier, in much the same way that a real-world dictionary is used to look up the definition for a particular word.
@@ -539,10 +539,10 @@
 </p><p class="para">
   Swift’s dictionary type is written as <code class="code-voice">Dictionary&lt;KeyType, ValueType&gt;</code>, where <code class="code-voice">KeyType</code> is the type of value that can be used as a dictionary key, and <code class="code-voice">ValueType</code> is the type of value that the dictionary stores for those keys.
 </p><p class="para">
-  The only restriction is that <code class="code-voice">KeyType</code> must be <em>hashable</em>—that is, it must provide a way to make itself uniquely representable. All of Swift’s basic types (such as <code class="code-voice">String</code>, <code class="code-voice">Int</code>, <code class="code-voice">Double</code>, and <code class="code-voice">Bool</code>) are hashable by default, and all of these types can be used as the keys of a dictionary. Enumeration member values without associated values (as described in <span class="x-name"><a href="Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-XID_185" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_185">Enumerations</a></span>) are also hashable by default.
+  The only restriction is that <code class="code-voice">KeyType</code> must be <em>hashable</em>—that is, it must provide a way to make itself uniquely representable. All of Swift’s basic types (such as <code class="code-voice">String</code>, <code class="code-voice">Int</code>, <code class="code-voice">Double</code>, and <code class="code-voice">Bool</code>) are hashable by default, and all of these types can be used as the keys of a dictionary. Enumeration member values without associated values (as described in <span class="x-name"><a href="Enumerations.html#TP40014097-CH12-XID_185" data-id="TP40014097-CH12-XID_185">Enumerations</a></span>) are also hashable by default.
 </p>
   <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_144"></a>
+  <a name="TP40014097-CH8-XID_144"></a>
   <h3 class="section-name" tabindex="0">Dictionary Literals</h3>
   <p class="para">
   You can initialize a dictionary with with a <em>dictionary literal</em>, which has a similar syntax to the array literal seen earlier. A dictionary literal is a shorthand way to write one or more key-value pairs as a <code class="code-voice">Dictionary</code> collection.
@@ -570,7 +570,7 @@
 </section><p class="para">
   The <code class="code-voice">airports</code> dictionary is declared as having a type of <code class="code-voice">Dictionary&lt;String, String&gt;</code>, which means “a <code class="code-voice">Dictionary</code> whose keys are of type <code class="code-voice">String</code>, and whose values are also of type <code class="code-voice">String</code>”.
 </p><div class="note">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_145"></a>
+  <a name="TP40014097-CH8-XID_145"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
@@ -602,7 +602,7 @@
   
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_146"></a>
+  <a name="TP40014097-CH8-XID_146"></a>
   <h3 class="section-name" tabindex="0">Accessing and Modifying a Dictionary</h3>
   <p class="para">
   You access and modify a dictionary through its methods and properties, or by using subscript syntax. As with an array, you can find out the number of items in a <code class="code-voice">Dictionary</code> by checking its read-only <code class="code-voice">count</code> property:
@@ -727,7 +727,7 @@
   
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_147"></a>
+  <a name="TP40014097-CH8-XID_147"></a>
   <h3 class="section-name" tabindex="0">Iterating Over a Dictionary</h3>
   <p class="para">
   You can iterate over the key-value pairs in a dictionary with a <code class="code-voice">for</code>-<code class="code-voice">in</code> loop. Each item in the dictionary is returned as a <code class="code-voice">(key, value)</code> tuple, and you can decompose the tuple’s members into temporary constants or variables as part of the iteration:
@@ -748,7 +748,7 @@
 
   </div>
 </section><p class="para">
-  For more about the <code class="code-voice">for</code>-<code class="code-voice">in</code> loop, see <span class="x-name"><a href="For Loops.html#//apple_ref/doc/uid/TP40014097-CH9-XID_154" data-id="//apple_ref/doc/uid/TP40014097-CH9-XID_154">For Loops</a></span>.
+  For more about the <code class="code-voice">for</code>-<code class="code-voice">in</code> loop, see <span class="x-name"><a href="For Loops.html#TP40014097-CH9-XID_154" data-id="TP40014097-CH9-XID_154">For Loops</a></span>.
 </p><p class="para">
   You can also retrieve an iteratable collection of a dictionary’s keys or values by accessing its <code class="code-voice">keys</code> and <code class="code-voice">values</code> properties:
 </p><section class="code-listing">
@@ -792,7 +792,7 @@
 
   </div>
 </section><div class="note">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_148"></a>
+  <a name="TP40014097-CH8-XID_148"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
@@ -804,7 +804,7 @@
   
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_149"></a>
+  <a name="TP40014097-CH8-XID_149"></a>
   <h3 class="section-name" tabindex="0">Creating an Empty Dictionary</h3>
   <p class="para">
   As with arrays, you can create an empty <code class="code-voice">Dictionary</code> of a certain type by using initializer syntax:
@@ -841,11 +841,11 @@
 
   </div>
 </section><div class="note">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_150"></a>
+  <a name="TP40014097-CH8-XID_150"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    	<p class="para">Behind the scenes, Swift’s array and dictionary types are implemented as <em>generic collections</em>. For more on generic types and collections, see <span class="x-name"><a href="Generics.html#//apple_ref/doc/uid/TP40014097-CH26-XID_234" data-id="//apple_ref/doc/uid/TP40014097-CH26-XID_234">Generics</a></span>.
+    	<p class="para">Behind the scenes, Swift’s array and dictionary types are implemented as <em>generic collections</em>. For more on generic types and collections, see <span class="x-name"><a href="Generics.html#TP40014097-CH26-XID_234" data-id="TP40014097-CH26-XID_234">Generics</a></span>.
     	</p>
     
   </aside>
@@ -855,7 +855,7 @@
 
 </section>
 <section class="section">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_151"></a>
+  <a name="TP40014097-CH8-XID_151"></a>
   <h3 class="section-name" tabindex="0">Mutability of Collections</h3>
   <p class="para">
   Arrays and dictionaries store multiple values together in a single collection. If you create an array or a dictionary and assign it to a variable, the collection that is created will be <em>mutable</em>. This means that you can change (or <em>mutate</em>) the size of the collection after it is created by adding more items to the collection, or by removing existing items from the ones it already contains. Conversely, if you assign an array or a dictionary to a constant, that array or dictionary is <em>immutable</em>, and its size cannot be changed.
@@ -864,9 +864,9 @@
 </p><p class="para">
   Immutability has a slightly different meaning for arrays, however. You are still not allowed to perform any action that has the potential to change the size of an immutable array, but you <em>are</em> allowed to set a new value for an existing index in the array. This enables Swift’s <code class="code-voice">Array</code> type to provide optimal performance for array operations when the size of an array is fixed.
 </p><p class="para">
-  The mutability behavior of Swift’s <code class="code-voice">Array</code> type also affects how array instances are assigned and modified. For more information, see <span class="x-name"><a href="Assignment and Copy Behavior for Collection Types.html#//apple_ref/doc/uid/TP40014097-CH13-XID_109" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_109">Assignment and Copy Behavior for Collection Types</a></span>.
+  The mutability behavior of Swift’s <code class="code-voice">Array</code> type also affects how array instances are assigned and modified. For more information, see <span class="x-name"><a href="Assignment and Copy Behavior for Collection Types.html#TP40014097-CH13-XID_109" data-id="TP40014097-CH13-XID_109">Assignment and Copy Behavior for Collection Types</a></span>.
 </p><div class="note">
-  <a name="//apple_ref/doc/uid/TP40014097-CH8-XID_152"></a>
+  <a name="TP40014097-CH8-XID_152"></a>
   <aside class="aside">
     <p class="aside-title">Note
     </p>
@@ -880,8 +880,8 @@
 
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="Strings and Characters.html#//apple_ref/doc/uid/TP40014097-CH7-XID_368" data-id="//apple_ref/doc/uid/TP40014097-CH7-XID_368">Strings and Characters</a></p>
-  			<p class="next-link"><a href="Control Flow.html#//apple_ref/doc/uid/TP40014097-CH9-XID_153" data-id="//apple_ref/doc/uid/TP40014097-CH9-XID_153">Control Flow</a></p>
+    		<p class="previous-link"><a href="Strings and Characters.html#TP40014097-CH7-XID_368" data-id="TP40014097-CH7-XID_368">Strings and Characters</a></p>
+  			<p class="next-link"><a href="Control Flow.html#TP40014097-CH9-XID_153" data-id="TP40014097-CH9-XID_153">Control Flow</a></p>
   <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
   </p>
   </section>

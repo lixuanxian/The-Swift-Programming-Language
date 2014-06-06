@@ -196,6 +196,8 @@ function B(a, b) {
     window.setTimeout(historian.ca, 2E3)
 }
 function y(a, b, c) {
+
+    
     var e = new XMLHttpRequest;
     e.addEventListener("progress", a.ya, !1);
     e.addEventListener("load", a.wa, !1);
@@ -235,8 +237,20 @@ function y(a, b, c) {
             "undefined" !== typeof PageTracker && (g = {}, document.referrer && (g.referrer = document.referrer), g.identifier = document.getElementById("identifier").content, PageTracker.logEvent("ajaxPageLoad", g))
         }
     };
+    
+
+        //支持离线
+   if(!location.host){
+        window.location.href= b.href; 
+        return;
+   }else{
+       
     e.open("GET", b.href);
     e.send()
+   }
+    
+ 
+    
 }
 function w(a, b) {
     Array.prototype.forEach.call(b, function(b) {
