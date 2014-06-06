@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<!-- saved from url=(0166)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Patterns.html#//apple_ref/doc/uid/TP40014097-CH36-XID_878 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>The Swift Programming Language: Patterns</title>
+    <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+<meta id="g-version" name="g-version" content="fe723145">
+<meta id="j-version" name="j-version" content="1.1.5">
+<meta id="build" name="build" content="9c53f481676f09a07ddd8374f439b060">
+<meta id="document-version" name="document-version" content="1.0.76">
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities/Swift}">
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40014097">
+<meta id="book-title" name="book-title" content="The Swift Programming Language">
+<meta id="book-resource-type" name="book-resource-type" content="Guide">
+<meta id="book-root" name="book-root" content="./">
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-06-02">
+<meta id="description" name="description" content="The definitive guide to Swift, Apple’s new programming language for building iOS and OS X apps.">
+<meta id="IndexTitle" name="IndexTitle" content="">
+
+<meta id="devcenter" name="devcenter" content="&lt;!-- DEVCENTER_NAME --&gt;">
+<meta id="devcenter-url" name="devcenter-url" content="&lt;!-- DEVCENTER_URL --&gt;">
+<meta id="reflib" name="reflib" content="&lt;!-- REFLIB_NAME --&gt;">
+
+<meta id="xcode-display" name="xcode-display" content="render">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="//apple_ref/doc/uid/TP40014097" title="The Swift Programming Language"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="iOS Developer Library.html">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="Developer.html>Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">The Swift Programming Language</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="https://developer.apple.com/library/prerelease/ios/search/" accept-charset="utf-8">
+      <input type="search" id="ssi_SearchField" placeholder="Search iOS Developer Library" name="q" accesskey="s">
+    </form>
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11">iBooks</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40014097-CH1-XID_27" class="part-name">Welcome to Swift
+          <ul class="nav-chapters">
+              <li class="nav-chapter nav-visited-chapter">
+              	<a href="About Swift.html#//apple_ref/doc/uid/TP40014097-CH3-XID_0" data-id="//apple_ref/doc/uid/TP40014097-CH3-XID_0" class="">About Swift</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="A Swift Tour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1" data-id="//apple_ref/doc/uid/TP40014097-CH2-XID_1" class="">A Swift Tour</a>
+              </li>
+          </ul>
+        </li><li data-id="//apple_ref/doc/uid/TP40014097-CH4-XID_299" class="part-name">Language Guide
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="The Basics.html#//apple_ref/doc/uid/TP40014097-CH5-XID_399" data-id="//apple_ref/doc/uid/TP40014097-CH5-XID_399" class="">The Basics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Basic Operators.html#//apple_ref/doc/uid/TP40014097-CH6-XID_70" data-id="//apple_ref/doc/uid/TP40014097-CH6-XID_70" class="">Basic Operators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Strings and Characters.html#//apple_ref/doc/uid/TP40014097-CH7-XID_368" data-id="//apple_ref/doc/uid/TP40014097-CH7-XID_368" class="">Strings and Characters</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Collection Types.html#//apple_ref/doc/uid/TP40014097-CH8-XID_133" data-id="//apple_ref/doc/uid/TP40014097-CH8-XID_133" class="">Collection Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control Flow.html#//apple_ref/doc/uid/TP40014097-CH9-XID_153" data-id="//apple_ref/doc/uid/TP40014097-CH9-XID_153" class="">Control Flow</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Functions.html#//apple_ref/doc/uid/TP40014097-CH10-XID_204" data-id="//apple_ref/doc/uid/TP40014097-CH10-XID_204" class="">Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Closures.html#//apple_ref/doc/uid/TP40014097-CH11-XID_117" data-id="//apple_ref/doc/uid/TP40014097-CH11-XID_117" class="">Closures</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-XID_185" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_185" class="">Enumerations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Classes and Structures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_94" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_94" class="">Classes and Structures</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Properties.html#//apple_ref/doc/uid/TP40014097-CH14-XID_323" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_323" class="">Properties</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Methods.html#//apple_ref/doc/uid/TP40014097-CH15-XID_300" data-id="//apple_ref/doc/uid/TP40014097-CH15-XID_300" class="">Methods</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Subscripts.html#//apple_ref/doc/uid/TP40014097-CH16-XID_393" data-id="//apple_ref/doc/uid/TP40014097-CH16-XID_393" class="">Subscripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-XID_251" data-id="//apple_ref/doc/uid/TP40014097-CH17-XID_251" class="">Inheritance</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-XID_266" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_266" class="">Initialization</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182" data-id="//apple_ref/doc/uid/TP40014097-CH19-XID_182" class="">Deinitialization</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Automatic Reference Counting.html#//apple_ref/doc/uid/TP40014097-CH20-XID_50" data-id="//apple_ref/doc/uid/TP40014097-CH20-XID_50" class="">Automatic Reference Counting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Optional Chaining.html#//apple_ref/doc/uid/TP40014097-CH21-XID_312" data-id="//apple_ref/doc/uid/TP40014097-CH21-XID_312" class="">Optional Chaining</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Type Casting.html#//apple_ref/doc/uid/TP40014097-CH22-XID_443" data-id="//apple_ref/doc/uid/TP40014097-CH22-XID_443" class="">Type Casting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Nested Types.html#//apple_ref/doc/uid/TP40014097-CH23-XID_309" data-id="//apple_ref/doc/uid/TP40014097-CH23-XID_309" class="">Nested Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Extensions.html#//apple_ref/doc/uid/TP40014097-CH24-XID_191" data-id="//apple_ref/doc/uid/TP40014097-CH24-XID_191" class="">Extensions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Protocols.html#//apple_ref/doc/uid/TP40014097-CH25-XID_345" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_345" class="">Protocols</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Generics.html#//apple_ref/doc/uid/TP40014097-CH26-XID_234" data-id="//apple_ref/doc/uid/TP40014097-CH26-XID_234" class="">Generics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Advanced Operators.html#//apple_ref/doc/uid/TP40014097-CH27-XID_28" data-id="//apple_ref/doc/uid/TP40014097-CH27-XID_28" class="">Advanced Operators</a>
+              </li>
+          </ul>
+        </li><li data-id="//apple_ref/doc/uid/TP40014097-CH28-XID_912" class="part-name nav-part-active open-part">Language Reference
+          <ul class="nav-chapters" style="height: 299px;">
+              <li class="nav-chapter">
+              	<a href="About the Language Reference.html#//apple_ref/doc/uid/TP40014097-CH29-XID_453" data-id="//apple_ref/doc/uid/TP40014097-CH29-XID_453" class="">About the Language Reference</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Lexical Structure.html#//apple_ref/doc/uid/TP40014097-CH30-XID_794" data-id="//apple_ref/doc/uid/TP40014097-CH30-XID_794" class="">Lexical Structure</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Types.html#//apple_ref/doc/uid/TP40014097-CH31-XID_988" data-id="//apple_ref/doc/uid/TP40014097-CH31-XID_988" class="">Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Expressions.html#//apple_ref/doc/uid/TP40014097-CH32-XID_655" data-id="//apple_ref/doc/uid/TP40014097-CH32-XID_655" class="">Expressions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Statements.html#//apple_ref/doc/uid/TP40014097-CH33-XID_913" data-id="//apple_ref/doc/uid/TP40014097-CH33-XID_913" class="">Statements</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-XID_475" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_475" class="">Declarations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Attributes.html#//apple_ref/doc/uid/TP40014097-CH35-XID_460" data-id="//apple_ref/doc/uid/TP40014097-CH35-XID_460" class="">Attributes</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Patterns.html" data-id="//apple_ref/doc/uid/TP40014097-CH36-XID_878" class="nav-chapter-active">Patterns</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Generic Parameters and Arguments.html#//apple_ref/doc/uid/TP40014097-CH37-XID_774" data-id="//apple_ref/doc/uid/TP40014097-CH37-XID_774">Generic Parameters and Arguments</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Summary of the Grammar.html#//apple_ref/doc/uid/TP40014097-CH38-XID_1030" data-id="//apple_ref/doc/uid/TP40014097-CH38-XID_1030">Summary of the Grammar</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36"></a><a name="//apple_ref/doc/uid/TP40014097-CH36-XID_878"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Patterns</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH36-XID_887">
+	  				Wildcard Pattern
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH36-XID_890">
+	  				Identifier Pattern
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH36-XID_893">
+	  				Value-Binding Pattern
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH36-XID_896">
+	  				Tuple Pattern
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH36-XID_901">
+	  				Enumeration Case Pattern
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH36-XID_904">
+	  				Type-Casting Patterns
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH36-XID_909">
+	  				Expression Pattern
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  A <em>pattern</em> represents the structure of a single value or a composite value. For example, the structure of a tuple <code class="code-voice">(1, 2)</code> is a comma-separated list of two elements. Because patterns represent the structure of a value rather than any one particular value, you can match them with a variety of values. For instance, the pattern <code class="code-voice">(x, y)</code> matches the tuple <code class="code-voice">(1, 2)</code> and any other two-element tuple. In addition matching a pattern with a value, you can extract part or all of a composite value and bind each part to a constant or variable name.
+</p>
+<p class="para">
+  In Swift, patterns occur in variable and constant declarations (on their left-hand side), in <code class="code-voice">for</code>-<code class="code-voice">in</code> statements, and in <code class="code-voice">switch</code> statements (in their case labels). Although any pattern can occur in the case labels of a <code class="code-voice">switch</code> statement, in the other contexts, only wildcard patterns, identifier patterns, and patterns containing those two patterns can occur.
+</p>
+<p class="para">
+  You can specify a type annotation for a wildcard pattern, an identifier pattern, and a tuple pattern to constraint the pattern to match only values of a certain type.
+</p>
+<div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a pattern
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/pattern"></a>
+  <span class="syntax-def-name">
+  pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="wildcard.html#//apple_ref/swift/grammar/wildcard-pattern" data-id="//apple_ref/swift/grammar/wildcard-pattern">wildcard-pattern</a>­</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_881"></a>
+  <span class="syntax-def-name">
+  pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier-pattern" data-id="//apple_ref/swift/grammar/identifier-pattern">identifier-pattern</a>­</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_882"></a>
+  <span class="syntax-def-name">
+  pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="value.html#//apple_ref/swift/grammar/value-binding-pattern" data-id="//apple_ref/swift/grammar/value-binding-pattern">value-binding-pattern</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_883"></a>
+  <span class="syntax-def-name">
+  pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="tuple.html#//apple_ref/swift/grammar/tuple-pattern" data-id="//apple_ref/swift/grammar/tuple-pattern">tuple-pattern</a>­</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_884"></a>
+  <span class="syntax-def-name">
+  pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="enum.html#//apple_ref/swift/grammar/enum-case-pattern" data-id="//apple_ref/swift/grammar/enum-case-pattern">enum-case-pattern</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_885"></a>
+  <span class="syntax-def-name">
+  pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-casting-pattern" data-id="//apple_ref/swift/grammar/type-casting-pattern">type-casting-pattern</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_886"></a>
+  <span class="syntax-def-name">
+  pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="expression.html#//apple_ref/swift/grammar/expression-pattern" data-id="//apple_ref/swift/grammar/expression-pattern">expression-pattern</a>­</span>
+</p>
+</div>
+ </div>
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_887"></a>
+  <h3 class="section-name" tabindex="0">Wildcard Pattern</h3>
+  <p class="para">
+  A <em>wildcard pattern</em> matches and ignores any value and consists of an underscore (<code class="code-voice">_</code>). Use a wildcard pattern when you don’t care about the values being matched against. For example, the following code iterates through the closed range <code class="code-voice">1..3</code>, ignoring the current value of the range on each iteration of the loop:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">for</span> <span class="kt">_</span> <span class="kt">in</span> <span class="m">1</span>...<span class="m">3</span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// Do something three times.</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a wildcard pattern
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/wildcard-pattern"></a>
+  <span class="syntax-def-name">
+  wildcard-pattern
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">_­</code>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_890"></a>
+  <h3 class="section-name" tabindex="0">Identifier Pattern</h3>
+  <p class="para">
+  An <em>identifier pattern</em> matches any value and binds the matched value to a variable or constant name. For example, in the following constant declaration, <code class="code-voice">someValue</code> is an identifier pattern that matches the value <code class="code-voice">42</code> of type <code class="code-voice">Int</code>:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">someValue</span> = <span class="m">42</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  When the match succeeds, the value <code class="code-voice">42</code> is bound (assigned) to the constant name <code class="code-voice">someValue</code>.
+</p><p class="para">
+  When the pattern on the left-hand side of a variable or constant declaration is an identifier pattern, the identifier pattern is implicitly a subpattern of a value-binding pattern.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of an identifier pattern
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/identifier-pattern"></a>
+  <span class="syntax-def-name">
+  identifier-pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_893"></a>
+  <h3 class="section-name" tabindex="0">Value-Binding Pattern</h3>
+  <p class="para">
+  A <em>value-binding pattern</em> binds matched values to variable or constant names. Value-binding patterns that bind a matched value to the name of a constant begin with the keyword <code class="code-voice">let</code>; those that bind to the name of variable begin with the keyword <code class="code-voice">var</code>.
+</p><p class="para">
+  Identifiers patterns within a value-binding pattern bind new named variables or constants to their matching values. For example, you can decompose the elements of a tuple and bind the value of each element to a corresponding identifier pattern.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">point</span> = (<span class="m">3</span>, <span class="m">2</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">switch</span> <span class="vc">point</span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// Bind x and y to the elements of point.</span></code></li>
+          <li><code class="code-voice"><span class="kt">case</span> <span class="kt">let</span> (<span class="vc">x</span>, <span class="vc">y</span>):</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"The point is at (</span>\(<span class="vc">x</span>)<span class="s">, </span>\(<span class="vc">y</span>)<span class="s">)."</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="c">// prints "The point is at (3, 2)."</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  In the example above, <code class="code-voice">let</code> distributes to each identifier pattern in the tuple pattern <code class="code-voice">(x, y)</code>. Because of this behavior, the <code class="code-voice">switch</code> cases <code class="code-voice">case let (x, y):</code> and <code class="code-voice">case (let x, let y):</code> match the same values.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a value-binding pattern
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/value-binding-pattern"></a>
+  <span class="syntax-def-name">
+  value-binding-pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <code class="literal">var­</code><span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern" data-id="//apple_ref/swift/grammar/pattern">pattern</a>­</span>
+</span><span class="alternative">
+  <code class="literal">let­</code><span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern" data-id="//apple_ref/swift/grammar/pattern">pattern</a>­</span>
+</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_896"></a>
+  <h3 class="section-name" tabindex="0">Tuple Pattern</h3>
+  <p class="para">
+  A <em>tuple pattern</em> is a comma-separated list of zero or more patterns, enclosed in parentheses. Tuple patterns match values of corresponding tuple types.
+</p><p class="para">
+  You can constrain a tuple pattern to match certain kinds of tuple types by using type annotations. For example, the tuple pattern <code class="code-voice">(x, y): (Int, Int)</code> in the constant declaration <code class="code-voice">let (x, y): (Int, Int) = (1, 2)</code> matches only tuple types in which both elements are of type <code class="code-voice">Int</code>. To constrain only some elements of a tuple pattern, provide type annotations directly to those individual elements. For example, the tuple pattern in <code class="code-voice">let (x: String, y)</code> matches any two-element tuple type, as long as the first element is of type <code class="code-voice">String</code>.
+</p><p class="para">
+  When a tuple pattern is used as the pattern in a <code class="code-voice">for</code>-<code class="code-voice">in</code> statement or in a variable or constant declaration, it can contain only wildcard patterns, identifier patterns, or other tuple patterns that contain those. For example, the following code isn’t valid because the element <code class="code-voice">0</code> in the tuple pattern <code class="code-voice">(x, 0)</code> is an expression pattern:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">points</span> = [(<span class="m">0</span>, <span class="m">0</span>), (<span class="m">1</span>, <span class="m">0</span>), (<span class="m">1</span>, <span class="m">1</span>), (<span class="m">2</span>, <span class="m">0</span>), (<span class="m">2</span>, <span class="m">1</span>)]</code></li>
+          <li><code class="code-voice"><span class="c">// This code isn't valid.</span></code></li>
+          <li><code class="code-voice"><span class="kt">for</span> (<span class="vc">x</span>, <span class="m">0</span>) <span class="kt">in</span> <span class="vc">points</span> {</code></li>
+          <li><code class="code-voice">    <span class="c">/* ... */</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The parentheses around a tuple pattern that contains a single element have no effect. The pattern matches values of that single element’s type. For example, the following are equivalent:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">a</span> = <span class="m">2</span>        <span class="c">// a: Int = 2</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> (<span class="vc">a</span>) = <span class="m">2</span>      <span class="c">// a: Int = 2</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> (<span class="vc">a</span>): <span class="n"><!-- a href="" -->Int<!-- /a --></span> = <span class="m">2</span> <span class="c">// a: Int = 2</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a tuple pattern
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/tuple-pattern"></a>
+  <span class="syntax-def-name">
+  tuple-pattern
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">(­</code><span class="optional"><span class="syntactic-cat"><a href="tuple.html#//apple_ref/swift/grammar/tuple-pattern-element-list" data-id="//apple_ref/swift/grammar/tuple-pattern-element-list">tuple-pattern-element-list</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">)­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/tuple-pattern-element-list"></a>
+  <span class="syntax-def-name">
+  tuple-pattern-element-list
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="tuple.html#//apple_ref/swift/grammar/tuple-pattern-element" data-id="//apple_ref/swift/grammar/tuple-pattern-element">tuple-pattern-element</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="tuple.html#//apple_ref/swift/grammar/tuple-pattern-element" data-id="//apple_ref/swift/grammar/tuple-pattern-element">tuple-pattern-element</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a href="tuple.html#//apple_ref/swift/grammar/tuple-pattern-element-list" data-id="//apple_ref/swift/grammar/tuple-pattern-element-list">tuple-pattern-element-list</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/tuple-pattern-element"></a>
+  <span class="syntax-def-name">
+  tuple-pattern-element
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern" data-id="//apple_ref/swift/grammar/pattern">pattern</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_901"></a>
+  <h3 class="section-name" tabindex="0">Enumeration Case Pattern</h3>
+  <p class="para">
+  An <em>enumeration case pattern</em> matches a case of an existing enumeration type. Enumeration case patterns appear only in <code class="code-voice">switch</code> statement case labels.
+</p><p class="para">
+  If the enumeration case you’re trying to match has any associated values, the corresponding enumeration case pattern must specify a tuple pattern that contains one element for each associated value. For an example that uses a <code class="code-voice">switch</code> statement to match enumeration cases containing associated values, see <span class="x-name"><a href="Associated Values.html#//apple_ref/doc/uid/TP40014097-CH12-XID_189" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_189">Associated Values</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of an enumeration case pattern
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/enum-case-pattern"></a>
+  <span class="syntax-def-name">
+  enum-case-pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">.­</code><span class="syntactic-cat"><a href="enum.html#//apple_ref/swift/grammar/enum-case-name" data-id="//apple_ref/swift/grammar/enum-case-name">enum-case-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="tuple.html#//apple_ref/swift/grammar/tuple-pattern" data-id="//apple_ref/swift/grammar/tuple-pattern">tuple-pattern</a>­</span><sub class="subscript">opt</sub>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_904"></a>
+  <h3 class="section-name" tabindex="0">Type-Casting Patterns</h3>
+  <p class="para">
+  There are two type-casting patterns, the <code class="code-voice">is</code> pattern and the <code class="code-voice">as</code> pattern. Both type-casting patterns appear only in <code class="code-voice">switch</code> statement case labels. The <code class="code-voice">is</code> and <code class="code-voice">as</code> patterns have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">is</span> <em class="variable-text">type</em></pre></li><li><pre class="code-voice"><em class="variable-text">pattern</em> <span class="kt">as</span> <em class="variable-text">type</em></pre></li>
+  </ul>
+</div><p class="para">
+  The <code class="code-voice">is</code> pattern matches a value if the type of that value at runtime is the same as the type specified in the right-hand side of the <code class="code-voice">is</code> pattern—or a subclass of that type. The <code class="code-voice">is</code> pattern behaves like the <code class="code-voice">is</code> operator in that they both perform a type cast but discard the returned type.
+</p><p class="para">
+  The <code class="code-voice">as</code> pattern matches a value if the type of that value at runtime is the same as the type specified in the right-hand side of the <code class="code-voice">as</code> pattern—or a subclass of that type. If the match succeeds, the type of the matched value is cast to the <em>pattern</em> specified in the left-hand side of the <code class="code-voice">as</code> pattern.
+</p><p class="para">
+  For an example that uses a <code class="code-voice">switch</code> statement to match values with <code class="code-voice">is</code> and <code class="code-voice">as</code> patterns, see <span class="x-name"><a href="Type Casting for Any and AnyObject.html#//apple_ref/doc/uid/TP40014097-CH22-XID_448" data-id="//apple_ref/doc/uid/TP40014097-CH22-XID_448">Type Casting for Any and AnyObject</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a type casting pattern
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/type-casting-pattern"></a>
+  <span class="syntax-def-name">
+  type-casting-pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="is.html#//apple_ref/swift/grammar/is-pattern" data-id="//apple_ref/swift/grammar/is-pattern">is-pattern</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="as.html#//apple_ref/swift/grammar/as-pattern" data-id="//apple_ref/swift/grammar/as-pattern">as-pattern</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/is-pattern"></a>
+  <span class="syntax-def-name">
+  is-pattern
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">is­</code><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type" data-id="//apple_ref/swift/grammar/type">type</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/as-pattern"></a>
+  <span class="syntax-def-name">
+  as-pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern" data-id="//apple_ref/swift/grammar/pattern">pattern</a>­</span><code class="literal">as­</code><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type" data-id="//apple_ref/swift/grammar/type">type</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH36-XID_909"></a>
+  <h3 class="section-name" tabindex="0">Expression Pattern</h3>
+  <p class="para">
+  An <em>expression pattern</em> represents the value of an expression. Expression patterns appear only in <code class="code-voice">switch</code> statement case labels.
+</p><p class="para">
+  The expression represented by the expression pattern is compared with the value of an input expression using the Swift standard library <code class="code-voice">~=</code> operator. The matches succeeds if the <code class="code-voice">~=</code> operator returns <code class="code-voice">true</code>. By default, the <code class="code-voice">~=</code> operator compares two values of the same type using the <code class="code-voice">==</code> operator. It can also match an integer value with a range of integers in an <code class="code-voice">Range</code> object, as the following example shows:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">point</span> = (<span class="m">1</span>, <span class="m">2</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">switch</span> <span class="vc">point</span> {</code></li>
+          <li><code class="code-voice"><span class="kt">case</span> (<span class="m">0</span>, <span class="m">0</span>):</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"(0, 0) is at the origin."</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">case</span> (-<span class="m">2</span>...<span class="m">2</span>, -<span class="m">2</span>...<span class="m">2</span>):</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"(</span>\(<span class="vc">point</span>.<span class="m">0</span>)<span class="s">, </span>\(<span class="vc">point</span>.<span class="m">1</span>)<span class="s">) is near the origin."</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">default</span>:</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"The point is at (</span>\(<span class="vc">point</span>.<span class="m">0</span>)<span class="s">, </span>\(<span class="vc">point</span>.<span class="m">1</span>)<span class="s">)."</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="c">// prints "(1, 2) is near the origin."</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  You can overload the <code class="code-voice">~=</code> operator to provide custom expression matching behavior. For example, you can rewrite the above example to compare the <code class="code-voice">point</code> expression with a string representations of points.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="c">// Overload the ~= operator to match a string with an integer</span></code></li>
+          <li><code class="code-voice"><span class="kt">func</span> ~=(<span class="vc">pattern</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">value</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Bool<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">pattern</span> == <span class="s">"</span>\(<span class="vc">value</span>)<span class="s">"</span></code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="kt">switch</span> <span class="vc">point</span> {</code></li>
+          <li><code class="code-voice"><span class="kt">case</span> (<span class="s">"0"</span>, <span class="s">"0"</span>):</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"(0, 0) is at the origin."</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">case</span> (<span class="s">"-2...2"</span>, <span class="s">"-2...2"</span>):</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"(</span>\(<span class="vc">point</span>.<span class="m">0</span>)<span class="s">, </span>\(<span class="vc">point</span>.<span class="m">1</span>)<span class="s">) is near the origin."</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">default</span>:</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"The point is at (</span>\(<span class="vc">point</span>.<span class="m">0</span>)<span class="s">, </span>\(<span class="vc">point</span>.<span class="m">1</span>)<span class="s">)."</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="c">// prints "(1, 2) is near the origin."</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of an expression pattern
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/expression-pattern"></a>
+  <span class="syntax-def-name">
+  expression-pattern
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="expression.html#//apple_ref/swift/grammar/expression" data-id="//apple_ref/swift/grammar/expression">expression</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Attributes.html#//apple_ref/doc/uid/TP40014097-CH35-XID_460" data-id="//apple_ref/doc/uid/TP40014097-CH35-XID_460">Attributes</a></p>
+  			<p class="next-link"><a href="Generic Parameters and Arguments.html#//apple_ref/doc/uid/TP40014097-CH37-XID_774" data-id="//apple_ref/doc/uid/TP40014097-CH37-XID_774">Generic Parameters and Arguments</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+    <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script> 
+  </body></html>
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>

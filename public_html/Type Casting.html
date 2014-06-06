@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<!-- saved from url=(0169)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html#//apple_ref/doc/uid/TP40014097-CH22-XID_443 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>The Swift Programming Language: Type Casting</title>
+    <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+<meta id="g-version" name="g-version" content="fe723145">
+<meta id="j-version" name="j-version" content="1.1.5">
+<meta id="build" name="build" content="9c53f481676f09a07ddd8374f439b060">
+<meta id="document-version" name="document-version" content="1.0.76">
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities/Swift}">
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40014097">
+<meta id="book-title" name="book-title" content="The Swift Programming Language">
+<meta id="book-resource-type" name="book-resource-type" content="Guide">
+<meta id="book-root" name="book-root" content="./">
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-06-02">
+<meta id="description" name="description" content="The definitive guide to Swift, Apple’s new programming language for building iOS and OS X apps.">
+<meta id="IndexTitle" name="IndexTitle" content="">
+
+<meta id="devcenter" name="devcenter" content="&lt;!-- DEVCENTER_NAME --&gt;">
+<meta id="devcenter-url" name="devcenter-url" content="&lt;!-- DEVCENTER_URL --&gt;">
+<meta id="reflib" name="reflib" content="&lt;!-- REFLIB_NAME --&gt;">
+
+<meta id="xcode-display" name="xcode-display" content="render">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="//apple_ref/doc/uid/TP40014097" title="The Swift Programming Language"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="iOS Developer Library.html">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="Developer.html>Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">The Swift Programming Language</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="https://developer.apple.com/library/prerelease/ios/search/" accept-charset="utf-8">
+      <input type="search" id="ssi_SearchField" placeholder="Search iOS Developer Library" name="q" accesskey="s">
+    </form>
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11">iBooks</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40014097-CH1-XID_27" class="part-name">Welcome to Swift
+          <ul class="nav-chapters">
+              <li class="nav-chapter nav-visited-chapter">
+              	<a href="About Swift.html#//apple_ref/doc/uid/TP40014097-CH3-XID_0" data-id="//apple_ref/doc/uid/TP40014097-CH3-XID_0" class="">About Swift</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="A Swift Tour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1" data-id="//apple_ref/doc/uid/TP40014097-CH2-XID_1" class="">A Swift Tour</a>
+              </li>
+          </ul>
+        </li><li data-id="//apple_ref/doc/uid/TP40014097-CH4-XID_299" class="part-name nav-part-active open-part">Language Guide
+          <ul class="nav-chapters" style="height: 607px;">
+              <li class="nav-chapter">
+              	<a href="The Basics.html#//apple_ref/doc/uid/TP40014097-CH5-XID_399" data-id="//apple_ref/doc/uid/TP40014097-CH5-XID_399" class="">The Basics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Basic Operators.html#//apple_ref/doc/uid/TP40014097-CH6-XID_70" data-id="//apple_ref/doc/uid/TP40014097-CH6-XID_70" class="">Basic Operators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Strings and Characters.html#//apple_ref/doc/uid/TP40014097-CH7-XID_368" data-id="//apple_ref/doc/uid/TP40014097-CH7-XID_368" class="">Strings and Characters</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Collection Types.html#//apple_ref/doc/uid/TP40014097-CH8-XID_133" data-id="//apple_ref/doc/uid/TP40014097-CH8-XID_133" class="">Collection Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control Flow.html#//apple_ref/doc/uid/TP40014097-CH9-XID_153" data-id="//apple_ref/doc/uid/TP40014097-CH9-XID_153" class="">Control Flow</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Functions.html#//apple_ref/doc/uid/TP40014097-CH10-XID_204" data-id="//apple_ref/doc/uid/TP40014097-CH10-XID_204" class="">Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Closures.html#//apple_ref/doc/uid/TP40014097-CH11-XID_117" data-id="//apple_ref/doc/uid/TP40014097-CH11-XID_117" class="">Closures</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-XID_185" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_185" class="">Enumerations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Classes and Structures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_94" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_94" class="">Classes and Structures</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Properties.html#//apple_ref/doc/uid/TP40014097-CH14-XID_323" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_323" class="">Properties</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Methods.html#//apple_ref/doc/uid/TP40014097-CH15-XID_300" data-id="//apple_ref/doc/uid/TP40014097-CH15-XID_300" class="">Methods</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Subscripts.html#//apple_ref/doc/uid/TP40014097-CH16-XID_393" data-id="//apple_ref/doc/uid/TP40014097-CH16-XID_393" class="">Subscripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-XID_251" data-id="//apple_ref/doc/uid/TP40014097-CH17-XID_251" class="">Inheritance</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-XID_266" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_266" class="">Initialization</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182" data-id="//apple_ref/doc/uid/TP40014097-CH19-XID_182" class="">Deinitialization</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Automatic Reference Counting.html#//apple_ref/doc/uid/TP40014097-CH20-XID_50" data-id="//apple_ref/doc/uid/TP40014097-CH20-XID_50" class="">Automatic Reference Counting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Optional Chaining.html#//apple_ref/doc/uid/TP40014097-CH21-XID_312" data-id="//apple_ref/doc/uid/TP40014097-CH21-XID_312" class="">Optional Chaining</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Type Casting.html" data-id="//apple_ref/doc/uid/TP40014097-CH22-XID_443" class="nav-chapter-active">Type Casting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Nested Types.html#//apple_ref/doc/uid/TP40014097-CH23-XID_309" data-id="//apple_ref/doc/uid/TP40014097-CH23-XID_309">Nested Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Extensions.html#//apple_ref/doc/uid/TP40014097-CH24-XID_191" data-id="//apple_ref/doc/uid/TP40014097-CH24-XID_191">Extensions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Protocols.html#//apple_ref/doc/uid/TP40014097-CH25-XID_345" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_345">Protocols</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Generics.html#//apple_ref/doc/uid/TP40014097-CH26-XID_234" data-id="//apple_ref/doc/uid/TP40014097-CH26-XID_234">Generics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Advanced Operators.html#//apple_ref/doc/uid/TP40014097-CH27-XID_28" data-id="//apple_ref/doc/uid/TP40014097-CH27-XID_28">Advanced Operators</a>
+              </li>
+          </ul>
+        </li><li data-id="//apple_ref/doc/uid/TP40014097-CH28-XID_912" class="part-name">Language Reference
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="About the Language Reference.html#//apple_ref/doc/uid/TP40014097-CH29-XID_453" data-id="//apple_ref/doc/uid/TP40014097-CH29-XID_453" class="">About the Language Reference</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Lexical Structure.html#//apple_ref/doc/uid/TP40014097-CH30-XID_794" data-id="//apple_ref/doc/uid/TP40014097-CH30-XID_794">Lexical Structure</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Types.html#//apple_ref/doc/uid/TP40014097-CH31-XID_988" data-id="//apple_ref/doc/uid/TP40014097-CH31-XID_988">Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Expressions.html#//apple_ref/doc/uid/TP40014097-CH32-XID_655" data-id="//apple_ref/doc/uid/TP40014097-CH32-XID_655">Expressions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Statements.html#//apple_ref/doc/uid/TP40014097-CH33-XID_913" data-id="//apple_ref/doc/uid/TP40014097-CH33-XID_913">Statements</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-XID_475" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_475">Declarations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Attributes.html#//apple_ref/doc/uid/TP40014097-CH35-XID_460" data-id="//apple_ref/doc/uid/TP40014097-CH35-XID_460">Attributes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Patterns.html#//apple_ref/doc/uid/TP40014097-CH36-XID_878" data-id="//apple_ref/doc/uid/TP40014097-CH36-XID_878">Patterns</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Generic Parameters and Arguments.html#//apple_ref/doc/uid/TP40014097-CH37-XID_774" data-id="//apple_ref/doc/uid/TP40014097-CH37-XID_774">Generic Parameters and Arguments</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Summary of the Grammar.html#//apple_ref/doc/uid/TP40014097-CH38-XID_1030" data-id="//apple_ref/doc/uid/TP40014097-CH38-XID_1030">Summary of the Grammar</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22"></a><a name="//apple_ref/doc/uid/TP40014097-CH22-XID_443"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Type Casting</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH22-XID_444">
+	  				Defining a Class Hierarchy for Type Casting
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH22-XID_445">
+	  				Checking Type
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH22-XID_446">
+	  				Downcasting
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH22-XID_448">
+	  				Type Casting for Any and AnyObject
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  <em>Type casting</em> is a way to check the type of an instance, and/or to treat that instance as if it is a different superclass or subclass from somewhere else in its own class hierarchy.
+</p>
+<p class="para">
+  Type casting in Swift is implemented with the <code class="code-voice">is</code> and <code class="code-voice">as</code> operators. These two operators provide a simple and expressive way to check the type of a value or cast a value to a different type.
+</p>
+<p class="para">
+  You can also use type casting to check whether a type conforms to a protocol, as described in <span class="x-name"><a href="Checking for Protocol Conformance.html#//apple_ref/doc/uid/TP40014097-CH25-XID_363" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_363">Checking for Protocol Conformance</a></span>.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_444"></a>
+  <h3 class="section-name" tabindex="0">Defining a Class Hierarchy for Type Casting</h3>
+  <p class="para">
+  You can use type casting with a hierarchy of classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy. The three code snippets below define a hierarchy of classes and an array containing instances of those classes, for use in an example of type casting.
+</p><p class="para">
+  The first snippet defines a new base class called <code class="code-voice">MediaItem</code>. This class provides basic functionality for any kind of item that appears in a digital media library. Specifically, it declares a <code class="code-voice">name</code> property of type <code class="code-voice">String</code>, and an <code class="code-voice">init name</code> initializer. (It is assumed that all media items, including all movies and songs, will have a name.)
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MediaItem</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The next snippet defines two subclasses of <code class="code-voice">MediaItem</code>. The first subclass, <code class="code-voice">Movie</code>, encapsulates additional information about a movie or film. It adds a <code class="code-voice">director</code> property on top of the base <code class="code-voice">MediaItem</code> class, with a corresponding initializer. The second subclass, <code class="code-voice">Song</code>, adds an <code class="code-voice">artist</code> property and initializer on top of the base class:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Movie</span>: <span class="n"><!-- a href="" -->MediaItem<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">director</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">director</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">director</span> = <span class="vc">director</span></code></li>
+          <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>(<span class="vc">name</span>: <span class="vc">name</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Song</span>: <span class="n"><!-- a href="" -->MediaItem<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">artist</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">artist</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">artist</span> = <span class="vc">artist</span></code></li>
+          <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>(<span class="vc">name</span>: <span class="vc">name</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The final snippet creates a constant array called <code class="code-voice">library</code>, which contains two <code class="code-voice">Movie</code> instances and three <code class="code-voice">Song</code> instances. The type of the <code class="code-voice">library</code> array is inferred by initializing it with the contents of an array literal. Swift’s type checker is able to deduce that <code class="code-voice">Movie</code> and <code class="code-voice">Song</code> have a common superclass of <code class="code-voice">MediaItem</code>, and so it infers a type of <code class="code-voice">MediaItem[]</code> for the <code class="code-voice">library</code> array:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">library</span> = [</code></li>
+          <li><code class="code-voice">    <span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"Casablanca"</span>, <span class="vc">director</span>: <span class="s">"Michael Curtiz"</span>),</code></li>
+          <li><code class="code-voice">    <span class="vc">Song</span>(<span class="vc">name</span>: <span class="s">"Blue Suede Shoes"</span>, <span class="vc">artist</span>: <span class="s">"Elvis Presley"</span>),</code></li>
+          <li><code class="code-voice">    <span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"Citizen Kane"</span>, <span class="vc">director</span>: <span class="s">"Orson Welles"</span>),</code></li>
+          <li><code class="code-voice">    <span class="vc">Song</span>(<span class="vc">name</span>: <span class="s">"The One And Only"</span>, <span class="vc">artist</span>: <span class="s">"Chesney Hawkes"</span>),</code></li>
+          <li><code class="code-voice">    <span class="vc">Song</span>(<span class="vc">name</span>: <span class="s">"Never Gonna Give You Up"</span>, <span class="vc">artist</span>: <span class="s">"Rick Astley"</span>)</code></li>
+          <li><code class="code-voice">]</code></li>
+          <li><code class="code-voice"><span class="c">// the type of "library" is inferred to be MediaItem[]</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The items stored in <code class="code-voice">library</code> are still <code class="code-voice">Movie</code> and <code class="code-voice">Song</code> instances behind the scenes. However, if you iterate over the contents of this array, the items you receive back are typed as <code class="code-voice">MediaItem</code>, and not as <code class="code-voice">Movie</code> or <code class="code-voice">Song</code>. In order to work with them as their native type, you need to <em>check</em> their type, or <em>downcast</em> them to a different type, as described below.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_445"></a>
+  <h3 class="section-name" tabindex="0">Checking Type</h3>
+  <p class="para">
+  Use the <em>type check operator</em> (<code class="code-voice">is</code>) to check whether an instance is of a certain subclass type. The type check operator returns <code class="code-voice">true</code> if the instance is of that subclass type and <code class="code-voice">false</code> if it is not.
+</p><p class="para">
+  The example below defines two variables, <code class="code-voice">movieCount</code> and <code class="code-voice">songCount</code>, which count the number of <code class="code-voice">Movie</code> and <code class="code-voice">Song</code> instances in the <code class="code-voice">library</code> array:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">movieCount</span> = <span class="m">0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">songCount</span> = <span class="m">0</span></code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="kt">for</span> <span class="vc">item</span> <span class="kt">in</span> <span class="vc">library</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">if</span> <span class="vc">item</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->Movie<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        ++<span class="vc">movieCount</span></code></li>
+          <li><code class="code-voice">    } <span class="kt">else</span> <span class="kt">if</span> <span class="vc">item</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->Song<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        ++<span class="vc">songCount</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"Media library contains </span>\(<span class="vc">movieCount</span>)<span class="s"> movies and </span>\(<span class="vc">songCount</span>)<span class="s"> songs"</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "Media library contains 2 movies and 3 songs"</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  This example iterates through all items in the <code class="code-voice">library</code> array. On each pass, the <code class="code-voice">for</code>-<code class="code-voice">in</code> loop sets the <code class="code-voice">item</code> constant to the next <code class="code-voice">MediaItem</code> in the array.
+</p><p class="para">
+  <code class="code-voice">item is Movie</code> returns <code class="code-voice">true</code> if the current <code class="code-voice">MediaItem</code> is a <code class="code-voice">Movie</code> instance and <code class="code-voice">false</code> if it is not. Similarly, <code class="code-voice">item is Song</code> checks whether the item is a <code class="code-voice">Song</code> instance. At the end of the <code class="code-voice">for</code>-<code class="code-voice">in</code> loop, the values of <code class="code-voice">movieCount</code> and <code class="code-voice">songCount</code> contain a count of how many <code class="code-voice">MediaItem</code> instances were found of each type.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_446"></a>
+  <h3 class="section-name" tabindex="0">Downcasting</h3>
+  <p class="para">
+  A constant or variable of a certain class type may actually refer to an instance of a subclass behind the scenes. Where you believe this is the case, you can try to <em>downcast</em> to the subclass type with the <em>type cast operator</em> (<code class="code-voice">as</code>).
+</p><p class="para">
+  Because downcasting can fail, the type cast operator comes in two different forms. The optional form, <code class="code-voice">as?</code>, returns an optional value of the type you are trying to downcast to. The forced form, <code class="code-voice">as</code>, attempts the downcast and force-unwraps the result as a single compound action.
+</p><p class="para">
+  Use the optional form of the type cast operator (<code class="code-voice">as?</code>) when you are not sure if the downcast will succeed. This form of the operator will always return an optional value, and the value will be <code class="code-voice">nil</code> if the downcast was not possible. This enables you to check for a successful downcast.
+</p><p class="para">
+  Use the forced form of the type cast operator (<code class="code-voice">as</code>) only when you are sure that the downcast will always succeed. This form of the operator will trigger a runtime error if you try to downcast to an incorrect class type.
+</p><p class="para">
+  The example below iterates over each <code class="code-voice">MediaItem</code> in <code class="code-voice">library</code>, and prints an appropriate description for each item. To do this, it needs to access each item as a true <code class="code-voice">Movie</code> or <code class="code-voice">Song</code>, and not just as a <code class="code-voice">MediaItem</code>. This is necessary in order for it to be able to access the <code class="code-voice">director</code> or <code class="code-voice">artist</code> property of a <code class="code-voice">Movie</code> or <code class="code-voice">Song</code> for use in the description.
+</p><p class="para">
+  In this example, each item in the array might be a <code class="code-voice">Movie</code>, or it might be a <code class="code-voice">Song</code>. You don’t know in advance which actual class to use for each item, and so it is appropriate to use the optional form of the type cast operator (<code class="code-voice">as?</code>) to check the downcast each time through the loop:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">for</span> <span class="vc">item</span> <span class="kt">in</span> <span class="vc">library</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">if</span> <span class="kt">let</span> <span class="vc">movie</span> = <span class="vc">item</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->Movie<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"Movie: '</span>\(<span class="vc">movie</span>.<span class="vc">name</span>)<span class="s">', dir. </span>\(<span class="vc">movie</span>.<span class="vc">director</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">    } <span class="kt">else</span> <span class="kt">if</span> <span class="kt">let</span> <span class="vc">song</span> = <span class="vc">item</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->Song<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"Song: '</span>\(<span class="vc">song</span>.<span class="vc">name</span>)<span class="s">', by </span>\(<span class="vc">song</span>.<span class="vc">artist</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="c">// Movie: 'Casablanca', dir. Michael Curtiz</span></code></li>
+          <li><code class="code-voice"><span class="c">// Song: 'Blue Suede Shoes', by Elvis Presley</span></code></li>
+          <li><code class="code-voice"><span class="c">// Movie: 'Citizen Kane', dir. Orson Welles</span></code></li>
+          <li><code class="code-voice"><span class="c">// Song: 'The One And Only', by Chesney Hawkes</span></code></li>
+          <li><code class="code-voice"><span class="c">// Song: 'Never Gonna Give You Up', by Rick Astley</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The example starts by trying to downcast the current <code class="code-voice">item</code> as a <code class="code-voice">Movie</code>. Because <code class="code-voice">item</code> is a <code class="code-voice">MediaItem</code> instance, it’s possible that it <em>might</em> be a <code class="code-voice">Movie</code>; equally, it’s also possible that it might a <code class="code-voice">Song</code>, or even just a base <code class="code-voice">MediaItem</code>. Because of this uncertainty, the <code class="code-voice">as?</code> form of the type cast operator returns an <em>optional</em> value when attempting to downcast to a subclass type. The result of <code class="code-voice">item as Movie</code> is of type <code class="code-voice">Movie?</code>, or “optional <code class="code-voice">Movie</code>”.
+</p><p class="para">
+  Downcasting to <code class="code-voice">Movie</code> fails when applied to the two <code class="code-voice">Song</code> instances in the library array. To cope with this, the example above uses optional binding to check whether the optional <code class="code-voice">Movie</code> actually contains a value (that is, to find out whether the downcast succeeded.) This optional binding is written “<code class="code-voice">if let movie = item as? Movie</code>”, which can be read as:
+</p><p class="para">
+  “Try to access <code class="code-voice">item</code> as a <code class="code-voice">Movie</code>. If this is successful, set a new temporary constant called <code class="code-voice">movie</code> to the value stored in the returned optional <code class="code-voice">Movie</code>.”
+</p><p class="para">
+  If the downcasting succeeds, the properties of <code class="code-voice">movie</code> are then used to print a description for that <code class="code-voice">Movie</code> instance, including the name of its <code class="code-voice">director</code>. A similar principle is used to check for <code class="code-voice">Song</code> instances, and to print an appropriate description (including <code class="code-voice">artist</code> name) whenever a <code class="code-voice">Song</code> is found in the library.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_447"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Casting does not actually modify the instance or change its values. The underlying instance remains the same; it is simply treated and accessed as an instance of the type to which it has been cast.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_448"></a>
+  <h3 class="section-name" tabindex="0">Type Casting for Any and AnyObject</h3>
+  <p class="para">
+  Swift provides two special type aliases for working with non-specific types:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <code class="code-voice">AnyObject</code> can represent an instance of any class type.
+</p>
+</li><li class="item"><p class="para">
+  <code class="code-voice">Any</code> can represent an instance of any type at all, apart from function types.
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_449"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Use <code class="code-voice">Any</code> and <code class="code-voice">AnyObject</code> only when you explicitly need the behavior and capabilities they provide. It is always better to be specific about the types you expect to work with in your code.
+    	</p>
+    
+  </aside>
+</div>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_450"></a>
+  <h3 class="section-name" tabindex="0">AnyObject</h3>
+  <p class="para">
+  When working with Cocoa APIs, it is common to receive an array with a type of <code class="code-voice">AnyObject[]</code>, or “an array of values of any object type”. This is because Objective-C does not have explicitly typed arrays. However, you can often be confident about the type of objects contained in such an array just from the information you know about the API that provided the array.
+</p><p class="para">
+  In these situations, you can use the forced version of the type cast operator (<code class="code-voice">as</code>) to downcast each item in the array to a more specific class type than <code class="code-voice">AnyObject</code>, without the need for optional unwrapping.
+</p><p class="para">
+  The example below defines an array of type <code class="code-voice">AnyObject[]</code> and populates this array with three instances of the <code class="code-voice">Movie</code> class:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">someObjects</span>: <span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>[] = [</code></li>
+          <li><code class="code-voice">    <span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"2001: A Space Odyssey"</span>, <span class="vc">director</span>: <span class="s">"Stanley Kubrick"</span>),</code></li>
+          <li><code class="code-voice">    <span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"Moon"</span>, <span class="vc">director</span>: <span class="s">"Duncan Jones"</span>),</code></li>
+          <li><code class="code-voice">    <span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"Alien"</span>, <span class="vc">director</span>: <span class="s">"Ridley Scott"</span>)</code></li>
+          <li><code class="code-voice">]</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  Because this array is known to contain only <code class="code-voice">Movie</code> instances, you can downcast and unwrap directly to a non-optional <code class="code-voice">Movie</code> with the forced version of the type cast operator (<code class="code-voice">as</code>):
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">for</span> <span class="vc">object</span> <span class="kt">in</span> <span class="vc">someObjects</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">movie</span> = <span class="vc">object</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Movie<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"Movie: '</span>\(<span class="vc">movie</span>.<span class="vc">name</span>)<span class="s">', dir. </span>\(<span class="vc">movie</span>.<span class="vc">director</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="c">// Movie: '2001: A Space Odyssey', dir. Stanley Kubrick</span></code></li>
+          <li><code class="code-voice"><span class="c">// Movie: 'Moon', dir. Duncan Jones</span></code></li>
+          <li><code class="code-voice"><span class="c">// Movie: 'Alien', dir. Ridley Scott</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  For an even shorter form of this loop, downcast the <code class="code-voice">someObjects</code> array to a type of <code class="code-voice">Movie[]</code> instead of downcasting each item:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">for</span> <span class="vc">movie</span> <span class="kt">in</span> <span class="vc">someObjects</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Movie<!-- /a --></span>[] {</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"Movie: '</span>\(<span class="vc">movie</span>.<span class="vc">name</span>)<span class="s">', dir. </span>\(<span class="vc">movie</span>.<span class="vc">director</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="c">// Movie: '2001: A Space Odyssey', dir. Stanley Kubrick</span></code></li>
+          <li><code class="code-voice"><span class="c">// Movie: 'Moon', dir. Duncan Jones</span></code></li>
+          <li><code class="code-voice"><span class="c">// Movie: 'Alien', dir. Ridley Scott</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_451"></a>
+  <h3 class="section-name" tabindex="0">Any</h3>
+  <p class="para">
+  Here’s an example of using <code class="code-voice">Any</code> to work with a mix of different types, including non-class types. The example creates an array called <code class="code-voice">things</code>, which can store values of type <code class="code-voice">Any</code>:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">things</span> = <span class="vc">Any</span>[]()</code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="vc">things</span>.<span class="vc">append</span>(<span class="m">0</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">things</span>.<span class="vc">append</span>(<span class="m">0.0</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">things</span>.<span class="vc">append</span>(<span class="m">42</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">things</span>.<span class="vc">append</span>(<span class="m">3.14159</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">things</span>.<span class="vc">append</span>(<span class="s">"hello"</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">things</span>.<span class="vc">append</span>((<span class="m">3.0</span>, <span class="m">5.0</span>))</code></li>
+          <li><code class="code-voice"><span class="vc">things</span>.<span class="vc">append</span>(<span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"Ghostbusters"</span>, <span class="vc">director</span>: <span class="s">"Ivan Reitman"</span>))</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The <code class="code-voice">things</code> array contains two <code class="code-voice">Int</code> values, two <code class="code-voice">Double</code> values, a <code class="code-voice">String</code> value, a tuple of type <code class="code-voice">(Double, Double)</code>, and the movie “Ghostbusters”, directed by Ivan Reitman.
+</p><p class="para">
+  You can use the <code class="code-voice">is</code> and <code class="code-voice">as</code> operators in a <code class="code-voice">switch</code> statement’s cases to discover the specific type of a constant or variable that is known only to be of type <code class="code-voice">Any</code> or <code class="code-voice">AnyObject</code>. The example below iterates over the items in the <code class="code-voice">things</code> array and queries the type of each item with a <code class="code-voice">switch</code> statement. Several of the <code class="code-voice">switch</code> statement’s cases bind their matched value to a constant of the specified type to enable its value to be printed:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">for</span> <span class="vc">thing</span> <span class="kt">in</span> <span class="vc">things</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">switch</span> <span class="vc">thing</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="m">0</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Int<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"zero as an Int"</span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="m">0</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Double<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"zero as a Double"</span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someInt</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Int<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"an integer value of </span>\(<span class="vc">someInt</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someDouble</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Double<!-- /a --></span> <span class="kt">where</span> <span class="vc">someDouble</span> &gt; <span class="m">0</span>:</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"a positive double value of </span>\(<span class="vc">someDouble</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">is</span> <span class="vc">Double</span>:</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"some other double value that I don't want to print"</span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someString</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->String<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"a string value of \"</span>\(<span class="vc">someString</span>)<span class="s">\""</span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> (<span class="vc">x</span>, <span class="vc">y</span>) <span class="kt">as</span> (<span class="n"><!-- a href="" -->Double<!-- /a --></span>, <span class="n"><!-- a href="" -->Double<!-- /a --></span>):</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"an (x, y) point at </span>\(<span class="vc">x</span>)<span class="s">, </span>\(<span class="vc">y</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">movie</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Movie<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"a movie called '</span>\(<span class="vc">movie</span>.<span class="vc">name</span>)<span class="s">', dir. </span>\(<span class="vc">movie</span>.<span class="vc">director</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">default</span>:</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"something else"</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="c">// zero as an Int</span></code></li>
+          <li><code class="code-voice"><span class="c">// zero as a Double</span></code></li>
+          <li><code class="code-voice"><span class="c">// an integer value of 42</span></code></li>
+          <li><code class="code-voice"><span class="c">// a positive double value of 3.14159</span></code></li>
+          <li><code class="code-voice"><span class="c">// a string value of "hello"</span></code></li>
+          <li><code class="code-voice"><span class="c">// an (x, y) point at 3.0, 5.0</span></code></li>
+          <li><code class="code-voice"><span class="c">// a movie called 'Ghostbusters', dir. Ivan Reitman</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014097-CH22-XID_452"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">The cases of a <code class="code-voice">switch</code> statement use the forced version of the type cast operator (<code class="code-voice">as</code>, not <code class="code-voice">as?</code>) to check and cast to a specific type. This check is always safe within the context of a <code class="code-voice">switch</code> case statement.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Optional Chaining.html#//apple_ref/doc/uid/TP40014097-CH21-XID_312" data-id="//apple_ref/doc/uid/TP40014097-CH21-XID_312">Optional Chaining</a></p>
+  			<p class="next-link"><a href="Nested Types.html#//apple_ref/doc/uid/TP40014097-CH23-XID_309" data-id="//apple_ref/doc/uid/TP40014097-CH23-XID_309">Nested Types</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+    <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script> 
+  </body></html>
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>

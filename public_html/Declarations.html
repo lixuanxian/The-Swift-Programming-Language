@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<!-- saved from url=(0170)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-XID_475 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>The Swift Programming Language: Declarations</title>
+    <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+<meta id="g-version" name="g-version" content="fe723145">
+<meta id="j-version" name="j-version" content="1.1.5">
+<meta id="build" name="build" content="9c53f481676f09a07ddd8374f439b060">
+<meta id="document-version" name="document-version" content="1.0.76">
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities/Swift}">
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40014097">
+<meta id="book-title" name="book-title" content="The Swift Programming Language">
+<meta id="book-resource-type" name="book-resource-type" content="Guide">
+<meta id="book-root" name="book-root" content="./">
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-06-02">
+<meta id="description" name="description" content="The definitive guide to Swift, Apple’s new programming language for building iOS and OS X apps.">
+<meta id="IndexTitle" name="IndexTitle" content="">
+
+<meta id="devcenter" name="devcenter" content="&lt;!-- DEVCENTER_NAME --&gt;">
+<meta id="devcenter-url" name="devcenter-url" content="&lt;!-- DEVCENTER_URL --&gt;">
+<meta id="reflib" name="reflib" content="&lt;!-- REFLIB_NAME --&gt;">
+
+<meta id="xcode-display" name="xcode-display" content="render">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="//apple_ref/doc/uid/TP40014097" title="The Swift Programming Language"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="iOS Developer Library.html">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="Developer.html>Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">The Swift Programming Language</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="https://developer.apple.com/library/prerelease/ios/search/" accept-charset="utf-8">
+      <input type="search" id="ssi_SearchField" placeholder="Search iOS Developer Library" name="q" accesskey="s">
+    </form>
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11">iBooks</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+
+
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34"></a><a name="//apple_ref/doc/uid/TP40014097-CH34-XID_475"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Declarations</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_494">
+	  				Module Scope
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_497">
+	  				Code Blocks
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_500">
+	  				Import Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_506">
+	  				Constant Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_512">
+	  				Variable Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_539">
+	  				Type Alias Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_545">
+	  				Function Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_566">
+	  				Enumeration Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_587">
+	  				Structure Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_592">
+	  				Class Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_597">
+	  				Protocol Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_625">
+	  				Initializer Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_630">
+	  				Deinitializer Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_633">
+	  				Extension Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_637">
+	  				Subscript Declaration
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH34-XID_644">
+	  				Operator Declaration
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  A <em>declaration</em> introduces a new name or construct into your program. For example, you use declarations to introduce functions and methods, variables and constants, and to define new, named enumeration, structure, class, and protocol types. You can also use a declaration to extend the the behavior of an existing named type and to import symbols into your program that are declared elsewhere.
+</p>
+<p class="para">
+  In Swift, most declarations are also definitions in the sense that they are implemented or initialized at the same time they are declared. That said, because protocols don’t implement their members, most protocol members are declarations only. For convenience and because the distinction isn’t that important in Swift, the term <em>declaration</em> covers both declarations and definitions.
+</p>
+<div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/declaration"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="import.html#//apple_ref/swift/grammar/import-declaration" data-id="//apple_ref/swift/grammar/import-declaration">import-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_478"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="constant.html#//apple_ref/swift/grammar/constant-declaration" data-id="//apple_ref/swift/grammar/constant-declaration">constant-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_479"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-declaration" data-id="//apple_ref/swift/grammar/variable-declaration">variable-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_480"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="typealias.html#//apple_ref/swift/grammar/typealias-declaration" data-id="//apple_ref/swift/grammar/typealias-declaration">typealias-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_481"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-declaration" data-id="//apple_ref/swift/grammar/function-declaration">function-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_482"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="enum.html#//apple_ref/swift/grammar/enum-declaration" data-id="//apple_ref/swift/grammar/enum-declaration">enum-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_483"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="struct.html#//apple_ref/swift/grammar/struct-declaration" data-id="//apple_ref/swift/grammar/struct-declaration">struct-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_484"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="class.html#//apple_ref/swift/grammar/class-declaration" data-id="//apple_ref/swift/grammar/class-declaration">class-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_485"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-declaration" data-id="//apple_ref/swift/grammar/protocol-declaration">protocol-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_486"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="initializer.html#//apple_ref/swift/grammar/initializer-declaration" data-id="//apple_ref/swift/grammar/initializer-declaration">initializer-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_487"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="deinitializer.html#//apple_ref/swift/grammar/deinitializer-declaration" data-id="//apple_ref/swift/grammar/deinitializer-declaration">deinitializer-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_488"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="extension.html#//apple_ref/swift/grammar/extension-declaration" data-id="//apple_ref/swift/grammar/extension-declaration">extension-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_489"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-declaration" data-id="//apple_ref/swift/grammar/subscript-declaration">subscript-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_490"></a>
+  <span class="syntax-def-name">
+  declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="operator.html#//apple_ref/swift/grammar/operator-declaration" data-id="//apple_ref/swift/grammar/operator-declaration">operator-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/declarations"></a>
+  <span class="syntax-def-name">
+  declarations
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="declaration.html#//apple_ref/swift/grammar/declaration" data-id="//apple_ref/swift/grammar/declaration">declaration</a>­</span><span class="optional"><span class="syntactic-cat"><a href="declarations.html#//apple_ref/swift/grammar/declarations" data-id="//apple_ref/swift/grammar/declarations">declarations</a>­</span><sub class="subscript">opt</sub>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/declaration-specifiers"></a>
+  <span class="syntax-def-name">
+  declaration-specifiers
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="declaration.html#//apple_ref/swift/grammar/declaration-specifier" data-id="//apple_ref/swift/grammar/declaration-specifier">declaration-specifier</a>­</span><span class="optional"><span class="syntactic-cat"><a href="declaration.html#//apple_ref/swift/grammar/declaration-specifiers" data-id="//apple_ref/swift/grammar/declaration-specifiers">declaration-specifiers</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/declaration-specifier"></a>
+  <span class="syntax-def-name">
+  declaration-specifier
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <code class="literal">class­</code>
+</span><span class="alternative">
+  <code class="literal">mutating­</code>
+</span><span class="alternative">
+  <code class="literal">nonmutating­</code>
+</span><span class="alternative">
+  <code class="literal">override­</code>
+</span><span class="alternative">
+  <code class="literal">static­</code>
+</span><span class="alternative">
+  <code class="literal">unowned­</code>
+</span><span class="alternative">
+  <code class="literal">unowned(safe)­</code>
+</span><span class="alternative">
+  <code class="literal">unowned(unsafe)­</code>
+</span><span class="alternative">
+  <code class="literal">weak­</code>
+</span>
+</p>
+</div>
+ </div>
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_494"></a>
+  <h3 class="section-name" tabindex="0">Module Scope</h3>
+  <p class="para">
+  The module scope defines the code that’s visible to other code in Swift source files that are part of the same module. The top-level code in a Swift source file consists of zero or more statements, declarations, and expressions. Variables, constants, and other named declarations that are declared at the top-level of a source file are visible to code in every source file that is part of the same module.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a top-level declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/top-level-declaration"></a>
+  <span class="syntax-def-name">
+  top-level-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="statements.html#//apple_ref/swift/grammar/statements" data-id="//apple_ref/swift/grammar/statements">statements</a>­</span><sub class="subscript">opt</sub>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_497"></a>
+  <h3 class="section-name" tabindex="0">Code Blocks</h3>
+  <p class="para">
+  A <em>code block</em> is used by a variety of declarations and control structures to group statements together. It has the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice">{</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  The <em>statements</em> inside a code block include declarations, expressions, and other kinds of statements and are executed in order of their appearance in source code.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a code block
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/code-block"></a>
+  <span class="syntax-def-name">
+  code-block
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="statements.html#//apple_ref/swift/grammar/statements" data-id="//apple_ref/swift/grammar/statements">statements</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_500"></a>
+  <h3 class="section-name" tabindex="0">Import Declaration</h3>
+  <p class="para">
+  An <em>import declaration</em> lets you access symbols that are declared outside the current file. The basic form imports the entire module; it consists of the <code class="code-voice">import</code> keyword followed by a module name:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">import</span> <em class="variable-text">module</em></pre></li>
+  </ul>
+</div><p class="para">
+  Providing more detail limits which symbols are imported—you can specify a specific submodule or a specific declaration within a module or submodule. When this detailed form is used, only the imported symbol (and not the module that declares it) is made available in the current scope.
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">import</span> <em class="variable-text">import kind</em> <em class="variable-text">module</em>.<em class="variable-text">symbol name</em></pre></li><li><pre class="code-voice"><span class="kt">import</span> <em class="variable-text">module</em>.<em class="variable-text">submodule</em></pre></li>
+  </ul>
+</div><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of an import declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/import-declaration"></a>
+  <span class="syntax-def-name">
+  import-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">import­</code><span class="optional"><span class="syntactic-cat"><a href="import.html#//apple_ref/swift/grammar/import-kind" data-id="//apple_ref/swift/grammar/import-kind">import-kind</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="import.html#//apple_ref/swift/grammar/import-path" data-id="//apple_ref/swift/grammar/import-path">import-path</a>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/import-kind"></a>
+  <span class="syntax-def-name">
+  import-kind
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <code class="literal">typealias­</code>
+</span><span class="alternative">
+  <code class="literal">struct­</code>
+</span><span class="alternative">
+  <code class="literal">class­</code>
+</span><span class="alternative">
+  <code class="literal">enum­</code>
+</span><span class="alternative">
+  <code class="literal">protocol­</code>
+</span><span class="alternative">
+  <code class="literal">var­</code>
+</span><span class="alternative">
+  <code class="literal">func­</code>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/import-path"></a>
+  <span class="syntax-def-name">
+  import-path
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="import.html#//apple_ref/swift/grammar/import-path-identifier" data-id="//apple_ref/swift/grammar/import-path-identifier">import-path-identifier</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="import.html#//apple_ref/swift/grammar/import-path-identifier" data-id="//apple_ref/swift/grammar/import-path-identifier">import-path-identifier</a>­</span><code class="literal">.­</code><span class="syntactic-cat"><a href="import.html#//apple_ref/swift/grammar/import-path" data-id="//apple_ref/swift/grammar/import-path">import-path</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/import-path-identifier"></a>
+  <span class="syntax-def-name">
+  import-path-identifier
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="operator.html#//apple_ref/swift/grammar/operator" data-id="//apple_ref/swift/grammar/operator">operator</a>­</span>
+</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_506"></a>
+  <h3 class="section-name" tabindex="0">Constant Declaration</h3>
+  <p class="para">
+  A <em>constant declaration</em> introduces a constant named value into your program. Constant declarations are declared using the keyword <code class="code-voice">let</code> and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">let</span> <em class="variable-text">constant name</em>: <em class="variable-text">type</em> = <em class="variable-text">expression</em></pre></li>
+  </ul>
+</div><p class="para">
+  A constant declaration defines an immutable binding between the <em>constant name</em> and the value of the initializer <em>expression</em>; after the value of a constant is set, it cannot be changed. That said, if a constant is initialized with a class object, the object itself can change, but the binding between the constant name and the object it refers to can’t.
+</p><p class="para">
+  When a constant is declared at global scope, it must be initialized with a value. When a constant declaration occurs in the context of a class or structure declaration, it is considered a <em>constant property</em>. Constant declarations are not computed properties and therefore do not have getters or setters.
+</p><p class="para">
+  If the <em>constant name</em> of a constant declaration is a tuple pattern, the name of each item in the tuple is bound to the corresponding value in the initializer <em>expression</em>.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> (<span class="vc">firstNumber</span>, <span class="vc">secondNumber</span>) = (<span class="m">10</span>, <span class="m">42</span>)</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  In this example, <code class="code-voice">firstNumber</code> is a named constant for the value <code class="code-voice">10</code>, and <code class="code-voice">secondNumber</code> is a named constant for the value <code class="code-voice">42</code>. Both constants can now be used independently:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"The first number is </span>\(<span class="vc">firstNumber</span>)<span class="s">."</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "The first number is 10."</span></code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"The second number is </span>\(<span class="vc">secondNumber</span>)<span class="s">."</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "The second number is 42."</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The type annotation (<code class="code-voice">:</code> <em>type</em>) is optional in a constant declaration when the type of the <em>constant name</em> can be inferred, as described in <span class="x-name"><a href="Type Inference.html#//apple_ref/doc/uid/TP40014097-CH31-XID_1029" data-id="//apple_ref/doc/uid/TP40014097-CH31-XID_1029">Type Inference</a></span>.
+</p><p class="para">
+  To declare a static constant property, mark the declaration with the <code class="code-voice">static</code> keyword. Static properties are discussed in <span class="x-name"><a href="Type Properties.html#//apple_ref/doc/uid/TP40014097-CH14-XID_339" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_339">Type Properties</a></span>.
+</p><p class="para">
+  For more information about constants and for guidance about when to use them, see <span class="x-name"><a href="Constants and Variables.html#//apple_ref/doc/uid/TP40014097-CH5-XID_400" data-id="//apple_ref/doc/uid/TP40014097-CH5-XID_400">Constants and Variables</a></span> and <span class="x-name"><a href="Stored Properties.html#//apple_ref/doc/uid/TP40014097-CH14-XID_324" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_324">Stored Properties</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a constant declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/constant-declaration"></a>
+  <span class="syntax-def-name">
+  constant-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="optional"><span class="syntactic-cat"><a href="declaration.html#//apple_ref/swift/grammar/declaration-specifiers" data-id="//apple_ref/swift/grammar/declaration-specifiers">declaration-specifiers</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">let­</code><span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern-initializer-list" data-id="//apple_ref/swift/grammar/pattern-initializer-list">pattern-initializer-list</a>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/pattern-initializer-list"></a>
+  <span class="syntax-def-name">
+  pattern-initializer-list
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern-initializer" data-id="//apple_ref/swift/grammar/pattern-initializer">pattern-initializer</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern-initializer" data-id="//apple_ref/swift/grammar/pattern-initializer">pattern-initializer</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern-initializer-list" data-id="//apple_ref/swift/grammar/pattern-initializer-list">pattern-initializer-list</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/pattern-initializer"></a>
+  <span class="syntax-def-name">
+  pattern-initializer
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern" data-id="//apple_ref/swift/grammar/pattern">pattern</a>­</span><span class="optional"><span class="syntactic-cat"><a href="initializer.html#//apple_ref/swift/grammar/initializer" data-id="//apple_ref/swift/grammar/initializer">initializer</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/initializer"></a>
+  <span class="syntax-def-name">
+  initializer
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">=­</code><span class="syntactic-cat"><a href="expression.html#//apple_ref/swift/grammar/expression" data-id="//apple_ref/swift/grammar/expression">expression</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_512"></a>
+  <h3 class="section-name" tabindex="0">Variable Declaration</h3>
+  <p class="para">
+  A <em>variable declaration</em> introduces a variable named value into your program and is declared using the keyword <code class="code-voice">var</code>.
+</p><p class="para">
+  Variable declarations have several forms that declare different kinds of named, mutable values, including stored and computed variables and properties, stored variable and property observers, and static variable properties. The appropriate form to use depends on the scope at which the variable is declared and the kind of variable you intend to declare.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_513"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">You can also declare properties in the context of a protocol declaration, as described in <span class="x-name"><a href="Protocol Property Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_610" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_610">Protocol Property Declaration</a></span>.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  You can override a property in a subclass by prefixing the subclass’s property declaration with the <code class="code-voice">override</code> keyword, as described in <span class="x-name"><a href="Overriding.html#//apple_ref/doc/uid/TP40014097-CH17-XID_257" data-id="//apple_ref/doc/uid/TP40014097-CH17-XID_257">Overriding</a></span>.
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_514"></a>
+  <h3 class="section-name" tabindex="0">Stored Variables and Stored Variable Properties</h3>
+  <p class="para">
+  The following form declares a stored variable or stored variable property:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">var</span> <em class="variable-text">variable name</em>: <em class="variable-text">type</em> = <em class="variable-text">expression</em></pre></li>
+  </ul>
+</div><p class="para">
+  You define this form of a variable declaration at global scope, the local scope of a function, or in the context of a class or structure declaration. When a variable declaration of this form is declared at global scope or the local scope of a function, it is referred to as a <em>stored variable</em>. When it is declared in the context of a class or structure declaration, it is referred to as a <em>stored variable property</em>.
+</p><p class="para">
+  The initializer <em>expression</em> can’t be present in a protocol declaration, but in all other contexts, the initializer <em>expression</em> is optional. That said, if no initializer <em>expression</em> is present, the variable declaration must include an explicit type annotation (<code class="code-voice">:</code> <em>type</em>).
+</p><p class="para">
+  As with constant declarations, if the <em>variable name</em> is a tuple pattern, the name of each item in the tuple is bound to the corresponding value in the initializer <em>expression</em>.
+</p><p class="para">
+  As their names suggest, the value of a stored variable or a stored variable property is stored in memory.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_515"></a>
+  <h3 class="section-name" tabindex="0">Computed Variables and Computed Properties</h3>
+  <p class="para">
+  The following form declares a computed variable or computed property:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">var</span> <em class="variable-text">variable name</em>: <em class="variable-text">type</em> {</pre></li><li><pre class="code-voice"><span class="kt">get</span> {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li><li><pre class="code-voice"><span class="kt">set</span>(<em class="variable-text">setter name</em>) {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  You define this form of a variable declaration at global scope, the local scope of a function, or in the context of a class, structure, enumeration, or extension declaration. When a variable declaration of this form is declared at global scope or the local scope of a function, it is referred to as a <em>computed variable</em>. When it is declared in the context of a class, structure, or extension declaration, it is referred to as a <em>computed property</em>.
+</p><p class="para">
+  The getter is used to read the value, and the setter is used to write the value. The setter clause is optional, and when only a getter is needed, you can omit both clauses and simply return the requested value directly, as described in <span class="x-name"><a href="Read.html#//apple_ref/doc/uid/TP40014097-CH14-XID_331" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_331">Read-Only Computed Properties</a></span>. But if you provide a setter clause, you must also provide a getter clause.
+</p><p class="para">
+  The <em>setter name</em> and enclosing parentheses is optional. If you provide a setter name, it is used as the name of the parameter to the setter. If you do not provide a setter name, the default parameter name to the setter is <code class="code-voice">newValue</code>, as described in <span class="x-name"><a href="Shorthand Setter Declaration.html#//apple_ref/doc/uid/TP40014097-CH14-XID_330" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_330">Shorthand Setter Declaration</a></span>.
+</p><p class="para">
+  Unlike stored named values and stored variable properties, the value of a computed named value or a computed property is not stored in memory.
+</p><p class="para">
+  For more information and to see examples of computed properties, see <span class="x-name"><a href="Computed Properties.html#//apple_ref/doc/uid/TP40014097-CH14-XID_329" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_329">Computed Properties</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_516"></a>
+  <h3 class="section-name" tabindex="0">Stored Variable Observers and Property Observers</h3>
+  <p class="para">
+  You can also declare a stored variable or property with <code class="code-voice">willSet</code> and <code class="code-voice">didSet</code> observers. A stored variable or property declared with observers has the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">var</span> <em class="variable-text">variable name</em>: <em class="variable-text">type</em> = <em class="variable-text">expression</em> {</pre></li><li><pre class="code-voice"><span class="kt">willSet</span>(<em class="variable-text">setter name</em>) {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li><li><pre class="code-voice"><span class="kt">didSet</span>(<em class="variable-text">setter name</em> {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  You define this form of a variable declaration at global scope, the local scope of a function, or in the context of a class or structure declaration. When a variable declaration of this form is declared at global scope or the local scope of a function, the observers are referred to as <em>stored variable observers</em>. When it is declared in the context of a class or structure declaration, the observers are referred to as <em>property observers</em>.
+</p><p class="para">
+  You can add property observers to any stored property. You can also add property observers to any inherited property (whether stored or computed) by overriding the property within a subclass, as described in <span class="x-name"><a href="Overriding Property Observers.html#//apple_ref/doc/uid/TP40014097-CH17-XID_263" data-id="//apple_ref/doc/uid/TP40014097-CH17-XID_263">Overriding Property Observers</a></span>.
+</p><p class="para">
+  The initializer <em>expression</em> is optional in the context of a class or structure declaration, but required elsewhere. The type annotation is required in all variable declarations that include observers, regardless of the context in which they are declared.
+</p><p class="para">
+  The <code class="code-voice">willSet</code> and <code class="code-voice">didSet</code> observers provide a way to observe (and to respond appropriately) when the value of a variable or property is being set. The observers are not called when the variable or property is first initialized. Instead, they are called only when the value is set outside of an initialization context.
+</p><p class="para">
+  A <code class="code-voice">willSet</code> observer is called just before the value of the variable or property is set. The new value is passed to the <code class="code-voice">willSet</code> observer as a constant, and therefore it can’t be changed in the implementation of the <code class="code-voice">willSet</code> clause. The <code class="code-voice">didSet</code> observer is called immediately after the new value is set. In contrast to the <code class="code-voice">willSet</code> observer, the old value of the variable or property is passed to the <code class="code-voice">didSet</code> observer in case you still need access to it. That said, if you assign a value to a variable or property within its own <code class="code-voice">didSet</code> observer clause, that new value that you assign will replace the one that was just set and passed to the <code class="code-voice">willSet</code> observer.
+</p><p class="para">
+  The <em>setter name</em> and enclosing parentheses in the <code class="code-voice">willSet</code> and <code class="code-voice">didSet</code> clauses are optional. If you provide setter names, they are used as the parameter names to the <code class="code-voice">willSet</code> and <code class="code-voice">didSet</code> observers. If you do not provide setter names, the default parameter name to the <code class="code-voice">willSet</code> observer is <code class="code-voice">newValue</code> and the default parameter name to the <code class="code-voice">didSet</code> observer is <code class="code-voice">oldValue</code>.
+</p><p class="para">
+  The <code class="code-voice">didSet</code> clause is optional when you provide a <code class="code-voice">willSet</code> clause. Likewise, the <code class="code-voice">willSet</code> clause is optional when you provide a <code class="code-voice">didSet</code> clause.
+</p><p class="para">
+  For more information and to see an example of how to use property observers, see <span class="x-name"><a href="Property Observers.html#//apple_ref/doc/uid/TP40014097-CH14-XID_333" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_333">Property Observers</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_517"></a>
+  <h3 class="section-name" tabindex="0">Class and Static Variable Properties</h3>
+  <p class="para">
+  To declare a class computed property, mark the declaration with the <code class="code-voice">class</code> keyword. To declare a static variable property, mark the declaration with the <code class="code-voice">static</code> keyword. Class and static properties are discussed in <span class="x-name"><a href="Type Properties.html#//apple_ref/doc/uid/TP40014097-CH14-XID_339" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_339">Type Properties</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a variable declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/variable-declaration"></a>
+  <span class="syntax-def-name">
+  variable-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-declaration-head" data-id="//apple_ref/swift/grammar/variable-declaration-head">variable-declaration-head</a>­</span><span class="syntactic-cat"><a href="pattern.html#//apple_ref/swift/grammar/pattern-initializer-list" data-id="//apple_ref/swift/grammar/pattern-initializer-list">pattern-initializer-list</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_520"></a>
+  <span class="syntax-def-name">
+  variable-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-declaration-head" data-id="//apple_ref/swift/grammar/variable-declaration-head">variable-declaration-head</a>­</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-name" data-id="//apple_ref/swift/grammar/variable-name">variable-name</a>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_521"></a>
+  <span class="syntax-def-name">
+  variable-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-declaration-head" data-id="//apple_ref/swift/grammar/variable-declaration-head">variable-declaration-head</a>­</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-name" data-id="//apple_ref/swift/grammar/variable-name">variable-name</a>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-setter-block" data-id="//apple_ref/swift/grammar/getter-setter-block">getter-setter-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_522"></a>
+  <span class="syntax-def-name">
+  variable-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-declaration-head" data-id="//apple_ref/swift/grammar/variable-declaration-head">variable-declaration-head</a>­</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-name" data-id="//apple_ref/swift/grammar/variable-name">variable-name</a>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-setter-keyword-block" data-id="//apple_ref/swift/grammar/getter-setter-keyword-block">getter-setter-keyword-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_523"></a>
+  <span class="syntax-def-name">
+  variable-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-declaration-head" data-id="//apple_ref/swift/grammar/variable-declaration-head">variable-declaration-head</a>­</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-name" data-id="//apple_ref/swift/grammar/variable-name">variable-name</a>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><span class="optional"><span class="syntactic-cat"><a href="initializer.html#//apple_ref/swift/grammar/initializer" data-id="//apple_ref/swift/grammar/initializer">initializer</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="willSet.html#//apple_ref/swift/grammar/willSet-didSet-block" data-id="//apple_ref/swift/grammar/willSet-didSet-block">willSet-didSet-block</a>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/variable-declaration-head"></a>
+  <span class="syntax-def-name">
+  variable-declaration-head
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="optional"><span class="syntactic-cat"><a href="declaration.html#//apple_ref/swift/grammar/declaration-specifiers" data-id="//apple_ref/swift/grammar/declaration-specifiers">declaration-specifiers</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">var­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/variable-name"></a>
+  <span class="syntax-def-name">
+  variable-name
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/getter-setter-block"></a>
+  <span class="syntax-def-name">
+  getter-setter-block
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-clause" data-id="//apple_ref/swift/grammar/getter-clause">getter-clause</a>­</span><span class="optional"><span class="syntactic-cat"><a href="setter.html#//apple_ref/swift/grammar/setter-clause" data-id="//apple_ref/swift/grammar/setter-clause">setter-clause</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_527"></a>
+  <span class="syntax-def-name">
+  getter-setter-block
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="syntactic-cat"><a href="setter.html#//apple_ref/swift/grammar/setter-clause" data-id="//apple_ref/swift/grammar/setter-clause">setter-clause</a>­</span><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-clause" data-id="//apple_ref/swift/grammar/getter-clause">getter-clause</a>­</span><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/getter-clause"></a>
+  <span class="syntax-def-name">
+  getter-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">get­</code><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/setter-clause"></a>
+  <span class="syntax-def-name">
+  setter-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">set­</code><span class="optional"><span class="syntactic-cat"><a href="setter.html#//apple_ref/swift/grammar/setter-name" data-id="//apple_ref/swift/grammar/setter-name">setter-name</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/setter-name"></a>
+  <span class="syntax-def-name">
+  setter-name
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">(­</code><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span><code class="literal">)­</code>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/getter-setter-keyword-block"></a>
+  <span class="syntax-def-name">
+  getter-setter-keyword-block
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-keyword-clause" data-id="//apple_ref/swift/grammar/getter-keyword-clause">getter-keyword-clause</a>­</span><span class="optional"><span class="syntactic-cat"><a href="setter.html#//apple_ref/swift/grammar/setter-keyword-clause" data-id="//apple_ref/swift/grammar/setter-keyword-clause">setter-keyword-clause</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_532"></a>
+  <span class="syntax-def-name">
+  getter-setter-keyword-block
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="syntactic-cat"><a href="setter.html#//apple_ref/swift/grammar/setter-keyword-clause" data-id="//apple_ref/swift/grammar/setter-keyword-clause">setter-keyword-clause</a>­</span><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-keyword-clause" data-id="//apple_ref/swift/grammar/getter-keyword-clause">getter-keyword-clause</a>­</span><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/getter-keyword-clause"></a>
+  <span class="syntax-def-name">
+  getter-keyword-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">get­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/setter-keyword-clause"></a>
+  <span class="syntax-def-name">
+  setter-keyword-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">set­</code>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/willSet-didSet-block"></a>
+  <span class="syntax-def-name">
+  willSet-didSet-block
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="syntactic-cat"><a href="willSet.html#//apple_ref/swift/grammar/willSet-clause" data-id="//apple_ref/swift/grammar/willSet-clause">willSet-clause</a>­</span><span class="optional"><span class="syntactic-cat"><a href="didSet.html#//apple_ref/swift/grammar/didSet-clause" data-id="//apple_ref/swift/grammar/didSet-clause">didSet-clause</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_536"></a>
+  <span class="syntax-def-name">
+  willSet-didSet-block
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="syntactic-cat"><a href="didSet.html#//apple_ref/swift/grammar/didSet-clause" data-id="//apple_ref/swift/grammar/didSet-clause">didSet-clause</a>­</span><span class="syntactic-cat"><a href="willSet.html#//apple_ref/swift/grammar/willSet-clause" data-id="//apple_ref/swift/grammar/willSet-clause">willSet-clause</a>­</span><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/willSet-clause"></a>
+  <span class="syntax-def-name">
+  willSet-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">willSet­</code><span class="optional"><span class="syntactic-cat"><a href="setter.html#//apple_ref/swift/grammar/setter-name" data-id="//apple_ref/swift/grammar/setter-name">setter-name</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/didSet-clause"></a>
+  <span class="syntax-def-name">
+  didSet-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">didSet­</code><span class="optional"><span class="syntactic-cat"><a href="setter.html#//apple_ref/swift/grammar/setter-name" data-id="//apple_ref/swift/grammar/setter-name">setter-name</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_539"></a>
+  <h3 class="section-name" tabindex="0">Type Alias Declaration</h3>
+  <p class="para">
+  A <em>type alias declaration</em> introduces a named alias of an existing type into your program. Type alias declarations begin with the keyword <code class="code-voice">typealias</code> and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">typealias</span> <em class="variable-text">name</em> = <em class="variable-text">existing type</em></pre></li>
+  </ul>
+</div><p class="para">
+  After a type alias is declared, the aliased <em>name</em> can be used instead of the <em>existing type</em> everywhere in your program. The <em>existing type</em> can be a named type or a compound type. Type aliases do not create new types; they simply allow a name to refer to an existing type.
+</p><p class="para">
+  See also <span class="x-name"><a href="Protocol Associated Type Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_622" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_622">Protocol Associated Type Declaration</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a type alias declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/typealias-declaration"></a>
+  <span class="syntax-def-name">
+  typealias-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="typealias.html#//apple_ref/swift/grammar/typealias-head" data-id="//apple_ref/swift/grammar/typealias-head">typealias-head</a>­</span><span class="syntactic-cat"><a href="typealias.html#//apple_ref/swift/grammar/typealias-assignment" data-id="//apple_ref/swift/grammar/typealias-assignment">typealias-assignment</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/typealias-head"></a>
+  <span class="syntax-def-name">
+  typealias-head
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">typealias­</code><span class="syntactic-cat"><a href="typealias.html#//apple_ref/swift/grammar/typealias-name" data-id="//apple_ref/swift/grammar/typealias-name">typealias-name</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/typealias-name"></a>
+  <span class="syntax-def-name">
+  typealias-name
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/typealias-assignment"></a>
+  <span class="syntax-def-name">
+  typealias-assignment
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">=­</code><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type" data-id="//apple_ref/swift/grammar/type">type</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_545"></a>
+  <h3 class="section-name" tabindex="0">Function Declaration</h3>
+  <p class="para">
+  A :newTerm`function declaration` introduces a function or method into your program. A function declared in the context of class, structure, enumeration, or protocol is referred to as a <em>method</em>. Function declarations are declared using the keyword <code class="code-voice">func</code> and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">func</span> <em class="variable-text">function name</em>(<em class="variable-text">parameters</em>) -&gt; <em class="variable-text">return type</em> {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  If the function has a return type of <code class="code-voice">Void</code>, the return type can be omitted as follows:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">func</span> <em class="variable-text">function name</em>(<em class="variable-text">parameters</em>) {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  The type of each parameter must be included—it can’t be inferred. By default, the parameters to a function are constants. Write <code class="code-voice">var</code> in front of a parameter’s name to make it a variable, scoping any changes made to the variable just to the function body, or write <code class="code-voice">inout</code> to make those changes also apply to the argument that was passed in the caller’s scope. For a discussion of in-out parameters, see <span class="x-name"><a href="In.html#//apple_ref/doc/uid/TP40014097-CH10-XID_226" data-id="//apple_ref/doc/uid/TP40014097-CH10-XID_226">In-Out Parameters</a></span>.
+</p><p class="para">
+  Functions can return multiple values using a tuple type as the return type of the function.
+</p><p class="para">
+  A function definition can appear inside another function declaration. This kind of function is known as a <em>nested function</em>. For a discussion of nested functions, see <span class="x-name"><a href="Nested Functions.html#//apple_ref/doc/uid/TP40014097-CH10-XID_233" data-id="//apple_ref/doc/uid/TP40014097-CH10-XID_233">Nested Functions</a></span>.
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_546"></a>
+  <h3 class="section-name" tabindex="0">Parameter Names</h3>
+  <p class="para">
+  Function parameters are a comma separated list where each parameter has one of several forms. The order of arguments in a function call must match the order of parameters in the function’s declaration. The simplest entry in a parameter list has the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><em class="variable-text">parameter name</em>: <em class="variable-text">parameter type</em></pre></li>
+  </ul>
+</div><p class="para">
+  For function parameters, the parameter name is used within the function body, but is not used when calling the function. For method parameters, the parameter name is used as within the function body, and is also used as a label for the argument when calling the method. The name of a method’s first parameter is used only within the function body, like the parameter of a function. For example:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">f</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">y</span> + <span class="vc">String</span>(<span class="vc">x</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="vc">f</span>(<span class="m">7</span>, <span class="s">"hello"</span>)  <span class="c">// x and y have no name</span></code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">C</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">f</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">y</span> + <span class="vc">String</span>(<span class="vc">x</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">c</span> = <span class="vc">C</span>()</code></li>
+          <li><code class="code-voice"><span class="vc">c</span>.<span class="vc">f</span>(<span class="m">7</span>, <span class="vc">y</span>: <span class="s">"hello"</span>)  <span class="c">// x has no name, y has a name</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  You can override the default behavior for how parameter names are used with one of the following forms:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><em class="variable-text">external parameter name</em> <em class="variable-text">local parameter name</em>: <em class="variable-text">parameter type</em></pre></li><li><pre class="code-voice">#<em class="variable-text">parameter name</em>: <em class="variable-text">parameter type</em></pre></li><li><pre class="code-voice"><span class="kt">_</span> <em class="variable-text">local parameter name</em>: <em class="variable-text">parameter type</em></pre></li>
+  </ul>
+</div><p class="para">
+  A second name before the local parameter name gives the parameter an external name, which can be different than the local parameter name. The external parameter name must be used when the function is called. The corresponding argument must have the external name in function or method calls.
+</p><p class="para">
+  A hash symbol (<code class="code-voice">#</code>) before a parameter name indicates that the name should be used as both an external and a local parameter name. It has the same meaning as writing the local parameter name twice. The corresponding argument must have this name in function or method calls.
+</p><p class="para">
+  An underscore (<code class="code-voice">_</code>) before a local parameter name gives that parameter no name to be used in function calls. The corresponding argument must have no name in function or method calls.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_547"></a>
+  <h3 class="section-name" tabindex="0">Special Kinds of Parameters</h3>
+  <p class="para">
+  Parameters can be ignored, take a variable number of values, and provide default values using the following forms:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">_</span> : &lt;#<span class="vc">parameter</span> <span class="vc">type</span>#.</pre></li><li><pre class="code-voice"><em class="variable-text">parameter name</em>: <em class="variable-text">parameter type</em>...</pre></li><li><pre class="code-voice"><em class="variable-text">parameter name</em>: <em class="variable-text">parameter type</em> = <em class="variable-text">default argument value</em></pre></li>
+  </ul>
+</div><p class="para">
+  A parameter named with an underscore (<code class="code-voice">_</code>) is explicitly ignored an can’t be accessed within the body of the function.
+</p><p class="para">
+  A parameter with a base type name followed immediately by three dots (<code class="code-voice">...</code>) is understood as a variadic parameter. A function can have at most one variadic parameter, which must be its last parameter. A variadic parameter is treated as an array that contains elements of the base type name. For instance, the variadic parameter <code class="code-voice">Int...</code> is treated as <code class="code-voice">Int[]</code>. For an example that uses a variadic parameter, see <span class="x-name"><a href="Variadic Parameters.html#//apple_ref/doc/uid/TP40014097-CH10-XID_222" data-id="//apple_ref/doc/uid/TP40014097-CH10-XID_222">Variadic Parameters</a></span>.
+</p><p class="para">
+  A parameter with an equals sign (<code class="code-voice">=</code>) and an expression after its type is understood to have a default value of the given expression. If the parameter is omitted when calling the function, the default value is used instead. If the parameter is not omitted, it must have its name in the function call. For example, <code class="code-voice">f()</code> and <code class="code-voice">f(x: 7)</code> are both valid calls to a function with a single default parameter named <code class="code-voice">x</code>, but <code class="code-voice">f(7)</code> is invalid because it provides a value without a name.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_548"></a>
+  <h3 class="section-name" tabindex="0">Special Kinds of Methods</h3>
+  <p class="para">
+  Methods on an enumeration or a structure that modify <code class="code-voice">self</code> must be marked with the <code class="code-voice">mutating</code> keyword at the start of the function declaration.
+</p><p class="para">
+  Methods that override a superclass method must be marked with the <code class="code-voice">override</code> keyword at the start of the function declaration. It is an error to override a method without the <code class="code-voice">override</code> keyword or to use the <code class="code-voice">override</code> keyword on a method that doesn’t override a superclass method.
+</p><p class="para">
+  Methods associated with a type rather than an instance of a type must be marked with the <code class="code-voice">static</code> attribute for enumerations and structures or the <code class="code-voice">class</code> attribute for classes.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_549"></a>
+  <h3 class="section-name" tabindex="0">Curried Functions and Methods</h3>
+  <p class="para">
+  Curried functions and methods have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">func</span> <em class="variable-text">function name</em>(<em class="variable-text">parameters</em>)(<em class="variable-text">parameters</em>) -&gt; <em class="variable-text">return type</em> {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  A function declared this way is understood as a function whose return type is another function. For example, the following two declarations are equivalent:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">addTwoNumbers</span>(<span class="vc">a</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>)(<span class="vc">b</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">a</span> + <span class="vc">b</span></code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">addTwoNumbers</span>(<span class="vc">a</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; (<span class="n"><!-- a href="" -->Int<!-- /a --></span> -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">addTheSecondNumber</span>(<span class="vc">b</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">a</span> + <span class="vc">b</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">addTheSecondNumber</span></code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="vc">addTwoNumbers</span>(<span class="m">4</span>)(<span class="m">5</span>) <span class="c">// Returns 9</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  Multiple levels of currying are allowed.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a function declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/function-declaration"></a>
+  <span class="syntax-def-name">
+  function-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-head" data-id="//apple_ref/swift/grammar/function-head">function-head</a>­</span><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-name" data-id="//apple_ref/swift/grammar/function-name">function-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-clause" data-id="//apple_ref/swift/grammar/generic-parameter-clause">generic-parameter-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-signature" data-id="//apple_ref/swift/grammar/function-signature">function-signature</a>­</span><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-body" data-id="//apple_ref/swift/grammar/function-body">function-body</a>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/function-head"></a>
+  <span class="syntax-def-name">
+  function-head
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="optional"><span class="syntactic-cat"><a href="declaration.html#//apple_ref/swift/grammar/declaration-specifiers" data-id="//apple_ref/swift/grammar/declaration-specifiers">declaration-specifiers</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">func­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/function-name"></a>
+  <span class="syntax-def-name">
+  function-name
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="operator.html#//apple_ref/swift/grammar/operator" data-id="//apple_ref/swift/grammar/operator">operator</a>­</span>
+</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/function-signature"></a>
+  <span class="syntax-def-name">
+  function-signature
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-clauses" data-id="//apple_ref/swift/grammar/parameter-clauses">parameter-clauses</a>­</span><span class="optional"><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-result" data-id="//apple_ref/swift/grammar/function-result">function-result</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/function-result"></a>
+  <span class="syntax-def-name">
+  function-result
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">-&gt;­</code><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type" data-id="//apple_ref/swift/grammar/type">type</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/function-body"></a>
+  <span class="syntax-def-name">
+  function-body
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/parameter-clauses"></a>
+  <span class="syntax-def-name">
+  parameter-clauses
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-clause" data-id="//apple_ref/swift/grammar/parameter-clause">parameter-clause</a>­</span><span class="optional"><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-clauses" data-id="//apple_ref/swift/grammar/parameter-clauses">parameter-clauses</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/parameter-clause"></a>
+  <span class="syntax-def-name">
+  parameter-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <code class="literal">(­</code><code class="literal">)­</code>
+</span><span class="alternative">
+  <code class="literal">(­</code><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-list" data-id="//apple_ref/swift/grammar/parameter-list">parameter-list</a>­</span><span class="optional"><code class="literal">...­</code><sub class="subscript">opt</sub>­</span><code class="literal">)­</code>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/parameter-list"></a>
+  <span class="syntax-def-name">
+  parameter-list
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter" data-id="//apple_ref/swift/grammar/parameter">parameter</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter" data-id="//apple_ref/swift/grammar/parameter">parameter</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-list" data-id="//apple_ref/swift/grammar/parameter-list">parameter-list</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/parameter"></a>
+  <span class="syntax-def-name">
+  parameter
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><code class="literal">inout­</code><sub class="subscript">opt</sub>­</span><span class="optional"><code class="literal">let­</code><sub class="subscript">opt</sub>­</span><span class="optional"><code class="literal">#­</code><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-name" data-id="//apple_ref/swift/grammar/parameter-name">parameter-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="local.html#//apple_ref/swift/grammar/local-parameter-name" data-id="//apple_ref/swift/grammar/local-parameter-name">local-parameter-name</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><span class="optional"><span class="syntactic-cat"><a href="default.html#//apple_ref/swift/grammar/default-argument-clause" data-id="//apple_ref/swift/grammar/default-argument-clause">default-argument-clause</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_561"></a>
+  <span class="syntax-def-name">
+  parameter
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><code class="literal">inout­</code><sub class="subscript">opt</sub>­</span><code class="literal">var­</code><span class="optional"><code class="literal">#­</code><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-name" data-id="//apple_ref/swift/grammar/parameter-name">parameter-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="local.html#//apple_ref/swift/grammar/local-parameter-name" data-id="//apple_ref/swift/grammar/local-parameter-name">local-parameter-name</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><span class="optional"><span class="syntactic-cat"><a href="default.html#//apple_ref/swift/grammar/default-argument-clause" data-id="//apple_ref/swift/grammar/default-argument-clause">default-argument-clause</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_562"></a>
+  <span class="syntax-def-name">
+  parameter
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type" data-id="//apple_ref/swift/grammar/type">type</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/parameter-name"></a>
+  <span class="syntax-def-name">
+  parameter-name
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</span><span class="alternative">
+  <code class="literal">_­</code>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/local-parameter-name"></a>
+  <span class="syntax-def-name">
+  local-parameter-name
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</span><span class="alternative">
+  <code class="literal">_­</code>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/default-argument-clause"></a>
+  <span class="syntax-def-name">
+  default-argument-clause
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">=­</code><span class="syntactic-cat"><a href="expression.html#//apple_ref/swift/grammar/expression" data-id="//apple_ref/swift/grammar/expression">expression</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_566"></a>
+  <h3 class="section-name" tabindex="0">Enumeration Declaration</h3>
+  <p class="para">
+  An <em>enumeration declaration</em> introduces a named enumeration type into your program.
+</p><p class="para">
+  Enumeration declarations have two basic forms and are declared using the keyword <code class="code-voice">enum</code>. The body of an enumeration declared using either form contains zero or more values—called <em>enumeration cases</em>—and any number of declarations, including computed properties, instance methods, static methods, initializers, type aliases, and even other enumeration, structure, and class declarations. Enumeration declarations can’t contain destructor or protocol declarations.
+</p><p class="para">
+  Unlike classes and structures, enumeration types do not have an implicitly provided default initializer; all initializers must be declared explicitly. Initializers can delegate to other initializers in the enumeration, but the initialization process is complete only after an initializer assigns one of the enumeration cases to <code class="code-voice">self</code>.
+</p><p class="para">
+  Like structures but unlike classes, enumerations are value types; instances of an enumeration are copied when assigned to variables or constants, or when passed as arguments to a function call. For information about value types, see <span class="x-name"><a href="Structures and Enumerations Are Value Types.html#//apple_ref/doc/uid/TP40014097-CH13-XID_104" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_104">Structures and Enumerations Are Value Types</a></span>.
+</p><p class="para">
+  You can extend the behavior of an enumeration type with an extension declaration, as discussed in <span class="x-name"><a href="Extension Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_633" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_633">Extension Declaration</a></span>.
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_567"></a>
+  <h3 class="section-name" tabindex="0">Enumerations with Cases of Any Type</h3>
+  <p class="para">
+  The following form declares an enumeration type that contains enumeration cases of any type:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">enum</span> <em class="variable-text">enumeration name</em> {</pre></li><li><pre class="code-voice">    <span class="kt">case</span> <em class="variable-text">enumeration case 1</em></pre></li><li><pre class="code-voice">    <span class="kt">case</span> <em class="variable-text">enumeration case 2</em>(<em class="variable-text">associated value types</em>)</pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  Enumerations declared in this form are sometimes called <em>discriminated unions</em> in other programming languages.
+</p><p class="para">
+  In this form, each case block consists of the keyword <code class="code-voice">case</code> followed by one or more enumeration cases, separated by commas. The name of each case must be unique. Each case can also specify that it stores values of a given type. These types are specified in the <em>associated value types</em> tuple, immediately following the name of the case. For more information and to see examples of cases with associated value types, see <span class="x-name"><a href="Associated Values.html#//apple_ref/doc/uid/TP40014097-CH12-XID_189" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_189">Associated Values</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_568"></a>
+  <h3 class="section-name" tabindex="0">Enumerations with Raw Cases Values</h3>
+  <p class="para">
+  The following form declares an enumeration type that contains enumeration cases of the same basic type:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">enum</span> <em class="variable-text">enumeration name</em>: <em class="variable-text">raw value type</em> {</pre></li><li><pre class="code-voice">    <span class="kt">case</span> <em class="variable-text">enumeration case 1</em> = <em class="variable-text">raw value 1</em></pre></li><li><pre class="code-voice">    <span class="kt">case</span> <em class="variable-text">enumeration case 2</em> = <em class="variable-text">raw value 2</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  In this form, each case block consists of the keyword <code class="code-voice">case</code>, followed by one or more enumeration cases, separated by commas. Unlike the cases in the first form, each case has an underlying value, called a <em>raw value</em>, of the same basic type. The type of these values is specified in the <em>raw value type</em> and must represent a literal integer, floating-point number, character, or string.
+</p><p class="para">
+  Each case must have a unique name and be assigned a unique raw value. If the raw value type is specified as <code class="code-voice">Int</code> and you don’t assign a value to the cases explicitly, they are implicitly assigned the values <code class="code-voice">0</code>, <code class="code-voice">1</code>, <code class="code-voice">2</code>, and so on. Each unassigned case of type <code class="code-voice">Int</code> is implicitly assigned a raw value that is automatically incremented from the raw value of the previous case.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">enum</span> <span class="vc">ExampleEnum</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">A</span>, <span class="vc">B</span>, <span class="vc">C</span> = <span class="m">5</span>, <span class="vc">D</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  In the above example, the value of <code class="code-voice">ExampleEnum.A</code> is <code class="code-voice">0</code> and the value of <code class="code-voice">ExampleEnum.B</code> is <code class="code-voice">1</code>. And because the value of <code class="code-voice">ExampleEnum.C</code> is explicitly set to <code class="code-voice">5</code>, the value of <code class="code-voice">ExampleEnum.D</code> is automatically incremented from <code class="code-voice">5</code> and is therefore <code class="code-voice">6</code>.
+</p><p class="para">
+  The raw value of an enumeration case can be accessed by calling its <code class="code-voice">toRaw</code> method, as in <code class="code-voice">ExampleEnum.B.toRaw()</code>. You can also use a raw value to find a corresponding case, if there is one, by calling the <code class="code-voice">fromRaw</code> method, which returns an optional case. For more information and to see examples of cases with raw value types, see <span class="x-name"><a href="Raw Values.html#//apple_ref/doc/uid/TP40014097-CH12-XID_190" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_190">Raw Values</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_569"></a>
+  <h3 class="section-name" tabindex="0">Accessing Enumeration Cases</h3>
+  <p class="para">
+  To reference the case of an enumeration type, use dot (<code class="code-voice">.</code>) syntax, as in <code class="code-voice">EnumerationType.EnumerationCase</code>. When the enumeration type can be inferred from context, you can omit it (the dot is still required), as described in <span class="x-name"><a href="Enumeration Syntax.html#//apple_ref/doc/uid/TP40014097-CH12-XID_186" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_186">Enumeration Syntax</a></span> and <span class="x-name"><a href="Implicit Member Expression.html#//apple_ref/doc/uid/TP40014097-CH32-XID_724" data-id="//apple_ref/doc/uid/TP40014097-CH32-XID_724">Implicit Member Expression</a></span>.
+</p><p class="para">
+  To check the values of enumeration cases, use a <code class="code-voice">switch</code> statement, as shown in <span class="x-name"><a href="Matching Enumeration Values with a Switch Statement.html#//apple_ref/doc/uid/TP40014097-CH12-XID_188" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_188">Matching Enumeration Values with a Switch Statement</a></span>. The enumeration type is pattern-matched against the enumeration case patterns in the case blocks of the <code class="code-voice">switch</code> statement, as described in <span class="x-name"><a href="Enumeration Case Pattern.html#//apple_ref/doc/uid/TP40014097-CH36-XID_901" data-id="//apple_ref/doc/uid/TP40014097-CH36-XID_901">Enumeration Case Pattern</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of an enumeration declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/enum-declaration"></a>
+  <span class="syntax-def-name">
+  enum-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum" data-id="//apple_ref/swift/grammar/union-style-enum">union-style-enum</a>­</span>
+</span><span class="alternative">
+  <span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum" data-id="//apple_ref/swift/grammar/raw-value-style-enum">raw-value-style-enum</a>­</span>
+</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/union-style-enum"></a>
+  <span class="syntax-def-name">
+  union-style-enum
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="enum.html#//apple_ref/swift/grammar/enum-name" data-id="//apple_ref/swift/grammar/enum-name">enum-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-clause" data-id="//apple_ref/swift/grammar/generic-parameter-clause">generic-parameter-clause</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum-members" data-id="//apple_ref/swift/grammar/union-style-enum-members">union-style-enum-members</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/union-style-enum-members"></a>
+  <span class="syntax-def-name">
+  union-style-enum-members
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum-member" data-id="//apple_ref/swift/grammar/union-style-enum-member">union-style-enum-member</a>­</span><span class="optional"><span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum-members" data-id="//apple_ref/swift/grammar/union-style-enum-members">union-style-enum-members</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/union-style-enum-member"></a>
+  <span class="syntax-def-name">
+  union-style-enum-member
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="declaration.html#//apple_ref/swift/grammar/declaration" data-id="//apple_ref/swift/grammar/declaration">declaration</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum-case-clause" data-id="//apple_ref/swift/grammar/union-style-enum-case-clause">union-style-enum-case-clause</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/union-style-enum-case-clause"></a>
+  <span class="syntax-def-name">
+  union-style-enum-case-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">case­</code><span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum-case-list" data-id="//apple_ref/swift/grammar/union-style-enum-case-list">union-style-enum-case-list</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/union-style-enum-case-list"></a>
+  <span class="syntax-def-name">
+  union-style-enum-case-list
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum-case" data-id="//apple_ref/swift/grammar/union-style-enum-case">union-style-enum-case</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum-case" data-id="//apple_ref/swift/grammar/union-style-enum-case">union-style-enum-case</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a href="union.html#//apple_ref/swift/grammar/union-style-enum-case-list" data-id="//apple_ref/swift/grammar/union-style-enum-case-list">union-style-enum-case-list</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/union-style-enum-case"></a>
+  <span class="syntax-def-name">
+  union-style-enum-case
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="enum.html#//apple_ref/swift/grammar/enum-case-name" data-id="//apple_ref/swift/grammar/enum-case-name">enum-case-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="tuple.html#//apple_ref/swift/grammar/tuple-type" data-id="//apple_ref/swift/grammar/tuple-type">tuple-type</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/enum-name"></a>
+  <span class="syntax-def-name">
+  enum-name
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/enum-case-name"></a>
+  <span class="syntax-def-name">
+  enum-case-name
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/raw-value-style-enum"></a>
+  <span class="syntax-def-name">
+  raw-value-style-enum
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="enum.html#//apple_ref/swift/grammar/enum-name" data-id="//apple_ref/swift/grammar/enum-name">enum-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-clause" data-id="//apple_ref/swift/grammar/generic-parameter-clause">generic-parameter-clause</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">:­</code><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum-members" data-id="//apple_ref/swift/grammar/raw-value-style-enum-members">raw-value-style-enum-members</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/raw-value-style-enum-members"></a>
+  <span class="syntax-def-name">
+  raw-value-style-enum-members
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum-member" data-id="//apple_ref/swift/grammar/raw-value-style-enum-member">raw-value-style-enum-member</a>­</span><span class="optional"><span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum-members" data-id="//apple_ref/swift/grammar/raw-value-style-enum-members">raw-value-style-enum-members</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/raw-value-style-enum-member"></a>
+  <span class="syntax-def-name">
+  raw-value-style-enum-member
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="declaration.html#//apple_ref/swift/grammar/declaration" data-id="//apple_ref/swift/grammar/declaration">declaration</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum-case-clause" data-id="//apple_ref/swift/grammar/raw-value-style-enum-case-clause">raw-value-style-enum-case-clause</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/raw-value-style-enum-case-clause"></a>
+  <span class="syntax-def-name">
+  raw-value-style-enum-case-clause
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">case­</code><span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum-case-list" data-id="//apple_ref/swift/grammar/raw-value-style-enum-case-list">raw-value-style-enum-case-list</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/raw-value-style-enum-case-list"></a>
+  <span class="syntax-def-name">
+  raw-value-style-enum-case-list
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum-case" data-id="//apple_ref/swift/grammar/raw-value-style-enum-case">raw-value-style-enum-case</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum-case" data-id="//apple_ref/swift/grammar/raw-value-style-enum-case">raw-value-style-enum-case</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-style-enum-case-list" data-id="//apple_ref/swift/grammar/raw-value-style-enum-case-list">raw-value-style-enum-case-list</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/raw-value-style-enum-case"></a>
+  <span class="syntax-def-name">
+  raw-value-style-enum-case
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="enum.html#//apple_ref/swift/grammar/enum-case-name" data-id="//apple_ref/swift/grammar/enum-case-name">enum-case-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="raw.html#//apple_ref/swift/grammar/raw-value-assignment" data-id="//apple_ref/swift/grammar/raw-value-assignment">raw-value-assignment</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/raw-value-assignment"></a>
+  <span class="syntax-def-name">
+  raw-value-assignment
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">=­</code><span class="syntactic-cat"><a href="literal.html#//apple_ref/swift/grammar/literal" data-id="//apple_ref/swift/grammar/literal">literal</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_587"></a>
+  <h3 class="section-name" tabindex="0">Structure Declaration</h3>
+  <p class="para">
+  A <em>structure declaration</em> introduces a named structure type into your program. Structure declarations are declared using the keyword <code class="code-voice">struct</code> and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">struct</span> <em class="variable-text">structure name</em>: <em class="variable-text">adopted protocols</em> {</pre></li><li><pre class="code-voice">    <em class="variable-text">declarations</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  The body of a structure contains zero or more <em>declarations</em>. These <em>declarations</em> can include both stored and computed properties, static properties, instance methods, static methods, initializers, type aliases, and even other structure, class, and enumeration declarations. Structure declarations can’t contain destructor or protocol declarations. For a discussion and several examples of structures that include various kinds of declarations, see <span class="x-name"><a href="Classes and Structures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_94" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_94">Classes and Structures</a></span>.
+</p><p class="para">
+  Structure types can adopt any number of protocols, but can’t inherit from classes, enumerations, or other structures.
+</p><p class="para">
+  There are three ways create an instance of a previously declared structure:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Call one of the initializers declared within the structure, as described in <span class="x-name"><a href="Initializers.html#//apple_ref/doc/uid/TP40014097-CH18-XID_269" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_269">Initializers</a></span>.
+</p>
+</li><li class="item"><p class="para">
+  If no initializers are declared, call the structure’s memberwise initializer, as described in <span class="x-name"><a href="Memberwise Initializers for Structure Types.html#//apple_ref/doc/uid/TP40014097-CH18-XID_280" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_280">Memberwise Initializers for Structure Types</a></span>.
+</p>
+</li><li class="item"><p class="para">
+  If no initializers are declared, and all properties of the structure declaration were given initial values, call the structure’s default initializer, as described in <span class="x-name"><a href="Default Initializers.html#//apple_ref/doc/uid/TP40014097-CH18-XID_279" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_279">Default Initializers</a></span>.
+</p>
+</li>
+</ul><p class="para">
+  The process of initializing a structure’s declared properties is described in <span class="x-name"><a href="Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-XID_266" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_266">Initialization</a></span>.
+</p><p class="para">
+  Properties of a structure instance can be accessed using dot (<code class="code-voice">.</code>) syntax, as described in <span class="x-name"><a href="Accessing Properties.html#//apple_ref/doc/uid/TP40014097-CH13-XID_101" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_101">Accessing Properties</a></span>.
+</p><p class="para">
+  Structures are value types; instances of a structure are copied when assigned to variables or constants, or when passed as arguments to a function call. For information about value types, see <span class="x-name"><a href="Structures and Enumerations Are Value Types.html#//apple_ref/doc/uid/TP40014097-CH13-XID_104" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_104">Structures and Enumerations Are Value Types</a></span>.
+</p><p class="para">
+  You can extend the behavior of a structure type with an extension declaration, as discussed in <span class="x-name"><a href="Extension Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_633" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_633">Extension Declaration</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a structure declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/struct-declaration"></a>
+  <span class="syntax-def-name">
+  struct-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">struct­</code><span class="syntactic-cat"><a href="struct.html#//apple_ref/swift/grammar/struct-name" data-id="//apple_ref/swift/grammar/struct-name">struct-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-clause" data-id="//apple_ref/swift/grammar/generic-parameter-clause">generic-parameter-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-inheritance-clause" data-id="//apple_ref/swift/grammar/type-inheritance-clause">type-inheritance-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="struct.html#//apple_ref/swift/grammar/struct-body" data-id="//apple_ref/swift/grammar/struct-body">struct-body</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/struct-name"></a>
+  <span class="syntax-def-name">
+  struct-name
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/struct-body"></a>
+  <span class="syntax-def-name">
+  struct-body
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="declarations.html#//apple_ref/swift/grammar/declarations" data-id="//apple_ref/swift/grammar/declarations">declarations</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_592"></a>
+  <h3 class="section-name" tabindex="0">Class Declaration</h3>
+  <p class="para">
+  A <em>class declaration</em> introduces a named class type into your program. Class declarations are declared using the keyword <code class="code-voice">class</code> and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">class</span> <em class="variable-text">class name</em>: <em class="variable-text">superclass</em>, <em class="variable-text">adopted protocols</em> {</pre></li><li><pre class="code-voice">    <em class="variable-text">declarations</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  The body of a class contains zero or more <em>declarations</em>. These <em>declarations</em> can include both stored and computed properties, instance methods, class methods, initializers, a single destructor method, type aliases, and even other class, structure, and enumeration declarations. Class declarations can’t contain protocol declarations. For a discussion and several examples of classes that include various kinds of declarations, see <span class="x-name"><a href="Classes and Structures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_94" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_94">Classes and Structures</a></span>.
+</p><p class="para">
+  A class type can inherit from only one parent class, its <em>superclass</em>, but can adopt any number of protocols. The <em>superclass</em> appears first in the <strong>type-inheritance-clause</strong>, followed by any <em>adopted protocols</em>.
+</p><p class="para">
+  As discussed in <span class="x-name"><a href="Initializer Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_625" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_625">Initializer Declaration</a></span>, classes can have designated and convenience initializers. When you declare either kind of initializer, you can require any subclass to override it by marking the initializer with the <code class="code-voice">required</code> attribute. The designated initializer of a class must initialize all of the class’s declared properties and it must do so before calling any of its superclass’s designated initializers.
+</p><p class="para">
+  A class can override properties, methods, and initializers of its superclass. Overridden methods and properties must be marked with the <code class="code-voice">override</code> keyword.
+</p><p class="para">
+  Although properties and methods declared in the <em>superclass</em> are inherited by the current class, designated initializers declared in the <em>superclass</em> are not. That said, if the current class overrides all of the superclass’s designated initializers, it inherits the superclass’s convenience initializers. Swift classes do not inherit from a universal base class.
+</p><p class="para">
+  There are two ways create an instance of a previously declared class:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  Call one of the initializers declared within the class, as described in <span class="x-name"><a href="Initializers.html#//apple_ref/doc/uid/TP40014097-CH18-XID_269" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_269">Initializers</a></span>.
+</p>
+</li><li class="item"><p class="para">
+  If no initializers are declared, and all properties of the class declaration were given initial values, call the class’s default initializer, as described in <span class="x-name"><a href="Default Initializers.html#//apple_ref/doc/uid/TP40014097-CH18-XID_279" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_279">Default Initializers</a></span>.
+</p>
+</li>
+</ul><p class="para">
+  Access properties of a class instance with dot (<code class="code-voice">.</code>) syntax, as described in <span class="x-name"><a href="Accessing Properties.html#//apple_ref/doc/uid/TP40014097-CH13-XID_101" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_101">Accessing Properties</a></span>.
+</p><p class="para">
+  Classes are reference types; instances of a class are referred to, rather than copied, when assigned to variables or constants, or when passed as arguments to a function call. For information about reference types, see <span class="x-name"><a href="Structures and Enumerations Are Value Types.html#//apple_ref/doc/uid/TP40014097-CH13-XID_104" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_104">Structures and Enumerations Are Value Types</a></span>.
+</p><p class="para">
+  You can extend the behavior of a class type with an extension declaration, as discussed in <span class="x-name"><a href="Extension Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_633" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_633">Extension Declaration</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a class declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/class-declaration"></a>
+  <span class="syntax-def-name">
+  class-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">class­</code><span class="syntactic-cat"><a href="class.html#//apple_ref/swift/grammar/class-name" data-id="//apple_ref/swift/grammar/class-name">class-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-clause" data-id="//apple_ref/swift/grammar/generic-parameter-clause">generic-parameter-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-inheritance-clause" data-id="//apple_ref/swift/grammar/type-inheritance-clause">type-inheritance-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="class.html#//apple_ref/swift/grammar/class-body" data-id="//apple_ref/swift/grammar/class-body">class-body</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/class-name"></a>
+  <span class="syntax-def-name">
+  class-name
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/class-body"></a>
+  <span class="syntax-def-name">
+  class-body
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="declarations.html#//apple_ref/swift/grammar/declarations" data-id="//apple_ref/swift/grammar/declarations">declarations</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_597"></a>
+  <h3 class="section-name" tabindex="0">Protocol Declaration</h3>
+  <p class="para">
+  A <em>protocol declaration</em> introduces a named protocol type into your program. Protocol declarations are declared using the keyword <code class="code-voice">protocol</code> and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">protocol</span> <em class="variable-text">protocol name</em>: <em class="variable-text">inherited protocols</em> {</pre></li><li><pre class="code-voice">    <em class="variable-text">protocol member declarations</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  The body of a protocol contains zero or more <em>protocol member declarations</em>, which describe the conformance requirements that any type adopting the protocol must fulfill. In particular, a protocol can declare that conforming types must implement certain properties, methods, initializers, and subscripts. Protocols can also declare special kinds of type aliases, called <em>associated types</em>, that can specify relationships among the various declarations of the protocol. The <em>protocol member declarations</em> are discussed in detail below.
+</p><p class="para">
+  Protocol types can inherit from any number of other protocols. When a protocol type inherits from other protocols, the set of requirements from those other protocols are aggregated, and any type that inherits from the current protocol must conform to all those requirements. For an example of how to use protocol inheritance, see <span class="x-name"><a href="Protocol Inheritance.html#//apple_ref/doc/uid/TP40014097-CH25-XID_360" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_360">Protocol Inheritance</a></span>.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_598"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">You can also aggregate the conformance requirements of multiple protocols using protocol composition types, as described in <span class="x-name"><a href="Protocol Composition Type.html#//apple_ref/doc/uid/TP40014097-CH31-XID_1017" data-id="//apple_ref/doc/uid/TP40014097-CH31-XID_1017">Protocol Composition Type</a></span> and <span class="x-name"><a href="Protocol Composition.html#//apple_ref/doc/uid/TP40014097-CH25-XID_361" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_361">Protocol Composition</a></span>.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  You can add protocol conformance to a previously declared type by adopting the protocol in an extension declaration of that type. In the extension, you must implement all of the adopted protocol’s requirements. If the type already implements all of the requirements, you can leave the body of the extension declaration empty.
+</p><p class="para">
+  By default, types that conform to a protocol must implement all properties, methods, and subscripts declared in the protocol. That said, you can mark these protocol member declarations with the <code class="code-voice">optional</code> attribute to specify that their implementation by a conforming type is optional. The <code class="code-voice">optional</code> attribute can be applied only to protocols that are marked with the <code class="code-voice">objc</code> attribute. As a result, only class types can adopt and conform to a protocol that contains optional member requirements. For more information about how to use the <code class="code-voice">optional</code> attribute and for guidance about how to access optional protocol members—for example, when you’re not sure whether a conforming type implements them—see <span class="x-name"><a href="Optional Protocol Requirements.html#//apple_ref/doc/uid/TP40014097-CH25-XID_365" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_365">Optional Protocol Requirements</a></span>.
+</p><p class="para">
+  To restrict the adoption of a protocol to class types only, mark the entire protocol declaration with the <code class="code-voice">class_protocol</code> attribute. Any protocol that inherits from a protocol marked with the <code class="code-voice">class_protocol</code> attribute can likewise be adopted only by a class type.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_599"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">If a protocol is already marked with the <code class="code-voice">objc</code> attribute, the <code class="code-voice">class_protocol</code> attribute is implicitly applied to that protocol; there’s no need to mark the protocol with the <code class="code-voice">class_protocol</code> attribute explicitly.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  Protocols are named types, and thus they can appear in all the same places in your code as other named types, as discussed in <span class="x-name"><a href="Protocols as Types.html#//apple_ref/doc/uid/TP40014097-CH25-XID_352" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_352">Protocols as Types</a></span>. However, you can’t construct an instance of a protocol, because protocols do not actually provide the implementations for the requirements they specify.
+</p><p class="para">
+  You can use protocols to declare which methods a delegate of a class or structure should implement, as described in <span class="x-name"><a href="Delegation.html#//apple_ref/doc/uid/TP40014097-CH25-XID_354" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_354">Delegation</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a protocol declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-declaration"></a>
+  <span class="syntax-def-name">
+  protocol-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">protocol­</code><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-name" data-id="//apple_ref/swift/grammar/protocol-name">protocol-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-inheritance-clause" data-id="//apple_ref/swift/grammar/type-inheritance-clause">type-inheritance-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-body" data-id="//apple_ref/swift/grammar/protocol-body">protocol-body</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-name"></a>
+  <span class="syntax-def-name">
+  protocol-name
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-body"></a>
+  <span class="syntax-def-name">
+  protocol-body
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-member-declarations" data-id="//apple_ref/swift/grammar/protocol-member-declarations">protocol-member-declarations</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-member-declaration"></a>
+  <span class="syntax-def-name">
+  protocol-member-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-property-declaration" data-id="//apple_ref/swift/grammar/protocol-property-declaration">protocol-property-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_605"></a>
+  <span class="syntax-def-name">
+  protocol-member-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-method-declaration" data-id="//apple_ref/swift/grammar/protocol-method-declaration">protocol-method-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_606"></a>
+  <span class="syntax-def-name">
+  protocol-member-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-initializer-declaration" data-id="//apple_ref/swift/grammar/protocol-initializer-declaration">protocol-initializer-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_607"></a>
+  <span class="syntax-def-name">
+  protocol-member-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-subscript-declaration" data-id="//apple_ref/swift/grammar/protocol-subscript-declaration">protocol-subscript-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_608"></a>
+  <span class="syntax-def-name">
+  protocol-member-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-associated-type-declaration" data-id="//apple_ref/swift/grammar/protocol-associated-type-declaration">protocol-associated-type-declaration</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-member-declarations"></a>
+  <span class="syntax-def-name">
+  protocol-member-declarations
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-member-declaration" data-id="//apple_ref/swift/grammar/protocol-member-declaration">protocol-member-declaration</a>­</span><span class="optional"><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-member-declarations" data-id="//apple_ref/swift/grammar/protocol-member-declarations">protocol-member-declarations</a>­</span><sub class="subscript">opt</sub>­</span>
+</p>
+</div>
+ </div>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_610"></a>
+  <h3 class="section-name" tabindex="0">Protocol Property Declaration</h3>
+  <p class="para">
+  Protocols declare that conforming types must implement a property by including a <em>protocol property declaration</em> in the body of the protocol declaration. Protocol property declarations have a special form of a variable declaration:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">var</span> <em class="variable-text">property name</em>: <em class="variable-text">type</em> { <span class="vc">get</span> <span class="vc">set</span> }</pre></li>
+  </ul>
+</div><p class="para">
+  As with other protocol member declarations, these property declarations declare only the getter and setter requirements for types that conform to the protocol. As a result, you don’t implement the getter or setter directly in the protocol in which it is declared.
+</p><p class="para">
+  The getter and setter requirements can be satisfied by a conforming type in a variety of ways. If a property declaration includes both the <code class="code-voice">get</code> and <code class="code-voice">set</code> keywords, a conforming type can implement it with a stored variable property or a computed property that is both readable and writeable (that is, one that implements both a getter and a setter). However, that property declaration can’t be implemented as a constant property or a read-only computed property. If a property declaration includes only the <code class="code-voice">get</code> keyword, it can be implemented as any kind of property. For examples of conforming types that implement the property requirements of a protocol, see <span class="x-name"><a href="Property Requirements.html#//apple_ref/doc/uid/TP40014097-CH25-XID_347" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_347">Property Requirements</a></span>.
+</p><p class="para">
+  See also <span class="x-name"><a href="Variable Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_512" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_512">Variable Declaration</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a protocol property declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-property-declaration"></a>
+  <span class="syntax-def-name">
+  protocol-property-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-declaration-head" data-id="//apple_ref/swift/grammar/variable-declaration-head">variable-declaration-head</a>­</span><span class="syntactic-cat"><a href="variable.html#//apple_ref/swift/grammar/variable-name" data-id="//apple_ref/swift/grammar/variable-name">variable-name</a>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-annotation" data-id="//apple_ref/swift/grammar/type-annotation">type-annotation</a>­</span><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-setter-keyword-block" data-id="//apple_ref/swift/grammar/getter-setter-keyword-block">getter-setter-keyword-block</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_613"></a>
+  <h3 class="section-name" tabindex="0">Protocol Method Declaration</h3>
+  <p class="para">
+  Protocols declare that conforming types must implement a method by including a protocol method declaration in the body of the protocol declaration. Protocol method declarations have the same form as function declarations, with two exceptions: They don’t include a function body, and you can’t provide any default parameter values as part of the function declaration. For examples of conforming types that implement the method requirements of a protocol, see <span class="x-name"><a href="Method Requirements.html#//apple_ref/doc/uid/TP40014097-CH25-XID_348" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_348">Method Requirements</a></span>.
+</p><p class="para">
+  To declare a class or static method requirement in a protocol declaration, mark the method declaration with the <code class="code-voice">class</code> keyword. Classes that implement this method also declare the method with the <code class="code-voice">class</code> keyword. Structures that implement it must declare the method with the <code class="code-voice">static</code> keyword instead. If you’re implementing the method in an extension, use the <code class="code-voice">class</code> keyword if you’re extending a class and the <code class="code-voice">static</code> keyword if you’re extending a structure.
+</p><p class="para">
+  See also <span class="x-name"><a href="Function Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_545" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_545">Function Declaration</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a protocol method declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-method-declaration"></a>
+  <span class="syntax-def-name">
+  protocol-method-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-head" data-id="//apple_ref/swift/grammar/function-head">function-head</a>­</span><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-name" data-id="//apple_ref/swift/grammar/function-name">function-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-clause" data-id="//apple_ref/swift/grammar/generic-parameter-clause">generic-parameter-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="function.html#//apple_ref/swift/grammar/function-signature" data-id="//apple_ref/swift/grammar/function-signature">function-signature</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_616"></a>
+  <h3 class="section-name" tabindex="0">Protocol Initializer Declaration</h3>
+  <p class="para">
+  Protocols declare that conforming types must implement an initializer by including a protocol initializer declaration in the body of the protocol declaration. Protocol initializer declarations have the same form as initializer declarations, except they don’t include the initializer’s body.
+</p><p class="para">
+  See also <span class="x-name"><a href="Initializer Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_625" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_625">Initializer Declaration</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a protocol initializer declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-initializer-declaration"></a>
+  <span class="syntax-def-name">
+  protocol-initializer-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="initializer.html#//apple_ref/swift/grammar/initializer-head" data-id="//apple_ref/swift/grammar/initializer-head">initializer-head</a>­</span><span class="optional"><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-clause" data-id="//apple_ref/swift/grammar/generic-parameter-clause">generic-parameter-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-clause" data-id="//apple_ref/swift/grammar/parameter-clause">parameter-clause</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_619"></a>
+  <h3 class="section-name" tabindex="0">Protocol Subscript Declaration</h3>
+  <p class="para">
+  Protocols declare that conforming types must implement a subscript by including a protocol subscript declaration in the body of the protocol declaration. Protocol property declarations have a special form of a subscript declaration:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">subscript</span> (<em class="variable-text">parameters</em>) -&gt; <em class="variable-text">return type</em> { <span class="vc">get</span> <span class="vc">set</span> }</pre></li>
+  </ul>
+</div><p class="para">
+  Subscript declarations only declare the minimum getter and setter implementation requirements for types that conform to the protocol. If the subscript declaration includes both the <code class="code-voice">get</code> and <code class="code-voice">set</code> keywords, a conforming type must implement both a getter and a setter clause. If the subscript declaration includes only the <code class="code-voice">get</code> keyword, a conforming type must implement <em>at least</em> a getter clause and optionally can implement a setter clause.
+</p><p class="para">
+  See also <span class="x-name"><a href="Subscript Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_637" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_637">Subscript Declaration</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a protocol subscript declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-subscript-declaration"></a>
+  <span class="syntax-def-name">
+  protocol-subscript-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-head" data-id="//apple_ref/swift/grammar/subscript-head">subscript-head</a>­</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-result" data-id="//apple_ref/swift/grammar/subscript-result">subscript-result</a>­</span><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-setter-keyword-block" data-id="//apple_ref/swift/grammar/getter-setter-keyword-block">getter-setter-keyword-block</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_622"></a>
+  <h3 class="section-name" tabindex="0">Protocol Associated Type Declaration</h3>
+  <p class="para">
+  Protocols declare associated types using the keyword <code class="code-voice">typealias</code>. An associated type provides an alias for a type that is used as part of a protocol’s declaration. Accosiated types are similiar to type paramters in generic parameter clauses, but they’re associated with <code class="code-voice">Self</code> in the protocol in which they’re declared. In that context, <code class="code-voice">Self</code> refers to the eventual type that conforms to the protocol. For more information and examples, see <span class="x-name"><a href="Associated Types.html#//apple_ref/doc/uid/TP40014097-CH26-XID_247" data-id="//apple_ref/doc/uid/TP40014097-CH26-XID_247">Associated Types</a></span>.
+</p><p class="para">
+  See also <span class="x-name"><a href="Type Alias Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_539" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_539">Type Alias Declaration</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a protocol associated type declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/protocol-associated-type-declaration"></a>
+  <span class="syntax-def-name">
+  protocol-associated-type-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="typealias.html#//apple_ref/swift/grammar/typealias-head" data-id="//apple_ref/swift/grammar/typealias-head">typealias-head</a>­</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-inheritance-clause" data-id="//apple_ref/swift/grammar/type-inheritance-clause">type-inheritance-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="optional"><span class="syntactic-cat"><a href="typealias.html#//apple_ref/swift/grammar/typealias-assignment" data-id="//apple_ref/swift/grammar/typealias-assignment">typealias-assignment</a>­</span><sub class="subscript">opt</sub>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_625"></a>
+  <h3 class="section-name" tabindex="0">Initializer Declaration</h3>
+  <p class="para">
+  An <em>initializer declaration</em> introduces an initializer for a class, structure, or enumeration into your program. Initializer declarations are declared using the keyword <code class="code-voice">init</code> and have two basic forms.
+</p><p class="para">
+  Structure, enumeration, and class types can have any number of initializers, but the rules and associated behavior for class initializers are different. Unlike structures and enumerations, classes have two kinds of initializers: designated initializers and convenience initializers, as described in <span class="x-name"><a href="Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-XID_266" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_266">Initialization</a></span>.
+</p><p class="para">
+  The following form declares initializers for structures, enumerations, and designated initializers of classes:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">init</span>(<em class="variable-text">parameters</em>) {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  A designated initializer of a class initializes all of the class’s properties directly. It can’t call any other initializers of the same class, and if the class has a superclass, it must call one of the superclass’s designated initializers. If the class inherits any properties from its superclass, one of the superclass’s designated initializers must be called before any of these properties can be set or modified in the current class.
+</p><p class="para">
+  Designated initializers can be declared in the context of a class declaration only and therefore can’t be added to a class using an extension declaration.
+</p><p class="para">
+  Initializers in structures and enumerations can call other declared initializers to delegate part or all of the initialization process.
+</p><p class="para">
+  To declare convenience initializers for a class, prefix the initializer declaration with the context-sensitive keyword <code class="code-voice">convenience</code>.
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">convenience</span> <span class="kt">init</span>(<em class="variable-text">parameters</em>) {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  Convenience initializers can delegate the initialization process to another convenience initializer or to one of the class’s designated initializers. That said, the initialization processes must end with a call to a designated initializer that ultimately initializes the class’s properties. Convenience initializers can’t call a superclass’s initializers.
+</p><p class="para">
+  You can mark designated and convenience initializers with the <code class="code-voice">required</code> attribute to require that every subclass implement the initializer. Because designated initializers are not inherited by subclasses, they must be implemented directly. Required convenience initializers can be either implemented explicitly or inherited when the subclass directly implements all of the superclass’s designated initializers (or overrides the designated initializers with convenience initializers). Unlike methods, properties, and subscripts, you don’t need to mark overridden initializers with the <code class="code-voice">override</code> keyword.
+</p><p class="para">
+  To see examples of initializers in various type declarations, see <span class="x-name"><a href="Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-XID_266" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_266">Initialization</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of an initializer declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/initializer-declaration"></a>
+  <span class="syntax-def-name">
+  initializer-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="initializer.html#//apple_ref/swift/grammar/initializer-head" data-id="//apple_ref/swift/grammar/initializer-head">initializer-head</a>­</span><span class="optional"><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-clause" data-id="//apple_ref/swift/grammar/generic-parameter-clause">generic-parameter-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-clause" data-id="//apple_ref/swift/grammar/parameter-clause">parameter-clause</a>­</span><span class="syntactic-cat"><a href="initializer.html#//apple_ref/swift/grammar/initializer-body" data-id="//apple_ref/swift/grammar/initializer-body">initializer-body</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/initializer-head"></a>
+  <span class="syntax-def-name">
+  initializer-head
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="optional"><code class="literal">convenience­</code><sub class="subscript">opt</sub>­</span><code class="literal">init­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/initializer-body"></a>
+  <span class="syntax-def-name">
+  initializer-body
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_630"></a>
+  <h3 class="section-name" tabindex="0">Deinitializer Declaration</h3>
+  <p class="para">
+  A <em>deinitializer declaration</em> declares a deinitializer for a class type. Deinitializers take no parameters and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">deinit</span> {</pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  A deinitializer is called automatically when there are no longer any references to a class object, just before the class object is deallocated. A deinitializer can be declared only in the body of a class declaration—but not in an extension of a class—and each class can have at most one.
+</p><p class="para">
+  A subclass inherits its superclass’s deinitializer, which is implicitly called just before the subclass object is deallocated. The subclass object is not deallocated until all deinitializers in its inheritance chain have finished executing.
+</p><p class="para">
+  Deinitializers are not called directly.
+</p><p class="para">
+  For an example of how to use a deinitializer in a class declaration, see <span class="x-name"><a href="Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182" data-id="//apple_ref/doc/uid/TP40014097-CH19-XID_182">Deinitialization</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a deinitializer declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/deinitializer-declaration"></a>
+  <span class="syntax-def-name">
+  deinitializer-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">deinit­</code><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_633"></a>
+  <h3 class="section-name" tabindex="0">Extension Declaration</h3>
+  <p class="para">
+  An <em>extension declaration</em> allows you to extend the behavior of existing class, structure, and enumeration types. Extension declarations begin with the keyword <code class="code-voice">extension</code> and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">extension</span> <em class="variable-text">type</em>: <em class="variable-text">adopted protocols</em> {</pre></li><li><pre class="code-voice">    <em class="variable-text">declarations</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  The body of an extension declaration contains zero or more <em>declarations</em>. These <em>declarations</em> can include computed properties, computed static properties, instance methods, static and class methods, initializers, subscript declarations, and even class, structure, and enumeration declarations. Extension declarations can’t contain destructor or protocol declarations, store properties, property observers, or other extension declarations. For a discussion and several examples of extensions that include various kinds of declarations, see <span class="x-name"><a href="Extensions.html#//apple_ref/doc/uid/TP40014097-CH24-XID_191" data-id="//apple_ref/doc/uid/TP40014097-CH24-XID_191">Extensions</a></span>.
+</p><p class="para">
+  Extension declarations can add protocol conformance to an existing class, structure, and enumeration type in the <em>adopted protocols</em>. Extension declarations can’t add class inheritance to an existing class, and therefore the <strong>type-inheritance-clause</strong> in an extension declaration contains only a list of protocols.
+</p><p class="para">
+  Properties, methods, and initializers of an existing type can’t be overridden in an extension of that type.
+</p><p class="para">
+  Extension declarations can contain initializer declarations. That said, if the type you’re extending is defined in another module, an initializer declaration must delegate to an initializer already defined in that module to ensure members of that type are properly initialized.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of an extension declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/extension-declaration"></a>
+  <span class="syntax-def-name">
+  extension-declaration
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">extension­</code><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><span class="optional"><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-inheritance-clause" data-id="//apple_ref/swift/grammar/type-inheritance-clause">type-inheritance-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="extension.html#//apple_ref/swift/grammar/extension-body" data-id="//apple_ref/swift/grammar/extension-body">extension-body</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/extension-body"></a>
+  <span class="syntax-def-name">
+  extension-body
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="declarations.html#//apple_ref/swift/grammar/declarations" data-id="//apple_ref/swift/grammar/declarations">declarations</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_637"></a>
+  <h3 class="section-name" tabindex="0">Subscript Declaration</h3>
+  <p class="para">
+  A <em>subscript</em> declaration allows you to add subscripting support for objects of a particular type and are typically used to provide a convenient syntax for accessing the elements in a collection, list, or sequence. Subscript declarations are declared using the keyword <code class="code-voice">subscript</code> and have the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">subscript</span> (<em class="variable-text">parameters</em>) -&gt; <em class="variable-text">return type</em> {</pre></li><li><pre class="code-voice">    <span class="kt">get</span> {</pre></li><li><pre class="code-voice">        <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">    }</pre></li><li><pre class="code-voice">    <span class="kt">set</span>(<em class="variable-text">setter name</em>) {</pre></li><li><pre class="code-voice">        <em class="variable-text">statements</em></pre></li><li><pre class="code-voice">    }</pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  Subscript declarations can appear only in the context of a class, structure, enumeration, extension, or protocol declaration.
+</p><p class="para">
+  The <em>parameters</em> specify one or more indexes used to access elements of the corresponding type in a subscript expression (for example, the <code class="code-voice">i</code> in the expression <code class="code-voice">object[i]</code>). Although the indexes used to access the elements can be of any type, each parameter must include a type annotation to specify the type of each index. The <em>return type</em> specifies the type of the element being accessed.
+</p><p class="para">
+  As with computed properties, subscript declarations support reading and writing the value of the accessed elements. The getter is used to read the value, and the setter is used to write the value. The setter clause is optional, and when only a getter is needed, you can omit both clauses and simply return the requested value directly. That said, if you provide a setter clause, you must also provide a getter clause.
+</p><p class="para">
+  The <em>setter name</em> and enclosing parentheses are optional. If you provide a setter name, it is used as the name of the parameter to the setter. If you do not provide a setter name, the default parameter name to the setter is <code class="code-voice">value</code>. That type of the <em>setter name</em> must be the same as the <em>return type</em>.
+</p><p class="para">
+  You can overload a subscript declaration in the type in which it is declared, as long as the <em>parameters</em> or the <em>return type</em> differ from the one you’re overloading. You can also override a subscript declaration inherited from a superclass. When you do so, you must mark the overridden subscript declaration with the <code class="code-voice">override</code> keyword.
+</p><p class="para">
+  You can also declare subscripts in the context of a protocol declaration, as described in <span class="x-name"><a href="Protocol Subscript Declaration.html#//apple_ref/doc/uid/TP40014097-CH34-XID_619" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_619">Protocol Subscript Declaration</a></span>.
+</p><p class="para">
+  For more information about subscripting and to see examples of subscript declarations, see <span class="x-name"><a href="Subscripts.html#//apple_ref/doc/uid/TP40014097-CH16-XID_393" data-id="//apple_ref/doc/uid/TP40014097-CH16-XID_393">Subscripts</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a subscript declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/subscript-declaration"></a>
+  <span class="syntax-def-name">
+  subscript-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-head" data-id="//apple_ref/swift/grammar/subscript-head">subscript-head</a>­</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-result" data-id="//apple_ref/swift/grammar/subscript-result">subscript-result</a>­</span><span class="syntactic-cat"><a href="code.html#//apple_ref/swift/grammar/code-block" data-id="//apple_ref/swift/grammar/code-block">code-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_640"></a>
+  <span class="syntax-def-name">
+  subscript-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-head" data-id="//apple_ref/swift/grammar/subscript-head">subscript-head</a>­</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-result" data-id="//apple_ref/swift/grammar/subscript-result">subscript-result</a>­</span><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-setter-block" data-id="//apple_ref/swift/grammar/getter-setter-block">getter-setter-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_641"></a>
+  <span class="syntax-def-name">
+  subscript-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-head" data-id="//apple_ref/swift/grammar/subscript-head">subscript-head</a>­</span><span class="syntactic-cat"><a href="subscript.html#//apple_ref/swift/grammar/subscript-result" data-id="//apple_ref/swift/grammar/subscript-result">subscript-result</a>­</span><span class="syntactic-cat"><a href="getter.html#//apple_ref/swift/grammar/getter-setter-keyword-block" data-id="//apple_ref/swift/grammar/getter-setter-keyword-block">getter-setter-keyword-block</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/subscript-head"></a>
+  <span class="syntax-def-name">
+  subscript-head
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">subscript­</code><span class="syntactic-cat"><a href="parameter.html#//apple_ref/swift/grammar/parameter-clause" data-id="//apple_ref/swift/grammar/parameter-clause">parameter-clause</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/subscript-result"></a>
+  <span class="syntax-def-name">
+  subscript-result
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">-&gt;­</code><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type" data-id="//apple_ref/swift/grammar/type">type</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH34-XID_644"></a>
+  <h3 class="section-name" tabindex="0">Operator Declaration</h3>
+  <p class="para">
+  An <em>operator declaration</em> introduces a new infix, prefix, or postfix operator into your program and is declared using the contextual keyword <code class="code-voice">operator</code>.
+</p><p class="para">
+  You can declare operators of three different fixities: infix, prefix, and postfix. The <em>fixity</em> of an operator specifies the relative position of an operator to its operands.
+</p><p class="para">
+  There are three basic forms of an operator declaration, one for each fixity. The fixity of the operator is specified by including the contextual keyword <code class="code-voice">infix</code>, <code class="code-voice">prefix</code>, or <code class="code-voice">postfix</code> between <code class="code-voice">operator</code> and the name of the operator. In each form, the name of the operator can contain only the operator characters defined in <span class="x-name"><a href="Operators.html#//apple_ref/doc/uid/TP40014097-CH30-XID_871" data-id="//apple_ref/doc/uid/TP40014097-CH30-XID_871">Operators</a></span>.
+</p><p class="para">
+  The following form declares a new infix operator:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="vc">operator</span> <span class="vc">infix</span> <em class="variable-text">operator name</em> {</pre></li><li><pre class="code-voice">    <span class="vc">precedence</span> <em class="variable-text">precedence level</em></pre></li><li><pre class="code-voice">    <span class="vc">associativity</span> <em class="variable-text">associativity</em></pre></li><li><pre class="code-voice">}</pre></li>
+  </ul>
+</div><p class="para">
+  An <em>infix operator</em> is a binary operator that is written between its two operands, such as the familiar addition operator (<code class="code-voice">+</code>) in the expression <code class="code-voice">1 + 2</code>.
+</p><p class="para">
+  Infix operators can optionally specify a precedence, associativity, or both.
+</p><p class="para">
+  The <em>precedence</em> of an operator specifies how tightly an operator binds to its operands in the absence of grouping parentheses. You specify the precedence of an operator by writing the contextual keyword <code class="code-voice">precedence</code> followed by the <em>precedence level</em>. The <em>precedence level</em> can be any whole number (decimal integer) from 0 to 255; unlike decimal integer literals, it can’t contain any underscore characters. Although the precedence level is a specific number, it is significant only relative to another operator. That is, when two operators compete with each other for their operands, such as in the expression <code class="code-voice">2 + 3 * 5</code>, the operator with the higher precedence level binds more tightly to its operands.
+</p><p class="para">
+  The <em>associativity</em> of an operator specifies how a sequence of operators with the same precedence level are grouped together in the absence of grouping parentheses. You specify the associativity of an operator by writing the contextual keyword <code class="code-voice">associativity</code> followed by the <em>associativity</em>, which is one of the contextual keywords <code class="code-voice">left</code>, <code class="code-voice">right</code>, or <code class="code-voice">none</code>. Operators that are left-associative group left-to-right. For example, the subtraction operator (<code class="code-voice">-</code>) is left-associative, and therefore the expression <code class="code-voice">4 - 5 - 6</code> is grouped as <code class="code-voice">(4 - 5) - 6</code> and evaluates to <code class="code-voice">-7</code>. Operators that are right-associative group right-to-left, and operators that are specified with an associativity of <code class="code-voice">none</code> don’t associate at all. Nonassociative operators of the same precedence level can’t appear adjacent to each to other. For example, <code class="code-voice">1 &lt; 2 &lt; 3</code> is not a valid expression.
+</p><p class="para">
+  Infix operators that are declared without specifying a precedence or associativity are initialized with a precedence level of 100 and an associativity of <code class="code-voice">none</code>.
+</p><p class="para">
+  The following form declares a new prefix operator:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="vc">operator</span> <span class="vc">prefix</span> <em class="variable-text">operator name</em> {}</pre></li>
+  </ul>
+</div><p class="para">
+  A <em>prefix operator</em> is a unary operator that is written immediately before its operand, such as the prefix increment operator (<code class="code-voice">++</code>) is in the expression <code class="code-voice">++i</code>.
+</p><p class="para">
+  Prefix operators declarations don’t specify a precedence level. Prefix operators are nonassociative.
+</p><p class="para">
+  The following form declares a new postfix operator:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="vc">operator</span> <span class="vc">postfix</span> <em class="variable-text">operator name</em> {}</pre></li>
+  </ul>
+</div><p class="para">
+  A <em>postfix operator</em> is a unary operator that is written immediately after its operand, such as the postfix increment operator (<code class="code-voice">++</code>) is in the expression <code class="code-voice">i++</code>.
+</p><p class="para">
+  As with prefix operators, postfix operator declarations don’t specify a precedence level. Postfix operators are nonassociative.
+</p><p class="para">
+  After declaring a new operator, you implement it by declaring a function that has the same name as the operator. To see an example of how to create and implement a new operator, see <span class="x-name"><a href="Custom Operators.html#//apple_ref/doc/uid/TP40014097-CH27-XID_48" data-id="//apple_ref/doc/uid/TP40014097-CH27-XID_48">Custom Operators</a></span>.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of an operator declaration
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/operator-declaration"></a>
+  <span class="syntax-def-name">
+  operator-declaration
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="prefix.html#//apple_ref/swift/grammar/prefix-operator-declaration" data-id="//apple_ref/swift/grammar/prefix-operator-declaration">prefix-operator-declaration</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="postfix.html#//apple_ref/swift/grammar/postfix-operator-declaration" data-id="//apple_ref/swift/grammar/postfix-operator-declaration">postfix-operator-declaration</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a href="infix.html#//apple_ref/swift/grammar/infix-operator-declaration" data-id="//apple_ref/swift/grammar/infix-operator-declaration">infix-operator-declaration</a>­</span>
+</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/prefix-operator-declaration"></a>
+  <span class="syntax-def-name">
+  prefix-operator-declaration
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">operator­</code><code class="literal">prefix­</code><span class="syntactic-cat"><a href="operator.html#//apple_ref/swift/grammar/operator" data-id="//apple_ref/swift/grammar/operator">operator</a>­</span><code class="literal">{­</code><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/postfix-operator-declaration"></a>
+  <span class="syntax-def-name">
+  postfix-operator-declaration
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">operator­</code><code class="literal">postfix­</code><span class="syntactic-cat"><a href="operator.html#//apple_ref/swift/grammar/operator" data-id="//apple_ref/swift/grammar/operator">operator</a>­</span><code class="literal">{­</code><code class="literal">}­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/infix-operator-declaration"></a>
+  <span class="syntax-def-name">
+  infix-operator-declaration
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">operator­</code><code class="literal">infix­</code><span class="syntactic-cat"><a href="operator.html#//apple_ref/swift/grammar/operator" data-id="//apple_ref/swift/grammar/operator">operator</a>­</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="infix.html#//apple_ref/swift/grammar/infix-operator-attributes" data-id="//apple_ref/swift/grammar/infix-operator-attributes">infix-operator-attributes</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/infix-operator-attributes"></a>
+  <span class="syntax-def-name">
+  infix-operator-attributes
+</span>
+<span class="arrow">
+  →
+</span><span class="optional"><span class="syntactic-cat"><a href="precedence.html#//apple_ref/swift/grammar/precedence-clause" data-id="//apple_ref/swift/grammar/precedence-clause">precedence-clause</a>­</span><sub class="subscript">opt</sub>­</span><span class="optional"><span class="syntactic-cat"><a href="associativity.html#//apple_ref/swift/grammar/associativity-clause" data-id="//apple_ref/swift/grammar/associativity-clause">associativity-clause</a>­</span><sub class="subscript">opt</sub>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/precedence-clause"></a>
+  <span class="syntax-def-name">
+  precedence-clause
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">precedence­</code><span class="syntactic-cat"><a href="precedence.html#//apple_ref/swift/grammar/precedence-level" data-id="//apple_ref/swift/grammar/precedence-level">precedence-level</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/precedence-level"></a>
+  <span class="syntax-def-name">
+  precedence-level
+</span>
+<span class="arrow">
+  →
+</span><span class="text-description">Digit 0 through 255</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/associativity-clause"></a>
+  <span class="syntax-def-name">
+  associativity-clause
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">associativity­</code><span class="syntactic-cat"><a href="associativity.html#//apple_ref/swift/grammar/associativity" data-id="//apple_ref/swift/grammar/associativity">associativity</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/associativity"></a>
+  <span class="syntax-def-name">
+  associativity
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <code class="literal">left­</code>
+</span><span class="alternative">
+  <code class="literal">right­</code>
+</span><span class="alternative">
+  <code class="literal">none­</code>
+</span>
+</p>
+</div>
+ </div>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Statements.html#//apple_ref/doc/uid/TP40014097-CH33-XID_913" data-id="//apple_ref/doc/uid/TP40014097-CH33-XID_913">Statements</a></p>
+  			<p class="next-link"><a href="Attributes.html#//apple_ref/doc/uid/TP40014097-CH35-XID_460" data-id="//apple_ref/doc/uid/TP40014097-CH35-XID_460">Attributes</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+    <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script> 
+  </body></html>
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>

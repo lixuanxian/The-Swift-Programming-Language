@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!-- saved from url=(0174)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>The Swift Programming Language: Deinitialization</title>
+    <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+<meta id="g-version" name="g-version" content="fe723145">
+<meta id="j-version" name="j-version" content="1.1.5">
+<meta id="build" name="build" content="9c53f481676f09a07ddd8374f439b060">
+<meta id="document-version" name="document-version" content="1.0.76">
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities/Swift}">
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40014097">
+<meta id="book-title" name="book-title" content="The Swift Programming Language">
+<meta id="book-resource-type" name="book-resource-type" content="Guide">
+<meta id="book-root" name="book-root" content="./">
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-06-02">
+<meta id="description" name="description" content="The definitive guide to Swift, Apple’s new programming language for building iOS and OS X apps.">
+<meta id="IndexTitle" name="IndexTitle" content="">
+
+<meta id="devcenter" name="devcenter" content="&lt;!-- DEVCENTER_NAME --&gt;">
+<meta id="devcenter-url" name="devcenter-url" content="&lt;!-- DEVCENTER_URL --&gt;">
+<meta id="reflib" name="reflib" content="&lt;!-- REFLIB_NAME --&gt;">
+
+<meta id="xcode-display" name="xcode-display" content="render">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="//apple_ref/doc/uid/TP40014097" title="The Swift Programming Language"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="iOS Developer Library.html">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="Developer.html>Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">The Swift Programming Language</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="https://developer.apple.com/library/prerelease/ios/search/" accept-charset="utf-8">
+      <input type="search" id="ssi_SearchField" placeholder="Search iOS Developer Library" name="q" accesskey="s">
+    </form>
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11">iBooks</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40014097-CH1-XID_27" class="part-name">Welcome to Swift
+          <ul class="nav-chapters">
+              <li class="nav-chapter nav-visited-chapter">
+              	<a href="About Swift.html#//apple_ref/doc/uid/TP40014097-CH3-XID_0" data-id="//apple_ref/doc/uid/TP40014097-CH3-XID_0" class="">About Swift</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="A Swift Tour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1" data-id="//apple_ref/doc/uid/TP40014097-CH2-XID_1" class="">A Swift Tour</a>
+              </li>
+          </ul>
+        </li><li data-id="//apple_ref/doc/uid/TP40014097-CH4-XID_299" class="part-name nav-part-active open-part">Language Guide
+          <ul class="nav-chapters" style="height: 607px;">
+              <li class="nav-chapter">
+              	<a href="The Basics.html#//apple_ref/doc/uid/TP40014097-CH5-XID_399" data-id="//apple_ref/doc/uid/TP40014097-CH5-XID_399" class="">The Basics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Basic Operators.html#//apple_ref/doc/uid/TP40014097-CH6-XID_70" data-id="//apple_ref/doc/uid/TP40014097-CH6-XID_70" class="">Basic Operators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Strings and Characters.html#//apple_ref/doc/uid/TP40014097-CH7-XID_368" data-id="//apple_ref/doc/uid/TP40014097-CH7-XID_368" class="">Strings and Characters</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Collection Types.html#//apple_ref/doc/uid/TP40014097-CH8-XID_133" data-id="//apple_ref/doc/uid/TP40014097-CH8-XID_133" class="">Collection Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control Flow.html#//apple_ref/doc/uid/TP40014097-CH9-XID_153" data-id="//apple_ref/doc/uid/TP40014097-CH9-XID_153" class="">Control Flow</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Functions.html#//apple_ref/doc/uid/TP40014097-CH10-XID_204" data-id="//apple_ref/doc/uid/TP40014097-CH10-XID_204" class="">Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Closures.html#//apple_ref/doc/uid/TP40014097-CH11-XID_117" data-id="//apple_ref/doc/uid/TP40014097-CH11-XID_117" class="">Closures</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-XID_185" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_185" class="">Enumerations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Classes and Structures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_94" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_94" class="">Classes and Structures</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Properties.html#//apple_ref/doc/uid/TP40014097-CH14-XID_323" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_323" class="">Properties</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Methods.html#//apple_ref/doc/uid/TP40014097-CH15-XID_300" data-id="//apple_ref/doc/uid/TP40014097-CH15-XID_300" class="">Methods</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Subscripts.html#//apple_ref/doc/uid/TP40014097-CH16-XID_393" data-id="//apple_ref/doc/uid/TP40014097-CH16-XID_393" class="">Subscripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-XID_251" data-id="//apple_ref/doc/uid/TP40014097-CH17-XID_251" class="">Inheritance</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-XID_266" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_266" class="">Initialization</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Deinitialization.html" data-id="//apple_ref/doc/uid/TP40014097-CH19-XID_182" class="nav-chapter-active">Deinitialization</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Automatic Reference Counting.html#//apple_ref/doc/uid/TP40014097-CH20-XID_50" data-id="//apple_ref/doc/uid/TP40014097-CH20-XID_50">Automatic Reference Counting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Optional Chaining.html#//apple_ref/doc/uid/TP40014097-CH21-XID_312" data-id="//apple_ref/doc/uid/TP40014097-CH21-XID_312">Optional Chaining</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Type Casting.html#//apple_ref/doc/uid/TP40014097-CH22-XID_443" data-id="//apple_ref/doc/uid/TP40014097-CH22-XID_443">Type Casting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Nested Types.html#//apple_ref/doc/uid/TP40014097-CH23-XID_309" data-id="//apple_ref/doc/uid/TP40014097-CH23-XID_309">Nested Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Extensions.html#//apple_ref/doc/uid/TP40014097-CH24-XID_191" data-id="//apple_ref/doc/uid/TP40014097-CH24-XID_191">Extensions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Protocols.html#//apple_ref/doc/uid/TP40014097-CH25-XID_345" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_345">Protocols</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Generics.html#//apple_ref/doc/uid/TP40014097-CH26-XID_234" data-id="//apple_ref/doc/uid/TP40014097-CH26-XID_234">Generics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Advanced Operators.html#//apple_ref/doc/uid/TP40014097-CH27-XID_28" data-id="//apple_ref/doc/uid/TP40014097-CH27-XID_28">Advanced Operators</a>
+              </li>
+          </ul>
+        </li><li data-id="//apple_ref/doc/uid/TP40014097-CH28-XID_912" class="part-name">Language Reference
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="About the Language Reference.html#//apple_ref/doc/uid/TP40014097-CH29-XID_453" data-id="//apple_ref/doc/uid/TP40014097-CH29-XID_453" class="">About the Language Reference</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Lexical Structure.html#//apple_ref/doc/uid/TP40014097-CH30-XID_794" data-id="//apple_ref/doc/uid/TP40014097-CH30-XID_794">Lexical Structure</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Types.html#//apple_ref/doc/uid/TP40014097-CH31-XID_988" data-id="//apple_ref/doc/uid/TP40014097-CH31-XID_988">Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Expressions.html#//apple_ref/doc/uid/TP40014097-CH32-XID_655" data-id="//apple_ref/doc/uid/TP40014097-CH32-XID_655">Expressions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Statements.html#//apple_ref/doc/uid/TP40014097-CH33-XID_913" data-id="//apple_ref/doc/uid/TP40014097-CH33-XID_913">Statements</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-XID_475" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_475">Declarations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Attributes.html#//apple_ref/doc/uid/TP40014097-CH35-XID_460" data-id="//apple_ref/doc/uid/TP40014097-CH35-XID_460">Attributes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Patterns.html#//apple_ref/doc/uid/TP40014097-CH36-XID_878" data-id="//apple_ref/doc/uid/TP40014097-CH36-XID_878">Patterns</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Generic Parameters and Arguments.html#//apple_ref/doc/uid/TP40014097-CH37-XID_774" data-id="//apple_ref/doc/uid/TP40014097-CH37-XID_774">Generic Parameters and Arguments</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Summary of the Grammar.html#//apple_ref/doc/uid/TP40014097-CH38-XID_1030" data-id="//apple_ref/doc/uid/TP40014097-CH38-XID_1030">Summary of the Grammar</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40014097-CH19"></a><a name="//apple_ref/doc/uid/TP40014097-CH19-XID_182"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Deinitialization</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH19-XID_183">
+	  				How Deinitialization Works
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH19-XID_184">
+	  				Deinitializers in Action
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  A <em>deinitializer</em> is called immediately before a class instance is deallocated. You write deinitializers with the <code class="code-voice">deinit</code> keyword, similar to how intializers are written with the <code class="code-voice">init</code> keyword. Deinitializers are only available on class types.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH19-XID_183"></a>
+  <h3 class="section-name" tabindex="0">How Deinitialization Works</h3>
+  <p class="para">
+  Swift automatically deallocates your instances when they are no longer needed, to free up resources. Swift handles the memory management of instances through <em>automatic reference counting</em> (<em>ARC</em>), as described in <span class="x-name"><a href="Automatic Reference Counting.html#//apple_ref/doc/uid/TP40014097-CH20-XID_50" data-id="//apple_ref/doc/uid/TP40014097-CH20-XID_50">Automatic Reference Counting</a></span>. Typically you don’t need to perform manual clean-up when your instances are deallocated. However, when you are working with your own resources, you might need to perform some additional clean-up yourself. For example, if you create a custom class to open a file and write some data to it, you might need to close the file before the class instance is deallocated.
+</p><p class="para">
+  Class definitions can have at most one deinitializer per class. The deinitializer does not take any parameters and is written without parentheses:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">deinit</span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// perform the deinitialization</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  Deinitializers are called automatically, just before instance deallocation takes place. You are not allowed to call a deinitializer yourself. Superclass deinitializers are inherited by their subclasses, and the superclass deinitializer is called automatically at the end of a subclass deinitializer implementation. Superclass deinitializers are always called, even if a subclass does not provide its own deinitializer.
+</p><p class="para">
+  Because an instance is not deallocated until after its deinitializer is called, a deinitializer can access all properties of the instance it is called on and can modify its behavior based on those properties (such as looking up the name of a file that needs to be closed).
+</p>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH19-XID_184"></a>
+  <h3 class="section-name" tabindex="0">Deinitializers in Action</h3>
+  <p class="para">
+  Here’s an example of a deinitializer in action. This example defines two new types, <code class="code-voice">Bank</code> and <code class="code-voice">Player</code>, for a simple game. The <code class="code-voice">Bank</code> structure manages a made-up currency, which can never have more than 10,000 coins in circulation. There can only ever be one <code class="code-voice">Bank</code> in the game, and so the <code class="code-voice">Bank</code> is implemented as a structure with static properties and methods to store and manage its current state:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Bank</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">static</span> <span class="kt">var</span> <span class="vc">coinsInBank</span> = <span class="m">10_000</span></code></li>
+          <li><code class="code-voice">    <span class="kt">static</span> <span class="kt">func</span> <span class="vc">vendCoins</span>(<span class="kt">var</span> <span class="vc">numberOfCoinsToVend</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="vc">numberOfCoinsToVend</span> = <span class="vc">min</span>(<span class="vc">numberOfCoinsToVend</span>, <span class="vc">coinsInBank</span>)</code></li>
+          <li><code class="code-voice">        <span class="vc">coinsInBank</span> -= <span class="vc">numberOfCoinsToVend</span></code></li>
+          <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">numberOfCoinsToVend</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="kt">static</span> <span class="kt">func</span> <span class="vc">receiveCoins</span>(<span class="vc">coins</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="vc">coinsInBank</span> += <span class="vc">coins</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  <code class="code-voice">Bank</code> keeps track of the current number of coins it holds with its <code class="code-voice">coinsInBank</code> property. It also offers two methods—<code class="code-voice">vendCoins</code> and <code class="code-voice">receiveCoins</code>—to handle the distribution and collection of coins.
+</p><p class="para">
+  <code class="code-voice">vendCoins</code> checks that there are enough coins in the bank before distributing them. If there are not enough coins, <code class="code-voice">Bank</code> returns a smaller number than the number that was requested (and returns zero if no coins are left in the bank). <code class="code-voice">vendCoins</code> declares <code class="code-voice">numberOfCoinsToVend</code> as a variable parameter, so that the number can be modified within the method’s body without the need to declare a new variable. It returns an integer value to indicate the actual number of coins that were provided.
+</p><p class="para">
+  The <code class="code-voice">receiveCoins</code> method simply adds the received number of coins back into the bank’s coin store.
+</p><p class="para">
+  The <code class="code-voice">Player</code> class describes a player in the game. Each player has a certain number of coins stored in their purse at any time. This is represented by the player’s <code class="code-voice">coinsInPurse</code> property:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Player</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">coinsInPurse</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">coins</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="vc">coinsInPurse</span> = <span class="vc">Bank</span>.<span class="vc">vendCoins</span>(<span class="vc">coins</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">winCoins</span>(<span class="vc">coins</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="vc">coinsInPurse</span> += <span class="vc">Bank</span>.<span class="vc">vendCoins</span>(<span class="vc">coins</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="kt">deinit</span> {</code></li>
+          <li><code class="code-voice">        <span class="vc">Bank</span>.<span class="vc">receiveCoins</span>(<span class="vc">coinsInPurse</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  Each <code class="code-voice">Player</code> instance is initialized with a starting allowance of a specified number of coins from the bank during initialization, although a <code class="code-voice">Player</code> instance may receive fewer than that number if not enough coins are available.
+</p><p class="para">
+  The <code class="code-voice">Player</code> class defines a <code class="code-voice">winCoins</code> method, which retrieves a certain number of coins from the bank and adds them to the player’s purse. The <code class="code-voice">Player</code> class also implements a deinitializer, which is called just before a <code class="code-voice">Player</code> instance is deallocated. Here, the deinitializer simply returns all of the player’s coins to the bank:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">playerOne</span>: <span class="n"><!-- a href="" -->Player<!-- /a --></span>? = <span class="vc">Player</span>(<span class="vc">coins</span>: <span class="m">100</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"A new player has joined the game with </span>\(<span class="vc">playerOne</span>!.<span class="vc">coinsInPurse</span>)<span class="s"> coins"</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "A new player has joined the game with 100 coins"</span></code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"There are now </span>\(<span class="vc">Bank</span>.<span class="vc">coinsInBank</span>)<span class="s"> coins left in the bank"</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "There are now 9900 coins left in the bank"</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  A new <code class="code-voice">Player</code> instance is created, with a request for 100 coins if they are available. This <code class="code-voice">Player</code> instance is stored in an optional <code class="code-voice">Player</code> variable called <code class="code-voice">playerOne</code>. An optional variable is used here, because players can leave the game at any point. The optional lets you track whether there is currently a player in the game.
+</p><p class="para">
+  Because <code class="code-voice">playerOne</code> is an optional, it is qualified with an exclamation mark (<code class="code-voice">!</code>) when its <code class="code-voice">coinsInPurse</code> property is accessed to print its default number of coins, and whenever its <code class="code-voice">winCoins</code> method is called:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">playerOne</span>!.<span class="vc">winCoins</span>(<span class="m">2_000</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"PlayerOne won 2000 coins &amp; now has </span>\(<span class="vc">playerOne</span>!.<span class="vc">coinsInPurse</span>)<span class="s"> coins"</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "PlayerOne won 2000 coins &amp; now has 2100 coins"</span></code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"The bank now only has </span>\(<span class="vc">Bank</span>.<span class="vc">coinsInBank</span>)<span class="s"> coins left"</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "The bank now only has 7900 coins left"</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  Here, the player has won 2,000 coins. The player’s purse now contains 2,100 coins, and the bank has only 7,900 coins left.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">playerOne</span> = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"PlayerOne has left the game"</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "PlayerOne has left the game"</span></code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"The bank now has </span>\(<span class="vc">Bank</span>.<span class="vc">coinsInBank</span>)<span class="s"> coins"</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "The bank now has 10000 coins"</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The player has now left the game. This is indicated by setting the optional <code class="code-voice">playerOne</code> variable to <code class="code-voice">nil</code>, meaning “no <code class="code-voice">Player</code> instance.” At the point that this happens, the <code class="code-voice">playerOne</code> variable’s reference to the <code class="code-voice">Player</code> instance is broken. No other properties or variables are still referring to the <code class="code-voice">Player</code> instance, and so it is deallocated in order to free up its memory. Just before this happens, its deinitializer is called automatically, and its coins are returned to the bank.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-XID_266" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_266">Initialization</a></p>
+  			<p class="next-link"><a href="Automatic Reference Counting.html#//apple_ref/doc/uid/TP40014097-CH20-XID_50" data-id="//apple_ref/doc/uid/TP40014097-CH20-XID_50">Automatic Reference Counting</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+    <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script> 
+  </body></html>
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>

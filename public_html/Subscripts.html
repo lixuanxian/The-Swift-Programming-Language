@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!-- saved from url=(0168)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Subscripts.html#//apple_ref/doc/uid/TP40014097-CH16-XID_393 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>The Swift Programming Language: Subscripts</title>
+    <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+<meta id="g-version" name="g-version" content="fe723145">
+<meta id="j-version" name="j-version" content="1.1.5">
+<meta id="build" name="build" content="9c53f481676f09a07ddd8374f439b060">
+<meta id="document-version" name="document-version" content="1.0.76">
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/Languages &amp; Utilities/Swift}">
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40014097">
+<meta id="book-title" name="book-title" content="The Swift Programming Language">
+<meta id="book-resource-type" name="book-resource-type" content="Guide">
+<meta id="book-root" name="book-root" content="./">
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-06-02">
+<meta id="description" name="description" content="The definitive guide to Swift, Apple’s new programming language for building iOS and OS X apps.">
+<meta id="IndexTitle" name="IndexTitle" content="">
+
+<meta id="devcenter" name="devcenter" content="&lt;!-- DEVCENTER_NAME --&gt;">
+<meta id="devcenter-url" name="devcenter-url" content="&lt;!-- DEVCENTER_URL --&gt;">
+<meta id="reflib" name="reflib" content="&lt;!-- REFLIB_NAME --&gt;">
+
+<meta id="xcode-display" name="xcode-display" content="render">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="//apple_ref/doc/uid/TP40014097" title="The Swift Programming Language"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="iOS Developer Library.html">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="Developer.html>Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">The Swift Programming Language</span>
+    </p>
+    <form id="search" class="hideInXcode" method="get" action="https://developer.apple.com/library/prerelease/ios/search/" accept-charset="utf-8">
+      <input type="search" id="ssi_SearchField" placeholder="Search iOS Developer Library" name="q" accesskey="s">
+    </form>
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11">iBooks</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40014097-CH1-XID_27" class="part-name">Welcome to Swift
+          <ul class="nav-chapters">
+              <li class="nav-chapter nav-visited-chapter">
+              	<a href="About Swift.html#//apple_ref/doc/uid/TP40014097-CH3-XID_0" data-id="//apple_ref/doc/uid/TP40014097-CH3-XID_0" class="">About Swift</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="A Swift Tour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1" data-id="//apple_ref/doc/uid/TP40014097-CH2-XID_1" class="">A Swift Tour</a>
+              </li>
+          </ul>
+        </li><li data-id="//apple_ref/doc/uid/TP40014097-CH4-XID_299" class="part-name nav-part-active open-part">Language Guide
+          <ul class="nav-chapters" style="height: 607px;">
+              <li class="nav-chapter">
+              	<a href="The Basics.html#//apple_ref/doc/uid/TP40014097-CH5-XID_399" data-id="//apple_ref/doc/uid/TP40014097-CH5-XID_399" class="">The Basics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Basic Operators.html#//apple_ref/doc/uid/TP40014097-CH6-XID_70" data-id="//apple_ref/doc/uid/TP40014097-CH6-XID_70" class="">Basic Operators</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Strings and Characters.html#//apple_ref/doc/uid/TP40014097-CH7-XID_368" data-id="//apple_ref/doc/uid/TP40014097-CH7-XID_368" class="">Strings and Characters</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Collection Types.html#//apple_ref/doc/uid/TP40014097-CH8-XID_133" data-id="//apple_ref/doc/uid/TP40014097-CH8-XID_133" class="">Collection Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Control Flow.html#//apple_ref/doc/uid/TP40014097-CH9-XID_153" data-id="//apple_ref/doc/uid/TP40014097-CH9-XID_153" class="">Control Flow</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Functions.html#//apple_ref/doc/uid/TP40014097-CH10-XID_204" data-id="//apple_ref/doc/uid/TP40014097-CH10-XID_204" class="">Functions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Closures.html#//apple_ref/doc/uid/TP40014097-CH11-XID_117" data-id="//apple_ref/doc/uid/TP40014097-CH11-XID_117" class="">Closures</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Enumerations.html#//apple_ref/doc/uid/TP40014097-CH12-XID_185" data-id="//apple_ref/doc/uid/TP40014097-CH12-XID_185" class="">Enumerations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Classes and Structures.html#//apple_ref/doc/uid/TP40014097-CH13-XID_94" data-id="//apple_ref/doc/uid/TP40014097-CH13-XID_94" class="">Classes and Structures</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Properties.html#//apple_ref/doc/uid/TP40014097-CH14-XID_323" data-id="//apple_ref/doc/uid/TP40014097-CH14-XID_323" class="">Properties</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Methods.html#//apple_ref/doc/uid/TP40014097-CH15-XID_300" data-id="//apple_ref/doc/uid/TP40014097-CH15-XID_300" class="">Methods</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Subscripts.html" data-id="//apple_ref/doc/uid/TP40014097-CH16-XID_393" class="nav-chapter-active">Subscripts</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-XID_251" data-id="//apple_ref/doc/uid/TP40014097-CH17-XID_251">Inheritance</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-XID_266" data-id="//apple_ref/doc/uid/TP40014097-CH18-XID_266">Initialization</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182" data-id="//apple_ref/doc/uid/TP40014097-CH19-XID_182">Deinitialization</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Automatic Reference Counting.html#//apple_ref/doc/uid/TP40014097-CH20-XID_50" data-id="//apple_ref/doc/uid/TP40014097-CH20-XID_50">Automatic Reference Counting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Optional Chaining.html#//apple_ref/doc/uid/TP40014097-CH21-XID_312" data-id="//apple_ref/doc/uid/TP40014097-CH21-XID_312">Optional Chaining</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Type Casting.html#//apple_ref/doc/uid/TP40014097-CH22-XID_443" data-id="//apple_ref/doc/uid/TP40014097-CH22-XID_443">Type Casting</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Nested Types.html#//apple_ref/doc/uid/TP40014097-CH23-XID_309" data-id="//apple_ref/doc/uid/TP40014097-CH23-XID_309">Nested Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Extensions.html#//apple_ref/doc/uid/TP40014097-CH24-XID_191" data-id="//apple_ref/doc/uid/TP40014097-CH24-XID_191">Extensions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Protocols.html#//apple_ref/doc/uid/TP40014097-CH25-XID_345" data-id="//apple_ref/doc/uid/TP40014097-CH25-XID_345">Protocols</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Generics.html#//apple_ref/doc/uid/TP40014097-CH26-XID_234" data-id="//apple_ref/doc/uid/TP40014097-CH26-XID_234">Generics</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Advanced Operators.html#//apple_ref/doc/uid/TP40014097-CH27-XID_28" data-id="//apple_ref/doc/uid/TP40014097-CH27-XID_28">Advanced Operators</a>
+              </li>
+          </ul>
+        </li><li data-id="//apple_ref/doc/uid/TP40014097-CH28-XID_912" class="part-name">Language Reference
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="About the Language Reference.html#//apple_ref/doc/uid/TP40014097-CH29-XID_453" data-id="//apple_ref/doc/uid/TP40014097-CH29-XID_453" class="">About the Language Reference</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Lexical Structure.html#//apple_ref/doc/uid/TP40014097-CH30-XID_794" data-id="//apple_ref/doc/uid/TP40014097-CH30-XID_794">Lexical Structure</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Types.html#//apple_ref/doc/uid/TP40014097-CH31-XID_988" data-id="//apple_ref/doc/uid/TP40014097-CH31-XID_988">Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Expressions.html#//apple_ref/doc/uid/TP40014097-CH32-XID_655" data-id="//apple_ref/doc/uid/TP40014097-CH32-XID_655">Expressions</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Statements.html#//apple_ref/doc/uid/TP40014097-CH33-XID_913" data-id="//apple_ref/doc/uid/TP40014097-CH33-XID_913">Statements</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-XID_475" data-id="//apple_ref/doc/uid/TP40014097-CH34-XID_475">Declarations</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Attributes.html#//apple_ref/doc/uid/TP40014097-CH35-XID_460" data-id="//apple_ref/doc/uid/TP40014097-CH35-XID_460">Attributes</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Patterns.html#//apple_ref/doc/uid/TP40014097-CH36-XID_878" data-id="//apple_ref/doc/uid/TP40014097-CH36-XID_878">Patterns</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Generic Parameters and Arguments.html#//apple_ref/doc/uid/TP40014097-CH37-XID_774" data-id="//apple_ref/doc/uid/TP40014097-CH37-XID_774">Generic Parameters and Arguments</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Summary of the Grammar.html#//apple_ref/doc/uid/TP40014097-CH38-XID_1030" data-id="//apple_ref/doc/uid/TP40014097-CH38-XID_1030">Summary of the Grammar</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40014097-CH16"></a><a name="//apple_ref/doc/uid/TP40014097-CH16-XID_393"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Subscripts</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH16-XID_394">
+	  				Subscript Syntax
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH16-XID_396">
+	  				Subscript Usage
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href=".html#//apple_ref/doc/uid/TP40014097-CH16-XID_398">
+	  				Subscript Options
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  Classes, structures, and enumerations can define <em>subscripts</em>, which are shortcuts for accessing the member elements of a collection, list, or sequence. You use subscripts to set and retrieve values by index without needing separate methods for setting and retrieval. For example, you access elements in an <code class="code-voice">Array</code> instance as <code class="code-voice">someArray[index]</code> and elements in a <code class="code-voice">Dictionary</code> instance as <code class="code-voice">someDictionary[key]</code>.
+</p>
+<p class="para">
+  You can define multiple subscripts for a single type, and the appropriate subscript overload to use is selected based on the type of index value you pass to the subscript. Subscripts are not limited to a single dimension, and you can define subscripts with multiple input parameters to suit your custom type’s needs.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH16-XID_394"></a>
+  <h3 class="section-name" tabindex="0">Subscript Syntax</h3>
+  <p class="para">
+  Subscripts enable you to query instances of a type by writing one or more values in square brackets after the instance name. Their syntax is similar to both instance method syntax and computed property syntax. You write subscript definitions with the <code class="code-voice">subscript</code> keyword, and specify one or more input parameters and a return type, in the same way as instance methods. Unlike instance methods, subscripts can be read-write or read-only. This behavior is communicated by a getter and setter in the same way as for computed properties:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">subscript</span>(<span class="vc">index</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">get</span> {</code></li>
+          <li><code class="code-voice">        <span class="c">// return an appropriate subscript value here</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="kt">set</span>(<span class="vc">newValue</span>) {</code></li>
+          <li><code class="code-voice">        <span class="c">// perform a suitable setting action here</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The type of <code class="code-voice">newValue</code> is the same as the return value of the subscript. As with computed properties, you can choose not to specify the setter’s <code class="code-voice">(newValue)</code> parameter. A default parameter called <code class="code-voice">newValue</code> is provided to your setter if you do not provide one yourself.
+</p><p class="para">
+  As with read-only computed properties, you can drop the <code class="code-voice">get</code> keyword for read-only subscripts:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">subscript</span>(<span class="vc">index</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// return an appropriate subscript value here</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  Here’s an example of a read-only subscript implementation, which defines a <code class="code-voice">TimesTable</code> structure to represent an <em>n</em>-times-table of integers:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">TimesTable</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">multiplier</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">index</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">multiplier</span> * <span class="vc">index</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">threeTimesTable</span> = <span class="vc">TimesTable</span>(<span class="vc">multiplier</span>: <span class="m">3</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"six times three is </span>\(<span class="vc">threeTimesTable</span>[<span class="m">6</span>])<span class="s">"</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// prints "six times three is 18"</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  In this example, a new instance of <code class="code-voice">TimesTable</code> is created to represent the three-times-table. This is indicated by passing a value of <code class="code-voice">3</code> to the structure’s <code class="code-voice">initializer</code> as the value to use for the instance’s <code class="code-voice">multiplier</code> parameter.
+</p><p class="para">
+  You can query the <code class="code-voice">threeTimesTable</code> instance by calling its subscript, as shown in the call to <code class="code-voice">threeTimesTable[6]</code>. This requests the sixth entry in the three-times-table, which returns a value of <code class="code-voice">18</code>, or <code class="code-voice">3</code> times <code class="code-voice">6</code>.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014097-CH16-XID_395"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">An <em>n</em>-times-table is based on a fixed mathematical rule. It is not appropriate to set <code class="code-voice">threeTimesTable[someIndex]</code> to a new value, and so the subscript for <code class="code-voice">TimesTable</code> is defined as a read-only subscript.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH16-XID_396"></a>
+  <h3 class="section-name" tabindex="0">Subscript Usage</h3>
+  <p class="para">
+  The exact meaning of “subscript” depends on the context in which it is used. Subscripts are typically used as a shortcut for accessing the member elements in a collection, list, or sequence. You are free to implement subscripts in the most appropriate way for your particular class or structure’s functionality.
+</p><p class="para">
+  For example, Swift’s <code class="code-voice">Dictionary</code> type implements a subscript to set and retrieve the values stored in a <code class="code-voice">Dictionary</code> instance. You can set a value in a dictionary by providing a key of the dictionary’s key type within subscript braces, and assigning a value of the dictionary’s value type to the subscript:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">numberOfLegs</span> = [<span class="s">"spider"</span>: <span class="m">8</span>, <span class="s">"ant"</span>: <span class="m">6</span>, <span class="s">"cat"</span>: <span class="m">4</span>]</code></li>
+          <li><code class="code-voice"><span class="vc">numberOfLegs</span>[<span class="s">"bird"</span>] = <span class="m">2</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The example above defines a variable called <code class="code-voice">numberOfLegs</code> and initializes it with a dictionary literal containing three key-value pairs. The type of the <code class="code-voice">numberOfLegs</code> dictionary is inferred to be <code class="code-voice">Dictionary&lt;String, Int&gt;</code>. After creating the dictionary, this example uses subscript assignment to add a <code class="code-voice">String</code> key of <code class="code-voice">"bird"</code> and an <code class="code-voice">Int</code> value of <code class="code-voice">2</code> to the dictionary.
+</p><p class="para">
+  For more information about <code class="code-voice">Dictionary</code> subscripting, see <span class="x-name"><a href="Accessing and Modifying a Dictionary.html#//apple_ref/doc/uid/TP40014097-CH8-XID_146" data-id="//apple_ref/doc/uid/TP40014097-CH8-XID_146">Accessing and Modifying a Dictionary</a></span>.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014097-CH16-XID_397"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Swift’s <code class="code-voice">Dictionary</code> type implements its key-value subscripting as a subscript that takes and receives an <em>optional</em> type. For the <code class="code-voice">numberOfLegs</code> dictionary above, the key-value subscript takes and returns a value of type <code class="code-voice">Int?</code>, or “optional int”. The <code class="code-voice">Dictionary</code> type uses an optional subscript type to model the fact that not every key will have a value, and to give a way to delete a value for a key by assigning a <code class="code-voice">nil</code> value for that key.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014097-CH16-XID_398"></a>
+  <h3 class="section-name" tabindex="0">Subscript Options</h3>
+  <p class="para">
+  Subscripts can take any number of input parameters, and these input parameters can be of any type. Subscripts can also return any type. Subscripts can use variable parameters and variadic parameters, but cannot use in-out parameters or provide default parameter values.
+</p><p class="para">
+  A class or structure can provide as many subscript implementations as it needs, and the appropriate subscript to be used will be inferred based on the types of the value or values that are contained within the subscript braces at the point that the subscript is used. This definition of multiple subscripts is known as <em>subscript overloading</em>.
+</p><p class="para">
+  While it is most common for a subscript to take a single parameter, you can also define a subscript with multiple parameters if it is appropriate for your type. The following example defines a <code class="code-voice">Matrix</code> structure, which represents a two-dimensional matrix of <code class="code-voice">Double</code> values. The <code class="code-voice">Matrix</code> structure’s subscript takes two integer parameters:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Matrix</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">rows</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">columns</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">grid</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span>[]</code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">rows</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">columns</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">rows</span> = <span class="vc">rows</span></code></li>
+          <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">columns</span> = <span class="vc">columns</span></code></li>
+          <li><code class="code-voice">        <span class="vc">grid</span> = <span class="vc">Array</span>(<span class="vc">count</span>: <span class="vc">rows</span> * <span class="vc">columns</span>, <span class="vc">repeatedValue</span>: <span class="m">0.0</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">indexIsValidForRow</span>(<span class="vc">row</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">column</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Bool<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">row</span> &gt;= <span class="m">0</span> &amp;&amp; <span class="vc">row</span> &lt; <span class="vc">rows</span> &amp;&amp; <span class="vc">column</span> &gt;= <span class="m">0</span> &amp;&amp; <span class="vc">column</span> &lt; <span class="vc">columns</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">row</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">column</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Double<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="kt">get</span> {</code></li>
+          <li><code class="code-voice">            <span class="vc">assert</span>(<span class="vc">indexIsValidForRow</span>(<span class="vc">row</span>, <span class="vc">column</span>: <span class="vc">column</span>), <span class="s">"Index out of range"</span>)</code></li>
+          <li><code class="code-voice">            <span class="kt">return</span> <span class="vc">grid</span>[(<span class="vc">row</span> * <span class="vc">columns</span>) + <span class="vc">column</span>]</code></li>
+          <li><code class="code-voice">        }</code></li>
+          <li><code class="code-voice">        <span class="kt">set</span> {</code></li>
+          <li><code class="code-voice">            <span class="vc">assert</span>(<span class="vc">indexIsValidForRow</span>(<span class="vc">row</span>, <span class="vc">column</span>: <span class="vc">column</span>), <span class="s">"Index out of range"</span>)</code></li>
+          <li><code class="code-voice">            <span class="vc">grid</span>[(<span class="vc">row</span> * <span class="vc">columns</span>) + <span class="vc">column</span>] = <span class="vc">newValue</span></code></li>
+          <li><code class="code-voice">        }</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  <code class="code-voice">Matrix</code> provides an initializer that takes two parameters called <code class="code-voice">rows</code> and <code class="code-voice">columns</code>, and creates an array that is large enough to store <code class="code-voice">rows * columns</code> values of type <code class="code-voice">Double</code>. Each position in the matrix is given an initial value of <code class="code-voice">0.0</code>. To achieve this, the array’s size, and an initial cell value of <code class="code-voice">0.0</code>, are passed to an array initializer that creates and initializes a new array of the correct size. This initializer is described in more detail in <span class="x-name"><a href="Creating and Initializing an Array.html#//apple_ref/doc/uid/TP40014097-CH8-XID_142" data-id="//apple_ref/doc/uid/TP40014097-CH8-XID_142">Creating and Initializing an Array</a></span>.
+</p><p class="para">
+  You can construct a new <code class="code-voice">Matrix</code> instance by passing an appropriate row and column count to its initializer:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">matrix</span> = <span class="vc">Matrix</span>(<span class="vc">rows</span>: <span class="m">2</span>, <span class="vc">columns</span>: <span class="m">2</span>)</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  The preceding example creates a new <code class="code-voice">Matrix</code> instance with two rows and two columns. The <code class="code-voice">grid</code> array for this <code class="code-voice">Matrix</code> instance is effectively a flattened version of the matrix, as read from top left to bottom right:
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="./resource/subscriptMatrix01_2x.png" alt="image: ../Art/subscriptMatrix01_2x.png" width="280" height="173">
+</figure><p class="para">
+  Values in the matrix can be set by passing row and column values into the subscript, separated by a comma:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">matrix</span>[<span class="m">0</span>, <span class="m">1</span>] = <span class="m">1.5</span></code></li>
+          <li><code class="code-voice"><span class="vc">matrix</span>[<span class="m">1</span>, <span class="m">0</span>] = <span class="m">3.2</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  These two statements call the subscript’s setter to set a value of <code class="code-voice">1.5</code> in the top right position of the matrix (where <code class="code-voice">row</code> is <code class="code-voice">0</code> and <code class="code-voice">column</code> is <code class="code-voice">1</code>), and <code class="code-voice">3.2</code> in the bottom left position (where <code class="code-voice">row</code> is <code class="code-voice">1</code> and <code class="code-voice">column</code> is <code class="code-voice">0</code>):
+</p><figure class="figure">
+  
+  <span class="caption"></span>
+  <img src="./resource/subscriptMatrix02_2x.png" alt="image: ../Art/subscriptMatrix02_2x.png" width="98" height="62">
+</figure><p class="para">
+  The <code class="code-voice">Matrix</code> subscript’s getter and setter both contain an assertion to check that the subscript’s <code class="code-voice">row</code> and <code class="code-voice">column</code> values are valid. To assist with these assertions, <code class="code-voice">Matrix</code> includes a convenience method called <code class="code-voice">indexIsValid</code>, which checks whether the requested <code class="code-voice">row</code> or <code class="code-voice">column</code> is outside the bounds of the matrix:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">indexIsValidForRow</span>(<span class="vc">row</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">column</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Bool<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">row</span> &gt;= <span class="m">0</span> &amp;&amp; <span class="vc">row</span> &lt; <span class="vc">rows</span> &amp;&amp; <span class="vc">column</span> &gt;= <span class="m">0</span> &amp;&amp; <span class="vc">column</span> &lt; <span class="vc">columns</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+
+
+
+  </div>
+</section><p class="para">
+  An assertion is triggered if you try to access a subscript that is outside of the matrix bounds:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">someValue</span> = <span class="vc">matrix</span>[<span class="m">2</span>, <span class="m">2</span>]</code></li>
+          <li><code class="code-voice"><span class="c">// this triggers an assert, because [2, 2] is outside of the matrix bounds</span></code></li>
+      </ul>
+
+
+
+  </div>
+</section>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Methods.html#//apple_ref/doc/uid/TP40014097-CH15-XID_300" data-id="//apple_ref/doc/uid/TP40014097-CH15-XID_300">Methods</a></p>
+  			<p class="next-link"><a href="Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-XID_251" data-id="//apple_ref/doc/uid/TP40014097-CH17-XID_251">Inheritance</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+    <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script> 
+  </body></html>
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>
