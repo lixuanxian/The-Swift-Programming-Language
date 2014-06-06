@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0174)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#TP40014097-CH27-XID_28 -->
+<!-- saved from url=(0174)#TP40014097-CH27-XID_28 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Advanced Operators</title>
   <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css">
@@ -162,35 +162,35 @@
   <ul class="list-bullet">
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#TP40014097-CH27-XID_29">
+	  			<a href="#TP40014097-CH27-XID_29">
 	  				Bitwise Operators
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#TP40014097-CH27-XID_37">
+	  			<a href="#TP40014097-CH27-XID_37">
 	  				Overflow Operators
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#TP40014097-CH27-XID_41">
+	  			<a href="#TP40014097-CH27-XID_41">
 	  				Precedence and Associativity
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#TP40014097-CH27-XID_43">
+	  			<a href="#TP40014097-CH27-XID_43">
 	  				Operator Functions
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#TP40014097-CH27-XID_48">
+	  			<a href="#TP40014097-CH27-XID_48">
 	  				Custom Operators
 	  			</a>
   			</p>
@@ -581,7 +581,7 @@
 
   </div>
 </section><p class="para">
-  A similar underflow occurs for signed integers. All subtraction for signed integers is performed as straight binary subtraction, with the sign bit included as part of the numbers being subtracted, as described in <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#TP40014097-CH27-XID_34" data-id="TP40014097-CH27-XID_34">Bitwise Left and Right Shift Operators</a></span>. The smallest number that an <code class="code-voice">Int8</code> can hold is <code class="code-voice">-128</code>, which is <code class="code-voice">10000000</code> in binary. Subtracting <code class="code-voice">1</code> from this binary number with the overflow operator gives a binary value of <code class="code-voice">01111111</code>, which toggles the sign bit and gives positive <code class="code-voice">127</code>, the largest positive value that an <code class="code-voice">Int8</code> can hold:
+  A similar underflow occurs for signed integers. All subtraction for signed integers is performed as straight binary subtraction, with the sign bit included as part of the numbers being subtracted, as described in <span class="x-name"><a href="#TP40014097-CH27-XID_34" data-id="TP40014097-CH27-XID_34">Bitwise Left and Right Shift Operators</a></span>. The smallest number that an <code class="code-voice">Int8</code> can hold is <code class="code-voice">-128</code>, which is <code class="code-voice">10000000</code> in binary. Subtracting <code class="code-voice">1</code> from this binary number with the overflow operator gives a binary value of <code class="code-voice">01111111</code>, which toggles the sign bit and gives positive <code class="code-voice">127</code>, the largest positive value that an <code class="code-voice">Int8</code> can hold:
 </p><figure class="figure">
   
   <span class="caption"></span>
@@ -1032,7 +1032,7 @@
   <a name="TP40014097-CH27-XID_49"></a>
   <h3 class="section-name" tabindex="0">Precedence and Associativity for Custom Infix Operators</h3>
   <p class="para">
-  Custom <code class="code-voice">infix</code> operators can also specify a <em>precedence</em> and an <em>associativity</em>. See <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#TP40014097-CH27-XID_41" data-id="TP40014097-CH27-XID_41">Precedence and Associativity</a></span> for an explanation of how these two characteristics affect an infix operator’s interaction with other infix operators.
+  Custom <code class="code-voice">infix</code> operators can also specify a <em>precedence</em> and an <em>associativity</em>. See <span class="x-name"><a href="#TP40014097-CH27-XID_41" data-id="TP40014097-CH27-XID_41">Precedence and Associativity</a></span> for an explanation of how these two characteristics affect an infix operator’s interaction with other infix operators.
 </p><p class="para">
   The possible values for <code class="code-voice">associativity</code> are <code class="code-voice">left</code>, <code class="code-voice">right</code>, and <code class="code-voice">none</code>. Left-associative operators associate to the left if written next to other left-associative operators of the same precedence. Similarly, right-associative operators associate to the right if written next to other right-associative operators of the same precedence. Non-associative operators cannot be written next to other operators with the same precedence.
 </p><p class="para">
@@ -1068,8 +1068,8 @@
 
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Generics.html#TP40014097-CH26-XID_234" data-id="TP40014097-CH26-XID_234">Generics</a></p>
-  			<p class="next-link"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AboutTheLanguageReference.html#TP40014097-CH29-XID_453" data-id="TP40014097-CH29-XID_453">About the Language Reference</a></p>
+    		<p class="previous-link"><a href="Generics.html#TP40014097-CH26-XID_234" data-id="TP40014097-CH26-XID_234">Generics</a></p>
+  			<p class="next-link"><a href="About the Language Reference.html#TP40014097-CH29-XID_453" data-id="TP40014097-CH29-XID_453">About the Language Reference</a></p>
   <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
   </p>
   </section>

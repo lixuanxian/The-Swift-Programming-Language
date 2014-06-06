@@ -161,42 +161,42 @@
   <ul class="list-bullet">
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_267">
+	  			<a href="#TP40014097-CH18-XID_267">
 	  				Setting Initial Values for Stored Properties
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_272">
+	  			<a href="#TP40014097-CH18-XID_272">
 	  				Customizing Initialization
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_279">
+	  			<a href="#TP40014097-CH18-XID_279">
 	  				Default Initializers
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_281">
+	  			<a href="#TP40014097-CH18-XID_281">
 	  				Initializer Delegation for Value Types
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_284">
+	  			<a href="#TP40014097-CH18-XID_284">
 	  				Class Inheritance and Initialization
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_297">
+	  			<a href="#TP40014097-CH18-XID_297">
 	  				Setting a Default Property Value with a Closure or Function
 	  			</a>
   			</p>
@@ -213,7 +213,7 @@
   You implement this initialization process by defining <em>initializers</em>, which are like special methods that can be called to create a new instance of a particular type. Unlike Objective-C initializers, Swift initializers do not return a value. Their primary role is to ensure that new instances of a type are correctly initialized before they are used for the first time.
 </p>
 <p class="para">
-  Instances of class types can also implement a <em>deinitializer</em>, which performs any custom cleanup just before an instance of that class is deallocated. For more information about deinitializers, see <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html#TP40014097-CH19-XID_182" data-id="TP40014097-CH19-XID_182">Deinitialization</a></span>.
+  Instances of class types can also implement a <em>deinitializer</em>, which performs any custom cleanup just before an instance of that class is deallocated. For more information about deinitializers, see <span class="x-name"><a href="Deinitialization.html#TP40014097-CH19-XID_182" data-id="TP40014097-CH19-XID_182">Deinitialization</a></span>.
 </p>
 
 		</section> 
@@ -563,7 +563,7 @@
   <p class="para">
   Initializers can call other initializers to perform part of an instance’s initialization. This process, known as <em>initializer delegation</em>, avoids duplicating code across multiple initializers.
 </p><p class="para">
-  The rules for how initializer delegation works, and for what forms of delegation are allowed, are different for value types and class types. Value types (structures and enumerations) do not support inheritance, and so their initializer delegation process is relatively simple, because they can only delegate to another initializer that they provide themselves. Classes, however, can inherit from other classes, as described in <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html#TP40014097-CH17-XID_251" data-id="TP40014097-CH17-XID_251">Inheritance</a></span>. This means that classes have additional responsibilities for ensuring that all stored properties they inherit are assigned a suitable value during initialization. These responsibilities are described in <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_284" data-id="TP40014097-CH18-XID_284">Class Inheritance and Initialization</a></span> below.
+  The rules for how initializer delegation works, and for what forms of delegation are allowed, are different for value types and class types. Value types (structures and enumerations) do not support inheritance, and so their initializer delegation process is relatively simple, because they can only delegate to another initializer that they provide themselves. Classes, however, can inherit from other classes, as described in <span class="x-name"><a href="#TP40014097-CH17-XID_251" data-id="TP40014097-CH17-XID_251">Inheritance</a></span>. This means that classes have additional responsibilities for ensuring that all stored properties they inherit are assigned a suitable value during initialization. These responsibilities are described in <span class="x-name"><a href="#TP40014097-CH18-XID_284" data-id="TP40014097-CH18-XID_284">Class Inheritance and Initialization</a></span> below.
 </p><p class="para">
   For value types, you use <code class="code-voice">self.init</code> to refer to other initializers from the same value type when writing your own custom initializers. You can only call <code class="code-voice">self.init</code> from within an initializer.
 </p><p class="para">
@@ -573,7 +573,7 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    	<p class="para">If you want your custom value type to be initializable with the default initializer and memberwise initializer, and also with your own custom initializers, write your custom initializers in an extension rather than as part of the value type’s original implementation. For more information, see <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html#TP40014097-CH24-XID_191" data-id="TP40014097-CH24-XID_191">Extensions</a></span>.
+    	<p class="para">If you want your custom value type to be initializable with the default initializer and memberwise initializer, and also with your own custom initializers, write your custom initializers in an extension rather than as part of the value type’s original implementation. For more information, see <span class="x-name"><a href="Extensions.html#TP40014097-CH24-XID_191" data-id="TP40014097-CH24-XID_191">Extensions</a></span>.
     	</p>
     
   </aside>
@@ -677,7 +677,7 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    	<p class="para">For an alternative way to write this example without defining the <code class="code-voice">init()</code> and <code class="code-voice">init(origin:size:)</code> initializers yourself, see <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html#TP40014097-CH24-XID_191" data-id="TP40014097-CH24-XID_191">Extensions</a></span>.
+    	<p class="para">For an alternative way to write this example without defining the <code class="code-voice">init()</code> and <code class="code-voice">init(origin:size:)</code> initializers yourself, see <span class="x-name"><a href="Extensions.html#TP40014097-CH24-XID_191" data-id="TP40014097-CH24-XID_191">Extensions</a></span>.
     	</p>
     
   </aside>
@@ -700,7 +700,7 @@
 </p><p class="para">
   Classes tend to have very few designated initializers, and it is quite common for a class to have only one. Designated initializers are “funnel” points through which initialization takes place, and through which the initialization process continues up the superclass chain.
 </p><p class="para">
-  Every class must have at least one designated initializer. In some cases, this requirement is satisfied by inheriting one or more designated initializers from a superclass, as described in <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_292" data-id="TP40014097-CH18-XID_292">Automatic Initializer Inheritance</a></span> below.
+  Every class must have at least one designated initializer. In some cases, this requirement is satisfied by inheriting one or more designated initializers from a superclass, as described in <span class="x-name"><a href="Initialization.html#TP40014097-CH18-XID_292" data-id="TP40014097-CH18-XID_292">Automatic Initializer Inheritance</a></span> below.
 </p><p class="para">
   <em>Convenience initializers</em> are secondary, supporting initializers for a class. You can define a convenience initializer to call a designated initializer from the same class as the convenience initializer with some of the designated initializer’s parameters set to default values. You can also define a convenience initializer to create an instance of that class for a specific use case or input value type.
 </p><p class="para">
@@ -866,7 +866,7 @@
 </p><p class="para">
   If the initializer you are overriding is a <em>designated</em> initializer, you can override its implementation in your subclass and call the superclass version of the initializer from within your overriding version.
 </p><p class="para">
-  If the initializer you are overriding is a <em>convenience</em> initializer, your override must call another designated initializer from its own subclass, as per the rules described above in <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_286" data-id="TP40014097-CH18-XID_286">Initializer Chaining</a></span>.
+  If the initializer you are overriding is a <em>convenience</em> initializer, your override must call another designated initializer from its own subclass, as per the rules described above in <span class="x-name"><a href="Initialization.html#TP40014097-CH18-XID_286" data-id="TP40014097-CH18-XID_286">Initializer Chaining</a></span>.
 </p><div class="note">
   <a name="TP40014097-CH18-XID_291"></a>
   <aside class="aside">
@@ -1021,7 +1021,7 @@
   <span class="caption"></span>
   <img src="resource/initializersExample02_2x.png" alt="image: ../Art/initializersExample02_2x.png" width="482" height="286">
 </figure><p class="para">
-  The <code class="code-voice">RecipeIngredient</code> class has a single designated initializer, <code class="code-voice">init(name: String, quantity: Int)</code>, which can be used to populate all of the properties of a new <code class="code-voice">RecipeIngredient</code> instance. This initializer starts by assigning the passed <code class="code-voice">quantity</code> argument to the <code class="code-voice">quantity</code> property, which is the only new property introduced by <code class="code-voice">RecipeIngredient</code>. After doing so, the initializer delegates up to the <code class="code-voice">init(name: String)</code> initializer of the <code class="code-voice">Food</code> class. This process satisfies safety check 1 from <span class="x-name"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18-XID_288" data-id="TP40014097-CH18-XID_288">Two-Phase Initialization</a></span> above.
+  The <code class="code-voice">RecipeIngredient</code> class has a single designated initializer, <code class="code-voice">init(name: String, quantity: Int)</code>, which can be used to populate all of the properties of a new <code class="code-voice">RecipeIngredient</code> instance. This initializer starts by assigning the passed <code class="code-voice">quantity</code> argument to the <code class="code-voice">quantity</code> property, which is the only new property introduced by <code class="code-voice">RecipeIngredient</code>. After doing so, the initializer delegates up to the <code class="code-voice">init(name: String)</code> initializer of the <code class="code-voice">Food</code> class. This process satisfies safety check 1 from <span class="x-name"><a href="#TP40014097-CH18-XID_288" data-id="TP40014097-CH18-XID_288">Two-Phase Initialization</a></span> above.
 </p><p class="para">
   <code class="code-voice">RecipeIngredient</code> also defines a convenience initializer, <code class="code-voice">init(name: String)</code>, which is used to create a <code class="code-voice">RecipeIngredient</code> instance by name alone. This convenience initializer assumes a quantity of <code class="code-voice">1</code> for any <code class="code-voice">RecipeIngredient</code> instance that is created without an explicit quantity. The definition of this convenience initializer makes <code class="code-voice">RecipeIngredient</code> instances quicker and more convenient to create, and avoids code duplication when creating several single-quantity <code class="code-voice">RecipeIngredient</code> instances. This convenience initializer simply delegates across to the class’s designated initializer.
 </p><p class="para">
@@ -1217,8 +1217,8 @@
 
   	
  	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html#TP40014097-CH17-XID_251" data-id="TP40014097-CH17-XID_251">Inheritance</a></p>
-  			<p class="next-link"><a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html#TP40014097-CH19-XID_182" data-id="TP40014097-CH19-XID_182">Deinitialization</a></p>
+    		<p class="previous-link"><a href="Inheritance.html#TP40014097-CH17-XID_251" data-id="TP40014097-CH17-XID_251">Inheritance</a></p>
+  			<p class="next-link"><a href="Deinitialization.html#TP40014097-CH19-XID_182" data-id="TP40014097-CH19-XID_182">Deinitialization</a></p>
   <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
   </p>
   </section>
