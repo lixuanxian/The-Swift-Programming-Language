@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0183)#TP40014097-CH20-XID_50 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Automatic Reference Counting</title>
   <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css">
@@ -14,7 +14,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     
 
@@ -260,8 +260,8 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Person</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"</span>\(<span class="vc">name</span>)<span class="s"> is being initialized"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
@@ -284,9 +284,9 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">reference1</span>: <span class="n"><!-- a href="" -->Person<!-- /a --></span>?</code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">reference2</span>: <span class="n"><!-- a href="" -->Person<!-- /a --></span>?</code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">reference3</span>: <span class="n"><!-- a href="" -->Person<!-- /a --></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">reference1</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">reference2</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">reference3</span>: <span class="n"></span>?</code></li>
       </ul>
 
 
@@ -379,16 +379,16 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Person</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) { <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span> }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">apartment</span>: <span class="n"><!-- a href="" -->Apartment<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) { <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">apartment</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">    <span class="kt">deinit</span> { <span class="vc">println</span>(<span class="s">"</span>\(<span class="vc">name</span>)<span class="s"> is being deinitialized"</span>) }</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"> </code></li>
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Apartment</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">number</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">number</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) { <span class="kt">self</span>.<span class="vc">number</span> = <span class="vc">number</span> }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">tenant</span>: <span class="n"><!-- a href="" -->Person<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">number</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">number</span>: <span class="n"></span>) { <span class="kt">self</span>.<span class="vc">number</span> = <span class="vc">number</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">tenant</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">    <span class="kt">deinit</span> { <span class="vc">println</span>(<span class="s">"Apartment #</span>\(<span class="vc">number</span>)<span class="s"> is being deinitialized"</span>) }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -410,8 +410,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">john</span>: <span class="n"><!-- a href="" -->Person<!-- /a --></span>?</code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">number73</span>: <span class="n"><!-- a href="" -->Apartment<!-- /a --></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">john</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">number73</span>: <span class="n"></span>?</code></li>
       </ul>
 
 
@@ -526,16 +526,16 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Person</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) { <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span> }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">apartment</span>: <span class="n"><!-- a href="" -->Apartment<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) { <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">apartment</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">    <span class="kt">deinit</span> { <span class="vc">println</span>(<span class="s">"</span>\(<span class="vc">name</span>)<span class="s"> is being deinitialized"</span>) }</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"> </code></li>
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Apartment</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">number</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">number</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) { <span class="kt">self</span>.<span class="vc">number</span> = <span class="vc">number</span> }</code></li>
-          <li><code class="code-voice">    <span class="kt">weak</span> <span class="kt">var</span> <span class="vc">tenant</span>: <span class="n"><!-- a href="" -->Person<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">number</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">number</span>: <span class="n"></span>) { <span class="kt">self</span>.<span class="vc">number</span> = <span class="vc">number</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">weak</span> <span class="kt">var</span> <span class="vc">tenant</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">    <span class="kt">deinit</span> { <span class="vc">println</span>(<span class="s">"Apartment #</span>\(<span class="vc">number</span>)<span class="s"> is being deinitialized"</span>) }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -551,8 +551,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">john</span>: <span class="n"><!-- a href="" -->Person<!-- /a --></span>?</code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">number73</span>: <span class="n"><!-- a href="" -->Apartment<!-- /a --></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">john</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">number73</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice"> </code></li>
           <li><code class="code-voice"><span class="vc">john</span> = <span class="vc">Person</span>(<span class="vc">name</span>: <span class="s">"John Appleseed"</span>)</code></li>
           <li><code class="code-voice"><span class="vc">number73</span> = <span class="vc">Apartment</span>(<span class="vc">number</span>: <span class="m">73</span>)</code></li>
@@ -651,18 +651,18 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Customer</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">card</span>: <span class="n"><!-- a href="" -->CreditCard<!-- /a --></span>?</code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">card</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">    <span class="kt">deinit</span> { <span class="vc">println</span>(<span class="s">"</span>\(<span class="vc">name</span>)<span class="s"> is being deinitialized"</span>) }</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"> </code></li>
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">CreditCard</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">number</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">unowned</span> <span class="kt">let</span> <span class="vc">customer</span>: <span class="n"><!-- a href="" -->Customer<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">number</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">customer</span>: <span class="n"><!-- a href="" -->Customer<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">number</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">unowned</span> <span class="kt">let</span> <span class="vc">customer</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">number</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">number</span> = <span class="vc">number</span></code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">customer</span> = <span class="vc">customer</span></code></li>
           <li><code class="code-voice">    }</code></li>
@@ -681,7 +681,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">john</span>: <span class="n"><!-- a href="" -->Customer<!-- /a --></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">john</span>: <span class="n"></span>?</code></li>
       </ul>
 
 
@@ -759,18 +759,18 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Country</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">capitalCity</span>: <span class="n"><!-- a href="" -->City<!-- /a --></span>!</code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">capitalName</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">capitalCity</span>: <span class="n"></span>!</code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">capitalCity</span> = <span class="vc">City</span>(<span class="vc">name</span>: <span class="vc">capitalName</span>, <span class="vc">country</span>: <span class="kt">self</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"> </code></li>
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">City</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">unowned</span> <span class="kt">let</span> <span class="vc">country</span>: <span class="n"><!-- a href="" -->Country<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">country</span>: <span class="n"><!-- a href="" -->Country<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">unowned</span> <span class="kt">let</span> <span class="vc">country</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">country</span> = <span class="vc">country</span></code></li>
           <li><code class="code-voice">    }</code></li>
@@ -832,10 +832,10 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">HTMLElement</span> {</code></li>
           <li><code class="code-voice">    </code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">text</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">text</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">    </code></li>
-          <li><code class="code-voice">    <span class="kt">@lazy</span> <span class="kt">var</span> <span class="vc">asHTML</span>: () -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> = {</code></li>
+          <li><code class="code-voice">    <span class="kt">@lazy</span> <span class="kt">var</span> <span class="vc">asHTML</span>: () -&gt; <span class="n"></span> = {</code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="kt">let</span> <span class="vc">text</span> = <span class="kt">self</span>.<span class="vc">text</span> {</code></li>
           <li><code class="code-voice">            <span class="kt">return</span> <span class="s">"&lt;</span>\(<span class="kt">self</span>.<span class="vc">name</span>)<span class="s">&gt;</span>\(<span class="vc">text</span>)<span class="s">&lt;/</span>\(<span class="kt">self</span>.<span class="vc">name</span>)<span class="s">&gt;"</span></code></li>
           <li><code class="code-voice">        } <span class="kt">else</span> {</code></li>
@@ -843,7 +843,7 @@
           <li><code class="code-voice">        }</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">    </code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">text</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>? = <span class="vc">nil</span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>? = <span class="vc">nil</span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">text</span> = <span class="vc">text</span></code></li>
           <li><code class="code-voice">    }</code></li>
@@ -885,7 +885,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">paragraph</span>: <span class="n"><!-- a href="" -->HTMLElement<!-- /a --></span>? = <span class="vc">HTMLElement</span>(<span class="vc">name</span>: <span class="s">"p"</span>, <span class="vc">text</span>: <span class="s">"hello, world"</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">paragraph</span>: <span class="n"></span>? = <span class="vc">HTMLElement</span>(<span class="vc">name</span>: <span class="s">"p"</span>, <span class="vc">text</span>: <span class="s">"hello, world"</span>)</code></li>
           <li><code class="code-voice"><span class="vc">println</span>(<span class="vc">paragraph</span>!.<span class="vc">asHTML</span>())</code></li>
           <li><code class="code-voice"><span class="c">// prints "&lt;p&gt;hello, world&lt;/p&gt;"</span></code></li>
       </ul>
@@ -966,8 +966,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">@lazy</span> <span class="kt">var</span> <span class="vc">someClosure</span>: (<span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="n"><!-- a href="" -->String<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> = {</code></li>
-          <li><code class="code-voice">    [<span class="kt">unowned</span> <span class="kt">self</span>] (<span class="vc">index</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">stringToProcess</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) -&gt; <span class="vc">String</span> <span class="kt">in</span></code></li>
+          <li><code class="code-voice"><span class="kt">@lazy</span> <span class="kt">var</span> <span class="vc">someClosure</span>: (<span class="n"></span> = {</code></li>
+          <li><code class="code-voice">    [<span class="kt">unowned</span> <span class="kt">self</span>] (<span class="vc">index</span>: <span class="n"></span>) -&gt; <span class="vc">String</span> <span class="kt">in</span></code></li>
           <li><code class="code-voice">    <span class="c">// closure body goes here</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -983,7 +983,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">@lazy</span> <span class="kt">var</span> <span class="vc">someClosure</span>: () -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> = {</code></li>
+          <li><code class="code-voice"><span class="kt">@lazy</span> <span class="kt">var</span> <span class="vc">someClosure</span>: () -&gt; <span class="n"></span> = {</code></li>
           <li><code class="code-voice">    [<span class="kt">unowned</span> <span class="kt">self</span>] <span class="kt">in</span></code></li>
           <li><code class="code-voice">    <span class="c">// closure body goes here</span></code></li>
           <li><code class="code-voice">}</code></li>
@@ -1021,10 +1021,10 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">HTMLElement</span> {</code></li>
           <li><code class="code-voice">    </code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">text</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">text</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">    </code></li>
-          <li><code class="code-voice">    <span class="kt">@lazy</span> <span class="kt">var</span> <span class="vc">asHTML</span>: () -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> = {</code></li>
+          <li><code class="code-voice">    <span class="kt">@lazy</span> <span class="kt">var</span> <span class="vc">asHTML</span>: () -&gt; <span class="n"></span> = {</code></li>
           <li><code class="code-voice">        [<span class="kt">unowned</span> <span class="kt">self</span>] <span class="kt">in</span></code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="kt">let</span> <span class="vc">text</span> = <span class="kt">self</span>.<span class="vc">text</span> {</code></li>
           <li><code class="code-voice">            <span class="kt">return</span> <span class="s">"&lt;</span>\(<span class="kt">self</span>.<span class="vc">name</span>)<span class="s">&gt;</span>\(<span class="vc">text</span>)<span class="s">&lt;/</span>\(<span class="kt">self</span>.<span class="vc">name</span>)<span class="s">&gt;"</span></code></li>
@@ -1033,7 +1033,7 @@
           <li><code class="code-voice">        }</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">    </code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">text</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>? = <span class="vc">nil</span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>? = <span class="vc">nil</span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">text</span> = <span class="vc">text</span></code></li>
           <li><code class="code-voice">    }</code></li>
@@ -1058,7 +1058,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">paragraph</span>: <span class="n"><!-- a href="" -->HTMLElement<!-- /a --></span>? = <span class="vc">HTMLElement</span>(<span class="vc">name</span>: <span class="s">"p"</span>, <span class="vc">text</span>: <span class="s">"hello, world"</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">paragraph</span>: <span class="n"></span>? = <span class="vc">HTMLElement</span>(<span class="vc">name</span>: <span class="s">"p"</span>, <span class="vc">text</span>: <span class="s">"hello, world"</span>)</code></li>
           <li><code class="code-voice"><span class="vc">println</span>(<span class="vc">paragraph</span>!.<span class="vc">asHTML</span>())</code></li>
           <li><code class="code-voice"><span class="c">// prints "&lt;p&gt;hello, world&lt;/p&gt;"</span></code></li>
       </ul>

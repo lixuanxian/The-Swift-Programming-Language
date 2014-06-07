@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0189)href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_54 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>Using Swift with Cocoa and Objective-C: Writing Swift Classes with Objective-C Behavior</title>
    <link rel="stylesheet" type="text/css" href="./../resource/style-1.1.15.css"> 
@@ -12,7 +12,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014216" title="Using Swift with Cocoa and Objective-C"></a>
 
@@ -64,7 +64,7 @@
               	<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_26" data-id="TP40014216-CH4-XID_26" class="">Interacting with Objective-C APIs</a>
               </li>
               <li class="nav-chapter nav-current-chapter">
-              	<a href="Writing Swift Classes with Objective-C Behavior.htm" data-id="TP40014216-CH5-XID_54" class="nav-chapter-active">Writing Swift Classes with Objective-C Behavior</a>
+              	<a href="" data-id="TP40014216-CH5-XID_54" class="nav-chapter-active">Writing Swift Classes with Objective-C Behavior</a>
               </li>
               <li class="nav-chapter">
               	<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40" data-id="TP40014216-CH6-XID_40">Working with Cocoa Data Types</a>
@@ -105,42 +105,42 @@
   <ul class="list-bullet">
   		<li class="item">
   			<p class="para">
-	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_55">
+	  			<a href="#TP40014216-CH5-XID_55">
 	  				Inheriting from Objective-C Classes
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_56">
+	  			<a href="#TP40014216-CH5-XID_56">
 	  				Adopting Protocols
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_57">
+	  			<a href="#TP40014216-CH5-XID_57">
 	  				Writing Initializers and Deinitializers
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_58">
+	  			<a href="#TP40014216-CH5-XID_58">
 	  				Integrating with Interface Builder
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_62">
+	  			<a href="#TP40014216-CH5-XID_62">
 	  				Specifying Property Attributes
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_66">
+	  			<a href="#TP40014216-CH5-XID_66">
 	  				Implementing Core Data Managed Object Subclasses
 	  			</a>
   			</p>
@@ -172,7 +172,7 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">import</span> <span class="vc">UIKit</span></code></li>
           <li><code class="code-voice"> </code></li>
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MySwiftViewController</span>: <span class="n"><!-- a href="" -->UIViewController<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MySwiftViewController</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// define the class</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -199,7 +199,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MySwiftViewController</span>: <span class="n"><!-- a href="" -->UIViewController<!-- /a --></span>, <span class="n"><!-- a href="" -->UITableViewDelegate<!-- /a --></span>, <span class="n"><!-- a href="" -->UITableViewDataSource<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MySwiftViewController</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// define the class</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -248,10 +248,10 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MyViewController</span>: <span class="n"><!-- a href="" -->UIViewController<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">@IBOutlet</span> <span class="kt">var</span> <span class="vc">button</span>: <span class="n"><!-- a href="" -->UIButton<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">@IBOutlet</span> <span class="kt">var</span> <span class="vc">textFields</span>: <span class="n"><!-- a href="" -->UITextField<!-- /a --></span>[]</code></li>
-          <li><code class="code-voice">    <span class="kt">@IBAction</span> <span class="kt">func</span> <span class="vc">buttonTapped</span>(<span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MyViewController</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">@IBOutlet</span> <span class="kt">var</span> <span class="vc">button</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">@IBOutlet</span> <span class="kt">var</span> <span class="vc">textFields</span>: <span class="n"></span>[]</code></li>
+          <li><code class="code-voice">    <span class="kt">@IBAction</span> <span class="kt">func</span> <span class="vc">buttonTapped</span>(<span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"button tapped!"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -291,9 +291,9 @@
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">@IBDesignable</span></code></li>
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MyCustomView</span>: <span class="n"><!-- a href="" -->UIView<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">@IBInspectable</span> <span class="kt">var</span> <span class="vc">textColor</span>: <span class="n"><!-- a href="" -->UIColor<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">@IBInspectable</span> <span class="kt">var</span> <span class="vc">iconHeight</span>: <span class="n"><!-- a href="" -->CGFloat<!-- /a --></span></code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MyCustomView</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">@IBInspectable</span> <span class="kt">var</span> <span class="vc">textColor</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">@IBInspectable</span> <span class="kt">var</span> <span class="vc">iconHeight</span>: <span class="n"></span></code></li>
           <li><code class="code-voice">    <span class="c">/* ... */</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>

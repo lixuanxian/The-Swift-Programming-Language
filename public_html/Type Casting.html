@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0169)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html#TP40014097-CH22-XID_443 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Type Casting</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -8,7 +8,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014097" title="The Swift Programming Language"></a>
 
@@ -217,8 +217,8 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MediaItem</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -235,17 +235,17 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Movie</span>: <span class="n"><!-- a href="" -->MediaItem<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">director</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">director</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Movie</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">director</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">director</span> = <span class="vc">director</span></code></li>
           <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>(<span class="vc">name</span>: <span class="vc">name</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"> </code></li>
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Song</span>: <span class="n"><!-- a href="" -->MediaItem<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">artist</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">artist</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Song</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">artist</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">artist</span> = <span class="vc">artist</span></code></li>
           <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>(<span class="vc">name</span>: <span class="vc">name</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
@@ -298,9 +298,9 @@
           <li><code class="code-voice"><span class="kt">var</span> <span class="vc">songCount</span> = <span class="m">0</span></code></li>
           <li><code class="code-voice"> </code></li>
           <li><code class="code-voice"><span class="kt">for</span> <span class="vc">item</span> <span class="kt">in</span> <span class="vc">library</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">if</span> <span class="vc">item</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->Movie<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">if</span> <span class="vc">item</span> <span class="kt">is</span> <span class="n"></span> {</code></li>
           <li><code class="code-voice">        ++<span class="vc">movieCount</span></code></li>
-          <li><code class="code-voice">    } <span class="kt">else</span> <span class="kt">if</span> <span class="vc">item</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->Song<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    } <span class="kt">else</span> <span class="kt">if</span> <span class="vc">item</span> <span class="kt">is</span> <span class="n"></span> {</code></li>
           <li><code class="code-voice">        ++<span class="vc">songCount</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -341,9 +341,9 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">for</span> <span class="vc">item</span> <span class="kt">in</span> <span class="vc">library</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">if</span> <span class="kt">let</span> <span class="vc">movie</span> = <span class="vc">item</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->Movie<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">if</span> <span class="kt">let</span> <span class="vc">movie</span> = <span class="vc">item</span> <span class="kt">as</span>? <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"Movie: '</span>\(<span class="vc">movie</span>.<span class="vc">name</span>)<span class="s">', dir. </span>\(<span class="vc">movie</span>.<span class="vc">director</span>)<span class="s">"</span>)</code></li>
-          <li><code class="code-voice">    } <span class="kt">else</span> <span class="kt">if</span> <span class="kt">let</span> <span class="vc">song</span> = <span class="vc">item</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->Song<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    } <span class="kt">else</span> <span class="kt">if</span> <span class="kt">let</span> <span class="vc">song</span> = <span class="vc">item</span> <span class="kt">as</span>? <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"Song: '</span>\(<span class="vc">song</span>.<span class="vc">name</span>)<span class="s">', by </span>\(<span class="vc">song</span>.<span class="vc">artist</span>)<span class="s">"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -416,7 +416,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">someObjects</span>: <span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>[] = [</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">someObjects</span>: <span class="n"></span>[] = [</code></li>
           <li><code class="code-voice">    <span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"2001: A Space Odyssey"</span>, <span class="vc">director</span>: <span class="s">"Stanley Kubrick"</span>),</code></li>
           <li><code class="code-voice">    <span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"Moon"</span>, <span class="vc">director</span>: <span class="s">"Duncan Jones"</span>),</code></li>
           <li><code class="code-voice">    <span class="vc">Movie</span>(<span class="vc">name</span>: <span class="s">"Alien"</span>, <span class="vc">director</span>: <span class="s">"Ridley Scott"</span>)</code></li>
@@ -435,7 +435,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">for</span> <span class="vc">object</span> <span class="kt">in</span> <span class="vc">someObjects</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">movie</span> = <span class="vc">object</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Movie<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">movie</span> = <span class="vc">object</span> <span class="kt">as</span> <span class="n"></span></code></li>
           <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"Movie: '</span>\(<span class="vc">movie</span>.<span class="vc">name</span>)<span class="s">', dir. </span>\(<span class="vc">movie</span>.<span class="vc">director</span>)<span class="s">"</span>)</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"><span class="c">// Movie: '2001: A Space Odyssey', dir. Stanley Kubrick</span></code></li>
@@ -454,7 +454,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">for</span> <span class="vc">movie</span> <span class="kt">in</span> <span class="vc">someObjects</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Movie<!-- /a --></span>[] {</code></li>
+          <li><code class="code-voice"><span class="kt">for</span> <span class="vc">movie</span> <span class="kt">in</span> <span class="vc">someObjects</span> <span class="kt">as</span> <span class="n"></span>[] {</code></li>
           <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"Movie: '</span>\(<span class="vc">movie</span>.<span class="vc">name</span>)<span class="s">', dir. </span>\(<span class="vc">movie</span>.<span class="vc">director</span>)<span class="s">"</span>)</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"><span class="c">// Movie: '2001: A Space Odyssey', dir. Stanley Kubrick</span></code></li>
@@ -505,21 +505,21 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">for</span> <span class="vc">thing</span> <span class="kt">in</span> <span class="vc">things</span> {</code></li>
           <li><code class="code-voice">    <span class="kt">switch</span> <span class="vc">thing</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">case</span> <span class="m">0</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Int<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="m">0</span> <span class="kt">as</span> <span class="n"></span>:</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"zero as an Int"</span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">case</span> <span class="m">0</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Double<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="m">0</span> <span class="kt">as</span> <span class="n"></span>:</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"zero as a Double"</span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someInt</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Int<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someInt</span> <span class="kt">as</span> <span class="n"></span>:</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"an integer value of </span>\(<span class="vc">someInt</span>)<span class="s">"</span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someDouble</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Double<!-- /a --></span> <span class="kt">where</span> <span class="vc">someDouble</span> &gt; <span class="m">0</span>:</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someDouble</span> <span class="kt">as</span> <span class="n"></span> <span class="kt">where</span> <span class="vc">someDouble</span> &gt; <span class="m">0</span>:</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"a positive double value of </span>\(<span class="vc">someDouble</span>)<span class="s">"</span>)</code></li>
           <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">is</span> <span class="vc">Double</span>:</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"some other double value that I don't want to print"</span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someString</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->String<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">someString</span> <span class="kt">as</span> <span class="n"></span>:</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"a string value of \"</span>\(<span class="vc">someString</span>)<span class="s">\""</span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> (<span class="vc">x</span>, <span class="vc">y</span>) <span class="kt">as</span> (<span class="n"><!-- a href="" -->Double<!-- /a --></span>, <span class="n"><!-- a href="" -->Double<!-- /a --></span>):</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> (<span class="vc">x</span>, <span class="vc">y</span>) <span class="kt">as</span> (<span class="n"></span>):</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"an (x, y) point at </span>\(<span class="vc">x</span>)<span class="s">, </span>\(<span class="vc">y</span>)<span class="s">"</span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">movie</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Movie<!-- /a --></span>:</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="kt">let</span> <span class="vc">movie</span> <span class="kt">as</span> <span class="n"></span>:</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"a movie called '</span>\(<span class="vc">movie</span>.<span class="vc">name</span>)<span class="s">', dir. </span>\(<span class="vc">movie</span>.<span class="vc">director</span>)<span class="s">"</span>)</code></li>
           <li><code class="code-voice">    <span class="kt">default</span>:</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"something else"</span>)</code></li>

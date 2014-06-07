@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0167)href="Interacting with C APIs.htm#TP40014216-CH8-XID_13 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>Using Swift with Cocoa and Objective-C: Interacting with C APIs</title>
    <link rel="stylesheet" type="text/css" href="./../resource/style-1.1.15.css"> 
@@ -12,7 +12,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014216" title="Using Swift with Cocoa and Objective-C"></a>
 
@@ -73,7 +73,7 @@
               	<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5" data-id="TP40014216-CH7-XID_5" class="">Adopting Cocoa Design Patterns</a>
               </li>
               <li class="nav-chapter nav-current-chapter">
-              	<a href="Interacting with C APIs.htm" data-id="TP40014216-CH8-XID_13" class="nav-chapter-active">Interacting with C APIs</a>
+              	<a href="" data-id="TP40014216-CH8-XID_13" class="nav-chapter-active">Interacting with C APIs</a>
               </li>
           </ul>
         </li><li data-id="TP40014216-CH9-XID_87" class="part-name">Mix and Match
@@ -105,35 +105,35 @@
   <ul class="list-bullet">
   		<li class="item">
   			<p class="para">
-	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_14">
+	  			<a href="#TP40014216-CH8-XID_14">
 	  				Primitive Types
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_15">
+	  			<a href="#TP40014216-CH8-XID_15">
 	  				Enumerations
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_16">
+	  			<a href="#TP40014216-CH8-XID_16">
 	  				Pointers
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_20">
+	  			<a href="#TP40014216-CH8-XID_20">
 	  				Global Constants
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_21">
+	  			<a href="#TP40014216-CH8-XID_21">
 	  				Preprocessor Directives
 	  			</a>
   			</p>
@@ -344,7 +344,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">enum</span> <span class="vc">UITableViewCellStyle</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">enum</span> <span class="vc">UITableViewCellStyle</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">Default</span></code></li>
           <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">Value1</span></code></li>
           <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">Value2</span></code></li>
@@ -366,7 +366,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">cellStyle</span>: <span class="n"><!-- a href="" -->UITableViewCellStyle<!-- /a --></span> = .<span class="vc">Default</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">cellStyle</span>: <span class="n"></span> = .<span class="vc">Default</span></code></li>
       </ul>
         </div>
 
@@ -542,7 +542,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAMutablePointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->CMutablePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt;) { <span class="c">/*...*/</span> }</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAMutablePointer</span>(<span class="vc">x</span>: <span class="n"></span>&gt;) { <span class="c">/*...*/</span> }</code></li>
       </ul>
         </div>
 
@@ -559,9 +559,9 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span> = <span class="m">0.0</span></code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->CMutablePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt; = <span class="vc">nil</span></code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span>[] = [<span class="m">1.0</span>, <span class="m">2.0</span>, <span class="m">3.0</span>]</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"></span> = <span class="m">0.0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"></span>&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">a</span>: <span class="n"></span>[] = [<span class="m">1.0</span>, <span class="m">2.0</span>, <span class="m">3.0</span>]</code></li>
           <li><code class="code-voice"><span class="vc">takesAMutablePointer</span>(<span class="vc">nil</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAMutablePointer</span>(<span class="vc">p</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAMutablePointer</span>(&amp;<span class="vc">x</span>)</code></li>
@@ -584,7 +584,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAMutableVoidPointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->CMutableVoidPointer<!-- /a --></span>)  { <span class="c">/* ... */</span> }</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAMutableVoidPointer</span>(<span class="vc">x</span>: <span class="n"></span>)  { <span class="c">/* ... */</span> }</code></li>
       </ul>
         </div>
 
@@ -601,9 +601,9 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span> = <span class="m">0.0</span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> = <span class="m">0</span></code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->CMutablePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt; = <span class="vc">nil</span>, <span class="vc">q</span>: <span class="n"><!-- a href="" -->CMutablePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Int<!-- /a --></span>&gt; = <span class="vc">nil</span></code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span>[] = [<span class="m">1.0</span>, <span class="m">2.0</span>, <span class="m">3.0</span>], <span class="vc">b</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> = [<span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>]</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"></span> = <span class="m">0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"></span>&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">a</span>: <span class="n"></span>[] = [<span class="m">1.0</span>, <span class="m">2.0</span>, <span class="m">3.0</span>], <span class="vc">b</span>: <span class="n"></span> = [<span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>]</code></li>
           <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(<span class="vc">nil</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(<span class="vc">p</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(<span class="vc">q</span>)</code></li>
@@ -649,7 +649,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAConstPointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->CConstPointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt;) { <span class="c">/*...*/</span> }</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAConstPointer</span>(<span class="vc">x</span>: <span class="n"></span>&gt;) { <span class="c">/*...*/</span> }</code></li>
       </ul>
         </div>
 
@@ -666,8 +666,8 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span> = <span class="m">0.0</span></code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->CConstPointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"></span> = <span class="m">0.0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"></span>&gt; = <span class="vc">nil</span></code></li>
           <li><code class="code-voice"><span class="vc">takesAConstPointer</span>(<span class="vc">nil</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAConstPointer</span>(<span class="vc">p</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAConstPointer</span>(&amp;<span class="vc">x</span>)</code></li>
@@ -690,7 +690,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAConstVoidPointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->CConstVoidPointer<!-- /a --></span>)  { <span class="c">/* ... */</span> }</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAConstVoidPointer</span>(<span class="vc">x</span>: <span class="n"></span>)  { <span class="c">/* ... */</span> }</code></li>
       </ul>
         </div>
 
@@ -707,8 +707,8 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span> = <span class="m">0.0</span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> = <span class="m">0</span></code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->CConstPointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt; = <span class="vc">nil</span>, <span class="vc">q</span>: <span class="n"><!-- a href="" -->CConstPointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Int<!-- /a --></span>&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"></span> = <span class="m">0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"></span>&gt; = <span class="vc">nil</span></code></li>
           <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>(<span class="vc">nil</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>(<span class="vc">p</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>(<span class="vc">q</span>)</code></li>
@@ -753,7 +753,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAnAutoreleasingPointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->AutoreleasingUnsafePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->NSDate<!-- /a --></span>?&gt;) { <span class="c">/* ... */</span> }</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAnAutoreleasingPointer</span>(<span class="vc">x</span>: <span class="n"></span>?&gt;) { <span class="c">/* ... */</span> }</code></li>
       </ul>
         </div>
 
@@ -770,8 +770,8 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->NSDate<!-- /a --></span>? = <span class="vc">nil</span></code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->AutoreleasingUnsafePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->NSDate<!-- /a --></span>?&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"></span>? = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"></span>?&gt; = <span class="vc">nil</span></code></li>
           <li><code class="code-voice"><span class="vc">takesAnAutoreleasingPointer</span>(<span class="vc">nil</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAnAutoreleasingPointer</span>(<span class="vc">p</span>)</code></li>
           <li><code class="code-voice"><span class="vc">takesAnAutoreleasingPointer</span>(&amp;<span class="vc">x</span>)</code></li>

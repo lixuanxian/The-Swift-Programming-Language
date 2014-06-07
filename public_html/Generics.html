@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0166)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Generics.html#TP40014097-CH26-XID_234 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Generics</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -8,7 +8,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014097" title="The Swift Programming Language"></a>
 
@@ -240,7 +240,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoInts</span>(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="kt">inout</span> <span class="vc">b</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoInts</span>(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">temporaryA</span> = <span class="vc">a</span></code></li>
           <li><code class="code-voice">    <span class="vc">a</span> = <span class="vc">b</span></code></li>
           <li><code class="code-voice">    <span class="vc">b</span> = <span class="vc">temporaryA</span></code></li>
@@ -278,13 +278,13 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoStrings</span>(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="kt">inout</span> <span class="vc">b</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoStrings</span>(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">temporaryA</span> = <span class="vc">a</span></code></li>
           <li><code class="code-voice">    <span class="vc">a</span> = <span class="vc">b</span></code></li>
           <li><code class="code-voice">    <span class="vc">b</span> = <span class="vc">temporaryA</span></code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"> </code></li>
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoDoubles</span>(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span>, <span class="kt">inout</span> <span class="vc">b</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoDoubles</span>(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">temporaryA</span> = <span class="vc">a</span></code></li>
           <li><code class="code-voice">    <span class="vc">a</span> = <span class="vc">b</span></code></li>
           <li><code class="code-voice">    <span class="vc">b</span> = <span class="vc">temporaryA</span></code></li>
@@ -321,7 +321,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoValues</span>&lt;<span class="vc">T</span>&gt;(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>, <span class="kt">inout</span> <span class="vc">b</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoValues</span>&lt;<span class="vc">T</span>&gt;(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">temporaryA</span> = <span class="vc">a</span></code></li>
           <li><code class="code-voice">    <span class="vc">a</span> = <span class="vc">b</span></code></li>
           <li><code class="code-voice">    <span class="vc">b</span> = <span class="vc">temporaryA</span></code></li>
@@ -339,8 +339,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoInts</span>(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="kt">inout</span> <span class="vc">b</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>)</code></li>
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoValues</span>&lt;<span class="vc">T</span>&gt;(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>, <span class="kt">inout</span> <span class="vc">b</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>)</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoInts</span>(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"></span>)</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">swapTwoValues</span>&lt;<span class="vc">T</span>&gt;(<span class="kt">inout</span> <span class="vc">a</span>: <span class="n"></span>)</code></li>
       </ul>
 
 
@@ -466,10 +466,10 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">IntStack</span> {</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">items</span> = <span class="vc">Int</span>[]()</code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">push</span>(<span class="vc">item</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">push</span>(<span class="vc">item</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">items</span>.<span class="vc">append</span>(<span class="vc">item</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">pop</span>() -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">pop</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">items</span>.<span class="vc">removeLast</span>()</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -492,10 +492,10 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Stack</span>&lt;<span class="vc">T</span>&gt; {</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">items</span> = <span class="vc">T</span>[]()</code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">push</span>(<span class="vc">item</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">push</span>(<span class="vc">item</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">items</span>.<span class="vc">append</span>(<span class="vc">item</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">pop</span>() -&gt; <span class="n"><!-- a href="" -->T<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">pop</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">items</span>.<span class="vc">removeLast</span>()</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -527,7 +527,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">stackOfStrings</span> = <span class="vc">Stack</span>&lt;<span class="n"><!-- a href="" -->String<!-- /a --></span>&gt;()</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">stackOfStrings</span> = <span class="vc">Stack</span>&lt;<span class="n"></span>&gt;()</code></li>
           <li><code class="code-voice"><span class="vc">stackOfStrings</span>.<span class="vc">push</span>(<span class="s">"uno"</span>)</code></li>
           <li><code class="code-voice"><span class="vc">stackOfStrings</span>.<span class="vc">push</span>(<span class="s">"dos"</span>)</code></li>
           <li><code class="code-voice"><span class="vc">stackOfStrings</span>.<span class="vc">push</span>(<span class="s">"tres"</span>)</code></li>
@@ -593,7 +593,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">someFunction</span>&lt;<span class="vc">T</span>: <span class="vc">SomeClass</span>, <span class="vc">U</span>: <span class="vc">SomeProtocol</span>&gt;(<span class="vc">someT</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>, <span class="vc">someU</span>: <span class="n"><!-- a href="" -->U<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">someFunction</span>&lt;<span class="vc">T</span>: <span class="vc">SomeClass</span>, <span class="vc">U</span>: <span class="vc">SomeProtocol</span>&gt;(<span class="vc">someT</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">    <span class="c">// function body goes here</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -617,7 +617,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">findStringIndex</span>(<span class="vc">array</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>[], <span class="vc">valueToFind</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span>? {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">findStringIndex</span>(<span class="vc">array</span>: <span class="n"></span>[], <span class="vc">valueToFind</span>: <span class="n"></span>? {</code></li>
           <li><code class="code-voice">    <span class="kt">for</span> (<span class="vc">index</span>, <span class="vc">value</span>) <span class="kt">in</span> <span class="vc">enumerate</span>(<span class="vc">array</span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">value</span> == <span class="vc">valueToFind</span> {</code></li>
           <li><code class="code-voice">            <span class="kt">return</span> <span class="vc">index</span></code></li>
@@ -658,7 +658,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">findIndex</span>&lt;<span class="vc">T</span>&gt;(<span class="vc">array</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>[], <span class="vc">valueToFind</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span>? {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">findIndex</span>&lt;<span class="vc">T</span>&gt;(<span class="vc">array</span>: <span class="n"></span>[], <span class="vc">valueToFind</span>: <span class="n"></span>? {</code></li>
           <li><code class="code-voice">    <span class="kt">for</span> (<span class="vc">index</span>, <span class="vc">value</span>) <span class="kt">in</span> <span class="vc">enumerate</span>(<span class="vc">array</span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">value</span> == <span class="vc">valueToFind</span> {</code></li>
           <li><code class="code-voice">            <span class="kt">return</span> <span class="vc">index</span></code></li>
@@ -683,7 +683,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">findIndex</span>&lt;<span class="vc">T</span>: <span class="vc">Equatable</span>&gt;(<span class="vc">array</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>[], <span class="vc">valueToFind</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span>? {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">findIndex</span>&lt;<span class="vc">T</span>: <span class="vc">Equatable</span>&gt;(<span class="vc">array</span>: <span class="n"></span>[], <span class="vc">valueToFind</span>: <span class="n"></span>? {</code></li>
           <li><code class="code-voice">    <span class="kt">for</span> (<span class="vc">index</span>, <span class="vc">value</span>) <span class="kt">in</span> <span class="vc">enumerate</span>(<span class="vc">array</span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">value</span> == <span class="vc">valueToFind</span> {</code></li>
           <li><code class="code-voice">            <span class="kt">return</span> <span class="vc">index</span></code></li>
@@ -739,9 +739,9 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">Container</span> {</code></li>
           <li><code class="code-voice">    <span class="kt">typealias</span> <span class="vc">ItemType</span></code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">append</span>(<span class="vc">item</span>: <span class="n"><!-- a href="" -->ItemType<!-- /a --></span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">count</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> { <span class="kt">get</span> }</code></li>
-          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">i</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->ItemType<!-- /a --></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">append</span>(<span class="vc">item</span>: <span class="n"></span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">count</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">i</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -777,24 +777,24 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">IntStack</span>: <span class="n"><!-- a href="" -->Container<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">IntStack</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// original IntStack implementation</span></code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">items</span> = <span class="vc">Int</span>[]()</code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">push</span>(<span class="vc">item</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">push</span>(<span class="vc">item</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">items</span>.<span class="vc">append</span>(<span class="vc">item</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">pop</span>() -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">pop</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">items</span>.<span class="vc">removeLast</span>()</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">    <span class="c">// conformance to the Container protocol</span></code></li>
-          <li><code class="code-voice">    <span class="kt">typealias</span> <span class="vc">ItemType</span> = <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">append</span>(<span class="vc">item</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">typealias</span> <span class="vc">ItemType</span> = <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">append</span>(<span class="vc">item</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">push</span>(<span class="vc">item</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">count</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">count</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">items</span>.<span class="vc">count</span></code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">i</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">i</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">items</span>[<span class="vc">i</span>]</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -817,23 +817,23 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Stack</span>&lt;<span class="vc">T</span>&gt;: <span class="n"><!-- a href="" -->Container<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Stack</span>&lt;<span class="vc">T</span>&gt;: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// original Stack&lt;T&gt; implementation</span></code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">items</span> = <span class="vc">T</span>[]()</code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">push</span>(<span class="vc">item</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">push</span>(<span class="vc">item</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">items</span>.<span class="vc">append</span>(<span class="vc">item</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">pop</span>() -&gt; <span class="n"><!-- a href="" -->T<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">pop</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">items</span>.<span class="vc">removeLast</span>()</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">    <span class="c">// conformance to the Container protocol</span></code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">append</span>(<span class="vc">item</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">append</span>(<span class="vc">item</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">push</span>(<span class="vc">item</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">count</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">count</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">items</span>.<span class="vc">count</span></code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">i</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->T<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">i</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">items</span>[<span class="vc">i</span>]</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -860,7 +860,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"><!-- a href="" -->Array<!-- /a --></span>: <span class="n"><!-- a href="" -->Container<!-- /a --></span> {}</code></li>
+          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"></span> {}</code></li>
       </ul>
 
 
@@ -893,7 +893,7 @@
           <li><code class="code-voice"><span class="kt">func</span> <span class="vc">allItemsMatch</span>&lt;</code></li>
           <li><code class="code-voice">    <span class="vc">C1</span>: <span class="vc">Container</span>, <span class="vc">C2</span>: <span class="vc">Container</span></code></li>
           <li><code class="code-voice">    <span class="kt">where</span> <span class="vc">C1</span>.<span class="vc">ItemType</span> == <span class="vc">C2</span>.<span class="vc">ItemType</span>, <span class="vc">C1</span>.<span class="vc">ItemType</span>: <span class="vc">Equatable</span>&gt;</code></li>
-          <li><code class="code-voice">    (<span class="vc">someContainer</span>: <span class="n"><!-- a href="" -->C1<!-- /a --></span>, <span class="vc">anotherContainer</span>: <span class="n"><!-- a href="" -->C2<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Bool<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    (<span class="vc">someContainer</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">        </code></li>
           <li><code class="code-voice">        <span class="c">// check that both containers contain the same number of items</span></code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">someContainer</span>.<span class="vc">count</span> != <span class="vc">anotherContainer</span>.<span class="vc">count</span> {</code></li>
@@ -970,7 +970,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">stackOfStrings</span> = <span class="vc">Stack</span>&lt;<span class="n"><!-- a href="" -->String<!-- /a --></span>&gt;()</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">stackOfStrings</span> = <span class="vc">Stack</span>&lt;<span class="n"></span>&gt;()</code></li>
           <li><code class="code-voice"><span class="vc">stackOfStrings</span>.<span class="vc">push</span>(<span class="s">"uno"</span>)</code></li>
           <li><code class="code-voice"><span class="vc">stackOfStrings</span>.<span class="vc">push</span>(<span class="s">"dos"</span>)</code></li>
           <li><code class="code-voice"><span class="vc">stackOfStrings</span>.<span class="vc">push</span>(<span class="s">"tres"</span>)</code></li>

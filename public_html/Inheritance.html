@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0169)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html#TP40014097-CH17-XID_251 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
         <title>The Swift Programming Language: Inheritance</title>
         <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -8,7 +8,7 @@
 
     <body id="conceptual_flow_with_tasks" class="jazz">
         <div id="_omniture_top">
-            <!-- SiteCatalyst code will be injected here when viewed in production -->
+            
         </div>
         <a name="TP40014097" title="The Swift Programming Language"></a>
 
@@ -227,9 +227,9 @@
 
         <ul class="code-lines">
             <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Vehicle</span> {</code></li>
-            <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">numberOfWheels</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-            <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">maxPassengers</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-            <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">description</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+            <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">numberOfWheels</span>: <span class="n"></span></code></li>
+            <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">maxPassengers</span>: <span class="n"></span></code></li>
+            <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">description</span>() -&gt; <span class="n"></span> {</code></li>
             <li><code class="code-voice">        <span class="kt">return</span> <span class="s">"</span>\(<span class="vc">numberOfWheels</span>)<span class="s"> wheels; up to </span>\(<span class="vc">maxPassengers</span>)<span class="s"> passengers"</span></code></li>
             <li><code class="code-voice">    }</code></li>
             <li><code class="code-voice">    <span class="kt">init</span>() {</code></li>
@@ -296,7 +296,7 @@
     <div class="code-sample">
 
         <ul class="code-lines">
-            <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeClass</span>: <span class="n"><!-- a href="" -->SomeSuperclass<!-- /a --></span> {</code></li>
+            <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeClass</span>: <span class="n"></span> {</code></li>
             <li><code class="code-voice">    <span class="c">// class definition goes here</span></code></li>
             <li><code class="code-voice">}</code></li>
         </ul>
@@ -316,7 +316,7 @@
     <div class="code-sample">
 
         <ul class="code-lines">
-            <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Bicycle</span>: <span class="n"><!-- a href="" -->Vehicle<!-- /a --></span> {</code></li>
+            <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Bicycle</span>: <span class="n"></span> {</code></li>
             <li><code class="code-voice">    <span class="kt">init</span>() {</code></li>
             <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>()</code></li>
             <li><code class="code-voice">        <span class="vc">numberOfWheels</span> = <span class="m">2</span></code></li>
@@ -366,7 +366,7 @@
     <div class="code-sample">
 
         <ul class="code-lines">
-            <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Tandem</span>: <span class="n"><!-- a href="" -->Bicycle<!-- /a --></span> {</code></li>
+            <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Tandem</span>: <span class="n"></span> {</code></li>
             <li><code class="code-voice">    <span class="kt">init</span>() {</code></li>
             <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>()</code></li>
             <li><code class="code-voice">        <span class="vc">maxPassengers</span> = <span class="m">2</span></code></li>
@@ -453,14 +453,14 @@
         <div class="code-sample">
 
             <ul class="code-lines">
-                <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Car</span>: <span class="n"><!-- a href="" -->Vehicle<!-- /a --></span> {</code></li>
-                <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">speed</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span> = <span class="m">0.0</span></code></li>
+                <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Car</span>: <span class="n"></span> {</code></li>
+                <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">speed</span>: <span class="n"></span> = <span class="m">0.0</span></code></li>
                 <li><code class="code-voice">    <span class="kt">init</span>() {</code></li>
                 <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>()</code></li>
                 <li><code class="code-voice">        <span class="vc">maxPassengers</span> = <span class="m">5</span></code></li>
                 <li><code class="code-voice">        <span class="vc">numberOfWheels</span> = <span class="m">4</span></code></li>
                 <li><code class="code-voice">    }</code></li>
-                <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">func</span> <span class="vc">description</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+                <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">func</span> <span class="vc">description</span>() -&gt; <span class="n"></span> {</code></li>
                 <li><code class="code-voice">        <span class="kt">return</span> <span class="kt">super</span>.<span class="vc">description</span>() + <span class="s">"; "</span></code></li>
                 <li><code class="code-voice">            + <span class="s">"traveling at </span>\(<span class="vc">speed</span>)<span class="s"> mph"</span></code></li>
                 <li><code class="code-voice">    }</code></li>
@@ -525,8 +525,8 @@
             <div class="code-sample">
 
                 <ul class="code-lines">
-  <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SpeedLimitedCar</span>: <span class="n"><!-- a href="" -->Car<!-- /a --></span> {</code></li>
-  <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">var</span> <span class="vc">speed</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span>  {</code></li>
+  <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SpeedLimitedCar</span>: <span class="n"></span> {</code></li>
+  <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">var</span> <span class="vc">speed</span>: <span class="n"></span>  {</code></li>
   <li><code class="code-voice">    <span class="kt">get</span> {</code></li>
   <li><code class="code-voice">        <span class="kt">return</span> <span class="kt">super</span>.<span class="vc">speed</span></code></li>
   <li><code class="code-voice">    }</code></li>
@@ -587,14 +587,14 @@
             <div class="code-sample">
 
                 <ul class="code-lines">
-  <li><code class="code-voice"><span class="kt">class</span> <span class="vc">AutomaticCar</span>: <span class="n"><!-- a href="" -->Car<!-- /a --></span> {</code></li>
+  <li><code class="code-voice"><span class="kt">class</span> <span class="vc">AutomaticCar</span>: <span class="n"></span> {</code></li>
   <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">gear</span> = <span class="m">1</span></code></li>
-  <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">var</span> <span class="vc">speed</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span> {</code></li>
+  <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">var</span> <span class="vc">speed</span>: <span class="n"></span> {</code></li>
   <li><code class="code-voice">    <span class="kt">didSet</span> {</code></li>
   <li><code class="code-voice">        <span class="vc">gear</span> = <span class="vc">Int</span>(<span class="vc">speed</span> / <span class="m">10.0</span>) + <span class="m">1</span></code></li>
   <li><code class="code-voice">    }</code></li>
   <li><code class="code-voice">    }</code></li>
-  <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">func</span> <span class="vc">description</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+  <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">func</span> <span class="vc">description</span>() -&gt; <span class="n"></span> {</code></li>
   <li><code class="code-voice">        <span class="kt">return</span> <span class="kt">super</span>.<span class="vc">description</span>() + <span class="s">" in gear </span>\(<span class="vc">gear</span>)<span class="s">"</span></code></li>
   <li><code class="code-voice">    }</code></li>
   <li><code class="code-voice">}</code></li>

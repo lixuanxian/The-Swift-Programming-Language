@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0174)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/OptionalChaining.html#TP40014097-CH21-XID_312 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Optional Chaining</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -8,7 +8,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014097" title="The Swift Programming Language"></a>
 
@@ -249,7 +249,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Person</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">residence</span>: <span class="n"><!-- a href="" -->Residence<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">residence</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"> </code></li>
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Residence</span> {</code></li>
@@ -370,7 +370,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Person</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">residence</span>: <span class="n"><!-- a href="" -->Residence<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">residence</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -387,16 +387,16 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Residence</span> {</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">rooms</span> = <span class="vc">Room</span>[]()</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">numberOfRooms</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">numberOfRooms</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">rooms</span>.<span class="vc">count</span></code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">i</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Room<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">subscript</span>(<span class="vc">i</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">rooms</span>[<span class="vc">i</span>]</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">printNumberOfRooms</span>() {</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"The number of rooms is </span>\(<span class="vc">numberOfRooms</span>)<span class="s">"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">address</span>: <span class="n"><!-- a href="" -->Address<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">address</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -420,8 +420,8 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Room</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) { <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>) { <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -437,10 +437,10 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Address</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">buildingName</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>?</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">buildingNumber</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>?</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">street</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>?</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">buildingIdentifier</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span>? {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">buildingName</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">buildingNumber</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">street</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">buildingIdentifier</span>() -&gt; <span class="n"></span>? {</code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">buildingName</span> {</code></li>
           <li><code class="code-voice">            <span class="kt">return</span> <span class="vc">buildingName</span></code></li>
           <li><code class="code-voice">        } <span class="kt">else</span> <span class="kt">if</span> <span class="vc">buildingNumber</span> {</code></li>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0169)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Expressions.html#TP40014097-CH32-XID_655 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Expressions</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -8,7 +8,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014097" title="The Swift Programming Language"></a>
 
@@ -640,13 +640,13 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeSuperType</span> {}</code></li>
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeType</span>: <span class="n"><!-- a href="" -->SomeSuperType<!-- /a --></span> {}</code></li>
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeChildType</span>: <span class="n"><!-- a href="" -->SomeType<!-- /a --></span> {}</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeType</span>: <span class="n"></span> {}</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeChildType</span>: <span class="n"></span> {}</code></li>
           <li><code class="code-voice"><span class="kt">let</span> <span class="vc">s</span> = <span class="vc">SomeType</span>()</code></li>
           <li><code class="code-voice"> </code></li>
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">x</span> = <span class="vc">s</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->SomeSuperType<!-- /a --></span>  <span class="c">// known to succeed; type is SomeSuperType</span></code></li>
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">y</span> = <span class="vc">s</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->Int<!-- /a --></span>            <span class="c">// known to fail; compile-time error</span></code></li>
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">z</span> = <span class="vc">s</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->SomeChildType<!-- /a --></span>  <span class="c">// might fail at runtime; type is SomeChildType?</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">x</span> = <span class="vc">s</span> <span class="kt">as</span> <span class="n"></span>  <span class="c">// known to succeed; type is SomeSuperType</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">y</span> = <span class="vc">s</span> <span class="kt">as</span> <span class="n"></span>            <span class="c">// known to fail; compile-time error</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">z</span> = <span class="vc">s</span> <span class="kt">as</span> <span class="n"></span>  <span class="c">// might fail at runtime; type is SomeChildType?</span></code></li>
       </ul>
 
 
@@ -660,8 +660,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">y1</span> = <span class="vc">x</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->SomeType<!-- /a --></span>  <span class="c">// Type information from 'as'</span></code></li>
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">y2</span>: <span class="n"><!-- a href="" -->SomeType<!-- /a --></span> = <span class="vc">x</span>    <span class="c">// Type information from an annotation</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">y1</span> = <span class="vc">x</span> <span class="kt">as</span> <span class="n"></span>  <span class="c">// Type information from 'as'</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">y2</span>: <span class="n"></span> = <span class="vc">x</span>    <span class="c">// Type information from an annotation</span></code></li>
       </ul>
 
 
@@ -677,8 +677,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="s">"hello"</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice"><span class="s">"hello"</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
+          <li><code class="code-voice"><span class="s">"hello"</span> <span class="kt">is</span> <span class="n"></span></code></li>
+          <li><code class="code-voice"><span class="s">"hello"</span> <span class="kt">is</span> <span class="n"></span></code></li>
       </ul>
 
 
@@ -1004,8 +1004,8 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeClass</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">greeting</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">greeting</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">greeting</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">greeting</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">greeting</span> = <span class="vc">greeting</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -1024,7 +1024,7 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Point</span> {</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">x</span> = <span class="m">0.0</span>, <span class="vc">y</span> = <span class="m">0.0</span></code></li>
-          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">moveByX</span>(<span class="vc">deltaX</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span>, <span class="vc">y</span> <span class="vc">deltaY</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">moveByX</span>(<span class="vc">deltaX</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span> = <span class="vc">Point</span>(<span class="vc">x</span>: <span class="vc">x</span> + <span class="vc">deltaX</span>, <span class="vc">y</span>: <span class="vc">y</span> + <span class="vc">deltaY</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -1171,7 +1171,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="vc">myFunction</span> {</code></li>
-          <li><code class="code-voice">    (<span class="vc">x</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="vc">Int</span> <span class="kt">in</span></code></li>
+          <li><code class="code-voice">    (<span class="vc">x</span>: <span class="n"></span>) -&gt; <span class="vc">Int</span> <span class="kt">in</span></code></li>
           <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">x</span> + <span class="vc">y</span></code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"> </code></li>
@@ -1663,7 +1663,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeSubClass</span>: <span class="n"><!-- a href="" -->SomeSuperClass<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeSubClass</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">init</span>() {</code></li>
           <li><code class="code-voice">        <span class="c">// subclass initialization goes here</span></code></li>
           <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>()</code></li>
@@ -1816,12 +1816,12 @@
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"SomeBaseClass"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeSubClass</span>: <span class="n"><!-- a href="" -->SomeBaseClass<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeSubClass</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">override</span> <span class="kt">class</span> <span class="kt">func</span> <span class="vc">printClassName</span>() {</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"SomeSubClass"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">someInstance</span>: <span class="n"><!-- a href="" -->SomeBaseClass<!-- /a --></span> = <span class="vc">SomeSubClass</span>()</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">someInstance</span>: <span class="n"></span> = <span class="vc">SomeSubClass</span>()</code></li>
           <li><code class="code-voice"><span class="c">// someInstance is of type SomeBaseClass at compile time, but</span></code></li>
           <li><code class="code-voice"><span class="c">// someInstance is of type SomeSubClass at runtime</span></code></li>
           <li><code class="code-voice"><span class="vc">someInstance</span>.<span class="kt">dynamicType</span>.<span class="vc">printClassName</span>()</code></li>
@@ -1930,8 +1930,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">c</span>: <span class="n"><!-- a href="" -->SomeClass<!-- /a --></span>?</code></li>
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">result</span>: <span class="n"><!-- a href="" -->Bool<!-- /a --></span>? = <span class="vc">c</span>?.<span class="vc">property</span>.<span class="vc">performAction</span>()</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">c</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">result</span>: <span class="n"></span>? = <span class="vc">c</span>?.<span class="vc">property</span>.<span class="vc">performAction</span>()</code></li>
       </ul>
 
 

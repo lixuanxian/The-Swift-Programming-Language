@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0174)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html#TP40014097-CH19-XID_182 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Deinitialization</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -8,7 +8,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014097" title="The Swift Programming Language"></a>
 
@@ -225,12 +225,12 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Bank</span> {</code></li>
           <li><code class="code-voice">    <span class="kt">static</span> <span class="kt">var</span> <span class="vc">coinsInBank</span> = <span class="m">10_000</span></code></li>
-          <li><code class="code-voice">    <span class="kt">static</span> <span class="kt">func</span> <span class="vc">vendCoins</span>(<span class="kt">var</span> <span class="vc">numberOfCoinsToVend</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">static</span> <span class="kt">func</span> <span class="vc">vendCoins</span>(<span class="kt">var</span> <span class="vc">numberOfCoinsToVend</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="vc">numberOfCoinsToVend</span> = <span class="vc">min</span>(<span class="vc">numberOfCoinsToVend</span>, <span class="vc">coinsInBank</span>)</code></li>
           <li><code class="code-voice">        <span class="vc">coinsInBank</span> -= <span class="vc">numberOfCoinsToVend</span></code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">numberOfCoinsToVend</span></code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">static</span> <span class="kt">func</span> <span class="vc">receiveCoins</span>(<span class="vc">coins</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">static</span> <span class="kt">func</span> <span class="vc">receiveCoins</span>(<span class="vc">coins</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">coinsInBank</span> += <span class="vc">coins</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -254,11 +254,11 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Player</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">coinsInPurse</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">coins</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">coinsInPurse</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">coins</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">coinsInPurse</span> = <span class="vc">Bank</span>.<span class="vc">vendCoins</span>(<span class="vc">coins</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">winCoins</span>(<span class="vc">coins</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">winCoins</span>(<span class="vc">coins</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">coinsInPurse</span> += <span class="vc">Bank</span>.<span class="vc">vendCoins</span>(<span class="vc">coins</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">    <span class="kt">deinit</span> {</code></li>
@@ -280,7 +280,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">playerOne</span>: <span class="n"><!-- a href="" -->Player<!-- /a --></span>? = <span class="vc">Player</span>(<span class="vc">coins</span>: <span class="m">100</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">playerOne</span>: <span class="n"></span>? = <span class="vc">Player</span>(<span class="vc">coins</span>: <span class="m">100</span>)</code></li>
           <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"A new player has joined the game with </span>\(<span class="vc">playerOne</span>!.<span class="vc">coinsInPurse</span>)<span class="s"> coins"</span>)</code></li>
           <li><code class="code-voice"><span class="c">// prints "A new player has joined the game with 100 coins"</span></code></li>
           <li><code class="code-voice"><span class="vc">println</span>(<span class="s">"There are now </span>\(<span class="vc">Bank</span>.<span class="vc">coinsInBank</span>)<span class="s"> coins left in the bank"</span>)</code></li>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0166)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html#TP40014097-CH11-XID_117 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Closures</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -8,7 +8,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014097" title="The Swift Programming Language"></a>
 
@@ -291,7 +291,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">backwards</span>(<span class="vc">s1</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">s2</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Bool<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">backwards</span>(<span class="vc">s1</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">s1</span> &gt; <span class="vc">s2</span></code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"><span class="kt">var</span> <span class="vc">reversed</span> = <span class="vc">sort</span>(<span class="vc">names</span>, <span class="vc">backwards</span>)</code></li>
@@ -328,7 +328,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="vc">reversed</span> = <span class="vc">sort</span>(<span class="vc">names</span>, { (<span class="vc">s1</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">s2</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) -&gt; <span class="vc">Bool</span> <span class="kt">in</span></code></li>
+          <li><code class="code-voice"><span class="vc">reversed</span> = <span class="vc">sort</span>(<span class="vc">names</span>, { (<span class="vc">s1</span>: <span class="n"></span>) -&gt; <span class="vc">Bool</span> <span class="kt">in</span></code></li>
           <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">s1</span> &gt; <span class="vc">s2</span></code></li>
           <li><code class="code-voice">    })</code></li>
       </ul>
@@ -348,7 +348,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="vc">reversed</span> = <span class="vc">sort</span>(<span class="vc">names</span>, { (<span class="vc">s1</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">s2</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) -&gt; <span class="vc">Bool</span> <span class="kt">in</span> <span class="kt">return</span> <span class="vc">s1</span> &gt; <span class="vc">s2</span> } )</code></li>
+          <li><code class="code-voice"><span class="vc">reversed</span> = <span class="vc">sort</span>(<span class="vc">names</span>, { (<span class="vc">s1</span>: <span class="n"></span>) -&gt; <span class="vc">Bool</span> <span class="kt">in</span> <span class="kt">return</span> <span class="vc">s1</span> &gt; <span class="vc">s2</span> } )</code></li>
       </ul>
 
 
@@ -596,9 +596,9 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">makeIncrementor</span>(<span class="vc">forIncrement</span> <span class="vc">amount</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; () -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">makeIncrementor</span>(<span class="vc">forIncrement</span> <span class="vc">amount</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">runningTotal</span> = <span class="m">0</span></code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">incrementor</span>() -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">incrementor</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="vc">runningTotal</span> += <span class="vc">amount</span></code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">runningTotal</span></code></li>
           <li><code class="code-voice">    }</code></li>
@@ -625,7 +625,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">incrementor</span>() -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">incrementor</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="vc">runningTotal</span> += <span class="vc">amount</span></code></li>
           <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">runningTotal</span></code></li>
           <li><code class="code-voice">}</code></li>

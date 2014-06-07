@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0173)href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>Using Swift with Cocoa and Objective-C: Adopting Cocoa Design Patterns</title>
    <link rel="stylesheet" type="text/css" href="./../resource/style-1.1.15.css"> 
@@ -12,7 +12,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014216" title="Using Swift with Cocoa and Objective-C"></a>
 
@@ -70,7 +70,7 @@
               	<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40" data-id="TP40014216-CH6-XID_40" class="">Working with Cocoa Data Types</a>
               </li>
               <li class="nav-chapter nav-current-chapter">
-              	<a href="Adopting Cocoa Design Patterns.htm" data-id="TP40014216-CH7-XID_5" class="nav-chapter-active">Adopting Cocoa Design Patterns</a>
+              	<a href="" data-id="TP40014216-CH7-XID_5" class="nav-chapter-active">Adopting Cocoa Design Patterns</a>
               </li>
               <li class="nav-chapter">
               	<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_13" data-id="TP40014216-CH8-XID_13">Interacting with C APIs</a>
@@ -105,42 +105,42 @@
   <ul class="list-bullet">
   		<li class="item">
   			<p class="para">
-	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_6">
+	  			<a href="#TP40014216-CH7-XID_6">
 	  				Delegation
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_8">
+	  			<a href="#TP40014216-CH7-XID_8">
 	  				Lazy Initialization
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_9">
+	  			<a href="#TP40014216-CH7-XID_9">
 	  				Error Reporting
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_10">
+	  			<a href="#TP40014216-CH7-XID_10">
 	  				Key-Value Observing
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_11">
+	  			<a href="#TP40014216-CH7-XID_11">
 	  				Target-Action
 	  			</a>
   			</p>
   		</li>
   		<li class="item">
   			<p class="para">
-	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_12">
+	  			<a href="#TP40014216-CH7-XID_12">
 	  				Introspection
 	  			</a>
   			</p>
@@ -229,7 +229,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">writeError</span> : <span class="n"><!-- a href="" -->NSError<!-- /a --></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">writeError</span> : <span class="n"></span>?</code></li>
           <li><code class="code-voice"><span class="kt">let</span> <span class="vc">written</span> = <span class="vc">myString</span>.<span class="vc">writeToFile</span>(<span class="vc">path</span>, <span class="vc">atomically</span>: <span class="vc">false</span>,</code></li>
           <li><code class="code-voice">    <span class="vc">encoding</span>: <span class="vc">NSUTF8StringEncoding</span>,</code></li>
           <li><code class="code-voice">    <span class="vc">error</span>: &amp;<span class="vc">writeError</span>)</code></li>
@@ -254,7 +254,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">contentsForType</span>(<span class="vc">typeName</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>! <span class="vc">error</span>: <span class="n"><!-- a href="" -->NSErrorPointer<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>! {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">contentsForType</span>(<span class="vc">typeName</span>: <span class="n"></span>! {</code></li>
           <li><code class="code-voice">    <span class="kt">if</span> <span class="vc">cannotProduceContentsForType</span>(<span class="vc">typeName</span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">error</span> {</code></li>
           <li><code class="code-voice">            <span class="vc">error</span>.<span class="vc">memory</span> = <span class="vc">NSError</span>(<span class="vc">domain</span>: <span class="vc">domain</span>, <span class="vc">code</span>: <span class="vc">code</span>, <span class="vc">userInfo</span>: [:])</code></li>
@@ -303,7 +303,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">if</span> <span class="vc">object</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->UIButton<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="vc">object</span> <span class="kt">is</span> <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// object is of type UIButton</span></code></li>
           <li><code class="code-voice">} <span class="kt">else</span> {</code></li>
           <li><code class="code-voice">    <span class="c">// object is not of type UIButton</span></code></li>
@@ -324,7 +324,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">button</span> = <span class="vc">object</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->UIButton<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">button</span> = <span class="vc">object</span> <span class="kt">as</span>? <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// object is successfully cast to type UIButton and bound to button</span></code></li>
           <li><code class="code-voice">} <span class="kt">else</span> {</code></li>
           <li><code class="code-voice">    <span class="c">// object could not be cast to type UIButton</span></code></li>
@@ -347,7 +347,7 @@
         <div class="Swift">
           <p class="aside-title">Swift</p>
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">dataSource</span> = <span class="vc">object</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->UITableViewDataSource<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">dataSource</span> = <span class="vc">object</span> <span class="kt">as</span>? <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// object conforms to UITableViewDataSource and is bound to dataSource</span></code></li>
           <li><code class="code-voice">} <span class="kt">else</span> {</code></li>
           <li><code class="code-voice">    <span class="c">// object not conform to UITableViewDataSource</span></code></li>

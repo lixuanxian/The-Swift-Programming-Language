@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0167)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html#TP40014097-CH25-XID_345 -->
+
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Protocols</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -8,7 +8,7 @@
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
-<!-- SiteCatalyst code will be injected here when viewed in production -->
+
 </div>
     	<a name="TP40014097" title="The Swift Programming Language"></a>
 
@@ -284,7 +284,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">SomeStructure</span>: <span class="n"><!-- a href="" -->FirstProtocol<!-- /a --></span>, <span class="n"><!-- a href="" -->AnotherProtocol<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">SomeStructure</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// structure definition goes here</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -300,7 +300,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeClass</span>: <span class="n"><!-- a href="" -->SomeSuperclass<!-- /a --></span>, <span class="n"><!-- a href="" -->FirstProtocol<!-- /a --></span>, <span class="n"><!-- a href="" -->AnotherProtocol<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SomeClass</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// class definition goes here</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -327,8 +327,8 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">SomeProtocol</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">mustBeSettable</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> { <span class="kt">get</span> <span class="kt">set</span> }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">doesNotNeedToBeSettable</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">mustBeSettable</span>: <span class="n"></span> { <span class="kt">get</span> <span class="kt">set</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">doesNotNeedToBeSettable</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -344,7 +344,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">AnotherProtocol</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">class</span> <span class="kt">var</span> <span class="vc">someTypeProperty</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> { <span class="kt">get</span> <span class="kt">set</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">class</span> <span class="kt">var</span> <span class="vc">someTypeProperty</span>: <span class="n"></span> { <span class="kt">get</span> <span class="kt">set</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -360,7 +360,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">FullyNamed</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">fullName</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">fullName</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -377,8 +377,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Person</span>: <span class="n"><!-- a href="" -->FullyNamed<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">fullName</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Person</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">fullName</span>: <span class="n"></span></code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"><span class="kt">let</span> <span class="vc">john</span> = <span class="vc">Person</span>(<span class="vc">fullName</span>: <span class="s">"John Appleseed"</span>)</code></li>
           <li><code class="code-voice"><span class="c">// john.fullName is "John Appleseed"</span></code></li>
@@ -399,14 +399,14 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Starship</span>: <span class="n"><!-- a href="" -->FullyNamed<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">prefix</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>?</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>, <span class="vc">prefix</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>? = <span class="vc">nil</span>) {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Starship</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">prefix</span>: <span class="n"></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">name</span>: <span class="n"></span>? = <span class="vc">nil</span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">name</span> = <span class="vc">name</span></code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">prefix</span> = <span class="vc">prefix</span></code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">fullName</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">fullName</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">return</span> (<span class="vc">prefix</span> ? <span class="vc">prefix</span>! + <span class="s">" "</span> : <span class="s">""</span>) + <span class="vc">name</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -461,7 +461,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">RandomNumberGenerator</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">random</span>() -&gt; <span class="n"><!-- a href="" -->Double<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">random</span>() -&gt; <span class="n"></span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -480,12 +480,12 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">LinearCongruentialGenerator</span>: <span class="n"><!-- a href="" -->RandomNumberGenerator<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">LinearCongruentialGenerator</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">lastRandom</span> = <span class="m">42.0</span></code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">m</span> = <span class="m">139968.0</span></code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">a</span> = <span class="m">3877.0</span></code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">c</span> = <span class="m">29573.0</span></code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">random</span>() -&gt; <span class="n"><!-- a href="" -->Double<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">random</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="vc">lastRandom</span> = ((<span class="vc">lastRandom</span> * <span class="vc">a</span> + <span class="vc">c</span>) % <span class="vc">m</span>)</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">lastRandom</span> / <span class="vc">m</span></code></li>
           <li><code class="code-voice">    }</code></li>
@@ -547,7 +547,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">enum</span> <span class="vc">OnOffSwitch</span>: <span class="n"><!-- a href="" -->Togglable<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">enum</span> <span class="vc">OnOffSwitch</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">Off</span>, <span class="vc">On</span></code></li>
           <li><code class="code-voice">    <span class="kt">mutating</span> <span class="kt">func</span> <span class="vc">toggle</span>() {</code></li>
           <li><code class="code-voice">        <span class="kt">switch</span> <span class="kt">self</span> {</code></li>
@@ -605,13 +605,13 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Dice</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">sides</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">generator</span>: <span class="n"><!-- a href="" -->RandomNumberGenerator<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">sides</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">generator</span>: <span class="n"><!-- a href="" -->RandomNumberGenerator<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">sides</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">generator</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">sides</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">sides</span> = <span class="vc">sides</span></code></li>
           <li><code class="code-voice">        <span class="kt">self</span>.<span class="vc">generator</span> = <span class="vc">generator</span></code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">roll</span>() -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">roll</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">Int</span>(<span class="vc">generator</span>.<span class="vc">random</span>() * <span class="vc">Double</span>(<span class="vc">sides</span>)) + <span class="m">1</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -667,13 +667,13 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">DiceGame</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">dice</span>: <span class="n"><!-- a href="" -->Dice<!-- /a --></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">dice</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
           <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">play</span>()</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">DiceGameDelegate</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">gameDidStart</span>(<span class="vc">game</span>: <span class="n"><!-- a href="" -->DiceGame<!-- /a --></span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">game</span>(<span class="vc">game</span>: <span class="n"><!-- a href="" -->DiceGame<!-- /a --></span>, <span class="vc">didStartNewTurnWithDiceRoll</span> <span class="vc">diceRoll</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>)</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">gameDidEnd</span>(<span class="vc">game</span>: <span class="n"><!-- a href="" -->DiceGame<!-- /a --></span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">gameDidStart</span>(<span class="vc">game</span>: <span class="n"></span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">game</span>(<span class="vc">game</span>: <span class="n"></span>)</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">gameDidEnd</span>(<span class="vc">game</span>: <span class="n"></span>)</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -690,17 +690,17 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SnakesAndLadders</span>: <span class="n"><!-- a href="" -->DiceGame<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">SnakesAndLadders</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">finalSquare</span> = <span class="m">25</span></code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">dice</span> = <span class="vc">Dice</span>(<span class="vc">sides</span>: <span class="m">6</span>, <span class="vc">generator</span>: <span class="vc">LinearCongruentialGenerator</span>())</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">square</span> = <span class="m">0</span></code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">board</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>[]</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">board</span>: <span class="n"></span>[]</code></li>
           <li><code class="code-voice">    <span class="kt">init</span>() {</code></li>
           <li><code class="code-voice">        <span class="vc">board</span> = <span class="vc">Int</span>[](<span class="vc">count</span>: <span class="vc">finalSquare</span> + <span class="m">1</span>, <span class="vc">repeatedValue</span>: <span class="m">0</span>)</code></li>
           <li><code class="code-voice">        <span class="vc">board</span>[<span class="m">03</span>] = +<span class="m">08</span>; <span class="vc">board</span>[<span class="m">06</span>] = +<span class="m">11</span>; <span class="vc">board</span>[<span class="m">09</span>] = +<span class="m">09</span>; <span class="vc">board</span>[<span class="m">10</span>] = +<span class="m">02</span></code></li>
           <li><code class="code-voice">        <span class="vc">board</span>[<span class="m">14</span>] = -<span class="m">10</span>; <span class="vc">board</span>[<span class="m">19</span>] = -<span class="m">11</span>; <span class="vc">board</span>[<span class="m">22</span>] = -<span class="m">02</span>; <span class="vc">board</span>[<span class="m">24</span>] = -<span class="m">08</span></code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">delegate</span>: <span class="n"><!-- a href="" -->DiceGameDelegate<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">delegate</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">play</span>() {</code></li>
           <li><code class="code-voice">        <span class="vc">square</span> = <span class="m">0</span></code></li>
           <li><code class="code-voice">        <span class="vc">delegate</span>?.<span class="vc">gameDidStart</span>(<span class="kt">self</span>)</code></li>
@@ -745,20 +745,20 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">DiceGameTracker</span>: <span class="n"><!-- a href="" -->DiceGameDelegate<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">DiceGameTracker</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">numberOfTurns</span> = <span class="m">0</span></code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">gameDidStart</span>(<span class="vc">game</span>: <span class="n"><!-- a href="" -->DiceGame<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">gameDidStart</span>(<span class="vc">game</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">numberOfTurns</span> = <span class="m">0</span></code></li>
-          <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">game</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->SnakesAndLadders<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">game</span> <span class="kt">is</span> <span class="n"></span> {</code></li>
           <li><code class="code-voice">            <span class="vc">println</span>(<span class="s">"Started a new game of Snakes and Ladders"</span>)</code></li>
           <li><code class="code-voice">        }</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"The game is using a </span>\(<span class="vc">game</span>.<span class="vc">dice</span>.<span class="vc">sides</span>)<span class="s">-sided dice"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">game</span>(<span class="vc">game</span>: <span class="n"><!-- a href="" -->DiceGame<!-- /a --></span>, <span class="vc">didStartNewTurnWithDiceRoll</span> <span class="vc">diceRoll</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">game</span>(<span class="vc">game</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        ++<span class="vc">numberOfTurns</span></code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"Rolled a </span>\(<span class="vc">diceRoll</span>)<span class="s">"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">gameDidEnd</span>(<span class="vc">game</span>: <span class="n"><!-- a href="" -->DiceGame<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">gameDidEnd</span>(<span class="vc">game</span>: <span class="n"></span>) {</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"The game lasted for </span>\(<span class="vc">numberOfTurns</span>)<span class="s"> turns"</span>)</code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -823,7 +823,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">TextRepresentable</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asText</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asText</span>() -&gt; <span class="n"></span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -838,8 +838,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"><!-- a href="" -->Dice<!-- /a --></span>: <span class="n"><!-- a href="" -->TextRepresentable<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asText</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asText</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="s">"A </span>\(<span class="vc">sides</span>)<span class="s">-sided dice"</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -874,8 +874,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"><!-- a href="" -->SnakesAndLadders<!-- /a --></span>: <span class="n"><!-- a href="" -->TextRepresentable<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asText</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asText</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="s">"A game of Snakes and Ladders with </span>\(<span class="vc">finalSquare</span>)<span class="s"> squares"</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
@@ -899,12 +899,12 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Hamster</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asText</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asText</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">return</span> <span class="s">"A hamster named </span>\(<span class="vc">name</span>)<span class="s">"</span></code></li>
           <li><code class="code-voice">    }</code></li>
           <li><code class="code-voice">}</code></li>
-          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"><!-- a href="" -->Hamster<!-- /a --></span>: <span class="n"><!-- a href="" -->TextRepresentable<!-- /a --></span> {}</code></li>
+          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"></span> {}</code></li>
       </ul>
 
 
@@ -919,7 +919,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">let</span> <span class="vc">simonTheHamster</span> = <span class="vc">Hamster</span>(<span class="vc">name</span>: <span class="s">"Simon"</span>)</code></li>
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">somethingTextRepresentable</span>: <span class="n"><!-- a href="" -->TextRepresentable<!-- /a --></span> = <span class="vc">simonTheHamster</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">somethingTextRepresentable</span>: <span class="n"></span> = <span class="vc">simonTheHamster</span></code></li>
           <li><code class="code-voice"><span class="vc">println</span>(<span class="vc">somethingTextRepresentable</span>.<span class="vc">asText</span>())</code></li>
           <li><code class="code-voice"><span class="c">// prints "A hamster named Simon"</span></code></li>
       </ul>
@@ -952,7 +952,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">things</span>: <span class="n"><!-- a href="" -->TextRepresentable<!-- /a --></span>[] = [<span class="vc">game</span>, <span class="vc">d12</span>, <span class="vc">simonTheHamster</span>]</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">things</span>: <span class="n"></span>[] = [<span class="vc">game</span>, <span class="vc">d12</span>, <span class="vc">simonTheHamster</span>]</code></li>
       </ul>
 
 
@@ -993,7 +993,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">InheritingProtocol</span>: <span class="n"><!-- a href="" -->SomeProtocol<!-- /a --></span>, <span class="n"><!-- a href="" -->AnotherProtocol<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">InheritingProtocol</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="c">// protocol definition goes here</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -1009,8 +1009,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">PrettyTextRepresentable</span>: <span class="n"><!-- a href="" -->TextRepresentable<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asPrettyText</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
+          <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">PrettyTextRepresentable</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asPrettyText</span>() -&gt; <span class="n"></span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -1027,8 +1027,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"><!-- a href="" -->SnakesAndLadders<!-- /a --></span>: <span class="n"><!-- a href="" -->PrettyTextRepresentable<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asPrettyText</span>() -&gt; <span class="n"><!-- a href="" -->String<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">asPrettyText</span>() -&gt; <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">var</span> <span class="vc">output</span> = <span class="vc">asText</span>() + <span class="s">":\n"</span></code></li>
           <li><code class="code-voice">        <span class="kt">for</span> <span class="vc">index</span> <span class="kt">in</span> <span class="m">1</span>...<span class="vc">finalSquare</span> {</code></li>
           <li><code class="code-voice">            <span class="kt">switch</span> <span class="vc">board</span>[<span class="vc">index</span>] {</code></li>
@@ -1094,16 +1094,16 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">Named</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"><span class="kt">protocol</span> <span class="vc">Aged</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">age</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">age</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
           <li><code class="code-voice">}</code></li>
-          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Person</span>: <span class="n"><!-- a href="" -->Named<!-- /a --></span>, <span class="n"><!-- a href="" -->Aged<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">age</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Person</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">name</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">age</span>: <span class="n"></span></code></li>
           <li><code class="code-voice">}</code></li>
-          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">wishHappyBirthday</span>(<span class="vc">celebrator</span>: <span class="kt">protocol</span>&lt;<span class="n"><!-- a href="" -->Named<!-- /a --></span>, <span class="n"><!-- a href="" -->Aged<!-- /a --></span>&gt;) {</code></li>
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">wishHappyBirthday</span>(<span class="vc">celebrator</span>: <span class="kt">protocol</span>&lt;<span class="n"></span>&gt;) {</code></li>
           <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"Happy birthday </span>\(<span class="vc">celebrator</span>.<span class="vc">name</span>)<span class="s"> - you're </span>\(<span class="vc">celebrator</span>.<span class="vc">age</span>)<span class="s">!"</span>)</code></li>
           <li><code class="code-voice">}</code></li>
           <li><code class="code-voice"><span class="kt">let</span> <span class="vc">birthdayPerson</span> = <span class="vc">Person</span>(<span class="vc">name</span>: <span class="s">"Malcolm"</span>, <span class="vc">age</span>: <span class="m">21</span>)</code></li>
@@ -1157,7 +1157,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">@objc</span> <span class="kt">protocol</span> <span class="vc">HasArea</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">area</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">area</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -1184,15 +1184,15 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Circle</span>: <span class="n"><!-- a href="" -->HasArea<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Circle</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">pi</span> = <span class="m">3.1415927</span></code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">radius</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">area</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span> { <span class="kt">return</span> <span class="vc">pi</span> * <span class="vc">radius</span> * <span class="vc">radius</span> }</code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">radius</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span>) { <span class="kt">self</span>.<span class="vc">radius</span> = <span class="vc">radius</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">radius</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">area</span>: <span class="n"></span> { <span class="kt">return</span> <span class="vc">pi</span> * <span class="vc">radius</span> * <span class="vc">radius</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">radius</span>: <span class="n"></span>) { <span class="kt">self</span>.<span class="vc">radius</span> = <span class="vc">radius</span> }</code></li>
           <li><code class="code-voice">}</code></li>
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Country</span>: <span class="n"><!-- a href="" -->HasArea<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">area</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">area</span>: <span class="n"><!-- a href="" -->Double<!-- /a --></span>) { <span class="kt">self</span>.<span class="vc">area</span> = <span class="vc">area</span> }</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Country</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">area</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">area</span>: <span class="n"></span>) { <span class="kt">self</span>.<span class="vc">area</span> = <span class="vc">area</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -1210,8 +1210,8 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Animal</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">legs</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">legs</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) { <span class="kt">self</span>.<span class="vc">legs</span> = <span class="vc">legs</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">legs</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">legs</span>: <span class="n"></span>) { <span class="kt">self</span>.<span class="vc">legs</span> = <span class="vc">legs</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -1226,7 +1226,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">objects</span>: <span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>[] = [</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">objects</span>: <span class="n"></span>[] = [</code></li>
           <li><code class="code-voice">    <span class="vc">Circle</span>(<span class="vc">radius</span>: <span class="m">2.0</span>),</code></li>
           <li><code class="code-voice">    <span class="vc">Country</span>(<span class="vc">area</span>: <span class="m">243_610</span>),</code></li>
           <li><code class="code-voice">    <span class="vc">Animal</span>(<span class="vc">legs</span>: <span class="m">4</span>)</code></li>
@@ -1247,7 +1247,7 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">for</span> <span class="vc">object</span> <span class="kt">in</span> <span class="vc">objects</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">if</span> <span class="kt">let</span> <span class="vc">objectWithArea</span> = <span class="vc">object</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->HasArea<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">if</span> <span class="kt">let</span> <span class="vc">objectWithArea</span> = <span class="vc">object</span> <span class="kt">as</span>? <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"Area is </span>\(<span class="vc">objectWithArea</span>.<span class="vc">area</span>)<span class="s">"</span>)</code></li>
           <li><code class="code-voice">    } <span class="kt">else</span> {</code></li>
           <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"Something that doesn't have an area"</span>)</code></li>
@@ -1298,8 +1298,8 @@
 
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">@objc</span> <span class="kt">protocol</span> <span class="vc">CounterDataSource</span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">@optional</span> <span class="kt">func</span> <span class="vc">incrementForCount</span>(<span class="vc">count</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span></code></li>
-          <li><code class="code-voice">    <span class="kt">@optional</span> <span class="kt">var</span> <span class="vc">fixedIncrement</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> { <span class="kt">get</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">@optional</span> <span class="kt">func</span> <span class="vc">incrementForCount</span>(<span class="vc">count</span>: <span class="n"></span></code></li>
+          <li><code class="code-voice">    <span class="kt">@optional</span> <span class="kt">var</span> <span class="vc">fixedIncrement</span>: <span class="n"></span> { <span class="kt">get</span> }</code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
 
@@ -1327,7 +1327,7 @@
       <ul class="code-lines">
           <li><code class="code-voice"><span class="kt">@objc</span> <span class="kt">class</span> <span class="vc">Counter</span> {</code></li>
           <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">count</span> = <span class="m">0</span></code></li>
-          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">dataSource</span>: <span class="n"><!-- a href="" -->CounterDataSource<!-- /a --></span>?</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">dataSource</span>: <span class="n"></span>?</code></li>
           <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">increment</span>() {</code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="kt">let</span> <span class="vc">amount</span> = <span class="vc">dataSource</span>?.<span class="vc">incrementForCount</span>?(<span class="vc">count</span>) {</code></li>
           <li><code class="code-voice">            <span class="vc">count</span> += <span class="vc">amount</span></code></li>
@@ -1361,7 +1361,7 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">ThreeSource</span>: <span class="n"><!-- a href="" -->CounterDataSource<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">ThreeSource</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">fixedIncrement</span> = <span class="m">3</span></code></li>
           <li><code class="code-voice">}</code></li>
       </ul>
@@ -1402,8 +1402,8 @@
   <div class="code-sample">
 
       <ul class="code-lines">
-          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">TowardsZeroSource</span>: <span class="n"><!-- a href="" -->CounterDataSource<!-- /a --></span> {</code></li>
-          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">incrementForCount</span>(<span class="vc">count</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">TowardsZeroSource</span>: <span class="n"></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">incrementForCount</span>(<span class="vc">count</span>: <span class="n"></span> {</code></li>
           <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">count</span> == <span class="m">0</span> {</code></li>
           <li><code class="code-voice">            <span class="kt">return</span> <span class="m">0</span></code></li>
           <li><code class="code-voice">        } <span class="kt">else</span> <span class="kt">if</span> <span class="vc">count</span> &lt; <span class="m">0</span> {</code></li>
