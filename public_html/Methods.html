@@ -260,7 +260,7 @@
   <a name="TP40014097-CH15-XID_302"></a>
   <h3 class="section-name" tabindex="0">Local and External Parameter Names for Methods</h3>
   <p class="para">
-  Function parameters can have both a local name (for use within the function’s body) and an external name (for use when calling the function), as described in <span class="x-name"><a href="External Parameter Names.html#TP40014097-CH10-XID_214" data-id="TP40014097-CH10-XID_214">External Parameter Names</a></span>. The same is true for method parameters, because methods are just functions that are associated with a type. However, the default behavior of local names and external names is different for functions and methods.
+  Function parameters can have both a local name (for use within the function’s body) and an external name (for use when calling the function), as described in <span class="x-name"><a href="Functions.html#TP40014097-CH10-XID_214" data-id="TP40014097-CH10-XID_214">External Parameter Names</a></span>. The same is true for method parameters, because methods are just functions that are associated with a type. However, the default behavior of local names and external names is different for functions and methods.
 </p><p class="para">
   Methods in Swift are very similar to their counterparts in Objective-C. As in Objective-C, the name of a method in Swift typically refers to the method’s first parameter using a preposition such as <code class="code-voice">with</code>, <code class="code-voice">for</code>, or <code class="code-voice">by</code>, as seen in the <code class="code-voice">incrementBy</code> method from the preceding <code class="code-voice">Counter</code> class example. The use of a preposition enables the method to be read as a sentence when it is called. Swift makes this established method naming convention easy to write by using a different default approach for method parameters than it uses for function parameters.
 </p><p class="para">
@@ -421,7 +421,7 @@
 </section><p class="para">
   The <code class="code-voice">Point</code> structure above defines a mutating <code class="code-voice">moveByX</code> method, which moves a <code class="code-voice">Point</code> instance by a certain amount. Instead of returning a new point, this method actually modifies the point on which it is called. The <code class="code-voice">mutating</code> keyword is added to its definition to enable it to modify its properties.
 </p><p class="para">
-  Note that you cannot call a mutating method on a constant of structure type, because its properties cannot be changed, even if they are variable properties, as described in <span class="x-name"><a href="Stored Properties of Constant Structure Instances.html#TP40014097-CH14-XID_325" data-id="TP40014097-CH14-XID_325">Stored Properties of Constant Structure Instances</a></span>:
+  Note that you cannot call a mutating method on a constant of structure type, because its properties cannot be changed, even if they are variable properties, as described in <span class="x-name"><a href="Properties.html#TP40014097-CH14-XID_325" data-id="TP40014097-CH14-XID_325">Stored Properties of Constant Structure Instances</a></span>:
 </p><section class="code-listing">
   
   <span class="caption"></span>
@@ -659,6 +659,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  	
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

@@ -146,13 +146,13 @@
       </li>
     </ul>
 </nav>
-      <article class="chapter">
+ <article class="chapter">
   <a name="TP40014097-CH35"></a><a name="TP40014097-CH35-XID_460"></a>
   <div class="pixel-line"></div>
   <h2 class="chapter-name chapter-name-short">Attributes</h2>
 
 
-      <section id="mini_toc" class="hideInXcode" role="navigation">
+      <section role="navigation" class="hideInXcode" id="mini_toc">
 	<div id="mini_toc_button">
   	<p>On This Page</p>
   </div>
@@ -177,7 +177,7 @@
   
   	<section class="section">
   		<p class="para">
-  <em>Attributes</em> provide more information about a declaration or type. There are two kinds of attributes in Swift, those that apply to declarations and those that apply to types. For instance, the <code class="code-voice">required</code> attribute—when applied to a designated or convenience initializer declaration of a class—indicates that every subclass must implement that initializer. And the <code class="code-voice">noreturn</code> attribute—when applied to a function or method type—indicates that the function or method doesn’t return to its caller.
+  <em>Attributes</em> provide more information about a declaration or type. There are two kinds of attributes in Swift, those that apply to declarations and those that apply to types. For instance, the <code class="code-voice">required</code> attribute&mdash;when applied to a designated or convenience initializer declaration of a class&mdash;indicates that every subclass must implement that initializer. And the <code class="code-voice">noreturn</code> attribute&mdash;when applied to a function or method type&mdash;indicates that the function or method doesn’t return to its caller.
 </p>
 <p class="para">
   You specify an attribute by writing the <code class="code-voice">@</code> symbol followed by the attribute’s name and any arguments that the attribute accepts:
@@ -197,12 +197,12 @@
 
   <section class="section">
   <a name="TP40014097-CH35-XID_461"></a>
-  <h3 class="section-name" tabindex="0">Declaration Attributes</h3>
+  <h3 tabindex="0" class="section-name">Declaration Attributes</h3>
   <p class="para">
   You can apply a declaration attribute to declarations only. However, you can also apply the <code class="code-voice">noreturn</code> attribute to a function or method <em>type</em>.
 </p><dl class="term-definition termdef">
 	<dt class="term"><code class="code-voice">assignment</code></dt><dd class="definition"><p class="para">
-  Apply this attribute to functions that overload a compound assignment operator. Functions that overload a compound assignment operator must mark their initial input parameter as <code class="code-voice">inout</code>. For an example of how to use the <code class="code-voice">assignment</code> attribute, see <span class="x-name"><a href="Compound Assignment Operators.html#TP40014097-CH27-XID_45" data-id="TP40014097-CH27-XID_45">Compound Assignment Operators</a></span>.
+  Apply this attribute to functions that overload a compound assignment operator. Functions that overload a compound assignment operator must mark their initial input parameter as <code class="code-voice">inout</code>. For an example of how to use the <code class="code-voice">assignment</code> attribute, see <span class="x-name"><a data-id="TP40014097-CH27-XID_45" href="Advanced Operators.html#TP40014097-CH27-XID_45">Compound Assignment Operators</a></span>.
 </p></dd>
 </dl><dl class="term-definition termdef">
 	<dt class="term"><code class="code-voice">class_protocol</code></dt><dd class="definition"><p class="para">
@@ -216,13 +216,13 @@
 </p></dd>
 </dl><dl class="term-definition termdef">
 	<dt class="term"><code class="code-voice">lazy</code></dt><dd class="definition"><p class="para">
-  Apply this attribute to a stored variable property of a class or structure to indicate that the property’s initial value is calculated and stored at most once, when the property is first accessed. For an example of how to use the <code class="code-voice">lazy</code> attribute, see <span class="x-name"><a href="Lazy Stored Properties.html#TP40014097-CH14-XID_326" data-id="TP40014097-CH14-XID_326">Lazy Stored Properties</a></span>.
+  Apply this attribute to a stored variable property of a class or structure to indicate that the property’s initial value is calculated and stored at most once, when the property is first accessed. For an example of how to use the <code class="code-voice">lazy</code> attribute, see <span class="x-name"><a data-id="TP40014097-CH14-XID_326" href="Properties.html#TP40014097-CH14-XID_326">Lazy Stored Properties</a></span>.
 </p></dd><dt class="term"><code class="code-voice">noreturn</code></dt><dd class="definition"><p class="para">
   Apply this attribute to a function or method declaration to indicate that the corresponding type of that function or method, <code class="code-voice">T</code>, is <code class="code-voice">@noreturn T</code>. You can mark a function or method type with this attribute to indicate that the function or method doesn’t return to its caller.
 </p><p class="para">
   You can override a function or method that is not marked with the <code class="code-voice">noreturn</code> attribute with a function or method that is. That said, you can’t override a function or method that is marked with the <code class="code-voice">noreturn</code> attribute with a function or method that is not. Similar rules apply when you implement a protocol method in a conforming type.
 </p></dd><dt class="term"><code class="code-voice">NSCopying</code></dt><dd class="definition"><p class="para">
-  Apply this attribute to a stored variable property of a class. This attribute causes the property’s setter to be synthesized with a <em>copy</em> of the property’s value—returned by the <code class="code-voice">copyWithZone</code> method—instead of the value of the property itself. The type of the property must conform to the <code class="code-voice">NSCopying</code> protocol.
+  Apply this attribute to a stored variable property of a class. This attribute causes the property’s setter to be synthesized with a <em>copy</em> of the property’s value&mdash;returned by the <code class="code-voice">copyWithZone</code> method&mdash;instead of the value of the property itself. The type of the property must conform to the <code class="code-voice">NSCopying</code> protocol.
 </p><p class="para">
   The <code class="code-voice">NSCopying</code> attribute behaves in a way similar to the Objective-C <code class="code-voice">copy</code> property attribute.
 </p></dd>
@@ -230,7 +230,7 @@
 	<dt class="term"><code class="code-voice">NSManaged</code></dt><dd class="definition"><p class="para">
   Apply this attribute to a stored variable property of a class that inherits from <code class="code-voice">NSManagedObject</code> to indicate that the storage and implementation of the property are provided dynamically by Core Data at runtime based on the associated entity description.
 </p></dd><dt class="term"><code class="code-voice">objc</code></dt><dd class="definition"><p class="para">
-  Apply this attribute to any declaration that can be represented in Objective-C—for example, non-nested classes, protocols, properties and methods (including getters and setters) of classes and protocols, initializers, deinitializers, and subscripts. The <code class="code-voice">objc</code> attribute tells the compiler that a declaration is available to use in Objective-C code.
+  Apply this attribute to any declaration that can be represented in Objective-C&mdash;for example, non-nested classes, protocols, properties and methods (including getters and setters) of classes and protocols, initializers, deinitializers, and subscripts. The <code class="code-voice">objc</code> attribute tells the compiler that a declaration is available to use in Objective-C code.
 </p><p class="para">
   If you apply the <code class="code-voice">objc</code> attribute to a class or protocol, it’s implicitly applied to the members of that class or protocol. The compiler also implicitly adds the <code class="code-voice">objc</code> attribute to a class that inherits from another class marked with the <code class="code-voice">objc</code> attribute. Protocols marked with the <code class="code-voice">objc</code> attribute can’t inherit from protocols that aren’t.
 </p><p class="para">
@@ -259,7 +259,7 @@
 	<dt class="term"><code class="code-voice">optional</code></dt><dd class="definition"><p class="para">
   Apply this attribute to a protocol’s property, method, or subscript members to indicate that a conforming type isn’t required to implement those members.
 </p><p class="para">
-  You can apply the <code class="code-voice">optional</code> attribute only to protocols that are marked with the <code class="code-voice">objc</code> attribute. As a result, only class types can adopt and conform to a protocol that contains optional member requirements. For more information about how to use the <code class="code-voice">optional</code> attribute and for guidance about how to access optional protocol members—for example, when you’re not sure whether a conforming type implements them—see <span class="x-name"><a href="Optional Protocol Requirements.html#TP40014097-CH25-XID_365" data-id="TP40014097-CH25-XID_365">Optional Protocol Requirements</a></span>.
+  You can apply the <code class="code-voice">optional</code> attribute only to protocols that are marked with the <code class="code-voice">objc</code> attribute. As a result, only class types can adopt and conform to a protocol that contains optional member requirements. For more information about how to use the <code class="code-voice">optional</code> attribute and for guidance about how to access optional protocol members&mdash;for example, when you’re not sure whether a conforming type implements them&mdash;see <span class="x-name"><a data-id="TP40014097-CH25-XID_365" href="Protocols.html#TP40014097-CH25-XID_365">Optional Protocol Requirements</a></span>.
 </p></dd>
 </dl><dl class="term-definition termdef">
 	<dt class="term"><code class="code-voice">required</code></dt><dd class="definition"><p class="para">
@@ -270,7 +270,7 @@
 </dl>
   <section class="section">
   <a name="TP40014097-CH35-XID_462"></a>
-  <h3 class="section-name" tabindex="0">Declaration Attributes Used by Interface Builder</h3>
+  <h3 tabindex="0" class="section-name">Declaration Attributes Used by Interface Builder</h3>
   <p class="para">
   Interface Builder attributes are declaration attributes used by Interface Builder to synchronize with Xcode. Swift provides the following Interface Builder attributes: <code class="code-voice">IBAction</code>, <code class="code-voice">IBDesignable</code>, <code class="code-voice">IBInspectable</code>, and <code class="code-voice">IBOutlet</code>. These attributes are conceptually the same as their Objective-C counterparts.
 </p><p class="para">
@@ -282,12 +282,12 @@
 </section>
 <section class="section">
   <a name="TP40014097-CH35-XID_463"></a>
-  <h3 class="section-name" tabindex="0">Type Attributes</h3>
+  <h3 tabindex="0" class="section-name">Type Attributes</h3>
   <p class="para">
   You can apply type attributes to types only. However, you can also apply the <code class="code-voice">noreturn</code> attribute to a function or method <em>declaration</em>.
 </p><dl class="term-definition termdef">
 	<dt class="term"><code class="code-voice">auto_closure</code></dt><dd class="definition"><p class="para">
-  This attribute is used to delay the evaluation of an expression by automatically wrapping that expression in a closure with no arguments. Apply this attribute to a function or method type that takes no arguments and that returns the type of the expression. For an example of how to use the <code class="code-voice">auto_closure</code> attribute, see <span class="x-name"><a href="Function Type.html#TP40014097-CH31-XID_1005" data-id="TP40014097-CH31-XID_1005">Function Type</a></span>.
+  This attribute is used to delay the evaluation of an expression by automatically wrapping that expression in a closure with no arguments. Apply this attribute to a function or method type that takes no arguments and that returns the type of the expression. For an example of how to use the <code class="code-voice">auto_closure</code> attribute, see <span class="x-name"><a data-id="TP40014097-CH31-XID_1005" href="Types.html#TP40014097-CH31-XID_1005">Function Type</a></span>.
 </p></dd><dt class="term"><code class="code-voice">noreturn</code></dt><dd class="definition"><p class="para">
   Apply this attribute to the type of a function or method to indicate that the function or method doesn’t return to its caller. You can also mark a function or method declaration with this attribute to indicate that the corresponding type of that function or method, <code class="code-voice">T</code>, is <code class="code-voice">@noreturn T</code>.
 </p></dd>
@@ -302,7 +302,7 @@
 </span>
 <span class="arrow">
   →
-</span><code class="literal">@­</code><span class="syntactic-cat"><a href="attribute.html#//apple_ref/swift/grammar/attribute-name" data-id="//apple_ref/swift/grammar/attribute-name">attribute-name</a>­</span><span class="optional"><span class="syntactic-cat"><a href="attribute.html#//apple_ref/swift/grammar/attribute-argument-clause" data-id="//apple_ref/swift/grammar/attribute-argument-clause">attribute-argument-clause</a>­</span><sub class="subscript">opt</sub>­</span>
+</span><code class="literal">@­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/attribute-name" href="#//apple_ref/swift/grammar/attribute-name">attribute-name</a>­</span><span class="optional"><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/attribute-argument-clause" href="#//apple_ref/swift/grammar/attribute-argument-clause">attribute-argument-clause</a>­</span><sub class="subscript">opt</sub>­</span>
 </p><p class="syntax-def">
   <a name="//apple_ref/swift/grammar/attribute-name"></a>
   <span class="syntax-def-name">
@@ -310,7 +310,7 @@
 </span>
 <span class="arrow">
   →
-</span><span class="syntactic-cat"><a href="identifier.html#//apple_ref/swift/grammar/identifier" data-id="//apple_ref/swift/grammar/identifier">identifier</a>­</span>
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/identifier" href="Lexical Structure.html#//apple_ref/swift/grammar/identifier">identifier</a>­</span>
 </p><p class="syntax-def">
   <a name="//apple_ref/swift/grammar/attribute-argument-clause"></a>
   <span class="syntax-def-name">
@@ -318,7 +318,7 @@
 </span>
 <span class="arrow">
   →
-</span><code class="literal">(­</code><span class="optional"><span class="syntactic-cat"><a href="balanced.html#//apple_ref/swift/grammar/balanced-tokens" data-id="//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">)­</code>
+</span><code class="literal">(­</code><span class="optional"><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/balanced-tokens" href="#//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">)­</code>
 </p><p class="syntax-def">
   <a name="//apple_ref/swift/grammar/attributes"></a>
   <span class="syntax-def-name">
@@ -326,7 +326,7 @@
 </span>
 <span class="arrow">
   →
-</span><span class="syntactic-cat"><a href="attribute.html#//apple_ref/swift/grammar/attribute" data-id="//apple_ref/swift/grammar/attribute">attribute</a>­</span><span class="optional"><span class="syntactic-cat"><a href="attributes.html#//apple_ref/swift/grammar/attributes" data-id="//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span>
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/attribute" href="#//apple_ref/swift/grammar/attribute">attribute</a>­</span><span class="optional"><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/attributes" href="#//apple_ref/swift/grammar/attributes">attributes</a>­</span><sub class="subscript">opt</sub>­</span>
 </p>
 </div><div class="syntax-defs-group">
   <p class="syntax-def">
@@ -336,7 +336,7 @@
 </span>
 <span class="arrow">
   →
-</span><span class="syntactic-cat"><a href="balanced.html#//apple_ref/swift/grammar/balanced-token" data-id="//apple_ref/swift/grammar/balanced-token">balanced-token</a>­</span><span class="optional"><span class="syntactic-cat"><a href="balanced.html#//apple_ref/swift/grammar/balanced-tokens" data-id="//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span>
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/balanced-token" href="#//apple_ref/swift/grammar/balanced-token">balanced-token</a>­</span><span class="optional"><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/balanced-tokens" href="#//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span>
 </p><p class="syntax-def">
   <a name="//apple_ref/swift/grammar/balanced-token"></a>
   <span class="syntax-def-name">
@@ -344,7 +344,7 @@
 </span>
 <span class="arrow">
   →
-</span><code class="literal">(­</code><span class="optional"><span class="syntactic-cat"><a href="balanced.html#//apple_ref/swift/grammar/balanced-tokens" data-id="//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">)­</code>
+</span><code class="literal">(­</code><span class="optional"><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/balanced-tokens" href="#//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">)­</code>
 </p><p class="syntax-def">
   <a name="TP40014097-CH35-XID_471"></a>
   <span class="syntax-def-name">
@@ -352,7 +352,7 @@
 </span>
 <span class="arrow">
   →
-</span><code class="literal">[­</code><span class="optional"><span class="syntactic-cat"><a href="balanced.html#//apple_ref/swift/grammar/balanced-tokens" data-id="//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">]­</code>
+</span><code class="literal">[­</code><span class="optional"><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/balanced-tokens" href="#//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">]­</code>
 </p><p class="syntax-def">
   <a name="TP40014097-CH35-XID_472"></a>
   <span class="syntax-def-name">
@@ -360,7 +360,7 @@
 </span>
 <span class="arrow">
   →
-</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a href="balanced.html#//apple_ref/swift/grammar/balanced-tokens" data-id="//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
+</span><code class="literal">{­</code><span class="optional"><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/balanced-tokens" href="#//apple_ref/swift/grammar/balanced-tokens">balanced-tokens</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">}­</code>
 </p><p class="syntax-def">
   <a name="TP40014097-CH35-XID_473"></a>
   <span class="syntax-def-name">
@@ -384,10 +384,10 @@
 </section>
 
   	
- 	<section id="next_previous" class="">
-    		<p class="previous-link"><a href="Declarations.html#TP40014097-CH34-XID_475" data-id="TP40014097-CH34-XID_475">Declarations</a></p>
-  			<p class="next-link"><a href="Patterns.html#TP40014097-CH36-XID_878" data-id="TP40014097-CH36-XID_878">Patterns</a></p>
-  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+ 	<section class="" id="next_previous">
+    		<p class="previous-link"><a data-id="TP40014097-CH34-XID_475" href="Declarations.html#TP40014097-CH34-XID_475">Declarations</a></p>
+  			<p class="next-link"><a data-id="TP40014097-CH36-XID_878" href="Patterns.html#TP40014097-CH36-XID_878">Patterns</a></p>
+  <p class="copyright">Copyright &copy; 2014 Apple Inc. All rights reserved. <a rel="external" target="_blank" href="http://www.apple.com/legal/terms/site.html" class="link">Terms of Use</a>   |  <a rel="external" target="_blank" href="http://www.apple.com/privacy/" class="link">Privacy Policy</a>  |  Updated: 2014-06-02
   </p>
   </section>
 </article>
@@ -396,6 +396,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+ 
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

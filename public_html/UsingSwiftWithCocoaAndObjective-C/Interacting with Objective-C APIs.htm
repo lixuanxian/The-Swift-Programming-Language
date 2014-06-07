@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<!-- saved from url=(0177)href="Basic Setup.htm#TP40014216-CH4-XID_26 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>Using Swift with Cocoa and Objective-C: Interacting with Objective-C APIs</title>
+   <link rel="stylesheet" type="text/css" href="./../resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="TP40014216" title="Using Swift with Cocoa and Objective-C"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="https://developer.apple.com/library/prerelease/ios/navigation/">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="https://developer.apple.com/">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Using Swift with Cocoa and Objective-C</span>
+    </p>
+    
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="resource/BuildingCocoaApps.pdf">PDF</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="TP40014216-CH1-XID_4" class="part-name">Getting Started
+          <ul class="nav-chapters" style="height: 0px;">
+              <li class="nav-chapter">
+              	<a href="Basic Setup.htm#TP40014216-CH2-XID_0" data-id="TP40014216-CH2-XID_0" class="">Basic Setup</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH3-XID_39" class="part-name nav-part-active open-part">Interoperability
+          <ul class="nav-chapters" style="height: 208px;">
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Interacting with Objective-C APIs.htm" data-id="TP40014216-CH4-XID_26" class="nav-chapter-active">Interacting with Objective-C APIs</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_54" data-id="TP40014216-CH5-XID_54">Writing Swift Classes with Objective-C Behavior</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40" data-id="TP40014216-CH6-XID_40">Working with Cocoa Data Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5" data-id="TP40014216-CH7-XID_5">Adopting Cocoa Design Patterns</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_13" data-id="TP40014216-CH8-XID_13">Interacting with C APIs</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH9-XID_87" class="part-name">Mix and Match
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Swift and Objective-C in the Same Project.htm#TP40014216-CH10-XID_75" data-id="TP40014216-CH10-XID_75">Swift and Objective-C in the Same Project</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH11-XID_74" class="part-name">Migration
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Migrating Your Objective-C Code to Swift.htm#TP40014216-CH12-XID_67" data-id="TP40014216-CH12-XID_67">Migrating Your Objective-C Code to Swift</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="TP40014216-CH4"></a><a name="TP40014216-CH4-XID_26"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Interacting with Objective-C APIs</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_27">
+	  				Initialization
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_28">
+	  				Accessing Properties
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_29">
+	  				Working with Methods
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_30">
+	  				id Compatibility
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_31">
+	  				Working with nil
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_33">
+	  				Extensions
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_34">
+	  				Closures
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_35">
+	  				Object Comparison
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_36">
+	  				Swift Type Compatibility
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_37">
+	  				Objective-C Selectors
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  <em>Interoperability</em> is the ability to interface between Swift and Objective-C in either direction, letting you access and use pieces of code written in one language in a file of the other language. As you begin to integrate Swift into your app development workflow, it’s a good idea to understand how you can leverage interoperability to redefine, improve, and enhance the way you write Cocoa apps.
+</p>
+<p class="para">
+  One important aspect of interoperability is that it lets you work with Objective-C APIs when writing Swift code. After you import an Objective-C framework, you can instantiate classes from it and interact with them using native Swift syntax.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="TP40014216-CH4-XID_27"></a>
+  <h3 class="section-name" tabindex="0">Initialization</h3>
+  <p class="para">
+  To instantiate an Objective-C class in Swift, you call one of its initializers with Swift syntax. When Objective-C <code class="code-voice">init</code> methods come over to Swift, they take on native Swift initializer syntax. The “init” prefix gets sliced off and becomes a keyword to indicate that the method is an initializer. For <code class="code-voice">init</code> methods that begin with “initWith,“ the “With” also gets sliced off. The first letter of the selector piece that had “init” or “initWith” split off from it becomes lowercase, and that selector piece is treated as the name of the first argument. The rest of the selector pieces also correspond to argument names. Each selector piece goes inside the parentheses and is required at the call site.
+</p><p class="para">
+  For example, where in Objective-C you would do this:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+
+        <div class="Objective-C">
+          <p class="aside-title">Objective-C</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="n">UITableView</span> <span class="o">*</span><span class="n">myTableView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITableView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectZero</span> <span class="nl">style:</span><span class="n">UITableViewStyleGrouped</span><span class="p">];</span>
+</code></li>
+      </ul>
+        </div>
+
+
+  </div>
+</section><p class="para">
+  In Swift, you do this:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">myTableView</span>: <span class="n"><!-- a href="" -->UITableView<!-- /a --></span> = <span class="vc">UITableView</span>(<span class="vc">frame</span>: <span class="vc">CGRectZero</span>, <span class="vc">style</span>: .<span class="vc">Grouped</span>)</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You don’t need to call <code class="code-voice">alloc</code>; Swift correctly handles this for you. Notice that “init” doesn’t appear anywhere when calling the Swift-style initializer.
+</p><p class="para">
+  You can be explicit in typing the object during initialization, or you can omit the type. Swift’s type inference correctly determines the type of the object.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">myTextField</span> = <span class="vc">UITextField</span>(<span class="vc">frame</span>: <span class="vc">CGRect</span>(<span class="m">0.0</span>, <span class="m">0.0</span>, <span class="m">200.0</span>, <span class="m">40.0</span>))</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  These <code class="code-voice">UITableView</code> and <code class="code-voice">UITextField</code> objects have the same familiar functionality that they have in Objective-C. You can use them in the same way you would in Objective-C, accessing any properties and calling any methods defined on the respective classes.
+</p><p class="para">
+  For consistency and simplicity, Objective-C factory methods get mapped as convenience initializers in Swift. This mapping allows them to be used with the same concise, clear syntax as initializers. For example, whereas in Objective-C you would call this factory method like this:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+
+        <div class="Objective-C">
+          <p class="aside-title">Objective-C</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="n">UIColor</span> <span class="o">*</span><span class="n">color</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIColor</span> <span class="nl">colorWithRed:</span><span class="mf">0.5</span> <span class="nl">green:</span><span class="mf">0.0</span> <span class="nl">blue:</span><span class="mf">0.5</span> <span class="nl">alpha:</span><span class="mf">1.0</span><span class="p">];</span>
+</code></li>
+      </ul>
+        </div>
+
+
+  </div>
+</section><p class="para">
+  In Swift, you call it like this:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">color</span> = <span class="vc">UIColor</span>(<span class="vc">red</span>: <span class="m">0.5</span>, <span class="vc">green</span>: <span class="m">0.0</span>, <span class="vc">blue</span>: <span class="m">0.5</span>, <span class="vc">alpha</span>: <span class="m">1.0</span>)</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_28"></a>
+  <h3 class="section-name" tabindex="0">Accessing Properties</h3>
+  <p class="para">
+  Access and set properties on Objective-C objects in Swift using dot syntax.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">myTextField</span>.<span class="vc">textColor</span> = <span class="vc">UIColor</span>.<span class="vc">darkGrayColor</span>()</code></li>
+          <li><code class="code-voice"><span class="vc">myTextField</span>.<span class="vc">text</span> = <span class="s">"Hello world"</span></code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="vc">myTextField</span>.<span class="vc">editing</span> {</code></li>
+          <li><code class="code-voice">    <span class="vc">myTextField</span>.<span class="vc">editing</span> = <span class="vc">false</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  When getting or setting a property, use the name of the property without appending parentheses. Notice that <code class="code-voice">darkGrayColor</code> has a set of parentheses. This is because <code class="code-voice">darkGrayColor</code> is a class method on <code class="code-voice">UIColor</code>, not a property.
+</p><p class="para">
+  In Objective-C, a method that returns a value and takes no arguments can be treated as an implicit getter—and be called using the same syntax as a getter for a property. This is not the case in Swift. In Swift, only properties that are written using the <code class="code-voice">@property</code> syntax in Objective-C are imported as properties. Methods are imported and called as described in <span class="x-name"><a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_29" data-id="TP40014216-CH4-XID_29">Working with Methods</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_29"></a>
+  <h3 class="section-name" tabindex="0">Working with Methods</h3>
+  <p class="para">
+  When calling Objective-C methods from Swift, use dot syntax.
+</p><p class="para">
+  When Objective-C methods come over to Swift, the first part of an Objective-C selector becomes the base method name and appears outside the parentheses. The first argument appears immediately inside the parentheses, without a name. The rest of the selector pieces correspond to argument names and go inside the parentheses. All selector pieces are required at the call site.
+</p><p class="para">
+  For example, whereas in Objective-C you would do this:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+
+        <div class="Objective-C">
+          <p class="aside-title">Objective-C</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="p">[</span><span class="n">myTableView</span> <span class="nl">insertSubview:</span><span class="n">mySubview</span> <span class="nl">atIndex:</span><span class="mi">2</span><span class="p">];</span>
+</code></li>
+      </ul>
+        </div>
+
+
+  </div>
+</section><p class="para">
+  In Swift, you do this:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">myTableView</span>.<span class="vc">insertSubview</span>(<span class="vc">mySubview</span>, <span class="vc">atIndex</span>: <span class="m">2</span>)</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  If you’re calling a method with no arguments, you must still include the parentheses.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">myTableView</span>.<span class="vc">layoutIfNeeded</span>()</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_30"></a>
+  <h3 class="section-name" tabindex="0">id Compatibility</h3>
+  <p class="para">
+  Swift includes a protocol type named <code class="code-voice">AnyObject</code> that represents any kind of object, just as <code class="code-voice">id</code> does in Objective-C. The <code class="code-voice">AnyObject</code> protocol allows you to write type-safe Swift code while maintaining the flexibility of an untyped object. Because of the additional safety provided by the <code class="code-voice">AnyObject</code> protocol, Swift imports <code class="code-voice">id</code> as <code class="code-voice">AnyObject</code>.
+</p><p class="para">
+  For example, as with <code class="code-voice">id</code>, you can assign an object of any class type to a constant or variable typed as <code class="code-voice">AnyObject</code>. You can also reassign a variable to an object of a different type.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">myObject</span>: <span class="n"><!-- a href="" -->AnyObject<!-- /a --></span> = <span class="vc">UITableViewCell</span>()</code></li>
+          <li><code class="code-voice"><span class="vc">myObject</span> = <span class="vc">NSDate</span>()</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can also call any Objective-C method and access any property without casting to a more specific class type. This includes Objective-C compatible methods marked with the <code class="code-voice">@objc</code> attribute.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">futureDate</span> = <span class="vc">myObject</span>.<span class="vc">dateByAddingTimeInterval</span>(<span class="m">10</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">timeSinceNow</span> = <span class="vc">myObject</span>.<span class="vc">timeIntervalSinceNow</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  However, because the specific type of an object typed as <code class="code-voice">AnyObject</code> is not known until runtime, it is possible to inadvertently write unsafe code. Additionally, in contrast with Objective-C, if you invoke a method or access a property that does not exist on an <code class="code-voice">AnyObject</code> typed object, it is a runtime error. For example, the following code compiles without complaint and then causes an unrecognized selector error at runtime:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">myObject</span>.<span class="vc">characterAtIndex</span>(<span class="m">5</span>)</code></li>
+          <li><code class="code-voice"><span class="c">// crash, myObject does't respond to that method</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  However, you can take advantage of optionals in Swift to eliminate this common Objective-C error from your code. When you call an Objective-C method on an <code class="code-voice">AnyObject</code> type object, the method call actually behaves like an implicitly unwrapped optional. You can use the same optional chaining syntax you would use for optional methods in protocols to optionally invoke a method on <code class="code-voice">AnyObject</code>. This same process applies to properties as well. 
+</p><p class="para">
+  For example, in the code listing below, the first and second lines are not executed because the <code class="code-voice">length</code> property and the <code class="code-voice">characterAtIndex:</code> method do not exist on an <code class="code-voice">NSDate</code> object. The <code class="code-voice">myLength</code> constant is inferred to be an optional <code class="code-voice">Int</code>, and is set to <code class="code-voice">nil</code>. You can also use an <code class="code-voice">if</code>–<code class="code-voice">let</code> statement to conditionally unwrap the result of a method that the object may not respond to, as shown on line three.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">myLength</span> = <span class="vc">myObject</span>.<span class="vc">length</span>?</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">myChar</span> = <span class="vc">myObject</span>.<span class="vc">characterAtIndex</span>?(<span class="m">5</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">fifthCharacter</span> = <span class="vc">myObject</span>.<span class="vc">characterAtIndex</span>(<span class="m">5</span>) {</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"Found </span>\(<span class="vc">fifthCharacter</span>)<span class="s"> at index 5"</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  As with all downcasts in Swift, casting from <code class="code-voice">AnyObject</code> to a more specific object type is not guaranteed to succeed and therefore returns an optional value. You can check that optional value to determine whether the cast succeeded.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">userDefaults</span> = <span class="vc">NSUserDefaults</span>.<span class="vc">standardUserDefaults</span>()</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">lastRefreshDate</span>: <span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>? = <span class="vc">userDefaults</span>.<span class="vc">objectForKey</span>(<span class="s">"LastRefreshDate"</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">date</span> = <span class="vc">lastRefreshDate</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->NSDate<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"</span>\(<span class="vc">date</span>.<span class="vc">timeIntervalSinceReferenceDate</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  Of course, if you are certain of the type of the object (and know that it is not <code class="code-voice">nil</code>), you can force the invocation with the <code class="code-voice">as</code> operator.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">myDate</span> = <span class="vc">lastRefreshDate</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->NSDate<!-- /a --></span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">timeInterval</span> = <span class="vc">myDate</span>.<span class="vc">timeIntervalSinceReferenceDate</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_31"></a>
+  <h3 class="section-name" tabindex="0">Working with nil</h3>
+  <p class="para">
+  In Objective-C, you work with references to objects using raw pointers that could be <code class="code-voice">NULL</code> (also referred to as <code class="code-voice">nil</code> in Objective-C). In Swift, all values—including structures and object references—are guaranteed to be non–nil. Instead, you represent a value that could be missing by wrapping the type of the value in an optional type. When you need to indicate that a value is missing, you use the value <code class="code-voice">nil</code>. You can read more about optionals in <a href="./../The Basics.html#TP40014097-CH5" target="_self">Optionals</a>.
+</p><p class="para">
+  Because Objective-C does not make any guarantees that an object is non-nil, Swift makes all classes in argument types and return types optional in imported Objective-C APIs. Before you use an Objective-C object, you should check to ensure that it is not missing.
+</p><p class="para">
+  In some cases, you might be <em>absolutely</em> certain that an Objective-C method or property never returns a <code class="code-voice">nil</code> object reference. To make objects in this special scenario more convenient to work with, Swift imports object types as <em>implicitly unwrapped optionals</em>. Implicitly unwrapped optional types include all of the safety features of optional types. In addition, you can access the value directly without checking for <code class="code-voice">nil</code> or unwrapping it yourself. When you access the value in this kind of optional type without safely unwrapping it first, the implicitly unwrapped optional checks whether the value is missing. If the value is missing, a runtime error occurs. As a result, you should always check and unwrap an implicitly unwrapped optional yourself, unless you are sure that the value cannot be missing.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_33"></a>
+  <h3 class="section-name" tabindex="0">Extensions</h3>
+  <p class="para">
+  A Swift extension is similar to an Objective-C category. <em>Extensions</em> expand the behavior of existing classes, structures, and enumerations, including those defined in Objective-C. You can define an extension on a type from either a system framework or one of your own custom types. Simply import the appropriate module, and refer to the class, structure, or enumeration by the same name that you would use in Objective-C.
+</p><p class="para">
+  For example, you can extend the <code class="code-voice">UIBezierPath</code> class to create a simple Bézier path with an equilateral triangle, based on a provided side length and starting point.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"><!-- a href="" -->UIBezierPath<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">convenience</span> <span class="kt">init</span>(<span class="vc">triangleSideLength</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span>, <span class="vc">origin</span>: <span class="n"><!-- a href="" -->CGPoint<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="kt">self</span>.<span class="kt">init</span>()</code></li>
+          <li><code class="code-voice">        <span class="kt">let</span> <span class="vc">squareRoot</span> = <span class="vc">Float</span>(<span class="vc">sqrt</span>(<span class="m">3</span>))</code></li>
+          <li><code class="code-voice">        <span class="kt">let</span> <span class="vc">altitude</span> = (<span class="vc">squareRoot</span> * <span class="vc">triangleSideLength</span>) / <span class="m">2</span></code></li>
+          <li><code class="code-voice">        <span class="vc">moveToPoint</span>(<span class="vc">origin</span>)</code></li>
+          <li><code class="code-voice">        <span class="vc">addLineToPoint</span>(<span class="vc">CGPoint</span>(<span class="vc">triangleSideLength</span>, <span class="vc">origin</span>.<span class="vc">x</span>))</code></li>
+          <li><code class="code-voice">        <span class="vc">addLineToPoint</span>(<span class="vc">CGPoint</span>(<span class="vc">triangleSideLength</span> / <span class="m">2</span>, <span class="vc">altitude</span>))</code></li>
+          <li><code class="code-voice">        <span class="vc">closePath</span>()</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can use extensions to add properties (including class and static properties). However, these properties must be computed; extensions can’t add stored properties to classes, structures, or enumerations.
+</p><p class="para">
+  This example extends the <code class="code-voice">CGRect</code> structure to contain a computed <code class="code-voice">area</code> property:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">extension</span> <span class="n"><!-- a href="" -->CGRect<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">var</span> <span class="vc">area</span>: <span class="n"><!-- a href="" -->CGFloat<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">width</span> * <span class="vc">height</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">rect</span> = <span class="vc">CGRect</span>(<span class="vc">x</span>: <span class="m">0.0</span>, <span class="vc">y</span>: <span class="m">0.0</span>, <span class="vc">width</span>: <span class="m">10.0</span>, <span class="vc">height</span>: <span class="m">50.0</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">area</span> = <span class="vc">rect</span>.<span class="vc">area</span></code></li>
+          <li><code class="code-voice"><span class="c">// area: CGFloat = 500.0</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can also use extensions to add protocol conformance to a class without subclassing it. If the protocol is defined in Swift, you can also add conformance to it to structures or enumerations, whether defined in Swift or Objective-C.
+</p><p class="para">
+  You cannot use extensions to override existing methods or properties on Objective-C types.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_34"></a>
+  <h3 class="section-name" tabindex="0">Closures</h3>
+  <p class="para">
+  Objective-C blocks are automatically imported as Swift closures. For example, here is an Objective-C block variable:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+
+        <div class="Objective-C">
+          <p class="aside-title">Objective-C</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">completionBlock</span><span class="p">)(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span> <span class="o">=</span> <span class="o">^</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span><span class="cm">/* ... */</span><span class="p">}</span>
+</code></li>
+      </ul>
+        </div>
+
+
+  </div>
+</section><p class="para">
+  And here’s what it looks like in Swift:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">completionBlock</span>: (<span class="n"><!-- a href="" -->NSData<!-- /a --></span>, <span class="n"><!-- a href="" -->NSError<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->Void<!-- /a --></span> = {<span class="vc">data</span>, <span class="vc">error</span> <span class="kt">in</span> <span class="c">/* ... */</span>}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  Swift closures and Objective-C blocks are compatible, so you can pass Swift closures to Objective-C methods that expect blocks. Swift closures and functions have the same type, so you can even pass the name of a Swift function.
+</p><p class="para">
+  Closures have similar capture semantics as blocks but differ in one key way: Variables are mutable rather than copied. In other words, the behavior of <code class="code-voice">__block</code> in Objective-C is the default behavior for variables in Swift.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_35"></a>
+  <h3 class="section-name" tabindex="0">Object Comparison</h3>
+  <p class="para">
+  There are two distinct types of comparison when you compare two objects in Swift. The first, <em>equality</em> (<code class="code-voice">==</code>), compares the contents of the objects. The second, <em>identity</em> (<code class="code-voice">===</code>), determines whether or not the constants or variables refer to the same object instance.
+</p><p class="para">
+  Swift and Objective-C objects are typically compared in Swift using the <code class="code-voice">==</code> and <code class="code-voice">===</code> operators. Swift provides a default implementation of the <code class="code-voice">==</code> operator for objects that derive from the <code class="code-voice">NSObject</code> class. In the implementation of this operator, Swift invokes the <code class="code-voice">isEqual:</code> method defined on the <code class="code-voice">NSObject</code> class. The <code class="code-voice">NSObject</code> class only performs an identity comparison, so you should implement your own <code class="code-voice">isEqual:</code> method in classes that derive from the <code class="code-voice">NSObject</code> class. Because you can pass Swift objects (including ones not derived from <code class="code-voice">NSObject</code>) to Objective-C APIs, you should implement the <code class="code-voice">isEqual:</code> method for these classes if you want the Objective-C APIs to compare the contents of the objects rather than their identities.
+</p><p class="para">
+  As part of implementing equality for your class, be sure to implement the <code class="code-voice">hash</code> property according to the rules in <span class="pediaLink" data-header="Object comparison" data-contents="Object comparison refers to the ability of an object to determine whether it is essentially the same as another object."><a href="https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/DevPedia-CocoaCore/ObjectComparison.html#TP40008195-CH37" target="_self">Object comparison</a></span>. Further, if you want to use your class as keys in a dictionary, also conform to the <code class="code-voice">Hashable</code> protocol and implement the <code class="code-voice">hashValue</code> property.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_36"></a>
+  <h3 class="section-name" tabindex="0">Swift Type Compatibility</h3>
+  <p class="para">
+  When you define a Swift class that inherits from <code class="code-voice">NSObject</code> or any other Objective-C class, the class is automatically compatible with Objective-C. All of the steps in this section have already been done for you by the Swift compiler. If you never import a Swift class in Objective-C code, you don’t need to worry about type compatibility in this case as well. Otherwise, if your Swift class does not derive from an Objective-C class and you want to use it from Objective-C code, you can use the <code class="code-voice">@objc</code> attribute described below.
+</p><p class="para">
+  The <code class="code-voice">@objc</code> attribute makes your Swift API available in Objective-C and the Objective-C runtime. In other words, you can use the <code class="code-voice">@objc</code> attribute before any Swift method, property, or class that you want to use from Objective-C code. If your class inherits from an Objective-C class, the compiler inserts the attribute for you. The compiler also adds the attribute to every method and property in a class that is itself marked with the <code class="code-voice">@objc</code> attribute. When you use the <code class="code-voice">@IBOutlet</code>, <code class="code-voice">@IBAction</code>, or <code class="code-voice">@NSManaged</code> attribute, the <code class="code-voice">@objc</code> attribute is added as well. This attribute is also useful when you’re working with Objective-C classes that use selectors to implement the target-action design pattern—for example, <code class="code-voice">NSTimer</code> or <code class="code-voice">UIButton</code>.
+</p><p class="para">
+  When you use a Swift API from Objective-C, the compiler typically performs a direct translation. For example, the Swift API <code class="code-voice">func playSong(name: String)</code> is imported as <code class="code-voice">- (void)playSong:(NSString *)name</code> in Objective-C. However, there is one exception: When you use a Swift initializer in Objective-C, the compiler adds the text “initWith” to the beginning of the method and properly capitalizes the first character in the original initializer. For example, this Swift initializer <code class="code-voice">init (songName: String, artist: String)</code> is imported as <code class="code-voice">- (instancetype)initWithSongName:(NSString *)songName artist:(NSString *)artist</code> in Objective-C.
+</p><p class="para">
+  Swift also provides a variant of the <code class="code-voice">@objc</code> attribute that allows you to specify name for your symbol in Objective-C. For example, if the name of your Swift class contains a character that isn’t supported by Objective-C, you can provide an alternative name to use in Objective-C. If you provide an Objective-C name for a Swift function, use Objective-C selector syntax. Remember to add a colon (<code class="code-voice">:</code>) wherever a parameter follows a selector piece.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">@objc</span>(<span class="vc">Squirrel</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">Белка</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">@objc</span>(<span class="vc">initWithName</span>:)</code></li>
+          <li><code class="code-voice">    <span class="kt">init</span> (<span class="vc">имя</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>) { <span class="c">/*...*/</span> }</code></li>
+          <li><code class="code-voice">    <span class="kt">@objc</span>(<span class="vc">hideNuts</span>:<span class="vc">inTree</span>:)</code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">прячьОрехи</span>(<span class="n"><!-- a href="" -->Int<!-- /a --></span>, <span class="vc">вДереве</span>: <span class="n"><!-- a href="" -->Дерево<!-- /a --></span>) { <span class="c">/*...*/</span> }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  When you use the <code class="code-voice">@objc(&lt;#name#&gt;)</code> attribute on a Swift class, the class is made available in Objective-C without any namespacing. As a result, this attribute can also be useful when you migrate an archivable Objective-C class to Swift. Because archived objects store the name of their class in the archive, you should use the <code class="code-voice">@objc(&lt;#name#&gt;)</code> attribute to specify the same name as your Objective-C class so that older archives can be unarchived by your new Swift class.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH4-XID_37"></a>
+  <h3 class="section-name" tabindex="0">Objective-C Selectors</h3>
+  <p class="para">
+  An Objective-C selector is a type that refers to the name of an Objective-C method. In Swift, Objective-C selectors are represented by the <code class="code-voice">Selector</code> structure. You can construct a selector with a string literal, such as <code class="code-voice">let mySelector: Selector = "tappedButton:"</code>. Because string literals can be automatically converted to selectors, you can pass a string literal to any method that accepts a selector.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">import</span> <span class="vc">UIKit</span></code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MyViewController</span>: <span class="n"><!-- a href="" -->UIViewController<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">let</span> <span class="vc">myButton</span> = <span class="vc">UIButton</span>(<span class="vc">frame</span>: <span class="vc">CGRect</span>(<span class="vc">x</span>: <span class="m">0</span>, <span class="vc">y</span>: <span class="m">0</span>, <span class="vc">width</span>: <span class="m">100</span>, <span class="vc">height</span>: <span class="m">50</span>))</code></li>
+          <li><code class="code-voice">    </code></li>
+          <li><code class="code-voice">    <span class="kt">init</span>(<span class="vc">nibName</span> <span class="vc">nibNameOrNil</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>!, <span class="vc">bundle</span> <span class="vc">nibBundleOrNil</span>: <span class="n"><!-- a href="" -->NSBundle<!-- /a --></span>!) {</code></li>
+          <li><code class="code-voice">        <span class="kt">super</span>.<span class="kt">init</span>(<span class="vc">nibName</span>: <span class="vc">nibName</span>, <span class="vc">bundle</span>: <span class="vc">nibBundle</span>)</code></li>
+          <li><code class="code-voice">        <span class="vc">myButton</span>.<span class="vc">targetForAction</span>(<span class="s">"tappedButton:"</span>, <span class="vc">withSender</span>: <span class="kt">self</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    </code></li>
+          <li><code class="code-voice">    <span class="kt">func</span> <span class="vc">tappedButton</span>(<span class="vc">sender</span>: <span class="n"><!-- a href="" -->UIButton<!-- /a --></span>!) {</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"tapped button"</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><div class="note">
+  <a name="TP40014216-CH4-XID_38"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">The <code class="code-voice">performSelector:</code> method and related selector-invoking methods are not imported in Swift because they are inherently unsafe.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  If your Swift class inherits from an Objective-C class, all of the methods and properties in the class are available as Objective-C selectors. Otherwise, if your Swift class does not inherit from an Objective-C class, you need to prefix the symbol you want to use as a selector with the <code class="code-voice">@objc</code> attribute, as described in <span class="x-name"><a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_36" data-id="TP40014216-CH4-XID_36">Swift Type Compatibility</a></span>.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Basic Setup.htm#TP40014216-CH2-XID_0" data-id="TP40014216-CH2-XID_0">Basic Setup</a></p>
+  			<p class="next-link"><a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_54" data-id="TP40014216-CH5-XID_54">Writing Swift Classes with Objective-C Behavior</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	
+  </div>
+    <script src="./../resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>

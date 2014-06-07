@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<!-- saved from url=(0172)href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>Using Swift with Cocoa and Objective-C: Working with Cocoa Data Types</title>
+   <link rel="stylesheet" type="text/css" href="./../resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="TP40014216" title="Using Swift with Cocoa and Objective-C"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="https://developer.apple.com/library/prerelease/ios/navigation/">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="https://developer.apple.com/">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Using Swift with Cocoa and Objective-C</span>
+    </p>
+    
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="resource/BuildingCocoaApps.pdf">PDF</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="TP40014216-CH1-XID_4" class="part-name">Getting Started
+          <ul class="nav-chapters" style="height: 0px;">
+              <li class="nav-chapter">
+              	<a href="Basic Setup.htm#TP40014216-CH2-XID_0" data-id="TP40014216-CH2-XID_0" class="">Basic Setup</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH3-XID_39" class="part-name nav-part-active open-part">Interoperability
+          <ul class="nav-chapters" style="height: 208px;">
+              <li class="nav-chapter">
+              	<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_26" data-id="TP40014216-CH4-XID_26" class="">Interacting with Objective-C APIs</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_54" data-id="TP40014216-CH5-XID_54" class="">Writing Swift Classes with Objective-C Behavior</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Working with Cocoa Data Types.htm" data-id="TP40014216-CH6-XID_40" class="nav-chapter-active">Working with Cocoa Data Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5" data-id="TP40014216-CH7-XID_5">Adopting Cocoa Design Patterns</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_13" data-id="TP40014216-CH8-XID_13">Interacting with C APIs</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH9-XID_87" class="part-name">Mix and Match
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Swift and Objective-C in the Same Project.htm#TP40014216-CH10-XID_75" data-id="TP40014216-CH10-XID_75">Swift and Objective-C in the Same Project</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH11-XID_74" class="part-name">Migration
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Migrating Your Objective-C Code to Swift.htm#TP40014216-CH12-XID_67" data-id="TP40014216-CH12-XID_67">Migrating Your Objective-C Code to Swift</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="TP40014216-CH6"></a><a name="TP40014216-CH6-XID_40"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Working with Cocoa Data Types</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_41">
+	  				Strings
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_43">
+	  				Numbers
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_44">
+	  				Collection Classes
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_48">
+	  				Foundation Data Types
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_49">
+	  				Foundation Functions
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_50">
+	  				Core Foundation
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  As part of its interoperability with Objective-C, Swift offers convenient and efficient ways of working with Cocoa data types.
+</p>
+<p class="para">
+  Swift automatically converts some Objective-C types to Swift types, and some Swift types to Objective-C types. There are also a number of data types in Swift and Objective-C that can be used interchangeably. Data types that are convertible or can be used interchangeably are referred to as <em>bridged</em> data types. For example, in Swift code, you can pass an <code class="code-voice">Array</code> value to a method expecting an <code class="code-voice">NSArray</code> object. You can also cast between a bridged type and its counterpart. When you cast between bridged types with <code class="code-voice">as</code>—or by explicitly providing the type of constant or variable—Swift bridges the data type.
+</p>
+<p class="para">
+  Swift also provides a convenient overlay for interfacing with Foundation data types, letting you work with them using a syntax that feels natural and unified with the rest of the Swift language.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="TP40014216-CH6-XID_41"></a>
+  <h3 class="section-name" tabindex="0">Strings</h3>
+  <p class="para">
+  Swift automatically bridges between the <code class="code-voice">String</code> type and the <code class="code-voice">NSString</code> class. This means that anywhere you use an <code class="code-voice">NSString</code> object, you can use a Swift <code class="code-voice">String</code> type instead and gain the benefits of both types—the <code class="code-voice">String</code> type’s interpolation and Swift-designed APIs and the <code class="code-voice">NSString</code> class’s broad functionality. For this reason, you should almost never need to use the <code class="code-voice">NSString</code> class directly in your own code. In fact, when Swift imports Objective-C APIs, it replaces all of the <code class="code-voice">NSString</code> types with <code class="code-voice">String</code> types. When your Objective-C code uses a Swift class, the importer replaces all of the <code class="code-voice">String</code> types with <code class="code-voice">NSString</code> in imported API.
+</p><p class="para">
+  To enable string bridging, just import Foundation. For example, you can call <code class="code-voice">capitalizedString</code>—a method on the <code class="code-voice">NSString</code> class—on a Swift string, and Swift automatically bridges the Swift <code class="code-voice">String</code> to an <code class="code-voice">NSString</code> object and calls the method. The method even returns a Swift <code class="code-voice">String</code> type, because it was converted during import.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">import</span> <span class="vc">Foundation</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">greeting</span> = <span class="s">"hello, world!"</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">capitalizedGreeting</span> = <span class="vc">greeting</span>.<span class="vc">capitalizedString</span></code></li>
+          <li><code class="code-voice"><span class="c">// capitalizedGreeting: String = Hello, World!</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  If you do need to use an <code class="code-voice">NSString</code> object, you can convert it to a Swift <code class="code-voice">String</code> value by casting it. The <code class="code-voice">String</code> type can always be converted from an <code class="code-voice">NSString</code> object to a Swift <code class="code-voice">String</code> value so there’s no need to use the optional version of the type casting operator (<code class="code-voice">as?</code>). You can also create an <code class="code-voice">NSString</code> object from a string literal by explicitly typing the constant or variable.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">import</span> <span class="vc">Foundation</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">myString</span>: <span class="n"><!-- a href="" -->NSString<!-- /a --></span> = <span class="s">"123"</span></code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">integerValue</span> = (<span class="vc">myString</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->String<!-- /a --></span>).<span class="vc">toInt</span>() {</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="s">"</span>\(<span class="vc">myString</span>)<span class="s"> is the integer </span>\(<span class="vc">integerValue</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section>
+  <section class="section">
+  <a name="TP40014216-CH6-XID_42"></a>
+  <h3 class="section-name" tabindex="0">Localization</h3>
+  <p class="para">
+  In Objective-C, you typically used the <code class="code-voice">NSLocalizedString</code> family of macros to localize strings. This set of macros includes <code class="code-voice">NSLocalizedString</code>, <code class="code-voice">NSLocalizedStringFromTable</code>, <code class="code-voice">NSLocalizedStringFromTableInBundle</code>, and <code class="code-voice">NSLocalizedStringWithDefaultValue</code>. In Swift you can use a single function that provides the same functionality as the entire set of <code class="code-voice">NSLocalizedString</code> macros—<code class="code-voice">NSLocalizedString(key:tableName:bundle:value:comment:)</code>. The <code class="code-voice">NSLocalizedString</code> function provides default values for the <code class="code-voice">tableName</code>, <code class="code-voice">bundle</code>, and <code class="code-voice">value</code> arguments. Use it as you would use the macro it replaces.
+</p>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="TP40014216-CH6-XID_43"></a>
+  <h3 class="section-name" tabindex="0">Numbers</h3>
+  <p class="para">
+  Swift automatically bridges certain native number types, such as <code class="code-voice">Int</code> and <code class="code-voice">Float</code>, to <code class="code-voice">NSNumber</code>. This bridging lets you create an <code class="code-voice">NSNumber</code> from one of these types:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">n</span> = <span class="m">42</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">m</span>: <span class="n"><!-- a href="" -->NSNumber<!-- /a --></span> = <span class="vc">n</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  It also allows you to pass a value of type <code class="code-voice">Int</code>, for example, to an argument expecting an <code class="code-voice">NSNumber</code>. However, note that because <code class="code-voice">NSNumber</code> can contain a variety of different types, you cannot pass it to something expecting an <code class="code-voice">Int</code> value.
+</p><p class="para">
+  All of the following types are automatically bridged to <code class="code-voice">NSNumber</code>:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <code class="code-voice">Int</code>
+</p>
+</li><li class="item"><p class="para">
+  <code class="code-voice">UInt</code>
+</p>
+</li><li class="item"><p class="para">
+  <code class="code-voice">Float</code>
+</p>
+</li><li class="item"><p class="para">
+  <code class="code-voice">Double</code>
+</p>
+</li><li class="item"><p class="para">
+  <code class="code-voice">Bool</code>
+</p>
+</li>
+</ul>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH6-XID_44"></a>
+  <h3 class="section-name" tabindex="0">Collection Classes</h3>
+  <p class="para">
+  Swift automatically bridges the <code class="code-voice">NSArray</code> and <code class="code-voice">NSDictionary</code> classes to their native Swift equivalents. This means you can take advantage of Swift’s powerful algorithms and natural syntax for working with collections—and use Foundation and Swift collection types interchangeably.
+</p>
+  <section class="section">
+  <a name="TP40014216-CH6-XID_45"></a>
+  <h3 class="section-name" tabindex="0">Arrays</h3>
+  <p class="para">
+  Swift automatically bridges between the <code class="code-voice">Array</code> type and the <code class="code-voice">NSArray</code> class. When you bridge from an <code class="code-voice">NSArray</code> object to a Swift array, the resulting array is of type <code class="code-voice">AnyObject[]</code>. An object is <code class="code-voice">AnyObject</code> compatible if it is an instance of an Objective-C or Swift class, or if the object can be bridged to one. You can bridge any <code class="code-voice">NSArray</code> object to a Swift array because all Objective-C objects are <code class="code-voice">AnyObject</code> compatible. Because all <code class="code-voice">NSArray</code> objects can be bridged to Swift arrays, the Swift compiler replaces the <code class="code-voice">NSArray</code> class with <code class="code-voice">AnyObject[]</code> when it imports Objective-C APIs.
+</p><p class="para">
+  After you bridge an <code class="code-voice">NSArray</code> object to a Swift array, you can also <em>downcast</em> the array to a more specific type. Unlike casting from the <code class="code-voice">NSArray</code> class to the <code class="code-voice">AnyObject[]</code> type, downcasting from <code class="code-voice">AnyObject</code> to a more specific type is not guaranteed to succeed. The compiler cannot know for certain until runtime that all of the elements in the array can be downcasted to the type you specified. As a result, downcasting from <code class="code-voice">AnyObject[]</code> to <code class="code-voice">SomeType[]</code> returns an optional value. For example, if you know that a Swift array contains only instances of the <code class="code-voice">UIView</code> class (or a subclass of the <code class="code-voice">UIView</code> class), you can downcast the array of <code class="code-voice">AnyObject</code> type elements to an array of <code class="code-voice">UIView</code> objects. If any element in the Swift array is not actually a <code class="code-voice">UIView</code> object at runtime, the cast returns <code class="code-voice">nil</code>.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">swiftArray</span> = <span class="vc">foundationArray</span> <span class="kt">as</span> <span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>[]</code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">downcastedSwiftArray</span> = <span class="vc">swiftArray</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->UIView<!-- /a --></span>[] {</code></li>
+          <li><code class="code-voice">    <span class="c">// downcastedSwiftArray contains only UIView objects</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can also downcast directly from an <code class="code-voice">NSArray</code> object to a Swift array of a specific type in a for loop:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">for</span> <span class="vc">aView</span>: <span class="n"><!-- a href="" -->UIView<!-- /a --></span>! <span class="kt">in</span> <span class="vc">foundationArray</span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// aView is of type UIView</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><div class="note">
+  <a name="TP40014216-CH6-XID_46"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">This cast is a forced cast, and will result in a runtime error if the cast does not succeed.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  When you bridge from a Swift array to an <code class="code-voice">NSArray</code> object, the elements in the Swift array must be <code class="code-voice">AnyObject</code> compatible. For example, a Swift array of type <code class="code-voice">Int[]</code> contains <code class="code-voice">Int</code> structure elements. The <code class="code-voice">Int</code> type is not an instance of a class, but because the <code class="code-voice">Int</code> type bridges to the <code class="code-voice">NSNumber</code> class, the <code class="code-voice">Int</code> type is <code class="code-voice">AnyObject</code> compatible. Therefore, you can bridge a Swift array of type <code class="code-voice">Int[]</code> to an <code class="code-voice">NSArray</code> object. If an element in a Swift array is not <code class="code-voice">AnyObject</code> compatible, a runtime error occurs when you bridge to an <code class="code-voice">NSArray</code> object.
+</p><p class="para">
+  You can also create an <code class="code-voice">NSArray</code> object directly from a Swift array literal, following the same bridging rules outlined above. When you explicitly type a constant or variable as an <code class="code-voice">NSArray</code> object and assign it an array literal, Swift creates an <code class="code-voice">NSArray</code> object instead of a Swift array.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">schoolSupplies</span>: <span class="n"><!-- a href="" -->NSArray<!-- /a --></span> = [<span class="s">"Pencil"</span>, <span class="s">"Eraser"</span>, <span class="s">"Notebook"</span>]</code></li>
+          <li><code class="code-voice"><span class="c">// schoolSupplies is an NSArray object containing NSString objects</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  In the example above, the Swift array literal contains three <code class="code-voice">String</code> literals. Because the <code class="code-voice">String</code> type bridges to the <code class="code-voice">NSString</code> class, the array literal is bridged to an <code class="code-voice">NSArray</code> object and the assignment to <code class="code-voice">schoolSupplies</code> succeeds.
+</p><p class="para">
+  When you use a Swift class or protocol in Objective-C code, the importer replaces all Swift arrays of any type in imported API with <code class="code-voice">NSArray</code>. If you pass an <code class="code-voice">NSArray</code> object to a Swift API that expects the elements to be of a different type, a runtime error occurs. If a Swift API returns a Swift array that cannot be bridged to <code class="code-voice">NSArray</code>, a runtime error occurs.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH6-XID_47"></a>
+  <h3 class="section-name" tabindex="0">Dictionaries</h3>
+  <p class="para">
+  Information forthcoming.
+</p>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="TP40014216-CH6-XID_48"></a>
+  <h3 class="section-name" tabindex="0">Foundation Data Types</h3>
+  <p class="para">
+  Swift provides a convenient overlay for interfacing with data types defined in the Foundation framework. Use this overlay to work with types like <code class="code-voice">NSSize</code> and <code class="code-voice">NSPoint</code>, using a syntax that feels natural and unified with the rest of the Swift language. For example, you can create an <code class="code-voice">NSSize</code> structure using this syntax:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">size</span> = <span class="vc">NSSize</span>(<span class="vc">width</span>: <span class="m">20</span>, <span class="vc">height</span>: <span class="m">40</span>)</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  The overlay also lets you call Foundation functions on structures in a natural way.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">rect</span> = <span class="vc">NSRect</span>(<span class="vc">x</span>: <span class="m">50</span>, <span class="vc">y</span>: <span class="m">50</span>, <span class="vc">width</span>: <span class="m">100</span>, <span class="vc">height</span>: <span class="m">100</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">width</span> = <span class="vc">rect</span>.<span class="vc">width</span>    <span class="c">// equivalent of NSWidth(rect)</span></code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">maxX</span> = <span class="vc">rect</span>.<span class="vc">maxY</span>      <span class="c">// equivalent of NSMaxY(rect)</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  Swift bridges <code class="code-voice">NSUInteger</code> and <code class="code-voice">NSInteger</code> to <code class="code-voice">Int</code>. Both of these types come over as <code class="code-voice">Int</code> in Foundation APIs. <code class="code-voice">Int</code> is used for consistency whenever possible in Swift, but the <code class="code-voice">UInt</code> type is available if you require an unsigned integer type.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH6-XID_49"></a>
+  <h3 class="section-name" tabindex="0">Foundation Functions</h3>
+  <p class="para">
+  <code class="code-voice">NSLog</code> is available in Swift for logging to the system console. You use the same formatting syntax you would use in Objective-C.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">NSLog</span>(<span class="s">"%.7f"</span>, <span class="vc">pi</span>)         <span class="c">// Logs "3.1415927" to the console</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  However, Swift also has print functions like <code class="code-voice">print</code> and <code class="code-voice">println</code> available. These functions are simple, powerful, and versatile due to Swift’s string interpolation. They don’t print to the system console but are available for general printing needs.
+</p><p class="para">
+  <code class="code-voice">NSAssert</code> functions do not carry over to Swift. Instead, use the <code class="code-voice">assert</code> function.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH6-XID_50"></a>
+  <h3 class="section-name" tabindex="0">Core Foundation</h3>
+  <p class="para">
+  Core Foundation types are automatically imported as full-fledged Swift classes. Wherever memory management annotations have been provided, Swift automatically manages the memory of Core Foundation objects, including Core Foundation objects that you instantiate yourself. In Swift, you can use each pair of toll-free bridged Foundation and Core Foundation types interchangeably. You can also bridge some toll-free bridged Core Foundation types to Swift standard library types if you cast to a bridging Foundation type first.
+</p>
+  <section class="section">
+  <a name="TP40014216-CH6-XID_51"></a>
+  <h3 class="section-name" tabindex="0">Remapped Types</h3>
+  <p class="para">
+  When Swift imports Core Foundation types, the compiler remaps the names of these types. The compiler removes <em class="book-name">Ref</em> from the end of each type name because all Swift classes are reference types, therefore the suffix is redundant.
+</p><p class="para">
+  The Core Foundation <code class="code-voice">CFTypeRef</code> type completely remaps to the <code class="code-voice">AnyObject</code> type. Wherever you would use <code class="code-voice">CFTypeRef</code>, you should now use <code class="code-voice">AnyObject</code> in your code.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH6-XID_52"></a>
+  <h3 class="section-name" tabindex="0">Memory Managed Objects</h3>
+  <p class="para">
+  Core Foundation objects returned from annotated APIs are automatically memory managed in Swift—you do not need to invoke the <code class="code-voice">CFRetain</code>, <code class="code-voice">CFRelease</code>, or <code class="code-voice">CFAutorelease</code> functions yourself. If you return Core Foundation objects from your own C functions and Objective-C methods, annotate them with either <code class="code-voice">CF_RETURNS_RETAINED</code> or <code class="code-voice">CF_RETURNS_NOT_RETAINED</code>. The compiler automatically inserts memory management calls when it compiles Swift code that invokes these APIs. If you use only annotated APIs that do not indirectly return Core Foundation objects, you can skip the rest of this section. Otherwise, continue on to learn about working with unmanaged Core Foundation objects.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH6-XID_53"></a>
+  <h3 class="section-name" tabindex="0">Unmanaged Objects</h3>
+  <p class="para">
+  When Swift imports APIs that have not been annotated, the compiler cannot automatically memory manage the returned Core Foundation objects. Swift wraps these returned Core Foundation objects in an <code class="code-voice">Unmanaged&lt;T&gt;</code> structure. All indirectly returned Core Foundation objects are unmanaged as well. For example, here’s an unannotated C function:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+
+        <div class="Objective-C">
+          <p class="aside-title">Objective-C</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="n">CFStringRef</span> <span class="n">StringByAddingTwoStrings</span><span class="p">(</span><span class="n">CFStringRef</span> <span class="n">string1</span><span class="p">,</span> <span class="n">CFStringRef</span> <span class="n">string2</span><span class="p">)</span>
+</code></li>
+      </ul>
+        </div>
+
+
+  </div>
+</section><p class="para">
+  And here’s how Swift imports it:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">StringByAddingTwoStrings</span>(<span class="n"><!-- a href="" -->CFString<!-- /a --></span>!, <span class="n"><!-- a href="" -->CFString<!-- /a --></span>!) -&gt; <span class="n"><!-- a href="" -->Unmanaged<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->CFString<!-- /a --></span>&gt;!</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  When you receive an unmanaged object from an unannotated API, you should immediately convert it to a memory managed object before you work with it. That way, Swift can handle memory management for you. The <code class="code-voice">Unmanaged&lt;T&gt;</code> structure provides two methods to convert an unmanaged object to a memory managed object—<code class="code-voice">takeUnretainedValue()</code> and <code class="code-voice">takeRetainedValue()</code>. Both of these methods return the original, unwrapped type of the object. You choose which method to use based on whether the API you are invoking returns an unretained or retained object.
+</p><p class="para">
+  For example, suppose the C function above does not retain the <code class="code-voice">CFString</code> object before returning it. To start using the object, you use the <code class="code-voice">takeUnretainedValue()</code> function.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">memoryManagedResult</span> = <span class="vc">StringByAddingTwoStrings</span>(<span class="vc">str1</span>, <span class="vc">str2</span>).<span class="vc">takeUnretainedValue</span>()</code></li>
+          <li><code class="code-voice"><span class="c">// memoryManagedResult is a memory managed CFString</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can also invoke the <code class="code-voice">retain()</code>, <code class="code-voice">release()</code>, and <code class="code-voice">autorelease()</code> methods on unmanaged objects, but this approach is not recommended.
+</p>
+  
+</section>
+
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_54" data-id="TP40014216-CH5-XID_54">Writing Swift Classes with Objective-C Behavior</a></p>
+  			<p class="next-link"><a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5" data-id="TP40014216-CH7-XID_5">Adopting Cocoa Design Patterns</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	
+  </div>
+    <script src="./../resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>

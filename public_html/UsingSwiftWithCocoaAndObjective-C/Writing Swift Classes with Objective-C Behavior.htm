@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!-- saved from url=(0189)href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_54 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>Using Swift with Cocoa and Objective-C: Writing Swift Classes with Objective-C Behavior</title>
+   <link rel="stylesheet" type="text/css" href="./../resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="TP40014216" title="Using Swift with Cocoa and Objective-C"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="https://developer.apple.com/library/prerelease/ios/navigation/">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="https://developer.apple.com/">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Using Swift with Cocoa and Objective-C</span>
+    </p>
+    
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="resource/BuildingCocoaApps.pdf">PDF</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="TP40014216-CH1-XID_4" class="part-name">Getting Started
+          <ul class="nav-chapters" style="height: 0px;">
+              <li class="nav-chapter">
+              	<a href="Basic Setup.htm#TP40014216-CH2-XID_0" data-id="TP40014216-CH2-XID_0" class="">Basic Setup</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH3-XID_39" class="part-name nav-part-active open-part">Interoperability
+          <ul class="nav-chapters" style="height: 208px;">
+              <li class="nav-chapter">
+              	<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_26" data-id="TP40014216-CH4-XID_26" class="">Interacting with Objective-C APIs</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Writing Swift Classes with Objective-C Behavior.htm" data-id="TP40014216-CH5-XID_54" class="nav-chapter-active">Writing Swift Classes with Objective-C Behavior</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40" data-id="TP40014216-CH6-XID_40">Working with Cocoa Data Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5" data-id="TP40014216-CH7-XID_5">Adopting Cocoa Design Patterns</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_13" data-id="TP40014216-CH8-XID_13">Interacting with C APIs</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH9-XID_87" class="part-name">Mix and Match
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Swift and Objective-C in the Same Project.htm#TP40014216-CH10-XID_75" data-id="TP40014216-CH10-XID_75">Swift and Objective-C in the Same Project</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH11-XID_74" class="part-name">Migration
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Migrating Your Objective-C Code to Swift.htm#TP40014216-CH12-XID_67" data-id="TP40014216-CH12-XID_67">Migrating Your Objective-C Code to Swift</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="TP40014216-CH5"></a><a name="TP40014216-CH5-XID_54"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Writing Swift Classes with Objective-C Behavior</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_55">
+	  				Inheriting from Objective-C Classes
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_56">
+	  				Adopting Protocols
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_57">
+	  				Writing Initializers and Deinitializers
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_58">
+	  				Integrating with Interface Builder
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_62">
+	  				Specifying Property Attributes
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_66">
+	  				Implementing Core Data Managed Object Subclasses
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  Interoperability lets you define Swift classes that incorporate Objective-C behavior. You can subclass Objective-C classes, adopt Objective-C protocols, and take advantage of other Objective-C functionality when writing a Swift class. This means that you can create classes based on familiar, established behavior in Objective-C and enhance them with Swift’s modern and powerful language features.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="TP40014216-CH5-XID_55"></a>
+  <h3 class="section-name" tabindex="0">Inheriting from Objective-C Classes</h3>
+  <p class="para">
+  In Swift, you can define subclasses of Objective-C classes. To create a Swift class that inherits from an Objective-C class, add a colon (<code class="code-voice">:</code>) after the name of the Swift class, followed by the name of the Objective-C class.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">import</span> <span class="vc">UIKit</span></code></li>
+          <li><code class="code-voice"> </code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MySwiftViewController</span>: <span class="n"><!-- a href="" -->UIViewController<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// define the class</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You get all the functionality offered by the superclass in Objective-C. If you provide your own implementations of the superclass’s methods, remember to use the <code class="code-voice">override</code> keyword.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH5-XID_56"></a>
+  <h3 class="section-name" tabindex="0">Adopting Protocols</h3>
+  <p class="para">
+  In Swift, you can adopt protocols that are defined in Objective-C. Like Swift protocols, any Objective-C protocols go in a comma-separated list following the name of a class’s superclass, if any.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MySwiftViewController</span>: <span class="n"><!-- a href="" -->UIViewController<!-- /a --></span>, <span class="n"><!-- a href="" -->UITableViewDelegate<!-- /a --></span>, <span class="n"><!-- a href="" -->UITableViewDataSource<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// define the class</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  Objective-C protocols come in as Swift protocols. If you want to refer to the <code class="code-voice">UITableViewDelegate</code> protocol in Swift code, refer to it as <code class="code-voice">UITableViewDelegate</code> (as compared to <code class="code-voice">id&lt;UITableViewDelegate&gt;</code> in Objective-C).
+</p><p class="para">
+  Because the namespace of classes and protocols is unified in Swift, the <code class="code-voice">NSObject</code> protocol in Objective-C is remapped to <code class="code-voice">NSObjectProtocol</code> in Swift.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH5-XID_57"></a>
+  <h3 class="section-name" tabindex="0">Writing Initializers and Deinitializers</h3>
+  <p class="para">
+  The Swift compiler ensures that your initializers do not leave any properties in your class uninitialized to increase the safety and predictability of your code. Additionally, unlike Objective-C, in Swift there is no separate memory allocation method to invoke. You use native Swift initialization syntax even when you are working with Objective-C classes—Swift converts Objective-C initialization methods to Swift initializers. You can read more about implementing your own initializers in <a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#TP40014097-CH18" target="_self">Initializers</a>.
+</p><p class="para">
+  When you want to perform additional clean-up before your class is deallocated, you can implement a deninitializer instead of the <code class="code-voice">dealloc</code> method. Swift deinitializers are called automatically, just before instance deallocation happens. Swift automatically calls the superclass deinitializer after invoking your subclass’s deinitializer. When you are working with an Objective-C class or your Swift class inherits from an Objective-C class, Swift calls your class’s superclass <code class="code-voice">dealloc</code> method for you as well. You can read more about implementing your own deinitializers in <a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html#TP40014097-CH19" target="_self">Deinitializers</a>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH5-XID_58"></a>
+  <h3 class="section-name" tabindex="0">Integrating with Interface Builder</h3>
+  <p class="para">
+  The Swift compiler includes attributes that enable Interface Builder features for your Swift classes. As in Objective-C, you can use outlets, actions, and live rendering in Swift.
+</p>
+  <section class="section">
+  <a name="TP40014216-CH5-XID_59"></a>
+  <h3 class="section-name" tabindex="0">Working with Outlets and Actions</h3>
+  <p class="para">
+  Outlets and actions allow you to connect your source code to user interface objects in Interface Builder. To use outlets and actions in Swift, insert <code class="code-voice">@IBOutlet</code> or <code class="code-voice">@IBAction</code> just before the property or method declaration. You use the same <code class="code-voice">@IBOutlet</code> attribute to declare an outlet collection—just specify an array for the type.
+</p><p class="para">
+  When you declare an outlet in Swift, the compiler automatically converts the type to a weak implicitly unwrapped optional and assigns it an initial value of <code class="code-voice">nil</code>. In effect, the compiler replaces <code class="code-voice">@IBOutlet var name: Type</code> with <code class="code-voice">@IBOutlet weak var name: Type! = nil</code>. The compiler converts the type to an implicitly unwrapped optional so that you aren’t required to assign a value in an initializer. It is implicitly unwrapped because after your class is initialized from a storyboard or <code class="code-voice">xib</code> file, you can assume that the outlet has been connected. Outlets are weak by default because the outlets you create usually have weak relationships.
+</p><p class="para">
+  For example, the following Swift code declares a class with an outlet, an outlet collection, and an action:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MyViewController</span>: <span class="n"><!-- a href="" -->UIViewController<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">@IBOutlet</span> <span class="kt">var</span> <span class="vc">button</span>: <span class="n"><!-- a href="" -->UIButton<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">@IBOutlet</span> <span class="kt">var</span> <span class="vc">textFields</span>: <span class="n"><!-- a href="" -->UITextField<!-- /a --></span>[]</code></li>
+          <li><code class="code-voice">    <span class="kt">@IBAction</span> <span class="kt">func</span> <span class="vc">buttonTapped</span>(<span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>) {</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"button tapped!"</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  Because the sender parameter of the <code class="code-voice">buttonTapped:</code> method wasn’t used, the parameter name can be omitted.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH5-XID_60"></a>
+  <h3 class="section-name" tabindex="0">Live Rendering</h3>
+  <p class="para">
+  You can use two different attributes—<code class="code-voice">@IBDesignable</code> and <code class="code-voice">@IBInspectable</code>—to enable live, interactive custom view design in Interface Builder. When you create a custom view that inherits from <code class="code-voice">UIView</code> or <code class="code-voice">NSView</code>, you can add the <code class="code-voice">@IBDesignable</code> attribute just before the class declaration. After you add the custom view to Interface Builder (by setting the custom class of the view in the inspector pane), Interface Builder renders your view in the canvas.
+</p><div class="note">
+  <a name="TP40014216-CH5-XID_61"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">Live rendering can be used only from frameworks.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  You can also add the <code class="code-voice">@IBInspectable</code> attribute to properties with types compatible with user defined runtime attributes. After you add your custom view to Interface Builder, you can edit these properties in the inspector.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">@IBDesignable</span></code></li>
+          <li><code class="code-voice"><span class="kt">class</span> <span class="vc">MyCustomView</span>: <span class="n"><!-- a href="" -->UIView<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">@IBInspectable</span> <span class="kt">var</span> <span class="vc">textColor</span>: <span class="n"><!-- a href="" -->UIColor<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="kt">@IBInspectable</span> <span class="kt">var</span> <span class="vc">iconHeight</span>: <span class="n"><!-- a href="" -->CGFloat<!-- /a --></span></code></li>
+          <li><code class="code-voice">    <span class="c">/* ... */</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="TP40014216-CH5-XID_62"></a>
+  <h3 class="section-name" tabindex="0">Specifying Property Attributes</h3>
+  <p class="para">
+  In Objective-C, properties have a range of potential attributes that specify additional information about a property’s behavior. In Swift, you specify these property attributes in a different way.
+</p>
+  <section class="section">
+  <a name="TP40014216-CH5-XID_63"></a>
+  <h3 class="section-name" tabindex="0">Strong and Weak</h3>
+  <p class="para">
+  Swift properties are strong by default. Use the <code class="code-voice">weak</code> keyword to indicate that a property has a weak reference to the object stored as its value. This keyword can be used only for properties that are optional class types. For more information, see <a href="./../Classes and Structures.html#TP40014097-CH13" target="_self">Attributes</a>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH5-XID_64"></a>
+  <h3 class="section-name" tabindex="0">Read/Write and Read-Only</h3>
+  <p class="para">
+  In Swift, there are no <code class="code-voice">readwrite</code> and <code class="code-voice">readonly</code> attributes. When declaring a stored property, use <code class="code-voice">let</code> to make it read-only, and use <code class="code-voice">var</code> to make it read/write. When declaring a computed property, provide a getter only to make it read-only and provide both a getter and setter to make it read/write. For more information, see <a href="./../Classes and Structures.html#TP40014097-CH13" target="_self">Properties</a>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH5-XID_65"></a>
+  <h3 class="section-name" tabindex="0">Copy Semantics</h3>
+  <p class="para">
+  In Swift, the Objective-C <code class="code-voice">copy</code> property attribute translates to <code class="code-voice">@NSCopying</code>. The type of the property must conform to the <code class="code-voice">NSCopying</code> protocol. For more information, see <a href="./../Classes and Structures.html#TP40014097-CH13" target="_self">Attributes</a>.
+</p>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="TP40014216-CH5-XID_66"></a>
+  <h3 class="section-name" tabindex="0">Implementing Core Data Managed Object Subclasses</h3>
+  <p class="para">
+  Core Data provides the underlying storage and implementation of properties in subclasses of the <code class="code-voice">NSManagedObject</code> class. Add the <code class="code-voice">@NSManaged</code> attribute before each property definition in your managed object subclass that corresponds to an attribute or relationship in your Core Data model. Like the <code class="code-voice">@dynamic</code> attribute in Objective-C, the <code class="code-voice">@NSManaged</code> attribute informs the Swift compiler that the storage and implementation of a property will be provided at runtime. However, unlike <code class="code-voice">@dynamic</code>, the <code class="code-voice">@NSManaged</code> attribute is available only for Core Data support.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_26" data-id="TP40014216-CH4-XID_26">Interacting with Objective-C APIs</a></p>
+  			<p class="next-link"><a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40" data-id="TP40014216-CH6-XID_40">Working with Cocoa Data Types</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	
+  </div>
+    <script src="./../resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>

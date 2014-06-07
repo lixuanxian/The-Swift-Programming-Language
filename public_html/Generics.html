@@ -4,8 +4,7 @@
   <title>The Swift Programming Language: Generics</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
   
-  <meta charset="utf-8">            <script>window["_GOOG_TRANS_EXT_VER"] = "1";</script>
-    </head>
+  <meta charset="utf-8">            <script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
 
   <body id="conceptual_flow_with_tasks" class="jazz">
     <div id="_omniture_top">
@@ -252,7 +251,7 @@
 
   </div>
 </section><p class="para">
-  This function makes use of in-out parameters to swap the values of <code class="code-voice">a</code> and <code class="code-voice">b</code>, as described in <span class="x-name"><a href="In.html#TP40014097-CH10-XID_226" data-id="TP40014097-CH10-XID_226">In-Out Parameters</a></span>.
+  This function makes use of in-out parameters to swap the values of <code class="code-voice">a</code> and <code class="code-voice">b</code>, as described in <span class="x-name"><a href="Functions.html#TP40014097-CH10-XID_226" data-id="TP40014097-CH10-XID_226">In-Out Parameters</a></span>.
 </p><p class="para">
   The <code class="code-voice">swapTwoInts</code> function swaps the original value of <code class="code-voice">b</code> into <code class="code-voice">a</code>, and the original value of <code class="code-voice">a</code> into <code class="code-voice">b</code>. You can call this function to swap the values in two <code class="code-voice">Int</code> variables:
 </p><section class="code-listing">
@@ -577,7 +576,7 @@
   <p class="para">
   The <code class="code-voice">swapTwoValues</code> function and the <code class="code-voice">Stack</code> type can work with any type. However, it is sometimes useful to enforce certain <em>type constraints</em> on the types that can be used with generic functions and generic types. Type constraints specify that a type parameter must inherit from a specific class, or conform to a particular protocol or protocol composition.
 </p><p class="para">
-  For example, Swift’s <code class="code-voice">Dictionary</code> type places a limitation on the types that can be used as keys for a dictionary. As described in <span class="x-name"><a href="Dictionaries.html#TP40014097-CH8-XID_143" data-id="TP40014097-CH8-XID_143">Dictionaries</a></span>, the type of a dictionary’s keys must be <em>hashable</em>. That is, it must provide a way to make itself uniquely representable. <code class="code-voice">Dictionary</code> needs its keys to be hashable so that it can check whether it already contains a value for a particular key. Without this requirement, <code class="code-voice">Dictionary</code> could not tell whether it should insert or replace a value for a particular key, nor would it be able to find a value for a given key that is already in the dictionary.
+  For example, Swift’s <code class="code-voice">Dictionary</code> type places a limitation on the types that can be used as keys for a dictionary. As described in <span class="x-name"><a href="Collection Types.html#TP40014097-CH8-XID_143" data-id="TP40014097-CH8-XID_143">Dictionaries</a></span>, the type of a dictionary’s keys must be <em>hashable</em>. That is, it must provide a way to make itself uniquely representable. <code class="code-voice">Dictionary</code> needs its keys to be hashable so that it can check whether it already contains a value for a particular key. Without this requirement, <code class="code-voice">Dictionary</code> could not tell whether it should insert or replace a value for a particular key, nor would it be able to find a value for a given key that is already in the dictionary.
 </p><p class="para">
   This requirement is enforced by a type constraint on the key type for <code class="code-voice">Dictionary</code>, which specifies that the key type must conform to the <code class="code-voice">Hashable</code> protocol, a special protocol defined in the Swift standard library. All of Swift’s basic types (such as <code class="code-voice">String</code>, <code class="code-voice">Int</code>, <code class="code-voice">Double</code>, and <code class="code-voice">Bool</code>) are hashable by default.
 </p><p class="para">
@@ -852,9 +851,9 @@
   <a name="TP40014097-CH26-XID_249"></a>
   <h3 class="section-name" tabindex="0">Extending an Existing Type to Specify an Associated Type</h3>
   <p class="para">
-  You can extend an existing type to add conformance to a protocol, as described in <span class="x-name"><a href="Adding Protocol Conformance with an Extension.html#TP40014097-CH25-XID_355" data-id="TP40014097-CH25-XID_355">Adding Protocol Conformance with an Extension</a></span>. This includes a protocol with an associated type.
+  You can extend an existing type to add conformance to a protocol, as described in <span class="x-name"><a href="Protocols.html#TP40014097-CH25-XID_355" data-id="TP40014097-CH25-XID_355">Adding Protocol Conformance with an Extension</a></span>. This includes a protocol with an associated type.
 </p><p class="para">
-  Swift’s <code class="code-voice">Array</code> type already provides an <code class="code-voice">append</code> method, a <code class="code-voice">count</code> property, and a subscript with an <code class="code-voice">Int</code> index to retrieve its elements. These three capabilities match the requirements of the <code class="code-voice">Container</code> protocol. This means that you can extend <code class="code-voice">Array</code> to conform to the <code class="code-voice">Container</code> protocol simply by declaring that <code class="code-voice">Array</code> adopts the protocol. You do this with an empty extension, as described in <span class="x-name"><a href="Declaring Protocol Adoption with an Extension.html#TP40014097-CH25-XID_357" data-id="TP40014097-CH25-XID_357">Declaring Protocol Adoption with an Extension</a></span>:
+  Swift’s <code class="code-voice">Array</code> type already provides an <code class="code-voice">append</code> method, a <code class="code-voice">count</code> property, and a subscript with an <code class="code-voice">Int</code> index to retrieve its elements. These three capabilities match the requirements of the <code class="code-voice">Container</code> protocol. This means that you can extend <code class="code-voice">Array</code> to conform to the <code class="code-voice">Container</code> protocol simply by declaring that <code class="code-voice">Array</code> adopts the protocol. You do this with an empty extension, as described in <span class="x-name"><a href="Protocols.html#TP40014097-CH25-XID_357" data-id="TP40014097-CH25-XID_357">Declaring Protocol Adoption with an Extension</a></span>:
 </p><section class="code-listing">
   
   <span class="caption"></span>
@@ -878,7 +877,7 @@
   <a name="TP40014097-CH26-XID_250"></a>
   <h3 class="section-name" tabindex="0">Where Clauses</h3>
   <p class="para">
-  Type constraints, as described in <span class="x-name"><a href="Type Constraints.html#TP40014097-CH26-XID_244" data-id="TP40014097-CH26-XID_244">Type Constraints</a></span>, enable you to define requirements on the type parameters associated with a generic function or type.
+  Type constraints, as described in <span class="x-name"><a href="#TP40014097-CH26-XID_244" data-id="TP40014097-CH26-XID_244">Type Constraints</a></span>, enable you to define requirements on the type parameters associated with a generic function or type.
 </p><p class="para">
   It can also be useful to define requirements for associated types. You do this by defining <em>where clauses</em> as part of a type parameter list. A where clause enables you to require that an associated type conforms to a certain protocol, and/or that certain type parameters and associated types be the same. You write a where clause by placing the <code class="code-voice">where</code> keyword immediately after the list of type parameters, followed by one or more constraints for associated types, and/or one or more equality relationships between types and associated types.
 </p><p class="para">
@@ -1008,6 +1007,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  	
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

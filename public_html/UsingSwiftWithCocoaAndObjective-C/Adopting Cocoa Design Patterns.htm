@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!-- saved from url=(0173)href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>Using Swift with Cocoa and Objective-C: Adopting Cocoa Design Patterns</title>
+   <link rel="stylesheet" type="text/css" href="./../resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="TP40014216" title="Using Swift with Cocoa and Objective-C"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="https://developer.apple.com/library/prerelease/ios/navigation/">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="https://developer.apple.com/">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Using Swift with Cocoa and Objective-C</span>
+    </p>
+    
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="resource/BuildingCocoaApps.pdf">PDF</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="TP40014216-CH1-XID_4" class="part-name">Getting Started
+          <ul class="nav-chapters" style="height: 0px;">
+              <li class="nav-chapter">
+              	<a href="Basic Setup.htm#TP40014216-CH2-XID_0" data-id="TP40014216-CH2-XID_0" class="">Basic Setup</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH3-XID_39" class="part-name nav-part-active open-part">Interoperability
+          <ul class="nav-chapters" style="height: 208px;">
+              <li class="nav-chapter">
+              	<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_26" data-id="TP40014216-CH4-XID_26" class="">Interacting with Objective-C APIs</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_54" data-id="TP40014216-CH5-XID_54" class="">Writing Swift Classes with Objective-C Behavior</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40" data-id="TP40014216-CH6-XID_40" class="">Working with Cocoa Data Types</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Adopting Cocoa Design Patterns.htm" data-id="TP40014216-CH7-XID_5" class="nav-chapter-active">Adopting Cocoa Design Patterns</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_13" data-id="TP40014216-CH8-XID_13">Interacting with C APIs</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH9-XID_87" class="part-name">Mix and Match
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Swift and Objective-C in the Same Project.htm#TP40014216-CH10-XID_75" data-id="TP40014216-CH10-XID_75">Swift and Objective-C in the Same Project</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH11-XID_74" class="part-name">Migration
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Migrating Your Objective-C Code to Swift.htm#TP40014216-CH12-XID_67" data-id="TP40014216-CH12-XID_67">Migrating Your Objective-C Code to Swift</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="TP40014216-CH7"></a><a name="TP40014216-CH7-XID_5"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Adopting Cocoa Design Patterns</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_6">
+	  				Delegation
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_8">
+	  				Lazy Initialization
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_9">
+	  				Error Reporting
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_10">
+	  				Key-Value Observing
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_11">
+	  				Target-Action
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_12">
+	  				Introspection
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  One aid in writing well-designed, resilient apps is to use Cocoa’s established design patterns. Many of these patterns rely on classes defined in Objective-C. Because of Swift’s interoperability with Objective-C, you can take advantage of these common patterns in your Swift code. In many cases, you can use Swift language features to extend or simplify existing Cocoa patterns, making them more powerful and easier to use.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="TP40014216-CH7-XID_6"></a>
+  <h3 class="section-name" tabindex="0">Delegation</h3>
+  <p class="para">
+  In both Swift and Objective-C, delegation is often expressed with a protocol that defines the interaction and a conforming delegate property. In contrast with Objective-C, when you implement delegation in Swift, the pattern stays the same but the implementation changes. Just as in Objective-C, before you send a message to the delegate you check to see whether it’s <code class="code-voice">nil</code>—and if the method is optional, you check to see whether the delegate responds to the selector. In Swift, these questions can be answered while maintaining type safety. The code listing below illustrates the following process:
+</p><ol class="list-number">
+  <li class="item"><p class="para">
+  Check that <code class="code-voice">myDelegate</code> is not <code class="code-voice">nil</code>.
+</p>
+</li><li class="item"><p class="para">
+  Check that <code class="code-voice">myDelegate</code> implements the method <code class="code-voice">window:willUseFullScreenContentSize:</code>.
+</p>
+</li><li class="item"><p class="para">
+  If 1 and 2 hold true, invoke the method and assign the result of the method to the value named <code class="code-voice">fullScreenSize</code>.
+</p>
+</li><li class="item"><p class="para">
+  Print the return value of the method.
+</p>
+</li>
+</ol><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="c">// @inteface MyObject : NSObject</span></code></li>
+          <li><code class="code-voice"><span class="c">// @property (nonatomic, weak) id&lt;NSWindowDelegate&gt; delegate;</span></code></li>
+          <li><code class="code-voice"><span class="c">// @end</span></code></li>
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">fullScreenSize</span> = <span class="vc">myDelegate</span>?.<span class="vc">window</span>?(<span class="vc">myWindow</span>, <span class="vc">willUseFullScreenContentSize</span>: <span class="vc">mySize</span>) {</code></li>
+          <li><code class="code-voice">    <span class="vc">println</span>(<span class="vc">NSStringFromSize</span>(<span class="vc">fullScreenSize</span>))</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><div class="note">
+  <a name="TP40014216-CH7-XID_7"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">In a pure Swift app, type the <code class="code-voice">delegate</code> property as an optional <code class="code-voice">NSWindowDelegate</code> object and assign it an initial value of <code class="code-voice">nil</code>.
+    	</p>
+    
+  </aside>
+</div>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH7-XID_8"></a>
+  <h3 class="section-name" tabindex="0">Lazy Initialization</h3>
+  <p class="para">
+  Information forthcoming. You can read more about lazy initialization in <a href="./../Properties.html#TP40014097-CH14" target="_self">Lazy Stored Properties</a>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH7-XID_9"></a>
+  <h3 class="section-name" tabindex="0">Error Reporting</h3>
+  <p class="para">
+  Error reporting in Swift follows the same pattern it does in Objective-C, with the added benefit of offering optional return values. In the simplest case, you return a <code class="code-voice">Bool</code> value from the function to indicate whether or not it succeeded. When you need to report the reason for the error, you can add to the function an <code class="code-voice">NSError</code> out parameter of type <code class="code-voice">NSErrorPointer</code>. This type is roughly equivalent to Objective-C’s <code class="code-voice">NSError **</code>, with additional memory safety and optional typing. You can use the prefix <code class="code-voice">&amp;</code> operator to pass in a reference to an optional <code class="code-voice">NSError</code> type as an <code class="code-voice">NSErrorPointer</code> object, as shown in the code listing below.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">writeError</span> : <span class="n"><!-- a href="" -->NSError<!-- /a --></span>?</code></li>
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">written</span> = <span class="vc">myString</span>.<span class="vc">writeToFile</span>(<span class="vc">path</span>, <span class="vc">atomically</span>: <span class="vc">false</span>,</code></li>
+          <li><code class="code-voice">    <span class="vc">encoding</span>: <span class="vc">NSUTF8StringEncoding</span>,</code></li>
+          <li><code class="code-voice">    <span class="vc">error</span>: &amp;<span class="vc">writeError</span>)</code></li>
+          <li><code class="code-voice"><span class="kt">if</span> !<span class="vc">written</span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">if</span> <span class="kt">let</span> <span class="vc">error</span> = <span class="vc">writeError</span> {</code></li>
+          <li><code class="code-voice">        <span class="vc">println</span>(<span class="s">"write failure: </span>\(<span class="vc">error</span>.<span class="vc">localizedDescription</span>)<span class="s">"</span>)</code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  When you implement your own functions that need to configure an <code class="code-voice">NSErrorPointer</code> object, you set the <code class="code-voice">NSErrorPointer</code> object’s <code class="code-voice">memory</code> property to an <code class="code-voice">NSError</code> object you create. Make sure you check that the caller passed a non-<code class="code-voice">nil</code> <code class="code-voice">NSErrorPointer</code> object first:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">contentsForType</span>(<span class="vc">typeName</span>: <span class="n"><!-- a href="" -->String<!-- /a --></span>! <span class="vc">error</span>: <span class="n"><!-- a href="" -->NSErrorPointer<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->AnyObject<!-- /a --></span>! {</code></li>
+          <li><code class="code-voice">    <span class="kt">if</span> <span class="vc">cannotProduceContentsForType</span>(<span class="vc">typeName</span>) {</code></li>
+          <li><code class="code-voice">        <span class="kt">if</span> <span class="vc">error</span> {</code></li>
+          <li><code class="code-voice">            <span class="vc">error</span>.<span class="vc">memory</span> = <span class="vc">NSError</span>(<span class="vc">domain</span>: <span class="vc">domain</span>, <span class="vc">code</span>: <span class="vc">code</span>, <span class="vc">userInfo</span>: [:])</code></li>
+          <li><code class="code-voice">        }</code></li>
+          <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">nil</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="c">// ...</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH7-XID_10"></a>
+  <h3 class="section-name" tabindex="0">Key-Value Observing</h3>
+  <p class="para">
+  Information forthcoming.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH7-XID_11"></a>
+  <h3 class="section-name" tabindex="0">Target-Action</h3>
+  <p class="para">
+  Target-action is a common Cocoa design pattern in which one object sends a message to another object when a specific event occurs. The target-action model is fundamentally similar in Swift and Objective-C. In Swift, you use the <code class="code-voice">Selector</code> type to refer to Objective-C selectors. For an example of using target-action in Swift code, see <span class="x-name"><a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_37" data-id="TP40014216-CH4-XID_37">Objective-C Selectors</a></span>.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH7-XID_12"></a>
+  <h3 class="section-name" tabindex="0">Introspection</h3>
+  <p class="para">
+  In Objective-C, you use the <code class="code-voice">isKindOfClass:</code> method to check whether an object is of a certain class type, and the <code class="code-voice">conformsToProtocol:</code> method to check whether an object conforms to a specified protocol. In Swift, you accomplish this task by using the <code class="code-voice">is</code> operator to check for a type, or the <code class="code-voice">as?</code> operator to downcast to that type.
+</p><p class="para">
+  You can check whether an instance is of a certain subclass type by using the <code class="code-voice">is</code> operator. The <code class="code-voice">is</code> operator returns <code class="code-voice">true</code> if the instance is of that subclass type, and <code class="code-voice">false</code> if it is not.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">if</span> <span class="vc">object</span> <span class="kt">is</span> <span class="n"><!-- a href="" -->UIButton<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// object is of type UIButton</span></code></li>
+          <li><code class="code-voice">} <span class="kt">else</span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// object is not of type UIButton</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can also try and downcast to the subclass type by using the <code class="code-voice">as?</code> operator. The <code class="code-voice">as?</code> operator returns an optional value that can be bound to a constant using an <code class="code-voice">if</code>-<code class="code-voice">let</code> statement.
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">button</span> = <span class="vc">object</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->UIButton<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// object is successfully cast to type UIButton and bound to button</span></code></li>
+          <li><code class="code-voice">} <span class="kt">else</span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// object could not be cast to type UIButton</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  For more information, see <a href="./../Type Casting.html#TP40014097-CH22" target="_self">Type Casting</a>.
+</p><p class="para">
+  Checking for and casting to a protocol follows exactly the same syntax as checking for and casting to a class. Here is an example of using the <code class="code-voice">as?</code> operator to check for protocol conformance:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">if</span> <span class="kt">let</span> <span class="vc">dataSource</span> = <span class="vc">object</span> <span class="kt">as</span>? <span class="n"><!-- a href="" -->UITableViewDataSource<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// object conforms to UITableViewDataSource and is bound to dataSource</span></code></li>
+          <li><code class="code-voice">} <span class="kt">else</span> {</code></li>
+          <li><code class="code-voice">    <span class="c">// object not conform to UITableViewDataSource</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  Note that after this cast, the <code class="code-voice">dataSource</code> constant is of type <code class="code-voice">UITableViewDataSource</code>, so you can only call methods and access properties defined on the <code class="code-voice">UITableViewDataSource</code> protocol. You must cast it back to another type to perform other operations.
+</p><p class="para">
+  For more information, see <a href="./../Protocols.html#TP40014097-CH25" target="_self">Protocols</a>.
+</p>
+  
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40" data-id="TP40014216-CH6-XID_40">Working with Cocoa Data Types</a></p>
+  			<p class="next-link"><a href="Interacting with C APIs.htm#TP40014216-CH8-XID_13" data-id="TP40014216-CH8-XID_13">Interacting with C APIs</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	
+  </div>
+    <script src="./../resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>

@@ -202,7 +202,7 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    	<p class="para">Don’t worry if you are not familiar with the concept of “capturing”. It is explained in detail below in <span class="x-name"><a href="Capturing Values.html#TP40014097-CH11-XID_129" data-id="TP40014097-CH11-XID_129">Capturing Values</a></span>.
+    	<p class="para">Don’t worry if you are not familiar with the concept of “capturing”. It is explained in detail below in <span class="x-name"><a href="#TP40014097-CH11-XID_129" data-id="TP40014097-CH11-XID_129">Capturing Values</a></span>.
     	</p>
     
   </aside>
@@ -248,7 +248,7 @@
   <a name="TP40014097-CH11-XID_119"></a>
   <h3 class="section-name" tabindex="0">Closure Expressions</h3>
   <p class="para">
-  Nested functions, as introduced in <span class="x-name"><a href="Nested Functions.html#TP40014097-CH10-XID_233" data-id="TP40014097-CH10-XID_233">Nested Functions</a></span>, are a convenient means of naming and defining self-contained blocks of code as part of a larger function. However, it is sometimes useful to write shorter versions of function-like constructs without a full declaration and name. This is particularly true when you work with functions that take other functions as one or more of their arguments.
+  Nested functions, as introduced in <span class="x-name"><a href="Functions.html#TP40014097-CH10-XID_233" data-id="TP40014097-CH10-XID_233">Nested Functions</a></span>, are a convenient means of naming and defining self-contained blocks of code as part of a larger function. However, it is sometimes useful to write shorter versions of function-like constructs without a full declaration and name. This is particularly true when you work with functions that take other functions as one or more of their arguments.
 </p><p class="para">
   <em>Closure expressions</em> are a way to write inline closures in a brief, focused syntax. Closure expressions provide several syntax optimizations for writing closures in their simplest form without loss of clarity or intent. The closure expression examples below illustrate these optimizations by refining a single example of the <code class="code-voice">sort</code> function over several iterations, each of which expresses the same functionality in a more succinct way.
 </p>
@@ -447,7 +447,7 @@
 
   </div>
 </section><p class="para">
-  For more about operator functions, see <span class="x-name"><a href="Operator Functions.html#TP40014097-CH27-XID_43" data-id="TP40014097-CH27-XID_43">Operator Functions</a></span>.
+  For more about operator functions, see <span class="x-name"><a href="Advanced Operators.html#TP40014097-CH27-XID_43" data-id="TP40014097-CH27-XID_43">Operator Functions</a></span>.
 </p>
   
 </section>
@@ -494,7 +494,7 @@
     
   </aside>
 </div><p class="para">
-  The string-sorting closure from the <span class="x-name"><a href="Closure Expression Syntax.html#TP40014097-CH11-XID_121" data-id="TP40014097-CH11-XID_121">Closure Expression Syntax</a></span> section above can be written outside of the <code class="code-voice">sort</code> function’s parentheses as a trailing closure:
+  The string-sorting closure from the <span class="x-name"><a href="#TP40014097-CH11-XID_121" data-id="TP40014097-CH11-XID_121">Closure Expression Syntax</a></span> section above can be written outside of the <code class="code-voice">sort</code> function’s parentheses as a trailing closure:
 </p><section class="code-listing">
   
   <span class="caption"></span>
@@ -558,7 +558,7 @@
 </section><p class="para">
   The <code class="code-voice">map</code> function calls the closure expression once for each item in the array. You do not need to specify the type of the closure’s input parameter, <code class="code-voice">number</code>, because the type can be inferred from the values in the array to be mapped.
 </p><p class="para">
-  In this example, the closure’s <code class="code-voice">number</code> parameter is defined as a <em>variable parameter</em>, as described in <span class="x-name"><a href="Constant and Variable Parameters.html#TP40014097-CH10-XID_224" data-id="TP40014097-CH10-XID_224">Constant and Variable Parameters</a></span>, so that the parameter’s value can be modified within the closure body, rather than declaring a new local variable and assigning the passed <code class="code-voice">number</code> value to it. The closure expression also specifies a return type of <code class="code-voice">String</code>, to indicate the type that will be stored in the mapped output array.
+  In this example, the closure’s <code class="code-voice">number</code> parameter is defined as a <em>variable parameter</em>, as described in <span class="x-name"><a href="Functions.html#TP40014097-CH10-XID_224" data-id="TP40014097-CH10-XID_224">Constant and Variable Parameters</a></span>, so that the parameter’s value can be modified within the closure body, rather than declaring a new local variable and assigning the passed <code class="code-voice">number</code> value to it. The closure expression also specifies a return type of <code class="code-voice">String</code>, to indicate the type that will be stored in the mapped output array.
 </p><p class="para">
   The closure expression builds a string called <code class="code-voice">output</code> each time it is called. It calculates the last digit of <code class="code-voice">number</code> by using the remainder operator (<code class="code-voice">number % 10</code>), and uses this digit to look up an appropriate string in the <code class="code-voice">digitNames</code> dictionary.
 </p><div class="note">
@@ -610,7 +610,7 @@
 
   </div>
 </section><p class="para">
-  The return type of <code class="code-voice">makeIncrementor</code> is <code class="code-voice">() -&gt; Int</code>. This means that it returns a <em>function</em>, rather than a simple value. The function it returns has no parameters, and returns an <code class="code-voice">Int</code> value each time it is called. To learn how functions can return other functions, see <span class="x-name"><a href="Function Types as Return Types.html#TP40014097-CH10-XID_232" data-id="TP40014097-CH10-XID_232">Function Types as Return Types</a></span>.
+  The return type of <code class="code-voice">makeIncrementor</code> is <code class="code-voice">() -&gt; Int</code>. This means that it returns a <em>function</em>, rather than a simple value. The function it returns has no parameters, and returns an <code class="code-voice">Int</code> value each time it is called. To learn how functions can return other functions, see <span class="x-name"><a href="Functions.html#TP40014097-CH10-XID_232" data-id="TP40014097-CH10-XID_232">Function Types as Return Types</a></span>.
 </p><p class="para">
   The <code class="code-voice">makeIncrementor</code> function defines an integer variable called <code class="code-voice">runningTotal</code>, to store the current running total of the incrementor that will be returned. This variable is initialized with a value of <code class="code-voice">0</code>.
 </p><p class="para">
@@ -705,7 +705,7 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    	<p class="para">If you assign a closure to a property of a class instance, and the closure captures that instance by referring to the instance or its members, you will create a strong reference cycle between the closure and the instance. Swift uses <em>capture lists</em> to break these strong reference cycles. For more information, see <span class="x-name"><a href="Strong Reference Cycles for Closures.html#TP40014097-CH20-XID_61" data-id="TP40014097-CH20-XID_61">Strong Reference Cycles for Closures</a></span>.
+    	<p class="para">If you assign a closure to a property of a class instance, and the closure captures that instance by referring to the instance or its members, you will create a strong reference cycle between the closure and the instance. Swift uses <em>capture lists</em> to break these strong reference cycles. For more information, see <span class="x-name"><a href="Automatic Reference Counting.html#TP40014097-CH20-XID_61" data-id="TP40014097-CH20-XID_61">Strong Reference Cycles for Closures</a></span>.
     	</p>
     
   </aside>
@@ -752,6 +752,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  	
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

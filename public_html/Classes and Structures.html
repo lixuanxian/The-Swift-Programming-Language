@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0177)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html#TP40014097-CH13-XID_94 -->
+<!-- saved from url=(0177)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Classes and Structures.html#TP40014097-CH13-XID_94 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Classes and Structures</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -648,7 +648,7 @@
 </p>
 </li>
 </ul><p class="para">
-  When you define your own custom classes and structures, it is your responsibility to decide what qualifies as two instances being “equal”. The process of defining your own implementations of the “equal to” and “not equal to” operators is described in <span class="x-name"><a href="Equivalence Operators.html#TP40014097-CH27-XID_47" data-id="TP40014097-CH27-XID_47">Equivalence Operators</a></span>.
+  When you define your own custom classes and structures, it is your responsibility to decide what qualifies as two instances being “equal”. The process of defining your own implementations of the “equal to” and “not equal to” operators is described in <span class="x-name"><a href="Advanced Operators.html#TP40014097-CH27-XID_47" data-id="TP40014097-CH27-XID_47">Equivalence Operators</a></span>.
 </p>
   
 </section>
@@ -724,7 +724,7 @@
   <a name="TP40014097-CH13-XID_111"></a>
   <h3 class="section-name" tabindex="0">Assignment and Copy Behavior for Dictionaries</h3>
   <p class="para">
-  Whenever you assign a <code class="code-voice">Dictionary</code> instance to a constant or variable, or pass a <code class="code-voice">Dictionary</code> instance as an argument to a function or method call, the dictionary is <em>copied</em> at the point that the assignment or call takes place. This process is described in <span class="x-name"><a href="Structures and Enumerations Are Value Types.html#TP40014097-CH13-XID_104" data-id="TP40014097-CH13-XID_104">Structures and Enumerations Are Value Types</a></span>.
+  Whenever you assign a <code class="code-voice">Dictionary</code> instance to a constant or variable, or pass a <code class="code-voice">Dictionary</code> instance as an argument to a function or method call, the dictionary is <em>copied</em> at the point that the assignment or call takes place. This process is described in <span class="x-name"><a href="Classes and Structures.html#TP40014097-CH13-XID_104" data-id="TP40014097-CH13-XID_104">Structures and Enumerations Are Value Types</a></span>.
 </p><p class="para">
   If the keys and/or values stored in the <code class="code-voice">Dictionary</code> instance are value types (structures or enumerations), they too are copied when the assignment or call takes place. Conversely, if the keys and/or values are reference types (classes or functions), the references are copied, but not the class instances or functions that they refer to. This copy behavior for a dictionary’s keys and values is the same as the copy behavior for a structure’s stored properties when the structure is copied.
 </p><p class="para">
@@ -771,7 +771,7 @@
 </p><p class="para">
   If you assign an <code class="code-voice">Array</code> instance to a constant or variable, or pass an <code class="code-voice">Array</code> instance as an argument to a function or method call, the contents of the array are <em>not</em> copied at the point that the assignment or call takes place. Instead, both arrays share the same sequence of element values. When you modify an element value through one array, the result is observable through the other.
 </p><p class="para">
-  For arrays, copying only takes place when you perform an action that has the potential to modify the <em>length</em> of the array. This includes appending, inserting, or removing items, or using a ranged subscript to replace a range of items in the array. If and when array copying does take place, the copy behavior for an array’s contents is the same as for a dictionary’s keys and values, as described in <span class="x-name"><a href="Assignment and Copy Behavior for Dictionaries.html#TP40014097-CH13-XID_111" data-id="TP40014097-CH13-XID_111">Assignment and Copy Behavior for Dictionaries</a></span>.
+  For arrays, copying only takes place when you perform an action that has the potential to modify the <em>length</em> of the array. This includes appending, inserting, or removing items, or using a ranged subscript to replace a range of items in the array. If and when array copying does take place, the copy behavior for an array’s contents is the same as for a dictionary’s keys and values, as described in <span class="x-name"><a href="Classes and Structures.html#TP40014097-CH13-XID_111" data-id="TP40014097-CH13-XID_111">Assignment and Copy Behavior for Dictionaries</a></span>.
 </p><p class="para">
   The example below assigns a new array of <code class="code-voice">Int</code> values to a variable called <code class="code-voice">a</code>. This array is also assigned to two further variables called <code class="code-voice">b</code> and <code class="code-voice">c</code>:
 </p><section class="code-listing">
@@ -1007,6 +1007,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  	
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

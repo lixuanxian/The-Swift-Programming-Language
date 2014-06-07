@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0170)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/BasicOperators.html#TP40014097-CH6-XID_70 -->
+<!-- saved from url=(0170)Basic Operators.html#TP40014097-CH6-XID_70 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
   <title>The Swift Programming Language: Basic Operators</title>
     <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -224,7 +224,7 @@
   An <em>operator</em> is a special symbol or phrase that you use to check, change, or combine values. For example, the addition operator (<code class="code-voice">+</code>) adds two numbers together (as in <code class="code-voice">let i = 1 + 2</code>). More complex examples include the logical AND operator <code class="code-voice">&amp;&amp;</code> (as in <code class="code-voice">if enteredDoorCode &amp;&amp; passedRetinaScan</code>) and the increment operator <code class="code-voice">++i</code>, which is a shortcut to increase the value of <code class="code-voice">i</code> by <code class="code-voice">1</code>.
 </p>
 <p class="para">
-  Swift supports most standard C operators and improves several capabilities to eliminate common coding errors. The assignment operator (<code class="code-voice">=</code>) does not return a value, to prevent it from being mistakenly used when the equal to operator (<code class="code-voice">==</code>) is intended. Arithmetic operators (<code class="code-voice">+</code>, <code class="code-voice">-</code>, <code class="code-voice">*</code>, <code class="code-voice">/</code>, <code class="code-voice">%</code> and so forth) detect and disallow value overflow, to avoid unexpected results when working with numbers that become larger or smaller than the allowed value range of the type that stores them. You can opt in to value overflow behavior by using Swift’s overflow operators, as described in <span class="x-name"><a href="Overflow Operators.html#TP40014097-CH27-XID_37" data-id="TP40014097-CH27-XID_37">Overflow Operators</a></span>.
+  Swift supports most standard C operators and improves several capabilities to eliminate common coding errors. The assignment operator (<code class="code-voice">=</code>) does not return a value, to prevent it from being mistakenly used when the equal to operator (<code class="code-voice">==</code>) is intended. Arithmetic operators (<code class="code-voice">+</code>, <code class="code-voice">-</code>, <code class="code-voice">*</code>, <code class="code-voice">/</code>, <code class="code-voice">%</code> and so forth) detect and disallow value overflow, to avoid unexpected results when working with numbers that become larger or smaller than the allowed value range of the type that stores them. You can opt in to value overflow behavior by using Swift’s overflow operators, as described in <span class="x-name"><a href="Advanced Operators.html#TP40014097-CH27-XID_37" data-id="TP40014097-CH27-XID_37">Overflow Operators</a></span>.
 </p>
 <p class="para">
   Unlike C, Swift lets you perform remainder (<code class="code-voice">%</code>) calculations on floating-point numbers. Swift also provides two range operators (<code class="code-voice">a..b</code> and <code class="code-voice">a...b</code>) not found in C, as a shortcut for expressing a range of values.
@@ -348,7 +348,7 @@
 
   </div>
 </section><p class="para">
-  Unlike the arithmetic operators in C and Objective-C, the Swift arithmetic operators do not allow values to overflow by default. You can opt in to value overflow behavior by using Swift’s overflow operators (such as <code class="code-voice">a &amp;+ b</code>). See <span class="x-name"><a href="Overflow Operators.html#TP40014097-CH27-XID_37" data-id="TP40014097-CH27-XID_37">Overflow Operators</a></span>.
+  Unlike the arithmetic operators in C and Objective-C, the Swift arithmetic operators do not allow values to overflow by default. You can opt in to value overflow behavior by using Swift’s overflow operators (such as <code class="code-voice">a &amp;+ b</code>). See <span class="x-name"><a href="Advanced Operators.html#TP40014097-CH27-XID_37" data-id="TP40014097-CH27-XID_37">Overflow Operators</a></span>.
 </p><p class="para">
   The addition operator is also supported for <code class="code-voice">String</code> concatenation:
 </p><section class="code-listing">
@@ -381,7 +381,7 @@
 
   </div>
 </section><p class="para">
-  See also <span class="x-name"><a href="Concatenating Strings and Characters.html#TP40014097-CH7-XID_379" data-id="TP40014097-CH7-XID_379">Concatenating Strings and Characters</a></span>.
+  See also <span class="x-name"><a href="Strings and Characters.html#TP40014097-CH7-XID_379" data-id="TP40014097-CH7-XID_379"></a></span>.
 </p>
   <section class="section">
   <a name="TP40014097-CH6-XID_74"></a>
@@ -835,7 +835,7 @@
 
   </div>
 </section><p class="para">
-  Note that the array contains four items, but <code class="code-voice">0..count</code> only counts as far as <code class="code-voice">3</code> (the index of the last item in the array), because it is a half-closed range. For more on arrays, see <span class="x-name"><a href="Arrays.html#TP40014097-CH8-XID_135" data-id="TP40014097-CH8-XID_135">Arrays</a></span>.
+  Note that the array contains four items, but <code class="code-voice">0..count</code> only counts as far as <code class="code-voice">3</code> (the index of the last item in the array), because it is a half-closed range. For more on arrays, see <span class="x-name"><a href="Collection Types.html#TP40014097-CH8-XID_135" data-id="TP40014097-CH8-XID_135">Arrays</a></span>.
 </p>
   
 </section>
@@ -1024,6 +1024,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  	
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

@@ -217,7 +217,7 @@
   <p class="para">
   In its simplest form, a stored property is a constant or variable that is stored as part of an instance of a particular class or structure. Stored properties can be either <em>variable stored properties</em> (introduced by the <code class="code-voice">var</code> keyword) or <em>constant stored properties</em> (introduced by the <code class="code-voice">let</code> keyword).
 </p><p class="para">
-  You can provide a default value for a stored property as part of its definition, as described in <span class="x-name"><a href="Default Property Values.html#TP40014097-CH18-XID_270" data-id="TP40014097-CH18-XID_270">Default Property Values</a></span>. You can also set and modify the initial value for a stored property during initialization. This is true even for constant stored properties, as described in <span class="x-name"><a href="Modifying Constant Properties During Initialization.html#TP40014097-CH18-XID_277" data-id="TP40014097-CH18-XID_277">Modifying Constant Properties During Initialization</a></span>.
+  You can provide a default value for a stored property as part of its definition, as described in <span class="x-name"><a href="Initialization.html#TP40014097-CH18-XID_270" data-id="TP40014097-CH18-XID_270">Default Property Values</a></span>. You can also set and modify the initial value for a stored property during initialization. This is true even for constant stored properties, as described in <span class="x-name"><a href="Initialization.html#TP40014097-CH18-XID_277" data-id="TP40014097-CH18-XID_277">Modifying Constant Properties During Initialization</a></span>.
 </p><p class="para">
   The example below defines a structure called <code class="code-voice">FixedLengthRange</code>, which describes a range of integers whose range length cannot be changed once it is created:
 </p><section class="code-listing">
@@ -508,7 +508,7 @@
   <p class="para">
   <em>Property observers</em> observe and respond to changes in a property’s value. Property observers are called every time a property’s value is set, even if the new value is the same as the property’s current value.
 </p><p class="para">
-  You can add property observers to any stored properties you define, apart from lazy stored properties. You can also add property observers to any inherited property (whether stored or computed) by overriding the property within a subclass. Property overriding is described in <span class="x-name"><a href="Overriding.html#TP40014097-CH17-XID_257" data-id="TP40014097-CH17-XID_257">Overriding</a></span>.
+  You can add property observers to any stored properties you define, apart from lazy stored properties. You can also add property observers to any inherited property (whether stored or computed) by overriding the property within a subclass. Property overriding is described in <span class="x-name"><a href="Inheritance.html#TP40014097-CH17-XID_257" data-id="TP40014097-CH17-XID_257">Overriding</a></span>.
 </p><div class="note">
   <a name="TP40014097-CH14-XID_334"></a>
   <aside class="aside">
@@ -610,7 +610,7 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    	<p class="para">Global constants and variables are always computed lazily, in a similar manner to <span class="x-name"><a href="Lazy Stored Properties.html#TP40014097-CH14-XID_326" data-id="TP40014097-CH14-XID_326">Lazy Stored Properties</a></span>. Unlike lazy stored properties, global constants and variables do not need to be marked with the <code class="code-voice">@lazy</code> attribute.
+    	<p class="para">Global constants and variables are always computed lazily, in a similar manner to <span class="x-name"><a href="#TP40014097-CH14-XID_326" data-id="TP40014097-CH14-XID_326">Lazy Stored Properties</a></span>. Unlike lazy stored properties, global constants and variables do not need to be marked with the <code class="code-voice">@lazy</code> attribute.
     	</p>
     <p class="para">
   Local constants and variables are never computed lazily.
@@ -846,6 +846,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  	
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

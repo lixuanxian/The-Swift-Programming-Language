@@ -507,7 +507,7 @@
   <a name="TP40014097-CH25-XID_350"></a>
   <h3 class="section-name" tabindex="0">Mutating Method Requirements</h3>
   <p class="para">
-  It is sometimes necessary for a method to modify (or <em>mutate</em>) the instance it belongs to. For instance methods on value types (that is, structures and enumerations) you place the <code class="code-voice">mutating</code> keyword before a method’s <code class="code-voice">func</code> keyword to indicate that the method is allowed to modify the instance it belongs to and/or any properties of that instance. This process is described in <span class="x-name"><a href="Modifying Value Types from Within Instance Methods.html#TP40014097-CH15-XID_305" data-id="TP40014097-CH15-XID_305">Modifying Value Types from Within Instance Methods</a></span>.
+  It is sometimes necessary for a method to modify (or <em>mutate</em>) the instance it belongs to. For instance methods on value types (that is, structures and enumerations) you place the <code class="code-voice">mutating</code> keyword before a method’s <code class="code-voice">func</code> keyword to indicate that the method is allowed to modify the instance it belongs to and/or any properties of that instance. This process is described in <span class="x-name"><a href="Methods.html#TP40014097-CH15-XID_305" data-id="TP40014097-CH15-XID_305">Modifying Value Types from Within Instance Methods</a></span>.
 </p><p class="para">
   If you define a protocol instance method requirement that is intended to mutate instances of any type that adopts the protocol, mark the method with the <code class="code-voice">mutating</code> keyword as part of the protocol’s definition. This enables structures and enumerations to adopt the protocol and satisfy that method requirement.
 </p><div class="note">
@@ -726,7 +726,7 @@
 
   </div>
 </section><p class="para">
-  For a description of the <em>Snakes and Ladders</em> gameplay, see the <span class="x-name"><a href="Break.html#TP40014097-CH9-XID_174" data-id="TP40014097-CH9-XID_174">Break</a></span> section of the <span class="x-name"><a href="Control Flow.html#TP40014097-CH9-XID_153" data-id="TP40014097-CH9-XID_153">Control Flow</a></span> chapter.
+  For a description of the <em>Snakes and Ladders</em> gameplay, see the <span class="x-name"><a href="Control Flow.html#TP40014097-CH9-XID_174" data-id="TP40014097-CH9-XID_174">Break</a></span> section of the <span class="x-name"><a href="Control Flow.html#TP40014097-CH9-XID_153" data-id="TP40014097-CH9-XID_153">Control Flow</a></span> chapter.
 </p><p class="para">
   This version of the game is wrapped up as a class called <code class="code-voice">SnakesAndLadders</code>, which adopts the <code class="code-voice">DiceGame</code> protocol. It provides a gettable <code class="code-voice">dice</code> property and a <code class="code-voice">play</code> method in order to conform to the protocol. (The <code class="code-voice">dice</code> property is declared as a constant property because it does not need to change after initialization, and the protocol only requires that it is gettable.)
 </p><p class="para">
@@ -945,7 +945,7 @@
   <a name="TP40014097-CH25-XID_359"></a>
   <h3 class="section-name" tabindex="0">Collections of Protocol Types</h3>
   <p class="para">
-  A protocol can be used as the type to be stored in a collection such as an array or a dictionary, as mentioned in <span class="x-name"><a href="Protocols as Types.html#TP40014097-CH25-XID_352" data-id="TP40014097-CH25-XID_352">Protocols as Types</a></span>. This example creates an array of <code class="code-voice">TextRepresentable</code> things:
+  A protocol can be used as the type to be stored in a collection such as an array or a dictionary, as mentioned in <span class="x-name"><a href="#TP40014097-CH25-XID_352" data-id="TP40014097-CH25-XID_352">Protocols as Types</a></span>. This example creates an array of <code class="code-voice">TextRepresentable</code> things:
 </p><section class="code-listing">
   
   <span class="caption"></span>
@@ -1169,7 +1169,7 @@
   <aside class="aside">
     <p class="aside-title">Note
     </p>
-    	<p class="para">You can check for protocol conformance only if your protocol is marked with the <code class="code-voice">@objc</code> attribute, as seen for the <code class="code-voice">HasArea</code> protocol above. This attribute indicates that the protocol should be exposed to Objective-C code and is described in <em class="u-book"><a href="Using Swift with Cocoa and Objective.html#TP40014216" target="_self">Using Swift with Cocoa and Objective-C</a></em>. Even if you are not interoperating with Objective-C, you need to mark your protocols with the <code class="code-voice">@objc</code> attribute if you want to be able to check for protocol conformance.
+    	<p class="para">You can check for protocol conformance only if your protocol is marked with the <code class="code-voice">@objc</code> attribute, as seen for the <code class="code-voice">HasArea</code> protocol above. This attribute indicates that the protocol should be exposed to Objective-C code and is described in <em class="u-book"><a href="UsingSwiftWithCocoaAndObjective-C/Basic Setup.htm#TP40014216" target="_self">Using Swift with Cocoa and Objective-C</a></em>. Even if you are not interoperating with Objective-C, you need to mark your protocols with the <code class="code-voice">@objc</code> attribute if you want to be able to check for protocol conformance.
     	</p>
     <p class="para">
   Note also that <code class="code-voice">@objc</code> protocols can be adopted only by classes, and not by structures or enumerations. If you mark your protocol as <code class="code-voice">@objc</code> in order to check for conformance, you will be able to apply that protocol only to class types.
@@ -1461,6 +1461,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  	
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

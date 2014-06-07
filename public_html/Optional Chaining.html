@@ -464,7 +464,7 @@
   <a name="TP40014097-CH21-XID_316"></a>
   <h3 class="section-name" tabindex="0">Calling Properties Through Optional Chaining</h3>
   <p class="para">
-  As demonstrated in <span class="x-name"><a href="Optional Chaining as an Alternative to Forced Unwrapping.html#TP40014097-CH21-XID_314" data-id="TP40014097-CH21-XID_314">Optional Chaining as an Alternative to Forced Unwrapping</a></span>, you can use optional chaining to access a property on an optional value, and to check if that property access is successful. You cannot, however, set a property’s value through optional chaining.
+  As demonstrated in <span class="x-name"><a href="#TP40014097-CH21-XID_314" data-id="TP40014097-CH21-XID_314">Optional Chaining as an Alternative to Forced Unwrapping</a></span>, you can use optional chaining to access a property on an optional value, and to check if that property access is successful. You cannot, however, set a property’s value through optional chaining.
 </p><p class="para">
   Use the classes defined above to create a new <code class="code-voice">Person</code> instance, and try to access its <code class="code-voice">numberOfRooms</code> property as before:
 </p><section class="code-listing">
@@ -512,7 +512,7 @@
 
   </div>
 </section><p class="para">
-  This method does not specify a return type. However, functions and methods with no return type have an implicit return type of <code class="code-voice">Void</code>, as described in <span class="x-name"><a href="Functions Without Return Values.html#TP40014097-CH10-XID_209" data-id="TP40014097-CH10-XID_209">Functions Without Return Values</a></span>.
+  This method does not specify a return type. However, functions and methods with no return type have an implicit return type of <code class="code-voice">Void</code>, as described in <span class="x-name"><a href="Functions.html#TP40014097-CH10-XID_209" data-id="TP40014097-CH10-XID_209">Functions Without Return Values</a></span>.
 </p><p class="para">
   If you call this method on an optional value with optional chaining, the method’s return type will be <code class="code-voice">Void?</code>, not <code class="code-voice">Void</code>, because return values are always of an optional type when called through optional chaining. This enables you to use an <code class="code-voice">if</code> statement to check whether it was possible to call the <code class="code-voice">printNumberOfRooms</code> method, even though the method does not itself define a return value. The implicit return value from the <code class="code-voice">printNumberOfRooms</code> will be equal to <code class="code-voice">Void</code> if the method was called succesfully through optional chaining, or <code class="code-voice">nil</code> if was not:
 </p><section class="code-listing">
@@ -739,6 +739,6 @@
     <div id="big_button"></div>
     <footer id="footer">
   <div class="content-wrapper">
-  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  	
   </div>
     <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

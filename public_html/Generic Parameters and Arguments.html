@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0187)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GenericParametersAndArguments.html#TP40014097-CH37-XID_774 -->
+<!-- saved from url=(0187)https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Generic Parameters and Arguments.html#TP40014097-CH37-XID_774 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
         <title>The Swift Programming Language: Generic Parameters and Arguments</title>
         <link rel="stylesheet" type="text/css" href="resource/style-1.1.15.css"> 
@@ -147,327 +147,327 @@
               </ul>
           </nav>
 
-          <article class="chapter">
-              <a name="TP40014097-CH37"></a><a name="TP40014097-CH37-XID_774"></a>
-              <div class="pixel-line"></div>
-              <h2 class="chapter-name chapter-name-short">Generic Parameters and Arguments</h2>
+    <article class="chapter">
+  <a name="TP40014097-CH37"></a><a name="TP40014097-CH37-XID_774"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Generic Parameters and Arguments</h2>
 
 
-              <section id="mini_toc" class="hideInXcode" role="navigation">
-<div id="mini_toc_button">
-    <p>On This Page</p>
-</div>
-<ul class="list-bullet">
-    <li class="item">
-        <p class="para">
-            <a href="#TP40014097-CH37-XID_775">
-                Generic Parameter Clause
-            </a>
-        </p>
-    </li>
-    <li class="item">
-        <p class="para">
-            <a href="#TP40014097-CH37-XID_789">
-                Generic Argument Clause
-            </a>
-        </p>
-    </li>
-</ul>
-              </section>
+      <section role="navigation" class="hideInXcode" id="mini_toc">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="#TP40014097-CH37-XID_775">
+	  				Generic Parameter Clause
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="#TP40014097-CH37-XID_789">
+	  				Generic Argument Clause
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
 
-
-              <section class="section">
-<p class="para">
-    This chapter describes parameters and arguments for generic types, functions, and initializers. When you declare a generic type, function, or initializer, you specify the type parameters that the generic type, function, or initializer can work with. These type parameters act as placeholders that are replaced by actual concrete type arguments when an instance of a generic type is created or a generic function or initializer is called.
+  
+  	<section class="section">
+  		<p class="para">
+  This chapter describes parameters and arguments for generic types, functions, and initializers. When you declare a generic type, function, or initializer, you specify the type parameters that the generic type, function, or initializer can work with. These type parameters act as placeholders that are replaced by actual concrete type arguments when an instance of a generic type is created or a generic function or initializer is called.
 </p>
 <p class="para">
-    For an overview of generics in Swift, see <span class="x-name"><a href="Generics.html#TP40014097-CH26-XID_234" data-id="TP40014097-CH26-XID_234">Generics</a></span>.
+  For an overview of generics in Swift, see <span class="x-name"><a data-id="TP40014097-CH26-XID_234" href="Generics.html#TP40014097-CH26-XID_234">Generics</a></span>.
 </p>
 
-              </section> 
+		</section> 
 
 
-              <section class="section">
-<a name="TP40014097-CH37-XID_775"></a>
-<h3 class="section-name" tabindex="0">Generic Parameter Clause</h3>
-<p class="para">
-    A <em>generic parameter clause</em> specifies the type parameters of a generic type or function, along with any associated constraints and requirements on those parameters. A generic parameter clause is enclosed in angle brackets (&lt;&gt;) and has one of the following forms:
+  <section class="section">
+  <a name="TP40014097-CH37-XID_775"></a>
+  <h3 tabindex="0" class="section-name">Generic Parameter Clause</h3>
+  <p class="para">
+  A <em>generic parameter clause</em> specifies the type parameters of a generic type or function, along with any associated constraints and requirements on those parameters. A generic parameter clause is enclosed in angle brackets (&lt;&gt;) and has one of the following forms:
 </p><span class="caption"></span>
 <div class="code-outline">
-    <ul class="code-outline-lines">
-        <li><pre class="code-voice">&lt;<em class="variable-text">generic parameter list</em>&gt;</pre></li><li><pre class="code-voice">&lt;<em class="variable-text">generic parameter list</em> <span class="kt">where</span> <em class="variable-text">requirements</em>&gt;</pre></li>
-    </ul>
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice">&lt;<em class="variable-text">generic parameter list</em>&gt;</pre></li><li><pre class="code-voice">&lt;<em class="variable-text">generic parameter list</em> <span class="kt">where</span> <em class="variable-text">requirements</em>&gt;</pre></li>
+  </ul>
 </div><p class="para">
-    The <em>generic parameter list</em> is a comma-separated list of generic parameters, each of which has the following form:
+  The <em>generic parameter list</em> is a comma-separated list of generic parameters, each of which has the following form:
 </p><span class="caption"></span>
 <div class="code-outline">
-    <ul class="code-outline-lines">
-        <li><pre class="code-voice"><em class="variable-text">type parameter</em>: <em class="variable-text">constraint</em></pre></li>
-    </ul>
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><em class="variable-text">type parameter</em>: <em class="variable-text">constraint</em></pre></li>
+  </ul>
 </div><p class="para">
-    A generic parameter consists of a <em>type parameter</em> followed by an optional <em>constraint</em>. A <em>type parameter</em> is simply the name of a placeholder type (for instance, <code class="code-voice">T</code>, <code class="code-voice">U</code>, <code class="code-voice">V</code>, <code class="code-voice">KeyType</code>, <code class="code-voice">ValueType</code>, and so on). You have access to the type parameters (and any of their associated types) in the rest of the type, function, or initializer declaration, including in the signature of the function or initializer.
+  A generic parameter consists of a <em>type parameter</em> followed by an optional <em>constraint</em>. A <em>type parameter</em> is simply the name of a placeholder type (for instance, <code class="code-voice">T</code>, <code class="code-voice">U</code>, <code class="code-voice">V</code>, <code class="code-voice">KeyType</code>, <code class="code-voice">ValueType</code>, and so on). You have access to the type parameters (and any of their associated types) in the rest of the type, function, or initializer declaration, including in the signature of the function or initializer.
 </p><p class="para">
-    The <em>constraint</em> specifies that a type parameter inherits from a specific class or conforms to a protocol or protocol composition. For instance, in the generic function below, the generic parameter <code class="code-voice">T: Comparable</code> indicates that any type argument substituted for the type parameter <code class="code-voice">T</code> must conform to the <code class="code-voice">Comparable</code> protocol.
+  The <em>constraint</em> specifies that a type parameter inherits from a specific class or conforms to a protocol or protocol composition. For instance, in the generic function below, the generic parameter <code class="code-voice">T: Comparable</code> indicates that any type argument substituted for the type parameter <code class="code-voice">T</code> must conform to the <code class="code-voice">Comparable</code> protocol.
 </p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
 
-    <span class="caption"></span>
-    <div class="code-sample">
-
-        <ul class="code-lines">
-            <li><code class="code-voice"><span class="kt">func</span> <span class="vc">simpleMin</span>&lt;<span class="vc">T</span>: <span class="vc">Comparable</span>&gt;(<span class="vc">x</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->T<!-- /a --></span> {</code></li>
-            <li><code class="code-voice">    <span class="kt">if</span> <span class="vc">x</span> &lt; <span class="vc">y</span> {</code></li>
-            <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">y</span></code></li>
-            <li><code class="code-voice">    }</code></li>
-            <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">x</span></code></li>
-            <li><code class="code-voice">}</code></li>
-        </ul>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">simpleMin</span>&lt;<span class="vc">T</span>: <span class="vc">Comparable</span>&gt;(<span class="vc">x</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->T<!-- /a --></span>) -&gt; <span class="n"><!-- a href="" -->T<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">if</span> <span class="vc">x</span> &lt; <span class="vc">y</span> {</code></li>
+          <li><code class="code-voice">        <span class="kt">return</span> <span class="vc">y</span></code></li>
+          <li><code class="code-voice">    }</code></li>
+          <li><code class="code-voice">    <span class="kt">return</span> <span class="vc">x</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
 
 
 
-    </div>
+  </div>
 </section><p class="para">
-    Because <code class="code-voice">Int</code> and <code class="code-voice">Double</code>, for example, both conform to the <code class="code-voice">Comparable</code> protocol, this function accepts arguments of either type. In contrast with generic types, you don’t specify a generic argument clause when you use a generic function or initializer. The type arguments are instead inferred from the type of the arguments passed to the function or initializer.
+  Because <code class="code-voice">Int</code> and <code class="code-voice">Double</code>, for example, both conform to the <code class="code-voice">Comparable</code> protocol, this function accepts arguments of either type. In contrast with generic types, you don’t specify a generic argument clause when you use a generic function or initializer. The type arguments are instead inferred from the type of the arguments passed to the function or initializer.
 </p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
 
-    <span class="caption"></span>
-    <div class="code-sample">
-
-        <ul class="code-lines">
-            <li><code class="code-voice"><span class="vc">simpleMin</span>(<span class="m">17</span>, <span class="m">42</span>) <span class="c">// T is inferred to be Int</span></code></li>
-            <li><code class="code-voice"><span class="vc">simpleMin</span>(<span class="m">3.14159</span>, <span class="m">2.71828</span>) <span class="c">// T is inferred to be Double</span></code></li>
-        </ul>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="vc">simpleMin</span>(<span class="m">17</span>, <span class="m">42</span>) <span class="c">// T is inferred to be Int</span></code></li>
+          <li><code class="code-voice"><span class="vc">simpleMin</span>(<span class="m">3.14159</span>, <span class="m">2.71828</span>) <span class="c">// T is inferred to be Double</span></code></li>
+      </ul>
 
 
 
-    </div>
+  </div>
+</section>
+  <section class="section">
+  <a name="TP40014097-CH37-XID_776"></a>
+  <h3 tabindex="0" class="section-name">Where Clauses</h3>
+  <p class="para">
+  You can specify additional requirements on type parameters and their associated types by including a <code class="code-voice">where</code> clause after the <em>generic parameter list</em>. A <code class="code-voice">where</code> clause consists of the keyword <code class="code-voice">where</code>, followed by a comma-separated list of one or more <em>requirements</em>.
+</p><p class="para">
+  The <em>requirements</em> in a <code class="code-voice">where</code> clause specify that a type parameter inherits from a class or conforms to a protocol or protocol composition. Although the <code class="code-voice">where</code> clause provides syntactic sugar for expressing simple constraints on type parameters (for instance, <code class="code-voice">T: Comparable</code> is equivalent to <code class="code-voice">T where T: Comparable</code> and so on), you can use it to provide more complex constraints on type parameters and their associated types. For instance, you can express the constraints that a generic type <code class="code-voice">T</code> inherits from a class <code class="code-voice">C</code> and conforms to a protocol <code class="code-voice">P</code> as <code class="code-voice">&lt;T where T: C, T: P&gt;</code>.
+</p><p class="para">
+  As mentioned above, you can constrain the associated types of type parameters to conform to protocols. For example, the generic parameter clause <code class="code-voice">&lt;T: Generator where T.Element: Equatable&gt;</code> specifies that <code class="code-voice">T</code> conforms to the <code class="code-voice">Generator</code> protocol and the associated type of <code class="code-voice">T</code>, <code class="code-voice">T.Element</code>, conforms to the <code class="code-voice">Equatable</code> protocol (<code class="code-voice">T</code> has the associated type <code class="code-voice">Element</code> because <code class="code-voice">Generator</code> declares <code class="code-voice">Element</code> and <code class="code-voice">T</code> conforms to <code class="code-voice">Generator</code>).
+</p><p class="para">
+  You can also specify the requirement that two types be identical, using the <code class="code-voice">==</code> operator. For example, the generic parameter clause <code class="code-voice">&lt;T: Generator, U: Generator where T.Element == U.Element&gt;</code> expresses the constraints that <code class="code-voice">T</code> and <code class="code-voice">U</code> conform to the <code class="code-voice">Generator</code> protocol and that their associated types must be identical.
+</p><p class="para">
+  Any type argument substituted for a type parameter must meet all the constraints and requirements placed on the type parameter.
+</p><p class="para">
+  You can overload a generic function or initializer by providing different constraints, requirements, or both on the type parameters in the generic parameter clause. When you call an overloaded generic function or initializer, the compiler uses these constraints to resolve which overloaded function or initializer to invoke.
+</p><p class="para">
+  You can subclass a generic class, but the subclass must also be a generic class.
+</p><div class="syntax-defs">
+  <p class="syntax-defs-name">
+  Grammar of a generic parameter clause
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/generic-parameter-clause"></a>
+  <span class="syntax-def-name">
+  generic-parameter-clause
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">&lt;­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/generic-parameter-list" href="#//apple_ref/swift/grammar/generic-parameter-list">generic-parameter-list</a>­</span><span class="optional"><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/requirement-clause" href="#//apple_ref/swift/grammar/requirement-clause">requirement-clause</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">&gt;­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/generic-parameter-list"></a>
+  <span class="syntax-def-name">
+  generic-parameter-list
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/generic-parameter" href="#//apple_ref/swift/grammar/generic-parameter">generic-parameter</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/generic-parameter" href="#//apple_ref/swift/grammar/generic-parameter">generic-parameter</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/generic-parameter-list" href="#//apple_ref/swift/grammar/generic-parameter-list">generic-parameter-list</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/generic-parameter"></a>
+  <span class="syntax-def-name">
+  generic-parameter
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-name" href="Types.html#//apple_ref/swift/grammar/type-name">type-name</a>­</span>
+</p><p class="syntax-def">
+  <a name="TP40014097-CH37-XID_781"></a>
+  <span class="syntax-def-name">
+  generic-parameter
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-name" href="Types.html#//apple_ref/swift/grammar/type-name">type-name</a>­</span><code class="literal">:­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-identifier" href="Types.html#//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span>
+</p><p class="syntax-def">
+  <a name="TP40014097-CH37-XID_782"></a>
+  <span class="syntax-def-name">
+  generic-parameter
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-name" href="Types.html#//apple_ref/swift/grammar/type-name">type-name</a>­</span><code class="literal">:­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/protocol-composition-type" href="Types.html#//apple_ref/swift/grammar/protocol-composition-type">protocol-composition-type</a>­</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/requirement-clause"></a>
+  <span class="syntax-def-name">
+  requirement-clause
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">where­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/requirement-list" href="#//apple_ref/swift/grammar/requirement-list">requirement-list</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/requirement-list"></a>
+  <span class="syntax-def-name">
+  requirement-list
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/requirement" href="#//apple_ref/swift/grammar/requirement">requirement</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/requirement" href="#//apple_ref/swift/grammar/requirement">requirement</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/requirement-list" href="#//apple_ref/swift/grammar/requirement-list">requirement-list</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/requirement"></a>
+  <span class="syntax-def-name">
+  requirement
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/conformance-requirement" href="#//apple_ref/swift/grammar/conformance-requirement">conformance-requirement</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/same-type-requirement" href="#//apple_ref/swift/grammar/same-type-requirement">same-type-requirement</a>­</span>
+</span>
+</p>
+</div><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/conformance-requirement"></a>
+  <span class="syntax-def-name">
+  conformance-requirement
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-identifier" href="Types.html#//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><code class="literal">:­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-identifier" href="Types.html#//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span>
+</p><p class="syntax-def">
+  <a name="TP40014097-CH37-XID_787"></a>
+  <span class="syntax-def-name">
+  conformance-requirement
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-identifier" href="Types.html#//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><code class="literal">:­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/protocol-composition-type" href="Types.html#//apple_ref/swift/grammar/protocol-composition-type">protocol-composition-type</a>­</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/same-type-requirement"></a>
+  <span class="syntax-def-name">
+  same-type-requirement
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-identifier" href="Types.html#//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><code class="literal">==­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type-identifier" href="Types.html#//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span>
+</p>
+</div>
+ </div>
+  
+</section>
+
 </section>
 <section class="section">
-    <a name="TP40014097-CH37-XID_776"></a>
-    <h3 class="section-name" tabindex="0">Where Clauses</h3>
-    <p class="para">
-        You can specify additional requirements on type parameters and their associated types by including a <code class="code-voice">where</code> clause after the <em>generic parameter list</em>. A <code class="code-voice">where</code> clause consists of the keyword <code class="code-voice">where</code>, followed by a comma-separated list of one or more <em>requirements</em>.
-    </p><p class="para">
-        The <em>requirements</em> in a <code class="code-voice">where</code> clause specify that a type parameter inherits from a class or conforms to a protocol or protocol composition. Although the <code class="code-voice">where</code> clause provides syntactic sugar for expressing simple constraints on type parameters (for instance, <code class="code-voice">T: Comparable</code> is equivalent to <code class="code-voice">T where T: Comparable</code> and so on), you can use it to provide more complex constraints on type parameters and their associated types. For instance, you can express the constraints that a generic type <code class="code-voice">T</code> inherits from a class <code class="code-voice">C</code> and conforms to a protocol <code class="code-voice">P</code> as <code class="code-voice">&lt;T where T: C, T: P&gt;</code>.
-    </p><p class="para">
-        As mentioned above, you can constrain the associated types of type parameters to conform to protocols. For example, the generic parameter clause <code class="code-voice">&lt;T: Generator where T.Element: Equatable&gt;</code> specifies that <code class="code-voice">T</code> conforms to the <code class="code-voice">Generator</code> protocol and the associated type of <code class="code-voice">T</code>, <code class="code-voice">T.Element</code>, conforms to the <code class="code-voice">Equatable</code> protocol (<code class="code-voice">T</code> has the associated type <code class="code-voice">Element</code> because <code class="code-voice">Generator</code> declares <code class="code-voice">Element</code> and <code class="code-voice">T</code> conforms to <code class="code-voice">Generator</code>).
-    </p><p class="para">
-        You can also specify the requirement that two types be identical, using the <code class="code-voice">==</code> operator. For example, the generic parameter clause <code class="code-voice">&lt;T: Generator, U: Generator where T.Element == U.Element&gt;</code> expresses the constraints that <code class="code-voice">T</code> and <code class="code-voice">U</code> conform to the <code class="code-voice">Generator</code> protocol and that their associated types must be identical.
-    </p><p class="para">
-        Any type argument substituted for a type parameter must meet all the constraints and requirements placed on the type parameter.
-    </p><p class="para">
-        You can overload a generic function or initializer by providing different constraints, requirements, or both on the type parameters in the generic parameter clause. When you call an overloaded generic function or initializer, the compiler uses these constraints to resolve which overloaded function or initializer to invoke.
-    </p><p class="para">
-        You can subclass a generic class, but the subclass must also be a generic class.
-    </p><div class="syntax-defs">
-        <p class="syntax-defs-name">
-            Grammar of a generic parameter clause
-        </p><div class="syntax-defs-group">
-            <p class="syntax-def">
-                <a name="//apple_ref/swift/grammar/generic-parameter-clause"></a>
-                <span class="syntax-def-name">
-  generic-parameter-clause
-                </span>
-                <span class="arrow">
-  →
-                </span><code class="literal">&lt;­</code><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-list" data-id="//apple_ref/swift/grammar/generic-parameter-list">generic-parameter-list</a>­</span><span class="optional"><span class="syntactic-cat"><a href="requirement.html#//apple_ref/swift/grammar/requirement-clause" data-id="//apple_ref/swift/grammar/requirement-clause">requirement-clause</a>­</span><sub class="subscript">opt</sub>­</span><code class="literal">&gt;­</code>
-            </p><p class="syntax-def">
-                <a name="//apple_ref/swift/grammar/generic-parameter-list"></a>
-                <span class="syntax-def-name">
-  generic-parameter-list
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="alternative">
-  <span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter" data-id="//apple_ref/swift/grammar/generic-parameter">generic-parameter</a>­</span>
-                </span><span class="alternative">
-  <span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter" data-id="//apple_ref/swift/grammar/generic-parameter">generic-parameter</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-parameter-list" data-id="//apple_ref/swift/grammar/generic-parameter-list">generic-parameter-list</a>­</span>
-                </span>
-            </p><p class="syntax-def">
-                <a name="//apple_ref/swift/grammar/generic-parameter"></a>
-                <span class="syntax-def-name">
-  generic-parameter
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-name" data-id="//apple_ref/swift/grammar/type-name">type-name</a>­</span>
-            </p><p class="syntax-def">
-                <a name="TP40014097-CH37-XID_781"></a>
-                <span class="syntax-def-name">
-  generic-parameter
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-name" data-id="//apple_ref/swift/grammar/type-name">type-name</a>­</span><code class="literal">:­</code><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span>
-            </p><p class="syntax-def">
-                <a name="TP40014097-CH37-XID_782"></a>
-                <span class="syntax-def-name">
-  generic-parameter
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-name" data-id="//apple_ref/swift/grammar/type-name">type-name</a>­</span><code class="literal">:­</code><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-composition-type" data-id="//apple_ref/swift/grammar/protocol-composition-type">protocol-composition-type</a>­</span>
-            </p>
-        </div><div class="syntax-defs-group">
-            <p class="syntax-def">
-                <a name="//apple_ref/swift/grammar/requirement-clause"></a>
-                <span class="syntax-def-name">
-  requirement-clause
-                </span>
-                <span class="arrow">
-  →
-                </span><code class="literal">where­</code><span class="syntactic-cat"><a href="requirement.html#//apple_ref/swift/grammar/requirement-list" data-id="//apple_ref/swift/grammar/requirement-list">requirement-list</a>­</span>
-            </p><p class="syntax-def">
-                <a name="//apple_ref/swift/grammar/requirement-list"></a>
-                <span class="syntax-def-name">
-  requirement-list
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="alternative">
-  <span class="syntactic-cat"><a href="requirement.html#//apple_ref/swift/grammar/requirement" data-id="//apple_ref/swift/grammar/requirement">requirement</a>­</span>
-                </span><span class="alternative">
-  <span class="syntactic-cat"><a href="requirement.html#//apple_ref/swift/grammar/requirement" data-id="//apple_ref/swift/grammar/requirement">requirement</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a href="requirement.html#//apple_ref/swift/grammar/requirement-list" data-id="//apple_ref/swift/grammar/requirement-list">requirement-list</a>­</span>
-                </span>
-            </p><p class="syntax-def">
-                <a name="//apple_ref/swift/grammar/requirement"></a>
-                <span class="syntax-def-name">
-  requirement
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="alternative">
-  <span class="syntactic-cat"><a href="conformance.html#//apple_ref/swift/grammar/conformance-requirement" data-id="//apple_ref/swift/grammar/conformance-requirement">conformance-requirement</a>­</span>
-                </span><span class="alternative">
-  <span class="syntactic-cat"><a href="same.html#//apple_ref/swift/grammar/same-type-requirement" data-id="//apple_ref/swift/grammar/same-type-requirement">same-type-requirement</a>­</span>
-                </span>
-            </p>
-        </div><div class="syntax-defs-group">
-            <p class="syntax-def">
-                <a name="//apple_ref/swift/grammar/conformance-requirement"></a>
-                <span class="syntax-def-name">
-  conformance-requirement
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><code class="literal">:­</code><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span>
-            </p><p class="syntax-def">
-                <a name="TP40014097-CH37-XID_787"></a>
-                <span class="syntax-def-name">
-  conformance-requirement
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><code class="literal">:­</code><span class="syntactic-cat"><a href="protocol.html#//apple_ref/swift/grammar/protocol-composition-type" data-id="//apple_ref/swift/grammar/protocol-composition-type">protocol-composition-type</a>­</span>
-            </p><p class="syntax-def">
-                <a name="//apple_ref/swift/grammar/same-type-requirement"></a>
-                <span class="syntax-def-name">
-  same-type-requirement
-                </span>
-                <span class="arrow">
-  →
-                </span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span><code class="literal">==­</code><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type-identifier" data-id="//apple_ref/swift/grammar/type-identifier">type-identifier</a>­</span>
-            </p>
-        </div>
-    </div>
-
-</section>
-
-              </section>
-              <section class="section">
-<a name="TP40014097-CH37-XID_789"></a>
-<h3 class="section-name" tabindex="0">Generic Argument Clause</h3>
-<p class="para">
-    A <em>generic argument clause</em> specifies the type arguments of a generic type. A generic argument clause is enclosed in angle brackets (&lt;&gt;) and has the following form:
+  <a name="TP40014097-CH37-XID_789"></a>
+  <h3 tabindex="0" class="section-name">Generic Argument Clause</h3>
+  <p class="para">
+  A <em>generic argument clause</em> specifies the type arguments of a generic type. A generic argument clause is enclosed in angle brackets (&lt;&gt;) and has the following form:
 </p><span class="caption"></span>
 <div class="code-outline">
-    <ul class="code-outline-lines">
-        <li><pre class="code-voice">&lt;<em class="variable-text">generic argument list</em>&gt;</pre></li>
-    </ul>
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice">&lt;<em class="variable-text">generic argument list</em>&gt;</pre></li>
+  </ul>
 </div><p class="para">
-    The <em>generic argument list</em> is a comma-separated list of type arguments. A <em>type argument</em> is the name of an actual concrete type that replaces a corresponding type parameter in the generic parameter clause of a generic type. The result is a specialized version of that generic type. As an example, the Swift standard library defines a generic dictionary type as:
+  The <em>generic argument list</em> is a comma-separated list of type arguments. A <em>type argument</em> is the name of an actual concrete type that replaces a corresponding type parameter in the generic parameter clause of a generic type. The result is a specialized version of that generic type. As an example, the Swift standard library defines a generic dictionary type as:
 </p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
 
-    <span class="caption"></span>
-    <div class="code-sample">
-
-        <ul class="code-lines">
-            <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Dictionary</span>&lt;<span class="vc">KeyType</span>: <span class="vc">Hashable</span>, <span class="vc">ValueType</span>&gt;: <span class="n"><!-- a href="" -->Collection<!-- /a --></span>, <span class="n"><!-- a href="" -->DictionaryLiteralConvertible<!-- /a --></span> {</code></li>
-            <li><code class="code-voice">    <span class="c">/* ... */</span></code></li>
-            <li><code class="code-voice">}</code></li>
-        </ul>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">struct</span> <span class="vc">Dictionary</span>&lt;<span class="vc">KeyType</span>: <span class="vc">Hashable</span>, <span class="vc">ValueType</span>&gt;: <span class="n"><!-- a href="" -->Collection<!-- /a --></span>, <span class="n"><!-- a href="" -->DictionaryLiteralConvertible<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="c">/* ... */</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
 
 
 
-    </div>
+  </div>
 </section><p class="para">
-    The specialized version of the generic <code class="code-voice">Dictionary</code> type, <code class="code-voice">Dictionary&lt;String, Int&gt;</code> is formed by replacing the generic parameters <code class="code-voice">KeyType: Hashable</code> and <code class="code-voice">ValueType</code> with the concrete type arguments <code class="code-voice">String</code> and <code class="code-voice">Int</code>. Each type argument must satisfy all the constraints of the generic parameter it replaces, including any additional requirements specified in a <code class="code-voice">where</code> clause. In the example above, the <code class="code-voice">KeyType</code> type parameter is constrained to conform to the <code class="code-voice">Hashable</code> protocol and therefore <code class="code-voice">String</code> must also conform to the <code class="code-voice">Hashable</code> protocol.
+  The specialized version of the generic <code class="code-voice">Dictionary</code> type, <code class="code-voice">Dictionary&lt;String, Int&gt;</code> is formed by replacing the generic parameters <code class="code-voice">KeyType: Hashable</code> and <code class="code-voice">ValueType</code> with the concrete type arguments <code class="code-voice">String</code> and <code class="code-voice">Int</code>. Each type argument must satisfy all the constraints of the generic parameter it replaces, including any additional requirements specified in a <code class="code-voice">where</code> clause. In the example above, the <code class="code-voice">KeyType</code> type parameter is constrained to conform to the <code class="code-voice">Hashable</code> protocol and therefore <code class="code-voice">String</code> must also conform to the <code class="code-voice">Hashable</code> protocol.
 </p><p class="para">
-    You can also replace a type parameter with a type argument that is itself a specialized version of a generic type (provided it satisfies the appropriate constraints and requirements). For example, you can replace the type parameter <code class="code-voice">T</code> in <code class="code-voice">Array&lt;T&gt;</code> with a specialized version of an array, <code class="code-voice">Array&lt;Int&gt;</code>, to form an array whose elements are themselves arrays of integers.
+  You can also replace a type parameter with a type argument that is itself a specialized version of a generic type (provided it satisfies the appropriate constraints and requirements). For example, you can replace the type parameter <code class="code-voice">T</code> in <code class="code-voice">Array&lt;T&gt;</code> with a specialized version of an array, <code class="code-voice">Array&lt;Int&gt;</code>, to form an array whose elements are themselves arrays of integers.
 </p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
 
-    <span class="caption"></span>
-    <div class="code-sample">
-
-        <ul class="code-lines">
-            <li><code class="code-voice"><span class="kt">let</span> <span class="vc">arrayOfArrays</span>: <span class="n"><!-- a href="" -->Array<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Array<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Int<!-- /a --></span>&gt;&gt; = [[<span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>], [<span class="m">4</span>, <span class="m">5</span>, <span class="m">6</span>], [<span class="m">7</span>, <span class="m">8</span>, <span class="m">9</span>]]</code></li>
-        </ul>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">arrayOfArrays</span>: <span class="n"><!-- a href="" -->Array<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Array<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Int<!-- /a --></span>&gt;&gt; = [[<span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>], [<span class="m">4</span>, <span class="m">5</span>, <span class="m">6</span>], [<span class="m">7</span>, <span class="m">8</span>, <span class="m">9</span>]]</code></li>
+      </ul>
 
 
 
-    </div>
+  </div>
 </section><p class="para">
-    As mentioned in <span class="x-name"><a href="Generic Parameter Clause.html#TP40014097-CH37-XID_775" data-id="TP40014097-CH37-XID_775">Generic Parameter Clause</a></span>, you don’t use a generic argument clause to specify the type arguments of a generic function or initializer.
+  As mentioned in <span class="x-name"><a data-id="TP40014097-CH37-XID_775" href="#TP40014097-CH37-XID_775">Generic Parameter Clause</a></span>, you don’t use a generic argument clause to specify the type arguments of a generic function or initializer.
 </p><div class="syntax-defs">
-    <p class="syntax-defs-name">
-        Grammar of a generic argument clause
-    </p><div class="syntax-defs-group">
-        <p class="syntax-def">
-            <a name="//apple_ref/swift/grammar/generic-argument-clause"></a>
-            <span class="syntax-def-name">
-                generic-argument-clause
-            </span>
-            <span class="arrow">
-                →
-            </span><code class="literal">&lt;­</code><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-argument-list" data-id="//apple_ref/swift/grammar/generic-argument-list">generic-argument-list</a>­</span><code class="literal">&gt;­</code>
-        </p><p class="syntax-def">
-            <a name="//apple_ref/swift/grammar/generic-argument-list"></a>
-            <span class="syntax-def-name">
-                generic-argument-list
-            </span>
-            <span class="arrow">
-                →
-            </span><span class="alternative">
-                <span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-argument" data-id="//apple_ref/swift/grammar/generic-argument">generic-argument</a>­</span>
-            </span><span class="alternative">
-                <span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-argument" data-id="//apple_ref/swift/grammar/generic-argument">generic-argument</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a href="generic.html#//apple_ref/swift/grammar/generic-argument-list" data-id="//apple_ref/swift/grammar/generic-argument-list">generic-argument-list</a>­</span>
-            </span>
-        </p><p class="syntax-def">
-            <a name="//apple_ref/swift/grammar/generic-argument"></a>
-            <span class="syntax-def-name">
-                generic-argument
-            </span>
-            <span class="arrow">
-                →
-            </span><span class="syntactic-cat"><a href="type.html#//apple_ref/swift/grammar/type" data-id="//apple_ref/swift/grammar/type">type</a>­</span>
-        </p>
-    </div>
-</div>
-
-              </section>
-
-
-              <section id="next_previous" class="">
-<p class="previous-link"><a href="Patterns.html#TP40014097-CH36-XID_878" data-id="TP40014097-CH36-XID_878">Patterns</a></p>
-<p class="next-link"><a href="Summary of the Grammar.html#TP40014097-CH38-XID_1030" data-id="TP40014097-CH38-XID_1030">Summary of the Grammar</a></p>
-<p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  <p class="syntax-defs-name">
+  Grammar of a generic argument clause
+</p><div class="syntax-defs-group">
+  <p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/generic-argument-clause"></a>
+  <span class="syntax-def-name">
+  generic-argument-clause
+</span>
+<span class="arrow">
+  →
+</span><code class="literal">&lt;­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/generic-argument-list" href="#//apple_ref/swift/grammar/generic-argument-list">generic-argument-list</a>­</span><code class="literal">&gt;­</code>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/generic-argument-list"></a>
+  <span class="syntax-def-name">
+  generic-argument-list
+</span>
+<span class="arrow">
+  →
+</span><span class="alternative">
+  <span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/generic-argument" href="#//apple_ref/swift/grammar/generic-argument">generic-argument</a>­</span>
+</span><span class="alternative">
+  <span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/generic-argument" href="#//apple_ref/swift/grammar/generic-argument">generic-argument</a>­</span><code class="literal">,­</code><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/generic-argument-list" href="#//apple_ref/swift/grammar/generic-argument-list">generic-argument-list</a>­</span>
+</span>
+</p><p class="syntax-def">
+  <a name="//apple_ref/swift/grammar/generic-argument"></a>
+  <span class="syntax-def-name">
+  generic-argument
+</span>
+<span class="arrow">
+  →
+</span><span class="syntactic-cat"><a data-id="//apple_ref/swift/grammar/type" href="Types.html#//apple_ref/swift/grammar/type">type</a>­</span>
 </p>
-              </section>
-          </article>
+</div>
+ </div>
+  
+</section>
+
+  	
+ 	<section class="" id="next_previous">
+    		<p class="previous-link"><a data-id="TP40014097-CH36-XID_878" href="Patterns.html#TP40014097-CH36-XID_878">Patterns</a></p>
+  			<p class="next-link"><a data-id="TP40014097-CH38-XID_1030" href="Summary of the Grammar.html#TP40014097-CH38-XID_1030">Summary of the Grammar</a></p>
+  <p class="copyright">Copyright &copy; 2014 Apple Inc. All rights reserved. <a rel="external" target="_blank" href="http://www.apple.com/legal/terms/site.html" class="link">Terms of Use</a>   |  <a rel="external" target="_blank" href="http://www.apple.com/privacy/" class="link">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
 
       </div>
       <div id="big_button"></div>
       <footer id="footer">
           <div class="content-wrapper">
-              <div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+              
           </div>
           <script src="./resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>  </footer>     <div id="blackout">     <div id="preload"></div> </div> </body></html>

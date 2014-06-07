@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<!-- saved from url=(0167)href="Interacting with C APIs.htm#TP40014216-CH8-XID_13 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+  <title>Using Swift with Cocoa and Objective-C: Interacting with C APIs</title>
+   <link rel="stylesheet" type="text/css" href="./../resource/style-1.1.15.css"> 
+  
+  <meta charset="utf-8"> 
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+    	<a name="TP40014216" title="Using Swift with Cocoa and Objective-C"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="https://developer.apple.com/library/prerelease/ios/navigation/">iOS Developer Library
+            — Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./resource/apple2.png" height="14px" width="12px" aria-hidden="true"><a href="https://developer.apple.com/">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">Using Swift with Cocoa and Objective-C</span>
+    </p>
+    
+      
+   
+   
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="resource/BuildingCocoaApps.pdf">PDF</a>
+    </span>
+
+    
+
+    <img id="shortstack" src="./resource/shortstack_2x.png">
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="TP40014216-CH1-XID_4" class="part-name">Getting Started
+          <ul class="nav-chapters" style="height: 0px;">
+              <li class="nav-chapter">
+              	<a href="Basic Setup.htm#TP40014216-CH2-XID_0" data-id="TP40014216-CH2-XID_0" class="">Basic Setup</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH3-XID_39" class="part-name nav-part-active open-part">Interoperability
+          <ul class="nav-chapters" style="height: 208px;">
+              <li class="nav-chapter">
+              	<a href="Interacting with Objective-C APIs.htm#TP40014216-CH4-XID_26" data-id="TP40014216-CH4-XID_26" class="">Interacting with Objective-C APIs</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Writing Swift Classes with Objective-C Behavior.htm#TP40014216-CH5-XID_54" data-id="TP40014216-CH5-XID_54" class="">Writing Swift Classes with Objective-C Behavior</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Working with Cocoa Data Types.htm#TP40014216-CH6-XID_40" data-id="TP40014216-CH6-XID_40" class="">Working with Cocoa Data Types</a>
+              </li>
+              <li class="nav-chapter">
+              	<a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5" data-id="TP40014216-CH7-XID_5" class="">Adopting Cocoa Design Patterns</a>
+              </li>
+              <li class="nav-chapter nav-current-chapter">
+              	<a href="Interacting with C APIs.htm" data-id="TP40014216-CH8-XID_13" class="nav-chapter-active">Interacting with C APIs</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH9-XID_87" class="part-name">Mix and Match
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Swift and Objective-C in the Same Project.htm#TP40014216-CH10-XID_75" data-id="TP40014216-CH10-XID_75">Swift and Objective-C in the Same Project</a>
+              </li>
+          </ul>
+        </li><li data-id="TP40014216-CH11-XID_74" class="part-name">Migration
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+              	<a href="Migrating Your Objective-C Code to Swift.htm#TP40014216-CH12-XID_67" data-id="TP40014216-CH12-XID_67">Migrating Your Objective-C Code to Swift</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+
+      <article class="chapter">
+  <a name="TP40014216-CH8"></a><a name="TP40014216-CH8-XID_13"></a>
+  <div class="pixel-line"></div>
+  <h2 class="chapter-name chapter-name-short">Interacting with C APIs</h2>
+
+
+      <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_14">
+	  				Primitive Types
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_15">
+	  				Enumerations
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_16">
+	  				Pointers
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_20">
+	  				Global Constants
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Interacting with C APIs.htm#TP40014216-CH8-XID_21">
+	  				Preprocessor Directives
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+  
+  	<section class="section">
+  		<p class="para">
+  As part of its interoperability with Objective-C, Swift maintains compatibility with a number of C language types and features. Swift also provides a way of working with common C constructs and patterns, in case your code requires it.
+</p>
+
+		</section> 
+
+
+  <section class="section">
+  <a name="TP40014216-CH8-XID_14"></a>
+  <h3 class="section-name" tabindex="0">Primitive Types</h3>
+  <p class="para">
+  Swift provides equivalents of C primitive integer types—for example, <code class="code-voice">char</code>, <code class="code-voice">int</code>, <code class="code-voice">float</code>, and <code class="code-voice">double</code>. However, there is no implicit conversion between these types and core Swift integer types, such as <code class="code-voice">Int</code>. Therefore, use these types if your code specifically requires them, but use <code class="code-voice">Int</code> wherever possible otherwise.
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  C Type
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Swift Type
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">bool</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CBool</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">char</code>, <code class="code-voice">signed char</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CChar</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">unsigned char</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CUnsignedChar</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">short</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CShort</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">unsigned short</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CUnsignedShort</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">int</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CInt</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">unsigned int</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CUnsignedInt</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">long</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CLong</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">unsigned long</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CUnsignedLong</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">long long</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CLongLong</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">unsigned long long</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CUnsignedLongLong</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">wchar_t</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CWideChar</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">char16_t</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CChar16</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">char32_t</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CChar32</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">float</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CFloat</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">double</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CDouble</code>
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH8-XID_15"></a>
+  <h3 class="section-name" tabindex="0">Enumerations</h3>
+  <p class="para">
+  Swift imports as a Swift enumeration any C-style enumeration marked with the <code class="code-voice">NS_ENUM</code> macro. This means that the prefixes to enumeration value names are truncated when they are imported into Swift, whether they’re defined in system frameworks or in custom code. For example, see this Objective-C enumeration:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+
+        <div class="Objective-C">
+          <p class="aside-title">Objective-C</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="k">typedef</span> <span class="nf">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">UITableViewCellStyle</span><span class="p">)</span> <span class="p">{</span>
+</code></li>
+          <li><code class="code-voice">   <span class="n">UITableViewCellStyleDefault</span><span class="p">,</span>
+</code></li>
+          <li><code class="code-voice">   <span class="n">UITableViewCellStyleValue1</span><span class="p">,</span>
+</code></li>
+          <li><code class="code-voice">   <span class="n">UITableViewCellStyleValue2</span><span class="p">,</span>
+</code></li>
+          <li><code class="code-voice">   <span class="n">UITableViewCellStyleSubtitle</span>
+</code></li>
+          <li><code class="code-voice"><span class="p">};</span>
+</code></li>
+      </ul>
+        </div>
+
+
+  </div>
+</section><p class="para">
+  In Swift, it’s imported like this:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">enum</span> <span class="vc">UITableViewCellStyle</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> {</code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">Default</span></code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">Value1</span></code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">Value2</span></code></li>
+          <li><code class="code-voice">    <span class="kt">case</span> <span class="vc">Subtitle</span></code></li>
+          <li><code class="code-voice">}</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  When you refer to an enumeration value, use the value name with a leading dot (<code class="code-voice">.</code>).
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">let</span> <span class="vc">cellStyle</span>: <span class="n"><!-- a href="" -->UITableViewCellStyle<!-- /a --></span> = .<span class="vc">Default</span></code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  Swift also imports options marked with the <code class="code-voice">NS_OPTIONS</code> macro. Whereas options behave similarly to imported enumerations, options can also support some bitwise operations, such as <code class="code-voice">&amp;</code>, <code class="code-voice">|</code>, and <code class="code-voice">~</code>. In Objective-C, you represent an empty option set with the constant zero (<code class="code-voice">0</code>). In Swift, use <code class="code-voice">nil</code> to represent the absence of any options.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH8-XID_16"></a>
+  <h3 class="section-name" tabindex="0">Pointers</h3>
+  <p class="para">
+  Swift avoids giving you direct access to pointers whenever possible. However, there are various pointer types available for your use when you need direct access to memory. The following tables use <code class="code-voice">Type</code> as a placeholder type name to indicate syntax for the mappings.
+</p><p class="para">
+  For arguments, the following mappings apply:
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  C Syntax
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Swift Syntax
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">const void *</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CConstVoidPointer</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">void *</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CMutableVoidPointer</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">const Type *</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CConstPointer&lt;Type&gt;</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">Type *</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CMutablePointer&lt;Type&gt;</code>
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  For return types, variables, and argument types more than one pointer level deep, the following mappings apply:
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  C Syntax
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Swift Syntax
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">void *</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">COpaquePointer</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">Type *</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">UnsafePointer&lt;Type&gt;</code>
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  For class types, the following mappings apply:
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  C Syntax
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Swift Syntax
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">Type * const *</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CConstPointer&lt;Type&gt;</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">Type * __strong *</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">CMutablePointer&lt;Type&gt;</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">Type **</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">AutoreleasingUnsafePointer&lt;Type&gt;</code>
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+  <section class="section">
+  <a name="TP40014216-CH8-XID_17"></a>
+  <h3 class="section-name" tabindex="0">C Mutable Pointers</h3>
+  <p class="para">
+  When a function is declared as taking a <code class="code-voice">CMutablePointer&lt;Type&gt;</code> argument, it can accept any of the following:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <code class="code-voice">nil</code>, which is passed as a null pointer
+</p>
+</li><li class="item"><p class="para">
+  A <code class="code-voice">CMutablePointer&lt;Type&gt;</code> value
+</p>
+</li><li class="item"><p class="para">
+  An in-out expression whose operand is a stored lvalue of type <code class="code-voice">Type</code>, which is passed as the address of the lvalue
+</p>
+</li><li class="item"><p class="para">
+  An in-out <code class="code-voice">Type[]</code> value, which is passed as a pointer to the start of the array, and lifetime-extended for the duration of the call
+</p>
+</li>
+</ul><p class="para">
+  If you have declared a function like this one:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAMutablePointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->CMutablePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt;) { <span class="c">/*...*/</span> }</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can call it in any of the following ways:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span> = <span class="m">0.0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->CMutablePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span>[] = [<span class="m">1.0</span>, <span class="m">2.0</span>, <span class="m">3.0</span>]</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutablePointer</span>(<span class="vc">nil</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutablePointer</span>(<span class="vc">p</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutablePointer</span>(&amp;<span class="vc">x</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutablePointer</span>(&amp;<span class="vc">a</span>)</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  When a function is declared as taking a <code class="code-voice">CMutableVoidPointer</code> argument, it can accept the same operands as <code class="code-voice">CMutablePointer&lt;Type&gt;</code> for any type <code class="code-voice">Type</code>.
+</p><p class="para">
+  If you have declared a function like this one:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAMutableVoidPointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->CMutableVoidPointer<!-- /a --></span>)  { <span class="c">/* ... */</span> }</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can call it in any of the following ways:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span> = <span class="m">0.0</span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> = <span class="m">0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->CMutablePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt; = <span class="vc">nil</span>, <span class="vc">q</span>: <span class="n"><!-- a href="" -->CMutablePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Int<!-- /a --></span>&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">a</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span>[] = [<span class="m">1.0</span>, <span class="m">2.0</span>, <span class="m">3.0</span>], <span class="vc">b</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> = [<span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>]</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(<span class="vc">nil</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(<span class="vc">p</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(<span class="vc">q</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(&amp;<span class="vc">x</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(&amp;<span class="vc">y</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(&amp;<span class="vc">a</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAMutableVoidPointer</span>(&amp;<span class="vc">b</span>)</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH8-XID_18"></a>
+  <h3 class="section-name" tabindex="0">C Constant Pointers</h3>
+  <p class="para">
+  When a function is declared as taking a <code class="code-voice">CConstPointer&lt;Type&gt;</code> argument, it can accept any of the following:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <code class="code-voice">nil</code>, which is passed as a null pointer
+</p>
+</li><li class="item"><p class="para">
+  A <code class="code-voice">CMutablePointer&lt;Type&gt;</code>, <code class="code-voice">CMutableVoidPointer</code>, <code class="code-voice">CConstPointer&lt;Type&gt;</code>, <code class="code-voice">CConstVoidPointer</code>, or <code class="code-voice">AutoreleasingUnsafePointer&lt;Type&gt;</code> value, which is converted to <code class="code-voice">CConstPointer&lt;Type&gt;</code> if necessary
+</p>
+</li><li class="item"><p class="para">
+  An in-out expression whose operand is an lvalue of type <code class="code-voice">Type</code>, which is passed as the address of the lvalue
+</p>
+</li><li class="item"><p class="para">
+  A <code class="code-voice">Type[]</code> value, which is passed as a pointer to the start of the array, and lifetime-extended for the duration of the call
+</p>
+</li>
+</ul><p class="para">
+  If you have declared a function like this one:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAConstPointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->CConstPointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt;) { <span class="c">/*...*/</span> }</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can call it in any of the following ways:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span> = <span class="m">0.0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->CConstPointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstPointer</span>(<span class="vc">nil</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstPointer</span>(<span class="vc">p</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstPointer</span>(&amp;<span class="vc">x</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstPointer</span>([<span class="m">1.0</span>, <span class="m">2.0</span>, <span class="m">3.0</span>])</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  When a function is declared as taking a <code class="code-voice">CConstVoidPointer</code> argument, it can accept the same operands as <code class="code-voice">CConstPointer&lt;Type&gt;</code> for any type <code class="code-voice">Type</code>.
+</p><p class="para">
+  If you have declared a function like this one:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAConstVoidPointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->CConstVoidPointer<!-- /a --></span>)  { <span class="c">/* ... */</span> }</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can call it in any of the following ways:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->Float<!-- /a --></span> = <span class="m">0.0</span>, <span class="vc">y</span>: <span class="n"><!-- a href="" -->Int<!-- /a --></span> = <span class="m">0</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->CConstPointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Float<!-- /a --></span>&gt; = <span class="vc">nil</span>, <span class="vc">q</span>: <span class="n"><!-- a href="" -->CConstPointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->Int<!-- /a --></span>&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>(<span class="vc">nil</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>(<span class="vc">p</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>(<span class="vc">q</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>(&amp;<span class="vc">x</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>(&amp;<span class="vc">y</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>([<span class="m">1.0</span>, <span class="m">2.0</span>, <span class="m">3.0</span>])</code></li>
+          <li><code class="code-voice"><span class="vc">takesAConstVoidPointer</span>([<span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span>])</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH8-XID_19"></a>
+  <h3 class="section-name" tabindex="0">AutoreleasingUnsafePointer</h3>
+  <p class="para">
+  When a function is declared as taking an <code class="code-voice">AutoreleasingUnsafePointer&lt;Type&gt;</code>, it can accept any of the following:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <code class="code-voice">nil</code>, which is passed as a null pointer
+</p>
+</li><li class="item"><p class="para">
+  An <code class="code-voice">AutoreleasingUnsafePointer&lt;Type&gt;</code> value
+</p>
+</li><li class="item"><p class="para">
+  An in-out expression, whose operand is primitive-copied to a temporary nonowning buffer. The address of that buffer is passed to the callee, and on return, the value in the buffer is loaded, retained, and reassigned into the operand.
+</p>
+</li>
+</ul><p class="para">
+  Note that this list does not include arrays.
+</p><p class="para">
+  If you have declared a function like this one:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">func</span> <span class="vc">takesAnAutoreleasingPointer</span>(<span class="vc">x</span>: <span class="n"><!-- a href="" -->AutoreleasingUnsafePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->NSDate<!-- /a --></span>?&gt;) { <span class="c">/* ... */</span> }</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  You can call it in any of the following ways:
+</p><section class="code-listing">
+  
+  <span class="caption"></span>
+  <div class="code-sample">
+
+        <div class="Swift">
+          <p class="aside-title">Swift</p>
+      <ul class="code-lines">
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">x</span>: <span class="n"><!-- a href="" -->NSDate<!-- /a --></span>? = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="kt">var</span> <span class="vc">p</span>: <span class="n"><!-- a href="" -->AutoreleasingUnsafePointer<!-- /a --></span>&lt;<span class="n"><!-- a href="" -->NSDate<!-- /a --></span>?&gt; = <span class="vc">nil</span></code></li>
+          <li><code class="code-voice"><span class="vc">takesAnAutoreleasingPointer</span>(<span class="vc">nil</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAnAutoreleasingPointer</span>(<span class="vc">p</span>)</code></li>
+          <li><code class="code-voice"><span class="vc">takesAnAutoreleasingPointer</span>(&amp;<span class="vc">x</span>)</code></li>
+      </ul>
+        </div>
+
+
+
+  </div>
+</section><p class="para">
+  Note that C function pointers are not imported in Swift.
+</p>
+  
+</section>
+
+</section>
+<section class="section">
+  <a name="TP40014216-CH8-XID_20"></a>
+  <h3 class="section-name" tabindex="0">Global Constants</h3>
+  <p class="para">
+  Global constants defined in C and Objective-C source files are automatically imported by the Swift compiler as Swift global constants.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH8-XID_21"></a>
+  <h3 class="section-name" tabindex="0">Preprocessor Directives</h3>
+  <p class="para">
+  The Swift compiler does not include a preprocessor. Instead, it takes advantage of compile-time attributes, build configurations, and language features to accomplish the same functionality. For this reason, preprocessor directives are not imported in Swift.
+</p>
+  <section class="section">
+  <a name="TP40014216-CH8-XID_22"></a>
+  <h3 class="section-name" tabindex="0">Simple Macros</h3>
+  <p class="para">
+  Where you typically used the <code class="code-voice">#define</code> directive to define a primitive constant in C and Objective-C, in Swift you use a global constant instead. For example, the constant definition <code class="code-voice">#define FADE_ANIMATION_DURATION 0.35</code> can be better expressed in Swift with <code class="code-voice">let FADE_ANIMATION_DURATION = 0.35</code>. Because simple constant-like macros map directly to Swift global variables, the compiler automatically imports simple macros defined in C and Objective-C source files.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH8-XID_23"></a>
+  <h3 class="section-name" tabindex="0">Complex Macros</h3>
+  <p class="para">
+  Complex macros are used in C and Objective-C but have no counterpart in Swift. Complex macros are macros that do not define constants, including parenthesized, function-like macros. You use complex macros in C and Objective-C to avoid type-checking constraints or to avoid retyping large amounts of boilerplate code. However, macros can make debugging and refactoring difficult. In Swift, you can use functions and generics to achieve the same results without any compromises. Therefore, the complex macros that are in C and Objective-C source files are not made available to your Swift code.
+</p>
+  
+</section>
+<section class="section">
+  <a name="TP40014216-CH8-XID_24"></a>
+  <h3 class="section-name" tabindex="0">Build Configurations</h3>
+  <p class="para">
+  Swift code and Objective-C code are conditionally compiled in different ways. Swift code can be conditionally compiled based on the evaluation of <em>build configurations</em>. Build configurations include the literal <code class="code-voice">true</code> and <code class="code-voice">false</code> values, command line flags, and the platform-testing functions listed in the table below. You can specify command line flags using <code class="code-voice">-D &lt;#flag#&gt;</code>.
+</p><div class="tableholder">
+  
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Function
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  Valid arguments
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">os()</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">OSX</code>, <code class="code-voice">iOS</code>
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  <code class="code-voice">arch()</code>
+</p></td>
+            <td><p class="para">
+  <code class="code-voice">x86_64</code>, <code class="code-voice">arm</code>, <code class="code-voice">arm64</code>, <code class="code-voice">i386</code>
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><div class="note">
+  <a name="TP40014216-CH8-XID_25"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    	<p class="para">The <code class="code-voice">arch(arm)</code> build configuration does not return <code class="code-voice">true</code> for ARM 64 devices. The <code class="code-voice">arch(i386)</code> build configuration returns <code class="code-voice">true</code> when code is compiled for the 32-bit iOS simulator.
+    	</p>
+    
+  </aside>
+</div><p class="para">
+  A simple conditional compilation statement takes the following form:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">#if</span> <em class="variable-text">build configuration</em></pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice"><span class="kt">#else</span></pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice"><span class="kt">#endif</span></pre></li>
+  </ul>
+</div><p class="para">
+  The <em>statements</em> consist of zero or more valid Swift statements, which can include expressions, statements, and control flow statements. You can add additional build configuration requirements to a conditional compilation statement with the <code class="code-voice">&amp;&amp;</code> and <code class="code-voice">||</code> operators, negate build configurations with the <code class="code-voice">!</code> operator, and add condition blocks with <code class="code-voice">#elseif</code>:
+</p><span class="caption"></span>
+<div class="code-outline">
+  <ul class="code-outline-lines">
+    <li><pre class="code-voice"><span class="kt">#if</span> <em class="variable-text">build configuration</em> &amp;&amp; !<em class="variable-text">build configuration</em></pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice"><span class="kt">#elseif</span> <em class="variable-text">build configuration</em></pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice"><span class="kt">#else</span></pre></li><li><pre class="code-voice">    <em class="variable-text">statements</em></pre></li><li><pre class="code-voice"><span class="kt">#endif</span></pre></li>
+  </ul>
+</div><p class="para">
+  In contrast with condition compilation statements in the C preprocessor, conditional compilation statements in Swift must completely surround blocks of code that are self-contained and syntactically valid. This is because all Swift code is syntax checked, even when it is not compiled.
+</p>
+  
+</section>
+
+</section>
+
+  	
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Adopting Cocoa Design Patterns.htm#TP40014216-CH7-XID_5" data-id="TP40014216-CH7-XID_5">Adopting Cocoa Design Patterns</a></p>
+  			<p class="next-link"><a href="Swift and Objective-C in the Same Project.htm#TP40014216-CH10-XID_75" data-id="TP40014216-CH10-XID_75">Swift and Objective-C in the Same Project</a></p>
+  <p class="copyright">Copyright © 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel="external">Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel="external">Privacy Policy</a>  |  Updated: 2014-06-02
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id="big_button"></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	
+  </div>
+    <script src="./../resource/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  
+</footer>
+
+    
+  
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+</body></html>
